@@ -24,6 +24,7 @@
 		5A7D6FAF29854754002A1996 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6FAE29854754002A1996 /* UIViewController.swift */; };
 		5A7D6FB129854760002A1996 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6FB029854760002A1996 /* UINavigationBar.swift */; };
 		5A7D6FB3298548C9002A1996 /* ShopNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6FB2298548C9002A1996 /* ShopNavigationBarViewController.swift */; };
+		5A7D6FB529855EAE002A1996 /* ProfileNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6FB429855EAE002A1996 /* ProfileNavigationBarViewController.swift */; };
 		5A820B662984FBCB00F3784F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B652984FBCB00F3784F /* AppDelegate.swift */; };
 		5A820B682984FBCB00F3784F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B672984FBCB00F3784F /* SceneDelegate.swift */; };
 		5A820B6A2984FBCB00F3784F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B692984FBCB00F3784F /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		5A7D6FAE29854754002A1996 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		5A7D6FB029854760002A1996 /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		5A7D6FB2298548C9002A1996 /* ShopNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopNavigationBarViewController.swift; sourceTree = "<group>"; };
+		5A7D6FB429855EAE002A1996 /* ProfileNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationBarViewController.swift; sourceTree = "<group>"; };
 		5A820B622984FBCB00F3784F /* instagram_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A820B652984FBCB00F3784F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A820B672984FBCB00F3784F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				5A820B8029850F0600F3784F /* ProfileViewController.storyboard */,
+				5A7D6FB429855EAE002A1996 /* ProfileNavigationBarViewController.swift */,
 				5A820B8229850F0E00F3784F /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -318,6 +321,7 @@
 				5A820B872985128500F3784F /* SearchViewController.swift in Sources */,
 				5A820B6A2984FBCB00F3784F /* ViewController.swift in Sources */,
 				5A7D6F942985441D002A1996 /* Constant.swift in Sources */,
+				5A7D6FB529855EAE002A1996 /* ProfileNavigationBarViewController.swift in Sources */,
 				5A820B8329850F0E00F3784F /* ProfileViewController.swift in Sources */,
 				5A7D6FAF29854754002A1996 /* UIViewController.swift in Sources */,
 				5A7D6FA0298545E2002A1996 /* IndicatorView.swift in Sources */,

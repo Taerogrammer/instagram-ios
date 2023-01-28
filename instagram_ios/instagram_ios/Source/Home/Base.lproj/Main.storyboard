@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="-816" y="1573"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile Navigation Bar View Controller-->
         <scene sceneID="M5K-Ja-oSZ">
             <objects>
-                <viewController id="8vw-hz-O2j" sceneMemberID="viewController">
+                <viewController id="8vw-hz-O2j" customClass="ProfileNavigationBarViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n0G-wo-cxP">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,7 +165,9 @@
                             <constraint firstItem="XRt-3g-N1Z" firstAttribute="top" secondItem="ne1-S1-eKS" secondAttribute="top" id="cxO-XQ-C9h"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="tabbar_search" id="dw5-44-fLv"/>
+                    <tabBarItem key="tabBarItem" title="" image="tabbar_search" id="dw5-44-fLv">
+                        <color key="badgeColor" red="0.033189580619999999" green="0.041728019339999999" blue="0.098039209840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="boq-q8-pFZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAb-p3-PW5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,10 +257,10 @@
             </objects>
             <point key="canvasLocation" x="-816" y="736"/>
         </scene>
-        <!--View Controller-->
+        <!--Shop Navigation Bar View Controller-->
         <scene sceneID="Qkq-HM-XFZ">
             <objects>
-                <viewController id="zZs-JH-Mpc" sceneMemberID="viewController">
+                <viewController id="zZs-JH-Mpc" customClass="ShopNavigationBarViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nEb-7U-7wJ">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

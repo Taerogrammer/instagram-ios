@@ -18,50 +18,51 @@ class ViewController: UIViewController {
     
     //MARK: navigationbar setting
     func navigationBarSetting() {
-        let buttonImage1 = UIImage(named: "home_add")!
+        let addImage = UIImage(named: "home_add")!
 
-        let button1 = UIButton(frame: CGRect(
+        let addButton = UIButton(frame: CGRect(
             x: 0,
             y: 0,
-            width: buttonImage1.size.width,
-            height: buttonImage1.size.height))
-        button1.setImage(buttonImage1, for: .normal)
+            width: addImage.size.width,
+            height: addImage.size.height))
+        addButton.setImage(addImage, for: .normal)
         
 
-        button1.addTarget(
+        addButton.addTarget(
             self,
-            action: #selector(self.onclickSideMenu(_:)),
+            action: #selector(self.onclickAdd(_:)),
             for: .touchUpInside
         )
         
 
-        let barbuttonItem1 = UIBarButtonItem(customView: button1)
+        let barAddButton = UIBarButtonItem(customView: addButton)
 
         
-        let buttonImage2 = UIImage(named: "home_like")!
+        let likeImage = UIImage(named: "home_like")!
 
-        let button2 = UIButton(frame: CGRect(
+        let likeButton = UIButton(frame: CGRect(
             x: 0,
             y: 0,
-            width: buttonImage2.size.width,
-            height: buttonImage2.size.height))
-        button2.setImage(buttonImage2, for: .normal)
-        button2.addTarget(self, action: #selector(onclickPopcorn), for: .touchUpInside)
+            width: likeImage.size.width,
+            height: likeImage.size.height))
+        likeButton.setImage(likeImage, for: .normal)
+        likeButton.addTarget(self, action: #selector(onclickLike), for: .touchUpInside)
         
 
-        let barbuttonItem2 = UIBarButtonItem(customView: button2)
+        let barLikeButton = UIBarButtonItem(customView: likeButton)
         
-        let buttonImage3 = UIImage(named: "home_dm")!
+        let dmImage = UIImage(named: "home_dm")!
 
-        let button3 = UIButton(frame: CGRect(
+        let dmButton = UIButton(frame: CGRect(
             x: 0,
             y: 0,
-            width: buttonImage3.size.width,
-            height: buttonImage3.size.height))
-        button3.setImage(buttonImage3, for: .normal)
+            width: dmImage.size.width,
+            height: dmImage.size.height))
+        dmButton.setImage(dmImage, for: .normal)
+        dmButton.addTarget(self, action: #selector(onClickDM), for: .touchUpInside)
         
 
-        let barbuttonItem3 = UIBarButtonItem(customView: button3)
+        let barDmButton = UIBarButtonItem(customView: dmButton)
         
 
         
@@ -84,21 +85,22 @@ class ViewController: UIViewController {
         spacer.width = 28
 
         self.navigationItem.leftBarButtonItem = instaButton
-        self.navigationItem.rightBarButtonItems = [barbuttonItem3, spacer, barbuttonItem2, spacer, barbuttonItem1]
+        self.navigationItem.rightBarButtonItems = [barDmButton, spacer, barLikeButton, spacer, barAddButton]
     }
     
-    @objc func onclickSideMenu(_ sender: AnyObject) {
+    @objc func onclickAdd(_ sender: AnyObject) {
         // ...
 //        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "SideMenuNavigation") as! SideMenuNavigation
 //        self.navigationController?.show(pushVC, sender: self)
+        print("onClickAdd() success")
     }
     
     //다른 vc으로 이동하기
-    @objc func onclickPopcorn(_ sender: AnyObject) {
+    @objc func onclickLike(_ sender: AnyObject) {
         
 //        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AlarmViewController")
 //        self.navigationController?.pushViewController(pushVC!, animated: true)
-        print("onclickPopcorn")
+        print("onclickLike() success")
 
         
     }
@@ -113,9 +115,23 @@ class ViewController: UIViewController {
 //        self.navigationController?.popViewController(animated: true)
         
         
-        print("onClickBack")
+        print("onclickInstagram()")
         
     }
+    @objc func onClickDM(_ sender: AnyObject) {
+        
+//        let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "ModalViewController")
+//
+//        modalVC?.modalPresentationStyle = .pageSheet
+//        self.present(modalVC!, animated: true, completion: nil)
+//        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
+//        self.navigationController?.popViewController(animated: true)
+        
+        
+        print("onclickDM")
+        
+    }
+    
     
 
 
