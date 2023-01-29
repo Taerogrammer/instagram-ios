@@ -16,6 +16,12 @@ class ProfileNavigationBarViewController : UIViewController {
         navigationBarSetting()
     }
     
+    
+    
+    
+    
+    
+    
     //MARK: Navigation Bar
     func navigationBarSetting() {
         let titleLabel = UILabel()
@@ -65,6 +71,12 @@ class ProfileNavigationBarViewController : UIViewController {
     }
     @objc func onClickMenu() {
         print("onClickMenu()")
+
+        let storyboard = UIStoryboard(name: "ProfileModalViewController", bundle: nil)
+        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "ProfileModalViewController") as! ProfileModalViewController
+
+        self.present(sheetPresentationController, animated: true)
+        
     }
     
     
