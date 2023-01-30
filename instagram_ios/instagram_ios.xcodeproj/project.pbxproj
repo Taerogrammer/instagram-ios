@@ -20,6 +20,8 @@
 		5A3D7A572987F2CE0020C74F /* FacebookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A562987F2CE0020C74F /* FacebookResponse.swift */; };
 		5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A582987F3AC0020C74F /* FacebookDataManager.swift */; };
 		5A3D7A5B2987F77A0020C74F /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A5A2987F77A0020C74F /* PhoneViewController.swift */; };
+		5A3D7A5E298807C90020C74F /* UserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A5D298807C90020C74F /* UserInfoRequest.swift */; };
+		5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A5F298807D30020C74F /* UserInfoResponse.swift */; };
 		5A7D6F8D2985161F002A1996 /* ReelsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D6F8C2985161F002A1996 /* ReelsViewController.storyboard */; };
 		5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F8E2985162A002A1996 /* ReelsViewController.swift */; };
 		5A7D6F9129853B6E002A1996 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F9029853B6E002A1996 /* SearchBarViewController.swift */; };
@@ -72,6 +74,8 @@
 		5A3D7A562987F2CE0020C74F /* FacebookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookResponse.swift; sourceTree = "<group>"; };
 		5A3D7A582987F3AC0020C74F /* FacebookDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookDataManager.swift; sourceTree = "<group>"; };
 		5A3D7A5A2987F77A0020C74F /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneViewController.swift; path = instagram_ios/Source/Main/Register/FacebookLogin/PhoneViewController.swift; sourceTree = SOURCE_ROOT; };
+		5A3D7A5D298807C90020C74F /* UserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRequest.swift; sourceTree = "<group>"; };
+		5A3D7A5F298807D30020C74F /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
 		5A7D6F8C2985161F002A1996 /* ReelsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsViewController.storyboard; sourceTree = "<group>"; };
 		5A7D6F8E2985162A002A1996 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
 		5A7D6F9029853B6E002A1996 /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				5A3D7A4D2987930B0020C74F /* Confirm */,
 				5A3D7A3B2987580E0020C74F /* InfoViewController.storyboard */,
 				5A3D7A38298757F30020C74F /* InfoViewController.swift */,
+				5A3D7A5C298806EC0020C74F /* Entity */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -212,6 +217,15 @@
 			children = (
 				5A3D7A542987F2110020C74F /* FacebookRequest.swift */,
 				5A3D7A562987F2CE0020C74F /* FacebookResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5A3D7A5C298806EC0020C74F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A3D7A5D298807C90020C74F /* UserInfoRequest.swift */,
+				5A3D7A5F298807D30020C74F /* UserInfoResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -526,6 +540,7 @@
 				5A3D7A5B2987F77A0020C74F /* PhoneViewController.swift in Sources */,
 				5A7D6FC529861E49002A1996 /* LoginViewController.swift in Sources */,
 				5A3D7A522987AD920020C74F /* FacebookViewController.swift in Sources */,
+				5A3D7A5E298807C90020C74F /* UserInfoRequest.swift in Sources */,
 				5A7D6FB3298548C9002A1996 /* ShopNavigationBarViewController.swift in Sources */,
 				5A7D6FAD2985474B002A1996 /* UIButton.swift in Sources */,
 				5A820B872985128500F3784F /* SearchViewController.swift in Sources */,
@@ -542,6 +557,7 @@
 				5A3D7A572987F2CE0020C74F /* FacebookResponse.swift in Sources */,
 				5A7D6FA529854724002A1996 /* Date.swift in Sources */,
 				5A7D6F9129853B6E002A1996 /* SearchBarViewController.swift in Sources */,
+				5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */,
 				5A820B662984FBCB00F3784F /* AppDelegate.swift in Sources */,
 				5A3D7A552987F2110020C74F /* FacebookRequest.swift in Sources */,
 				5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */,

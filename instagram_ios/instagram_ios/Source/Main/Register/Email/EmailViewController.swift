@@ -10,14 +10,15 @@ import UIKit
 
 class EmailViewController : UIViewController {
     
+    var textCnt : Int = 0
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var facebookContinueView : UIView!
     @IBAction func onClickName() {
-        guard let nameVC = self.storyboard?.instantiateViewController(identifier: "NameViewController") else {return}
-        nameVC.modalPresentationStyle = .fullScreen
-        self.present(nameVC, animated: false)
-        
-        
+        if textCnt > 0 {
+            guard let nameVC = self.storyboard?.instantiateViewController(identifier: "NameViewController") else {return}
+            nameVC.modalPresentationStyle = .fullScreen
+            self.present(nameVC, animated: false)
+        }
     }
     
     @IBOutlet weak var nextButton: UIButton!
@@ -44,9 +45,11 @@ class EmailViewController : UIViewController {
         if let text = textField.text {
             if text.count > 0 {
                 nextButton.tintColor = .facebook_check
+                textCnt = text.count
             }
             else {
                 nextButton.tintColor = .facebook_uncheck
+                textCnt = text.count
             }
         }
     }

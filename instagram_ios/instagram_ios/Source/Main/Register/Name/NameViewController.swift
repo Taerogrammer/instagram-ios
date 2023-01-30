@@ -9,14 +9,16 @@ import Foundation
 import UIKit
 
 class NameViewController : UIViewController {
+    
+    var textCnt : Int = 0
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBAction func onClickPassword() {
-        guard let passwordVC = self.storyboard?.instantiateViewController(identifier: "PasswordViewController") else {return}
-        passwordVC.modalPresentationStyle = .fullScreen
-        self.present(passwordVC, animated: true)
-        
-        
+        if textCnt > 0 {
+            guard let passwordVC = self.storyboard?.instantiateViewController(identifier: "PasswordViewController") else {return}
+            passwordVC.modalPresentationStyle = .fullScreen
+            self.present(passwordVC, animated: true)
+        }
     }
     
     override func viewDidLoad() {
@@ -40,9 +42,11 @@ class NameViewController : UIViewController {
         if let text = textField.text {
             if text.count > 0 {
                 nextButton.tintColor = .facebook_check
+                textCnt = text.count
             }
             else {
                 nextButton.tintColor = .facebook_uncheck
+                textCnt = text.count
             }
         }
     }

@@ -9,12 +9,16 @@ import Foundation
 import UIKit
 
 class UserNameViewController : UIViewController {
+    
+    var textCnt : Int = 0
     @IBOutlet weak var userNameText: UITextField!
     @IBOutlet weak var nextButton : UIButton!
     @IBAction func onClickConfirm() {
-        guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "ConfirmViewController") else {return}
-        confirmVC.modalPresentationStyle = .fullScreen
-        self.present(confirmVC, animated: true)
+        if textCnt > 0 {
+            guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "ConfirmViewController") else {return}
+            confirmVC.modalPresentationStyle = .fullScreen
+            self.present(confirmVC, animated: true)
+        }
     }
     
     override func viewDidLoad() {
@@ -38,9 +42,11 @@ class UserNameViewController : UIViewController {
         if let text = textField.text {
             if text.count > 0 {
                 nextButton.tintColor = .facebook_check
+                textCnt = text.count
             }
             else {
                 nextButton.tintColor = .facebook_uncheck
+                textCnt = text.count
             }
         }
     }

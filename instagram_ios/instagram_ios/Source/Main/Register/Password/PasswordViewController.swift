@@ -9,12 +9,17 @@ import Foundation
 import UIKit
 
 class PasswordViewController : UIViewController {
+    
+    var textCnt: Int = 0
+    
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var nextButton : UIButton!
     @IBAction func onClickUserName() {
-        guard let userNameVC = self.storyboard?.instantiateViewController(identifier: "UserNameViewController") else {return}
-        userNameVC.modalPresentationStyle = .fullScreen
-        self.present(userNameVC, animated: true)
+        if textCnt > 5 {
+            guard let userNameVC = self.storyboard?.instantiateViewController(identifier: "UserNameViewController") else {return}
+            userNameVC.modalPresentationStyle = .fullScreen
+            self.present(userNameVC, animated: true)
+        }
     }
     
     func PwdSecure() {
@@ -39,11 +44,13 @@ class PasswordViewController : UIViewController {
     @objc private func textFieldDidChange(_ textField: UITextField) {
         // [실시간 입력 값 체크 실시]
         if let text = textField.text {
-            if text.count > 0 {
+            if text.count > 5 {
                 nextButton.tintColor = .facebook_check
+                textCnt = text.count
             }
             else {
                 nextButton.tintColor = .facebook_uncheck
+                textCnt = text.count
             }
         }
     }
