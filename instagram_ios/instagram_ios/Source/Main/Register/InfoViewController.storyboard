@@ -97,7 +97,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="다음"/>
                                 <connections>
-                                    <action selector="onClickName" destination="XYB-um-WzL" eventType="touchUpInside" id="Pdc-dF-GiY"/>
+                                    <action selector="onClickName" destination="XYB-um-WzL" eventType="touchUpInside" id="pOH-iK-skX"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFv-r3-aL8">
@@ -186,9 +186,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="facebookContinueView" destination="IFv-r3-aL8" id="5hT-D2-JVv"/>
-                        <outlet property="nextButton" destination="BD7-5b-sgs" id="f0j-ZA-LKx"/>
-                        <outlet property="phoneText" destination="bxn-zo-h23" id="wHc-Z6-wHX"/>
+                        <outlet property="facebookContinueView" destination="IFv-r3-aL8" id="GxR-jV-ebf"/>
+                        <outlet property="nextButton" destination="BD7-5b-sgs" id="UxF-sQ-DoP"/>
+                        <outlet property="phoneText" destination="bxn-zo-h23" id="Kk2-dc-KO7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zb5-qL-BHe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
