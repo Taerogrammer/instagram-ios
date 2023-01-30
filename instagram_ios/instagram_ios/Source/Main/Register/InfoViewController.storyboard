@@ -579,6 +579,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="가입하기"/>
                                         <connections>
+                                            <action selector="confirmRegister:" destination="GHj-eE-4V1" eventType="touchUpInside" id="0EB-7o-smf"/>
                                             <action selector="onClickPassword" destination="SuE-2t-pxN" eventType="touchUpInside" id="6IT-xT-jb4"/>
                                         </connections>
                                     </button>
@@ -612,6 +613,7 @@
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="E7a-Lt-Hlp" id="Fxf-eL-nzQ"/>
+                        <outlet property="userNameLbl" destination="4bw-li-aFK" id="MoO-hf-E8c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9MJ-32-nEK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -5,8 +5,12 @@
 //  Created by 김태형 on 2023/01/30.
 //
 
-struct UserInfoRequest {
-
+struct UserInfoRequest: Codable {
+    var name: String?
+    var email: String?
+    var password: String?
+    var phone: String?
+    var userName: String?
 }
 
 

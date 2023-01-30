@@ -22,6 +22,10 @@
 		5A3D7A5B2987F77A0020C74F /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A5A2987F77A0020C74F /* PhoneViewController.swift */; };
 		5A3D7A5E298807C90020C74F /* UserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A5D298807C90020C74F /* UserInfoRequest.swift */; };
 		5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A5F298807D30020C74F /* UserInfoResponse.swift */; };
+		5A3D7A62298823200020C74F /* ConfirmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A61298823200020C74F /* ConfirmDataManager.swift */; };
+		5A3D7A6629883F310020C74F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A6529883F310020C74F /* LoginRequest.swift */; };
+		5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A69298840950020C74F /* LoginDataManager.swift */; };
+		5A3D7A6C298841450020C74F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A6B298841450020C74F /* LoginResponse.swift */; };
 		5A7D6F8D2985161F002A1996 /* ReelsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D6F8C2985161F002A1996 /* ReelsViewController.storyboard */; };
 		5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F8E2985162A002A1996 /* ReelsViewController.swift */; };
 		5A7D6F9129853B6E002A1996 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F9029853B6E002A1996 /* SearchBarViewController.swift */; };
@@ -76,6 +80,10 @@
 		5A3D7A5A2987F77A0020C74F /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhoneViewController.swift; path = instagram_ios/Source/Main/Register/FacebookLogin/PhoneViewController.swift; sourceTree = SOURCE_ROOT; };
 		5A3D7A5D298807C90020C74F /* UserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRequest.swift; sourceTree = "<group>"; };
 		5A3D7A5F298807D30020C74F /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
+		5A3D7A61298823200020C74F /* ConfirmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmDataManager.swift; sourceTree = "<group>"; };
+		5A3D7A6529883F310020C74F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		5A3D7A69298840950020C74F /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
+		5A3D7A6B298841450020C74F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		5A7D6F8C2985161F002A1996 /* ReelsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsViewController.storyboard; sourceTree = "<group>"; };
 		5A7D6F8E2985162A002A1996 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
 		5A7D6F9029853B6E002A1996 /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
@@ -147,9 +155,9 @@
 				5A3D7A47298790680020C74F /* Password */,
 				5A3D7A4A2987922B0020C74F /* UserName */,
 				5A3D7A4D2987930B0020C74F /* Confirm */,
+				5A3D7A6329883F0A0020C74F /* Login */,
 				5A3D7A3B2987580E0020C74F /* InfoViewController.storyboard */,
 				5A3D7A38298757F30020C74F /* InfoViewController.swift */,
-				5A3D7A5C298806EC0020C74F /* Entity */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -198,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				5A3D7A4E298793260020C74F /* ConfirmViewController.swift */,
+				5A3D7A61298823200020C74F /* ConfirmDataManager.swift */,
+				5A3D7A5C298806EC0020C74F /* Entity */,
 			);
 			path = Confirm;
 			sourceTree = "<group>";
@@ -226,6 +236,25 @@
 			children = (
 				5A3D7A5D298807C90020C74F /* UserInfoRequest.swift */,
 				5A3D7A5F298807D30020C74F /* UserInfoResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5A3D7A6329883F0A0020C74F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5A7D6FC429861E49002A1996 /* LoginViewController.swift */,
+				5A3D7A69298840950020C74F /* LoginDataManager.swift */,
+				5A3D7A6429883F190020C74F /* Entity */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5A3D7A6429883F190020C74F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A3D7A6529883F310020C74F /* LoginRequest.swift */,
+				5A3D7A6B298841450020C74F /* LoginResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -347,7 +376,6 @@
 				5A3D7A3529874EBA0020C74F /* Register */,
 				5A820B692984FBCB00F3784F /* ViewController.swift */,
 				5A820B6B2984FBCB00F3784F /* Main.storyboard */,
-				5A7D6FC429861E49002A1996 /* LoginViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -530,6 +558,7 @@
 			files = (
 				5A7D6FA2298546F5002A1996 /* Device.swift in Sources */,
 				5A3D7A4329877BE10020C74F /* EmailViewController.swift in Sources */,
+				5A3D7A6C298841450020C74F /* LoginResponse.swift in Sources */,
 				5A3D7A492987907E0020C74F /* PasswordViewController.swift in Sources */,
 				5A7D6FA92985473C002A1996 /* UIColor.swift in Sources */,
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
@@ -551,10 +580,12 @@
 				5A7D6FAF29854754002A1996 /* UIViewController.swift in Sources */,
 				5A7D6FC12985F960002A1996 /* ModalTableViewCell.swift in Sources */,
 				5A7D6FB72985639B002A1996 /* ProfileModalViewController.swift in Sources */,
+				5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */,
 				5A7D6FA0298545E2002A1996 /* IndicatorView.swift in Sources */,
 				5A7D6FAB29854742002A1996 /* UIFont.swift in Sources */,
 				5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */,
 				5A3D7A572987F2CE0020C74F /* FacebookResponse.swift in Sources */,
+				5A3D7A6629883F310020C74F /* LoginRequest.swift in Sources */,
 				5A7D6FA529854724002A1996 /* Date.swift in Sources */,
 				5A7D6F9129853B6E002A1996 /* SearchBarViewController.swift in Sources */,
 				5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */,
@@ -564,6 +595,7 @@
 				5A3D7A4629878A280020C74F /* NameViewController.swift in Sources */,
 				5A7D6FB129854760002A1996 /* UINavigationBar.swift in Sources */,
 				5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */,
+				5A3D7A62298823200020C74F /* ConfirmDataManager.swift in Sources */,
 				5A820B682984FBCB00F3784F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

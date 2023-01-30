@@ -11,11 +11,14 @@ import UIKit
 class PasswordViewController : UIViewController {
     
     var textCnt: Int = 0
+    var pwdData : String = ""
     
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var nextButton : UIButton!
     @IBAction func onClickUserName() {
         if textCnt > 5 {
+            let singleton = UserInfoSingleton.shared
+            singleton.password = pwdData
             guard let userNameVC = self.storyboard?.instantiateViewController(identifier: "UserNameViewController") else {return}
             userNameVC.modalPresentationStyle = .fullScreen
             self.present(userNameVC, animated: true)
@@ -47,6 +50,7 @@ class PasswordViewController : UIViewController {
             if text.count > 5 {
                 nextButton.tintColor = .facebook_check
                 textCnt = text.count
+                pwdData = text
             }
             else {
                 nextButton.tintColor = .facebook_uncheck

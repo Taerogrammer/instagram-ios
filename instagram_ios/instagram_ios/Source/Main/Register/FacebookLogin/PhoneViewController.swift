@@ -11,16 +11,27 @@ import UIKit
 class PhoneViewController : UIViewController {
     
     var textCnt : Int = 0
-    
+    var phoneData : String = ""
+        
     @IBOutlet weak var phoneText: UITextField!
     @IBOutlet weak var facebookContinueView : UIView!
     @IBAction func onClickName() {
-        if textCnt > 0 {
+        if phoneData.validatePhone() == true && textCnt > 0 {
+            let singleton = UserInfoSingleton.shared
+            singleton.phone = phoneData
             guard let nameVC = self.storyboard?.instantiateViewController(identifier: "NameViewController") else {return}
             nameVC.modalPresentationStyle = .fullScreen
             self.present(nameVC, animated: false)
+            
+            print(singleton.phone)
         }
+        else if phoneData.validatePhone() == false {
+            self.presentAlert(title: "핸드폰 형식을 맞춰주세요.\n(01x-xxxx-xxxx)")
+        }
+        
     }
+    
+    
     
     @IBOutlet weak var nextButton: UIButton!
     
@@ -48,6 +59,7 @@ class PhoneViewController : UIViewController {
             if text.count > 0 {
                 nextButton.tintColor = .facebook_check
                 textCnt = text.count
+                phoneData = text
             }
             else {
                 nextButton.tintColor = .facebook_uncheck

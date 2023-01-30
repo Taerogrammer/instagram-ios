@@ -11,10 +11,14 @@ import UIKit
 class UserNameViewController : UIViewController {
     
     var textCnt : Int = 0
+    var userNameData : String = ""
+    
     @IBOutlet weak var userNameText: UITextField!
     @IBOutlet weak var nextButton : UIButton!
     @IBAction func onClickConfirm() {
         if textCnt > 0 {
+            let singleton = UserInfoSingleton.shared
+            singleton.userName = userNameData
             guard let confirmVC = self.storyboard?.instantiateViewController(identifier: "ConfirmViewController") else {return}
             confirmVC.modalPresentationStyle = .fullScreen
             self.present(confirmVC, animated: true)
@@ -43,6 +47,7 @@ class UserNameViewController : UIViewController {
             if text.count > 0 {
                 nextButton.tintColor = .facebook_check
                 textCnt = text.count
+                userNameData = text
             }
             else {
                 nextButton.tintColor = .facebook_uncheck

@@ -14,10 +14,28 @@ class LoginViewController : UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordEyeButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
-    
+    @IBAction func Login(_ sender: AnyObject) {
+        print("Login() success")
+        //ID validation
+        guard let id = idTextField.text?.trim, id.isExists else {
+            self.presentAlert(title: "아이디를 입력해주세요")
+            return
+        }
+        //Password validation
+        guard let password = passwordTextField.text, password.isExists else {
+            self.presentAlert(title: "비밀번호를 입력해주세요")
+            return
+        }
+        //Request Sign In
+        self.dismissKeyboard()
+        self.showIndicator()
+        let input = LoginRequest(loginId: id, password: password)
+        dataManager.postLogin(input, delegate: self)
+    }
+
     var idCnt: Bool = false
     var pwdCnt: Bool = false
-    
+    lazy var dataManager: LoginDataManager = LoginDataManager()
     
     //MARK: password visible
     @IBAction func passwordEyeButtonDidTap(_ sender: Any) {
@@ -28,8 +46,7 @@ class LoginViewController : UIViewController {
         //눈 모양 이미지 변경
         let eyeImage = passwordEyeButton.isSelected ? "login_eye_on" : "login_eye_off"
         passwordEyeButton.setImage(UIImage(named: eyeImage) , for: .normal)
-        
-        
+
         passwordEyeButton.tintColor = .clear
     }
     
@@ -96,6 +113,20 @@ class LoginViewController : UIViewController {
     }
     
     
-    
 }
 
+extension LoginViewController {
+    func didSuccessLogin(_ result: LoginResult) {
+        self.presentAlert(title: "로그인 성공", message: "로그인에 성공하였습니다")
+        //result.jwt
+        print("get jwt")
+//        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+//            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier:"MainViewController")else{return}
+//            self.navigationController?.pushViewController(nextVC, animated: true)
+//        }
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
+}

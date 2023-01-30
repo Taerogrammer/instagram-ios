@@ -11,13 +11,21 @@ import UIKit
 class EmailViewController : UIViewController {
     
     var textCnt : Int = 0
+    var emailData: String = ""
+    
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var facebookContinueView : UIView!
     @IBAction func onClickName() {
-        if textCnt > 0 {
+        if emailData.validateEmail() == true && textCnt > 0 {
+            let singleton = UserInfoSingleton.shared
+            singleton.email = emailData
             guard let nameVC = self.storyboard?.instantiateViewController(identifier: "NameViewController") else {return}
             nameVC.modalPresentationStyle = .fullScreen
             self.present(nameVC, animated: false)
+        }
+        
+        else if emailData.validateEmail() == false {
+            self.presentAlert(title: "이메일 형식을 맞춰주세요.")
         }
     }
     
@@ -46,6 +54,7 @@ class EmailViewController : UIViewController {
             if text.count > 0 {
                 nextButton.tintColor = .facebook_check
                 textCnt = text.count
+                emailData = text
             }
             else {
                 nextButton.tintColor = .facebook_uncheck

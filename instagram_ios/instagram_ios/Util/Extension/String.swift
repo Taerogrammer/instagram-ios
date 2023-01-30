@@ -93,4 +93,24 @@ extension String {
         }
         return self
     }
+    
+    //MARK: regex
+    func validateEmail() -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
+        return predicate.evaluate(with: self)
+    }
+    func validatePhone() -> Bool {
+        let phoneRegEx = "^01([0|1|6|7|8|9]?)-([0-9]{3,4})-([0-9]{4})$"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", phoneRegEx)
+        return predicate.evaluate(with: self)
+    }
+    func validatePassword() -> Bool {
+        let passwordRegEx = "^(?=.*[A-Za-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-]).{8,50}" // 8자리 ~ 50자리 영어+숫자+특수문자
+        let predicate = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+        return predicate.evaluate(with: self)
+    }
+    
+    
+    
 }

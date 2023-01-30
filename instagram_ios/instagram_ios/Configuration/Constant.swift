@@ -7,3 +7,9 @@
 
 import Alamofire
 
+struct Constant {
+    //일반 회원가입 url
+    static let Register_URL = ""
+    static let Facebook_URL = ""
+    
+}

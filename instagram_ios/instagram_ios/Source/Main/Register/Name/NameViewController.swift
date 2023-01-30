@@ -11,10 +11,14 @@ import UIKit
 class NameViewController : UIViewController {
     
     var textCnt : Int = 0
+    var nameData : String = ""
+    
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     @IBAction func onClickPassword() {
         if textCnt > 0 {
+            let singleton = UserInfoSingleton.shared
+            singleton.name = nameData
             guard let passwordVC = self.storyboard?.instantiateViewController(identifier: "PasswordViewController") else {return}
             passwordVC.modalPresentationStyle = .fullScreen
             self.present(passwordVC, animated: true)
@@ -25,6 +29,7 @@ class NameViewController : UIViewController {
         super.viewDidLoad()
         nextButton.tintColor = .facebook_uncheck
         
+
         DispatchQueue.main.async {
             self.CountText()
         }
@@ -43,6 +48,7 @@ class NameViewController : UIViewController {
             if text.count > 0 {
                 nextButton.tintColor = .facebook_check
                 textCnt = text.count
+                nameData = text
             }
             else {
                 nextButton.tintColor = .facebook_uncheck
