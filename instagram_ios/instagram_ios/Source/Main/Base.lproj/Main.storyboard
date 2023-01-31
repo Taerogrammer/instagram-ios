@@ -580,6 +580,111 @@
             </objects>
             <point key="canvasLocation" x="543" y="1573"/>
         </scene>
+        <!--Activity View Controller-->
+        <scene sceneID="JN4-3G-Lsq">
+            <objects>
+                <viewController storyboardIdentifier="ActivityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o3S-8L-pWr" customClass="ActivityViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bJB-UR-fMF">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QZf-bI-Qvd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTm-gQ-EvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774" y="1954"/>
+        </scene>
+        <!--Keep View Controller-->
+        <scene sceneID="t7T-cL-7zm">
+            <objects>
+                <viewController storyboardIdentifier="KeepViewController" id="1C7-5E-VEt" customClass="KeepViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WN2-XT-Uhy">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="BZL-77-ZjA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hMX-nH-mMK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774" y="2775"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7F7-sp-Bob">
+            <objects>
+                <viewController storyboardIdentifier="QRViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fsy-fm-lYb" customClass="QRViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nEo-39-HST">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KL3-0s-sWP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8L-qf-Hgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774" y="3486"/>
+        </scene>
+        <!--Saved View Controller-->
+        <scene sceneID="g5B-58-Hc8">
+            <objects>
+                <viewController storyboardIdentifier="SavedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SJf-Pp-WSv" customClass="SavedViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GHr-v1-Yy3">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ohb-RC-bRN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IlP-Nz-R3b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774" y="4245"/>
+        </scene>
+        <!--Digital View Controller-->
+        <scene sceneID="aqe-mU-QdT">
+            <objects>
+                <viewController storyboardIdentifier="DigitalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xs7-cR-Eiy" customClass="DigitalViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dyI-cG-kNY">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="sSQ-zy-zvE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9NH-cl-LK3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774" y="5040"/>
+        </scene>
+        <!--Best Friends View Controller-->
+        <scene sceneID="2nR-ak-SG9">
+            <objects>
+                <viewController storyboardIdentifier="BestFriendsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="plw-b4-frN" customClass="BestFriendsViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QRK-ZB-ZUU">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jeH-D6-YGO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yN9-cd-2JK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774" y="5772"/>
+        </scene>
+        <!--Favorite View Controller-->
+        <scene sceneID="1UI-aM-UCt">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gfC-el-YRJ" customClass="FavoriteViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qau-AS-HeY">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rPA-W6-N11"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jDq-oJ-lID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2774" y="6558"/>
+        </scene>
         <!--ProfileViewController-->
         <scene sceneID="lbX-9f-fbY">
             <objects>
@@ -588,7 +693,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gg-oo-0Zh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="1636"/>
+            <point key="canvasLocation" x="543" y="2280"/>
         </scene>
         <!--Setting View Controller-->
         <scene sceneID="qVJ-uz-TIT">
@@ -597,14 +702,183 @@
                     <view key="view" contentMode="scaleToFill" id="iB0-LF-7pU">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rB-av-978">
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6f-Je-xc4">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="900"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" placeholder="검색" translatesAutoresizingMaskIntoConstraints="NO" id="RNb-Ne-ivc">
+                                                <rect key="frame" x="0.0" y="0.0" width="430" height="56"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="YPr-7a-E4M" id="vbe-tA-O0F"/>
+                                                </connections>
+                                            </searchBar>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWy-bZ-kba">
+                                                <rect key="frame" x="0.0" y="56" width="430" height="480"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="smh-qW-8ws">
+                                                        <rect key="frame" x="0.0" y="0.0" width="430" height="480"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCy-n7-KwM">
+                                                                <rect key="frame" x="0.0" y="0.0" width="430" height="53.333333333333336"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List1"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <segue destination="9Ub-gz-y5l" kind="show" id="EG1-o3-3KJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPL-Bs-Tpg">
+                                                                <rect key="frame" x="0.0" y="53.333333333333343" width="430" height="53.333333333333343"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List2"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7o-ib-cwa">
+                                                                <rect key="frame" x="0.0" y="106.66666666666667" width="430" height="53.333333333333329"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List3"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-1b-Kbm">
+                                                                <rect key="frame" x="0.0" y="160" width="430" height="53.333333333333343"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List4"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcB-qE-Znu">
+                                                                <rect key="frame" x="0.0" y="213.33333333333331" width="430" height="53.333333333333314"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List5"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-UD-4WK">
+                                                                <rect key="frame" x="0.0" y="266.66666666666669" width="430" height="53.333333333333314"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List6"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-IZ-lTB">
+                                                                <rect key="frame" x="0.0" y="320" width="430" height="53.333333333333314"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List7"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7x-cF-UZX">
+                                                                <rect key="frame" x="0.0" y="373.33333333333337" width="430" height="53.333333333333314"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List8"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-XW-oGG">
+                                                                <rect key="frame" x="0.0" y="426.66666666666663" width="430" height="53.333333333333314"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain">
+                                                                    <backgroundConfiguration key="background" image="List9"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="trailing" secondItem="lLf-1b-Kbm" secondAttribute="trailing" id="0nF-TD-ddX"/>
+                                                            <constraint firstItem="Z7o-ib-cwa" firstAttribute="height" secondItem="lLf-1b-Kbm" secondAttribute="height" id="1gQ-Bj-0PM"/>
+                                                            <constraint firstItem="QJU-IZ-lTB" firstAttribute="height" secondItem="r7x-cF-UZX" secondAttribute="height" id="2dI-Cf-Jau"/>
+                                                            <constraint firstItem="LJ8-XW-oGG" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="309-1x-8XC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="fcB-qE-Znu" secondAttribute="trailing" id="3GU-pK-cE9"/>
+                                                            <constraint firstAttribute="trailing" secondItem="QCy-n7-KwM" secondAttribute="trailing" id="3U2-DN-fFK"/>
+                                                            <constraint firstItem="lLf-1b-Kbm" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="3WR-Ll-OJl"/>
+                                                            <constraint firstItem="r7x-cF-UZX" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="7nE-Gb-aXe"/>
+                                                            <constraint firstAttribute="trailing" secondItem="LJ8-XW-oGG" secondAttribute="trailing" id="Mhm-UV-cp8"/>
+                                                            <constraint firstItem="jPL-Bs-Tpg" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="Ras-iT-5pA"/>
+                                                            <constraint firstItem="fcB-qE-Znu" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="UUS-Uv-BDb"/>
+                                                            <constraint firstAttribute="trailing" secondItem="jPL-Bs-Tpg" secondAttribute="trailing" id="Wv1-uI-9g4"/>
+                                                            <constraint firstItem="lLf-1b-Kbm" firstAttribute="height" secondItem="fcB-qE-Znu" secondAttribute="height" id="X55-2D-O77"/>
+                                                            <constraint firstItem="jPL-Bs-Tpg" firstAttribute="height" secondItem="Z7o-ib-cwa" secondAttribute="height" id="Xjn-Hy-ufH"/>
+                                                            <constraint firstAttribute="trailing" secondItem="r7x-cF-UZX" secondAttribute="trailing" id="ZT5-gX-a1J"/>
+                                                            <constraint firstItem="dLE-UD-4WK" firstAttribute="height" secondItem="QJU-IZ-lTB" secondAttribute="height" id="b4S-nC-BD3"/>
+                                                            <constraint firstAttribute="trailing" secondItem="QJU-IZ-lTB" secondAttribute="trailing" id="dI0-C5-zNh"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Z7o-ib-cwa" secondAttribute="trailing" id="fma-e6-wbj"/>
+                                                            <constraint firstItem="QJU-IZ-lTB" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="gee-zn-ogT"/>
+                                                            <constraint firstItem="fcB-qE-Znu" firstAttribute="height" secondItem="dLE-UD-4WK" secondAttribute="height" id="hE0-VK-6mT"/>
+                                                            <constraint firstItem="QCy-n7-KwM" firstAttribute="height" secondItem="jPL-Bs-Tpg" secondAttribute="height" id="mdJ-3a-nJk"/>
+                                                            <constraint firstItem="Z7o-ib-cwa" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="mi9-na-itH"/>
+                                                            <constraint firstAttribute="trailing" secondItem="dLE-UD-4WK" secondAttribute="trailing" id="tXc-6s-eDw"/>
+                                                            <constraint firstItem="QCy-n7-KwM" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="tYV-bj-8qO"/>
+                                                            <constraint firstItem="r7x-cF-UZX" firstAttribute="height" secondItem="LJ8-XW-oGG" secondAttribute="height" id="zab-fd-1ZA"/>
+                                                            <constraint firstItem="dLE-UD-4WK" firstAttribute="leading" secondItem="smh-qW-8ws" secondAttribute="leading" id="zsK-No-K5N"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="smh-qW-8ws" firstAttribute="top" secondItem="zWy-bZ-kba" secondAttribute="top" id="FBe-go-T3e"/>
+                                                    <constraint firstAttribute="bottom" secondItem="smh-qW-8ws" secondAttribute="bottom" id="XNj-g1-gvX"/>
+                                                    <constraint firstItem="smh-qW-8ws" firstAttribute="leading" secondItem="zWy-bZ-kba" secondAttribute="leading" id="ZCO-kk-clb"/>
+                                                    <constraint firstAttribute="trailing" secondItem="smh-qW-8ws" secondAttribute="trailing" id="aeb-wV-Teo"/>
+                                                    <constraint firstAttribute="height" constant="480" id="nMY-Br-HJa"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="zWy-bZ-kba" firstAttribute="leading" secondItem="z6f-Je-xc4" secondAttribute="leading" id="8QH-TJ-1Mi"/>
+                                            <constraint firstAttribute="trailing" secondItem="zWy-bZ-kba" secondAttribute="trailing" id="FKZ-K3-sk3"/>
+                                            <constraint firstAttribute="height" constant="900" id="HZG-oR-gC9"/>
+                                            <constraint firstAttribute="trailing" secondItem="RNb-Ne-ivc" secondAttribute="trailing" id="VYz-OW-4Id"/>
+                                            <constraint firstItem="RNb-Ne-ivc" firstAttribute="top" secondItem="z6f-Je-xc4" secondAttribute="top" id="bjI-HN-Qp4"/>
+                                            <constraint firstItem="RNb-Ne-ivc" firstAttribute="leading" secondItem="z6f-Je-xc4" secondAttribute="leading" id="iPx-C2-Hob"/>
+                                            <constraint firstItem="zWy-bZ-kba" firstAttribute="top" secondItem="RNb-Ne-ivc" secondAttribute="bottom" id="wOg-Zn-cri"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="z6f-Je-xc4" firstAttribute="leading" secondItem="od1-N5-VA9" secondAttribute="leading" id="67j-eC-Zes"/>
+                                    <constraint firstItem="z6f-Je-xc4" firstAttribute="width" secondItem="TDw-IY-rbI" secondAttribute="width" id="S6H-dJ-isZ"/>
+                                    <constraint firstItem="z6f-Je-xc4" firstAttribute="trailing" secondItem="od1-N5-VA9" secondAttribute="trailing" id="ngt-oW-tyl"/>
+                                    <constraint firstItem="z6f-Je-xc4" firstAttribute="bottom" secondItem="od1-N5-VA9" secondAttribute="bottom" id="re1-AY-oaP"/>
+                                    <constraint firstItem="z6f-Je-xc4" firstAttribute="top" secondItem="od1-N5-VA9" secondAttribute="top" id="v05-wk-jcP"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="od1-N5-VA9"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="TDw-IY-rbI"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nop-us-p2p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0rB-av-978" firstAttribute="top" secondItem="nop-us-p2p" secondAttribute="top" id="35O-UR-fpo"/>
+                            <constraint firstItem="nop-us-p2p" firstAttribute="bottom" secondItem="0rB-av-978" secondAttribute="bottom" id="INb-qI-gxC"/>
+                            <constraint firstItem="nop-us-p2p" firstAttribute="trailing" secondItem="0rB-av-978" secondAttribute="trailing" id="Kd9-xc-sYv"/>
+                            <constraint firstItem="0rB-av-978" firstAttribute="leading" secondItem="nop-us-p2p" secondAttribute="leading" id="jye-ds-k7d"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VPf-Z1-RzZ"/>
+                    <connections>
+                        <outlet property="testView" destination="zWy-bZ-kba" id="Pk2-HZ-YPC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIE-Ye-Hpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2747" y="1573"/>
+            <point key="canvasLocation" x="2774" y="1192"/>
+        </scene>
+        <!--FollowViewController-->
+        <scene sceneID="uud-TM-z8A">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FollowViewController" storyboardName="FollowViewController" referencedIdentifier="FollowViewController" id="9Ub-gz-y5l" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dOZ-io-1eI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bL7-nZ-nAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3578" y="1002"/>
         </scene>
         <!--Item-->
         <scene sceneID="Sa3-mt-MiB">
@@ -785,6 +1059,15 @@
         <segue reference="6nG-h2-FCC"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="List1" width="869" height="133"/>
+        <image name="List2" width="869" height="133"/>
+        <image name="List3" width="869" height="133"/>
+        <image name="List4" width="869" height="133"/>
+        <image name="List5" width="869" height="133"/>
+        <image name="List6" width="869" height="133"/>
+        <image name="List7" width="869" height="133"/>
+        <image name="List8" width="869" height="133"/>
+        <image name="List9" width="869" height="133"/>
         <image name="facebook_circle" width="100" height="90"/>
         <image name="facebook_logo" width="25" height="25"/>
         <image name="home_instagram" width="120" height="45"/>

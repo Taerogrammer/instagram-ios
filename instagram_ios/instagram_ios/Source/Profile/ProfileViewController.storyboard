@@ -36,7 +36,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G57-ze-UFp">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="800"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mz3-HU-5Ft">
                                                 <rect key="frame" x="15" y="0.0" width="363" height="120"/>
@@ -144,9 +144,6 @@
                                                             </attributedString>
                                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                                         </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="goToDemo" destination="kEa-MC-KQd" eventType="touchUpInside" id="ivP-zy-WtR"/>
-                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPj-Wb-hlK">
                                                         <rect key="frame" x="162.33333333333337" y="0.0" width="152.66666666666663" height="35"/>
@@ -182,21 +179,45 @@
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1o-62-h4t">
-                                                <rect key="frame" x="0.0" y="322" width="393" height="678"/>
+                                                <rect key="frame" x="0.0" y="322" width="393" height="478"/>
                                                 <subviews>
                                                     <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kaO-nQ-Mlu">
-                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="393" height="43"/>
                                                         <segments>
                                                             <segment title="" image="myfeed_checked"/>
-                                                            <segment title="" image="tagfeed_unchecked"/>
+                                                            <segment title="" image="tagfeed_checked"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="segmentedControlUnderLine:" destination="kEa-MC-KQd" eventType="valueChanged" id="dpw-Am-0RY"/>
+                                                            <action selector="switchViews:" destination="kEa-MC-KQd" eventType="valueChanged" id="HUT-Yq-bSV"/>
+                                                        </connections>
                                                     </segmentedControl>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iL3-FK-0Pu">
+                                                        <rect key="frame" x="0.0" y="42" width="393" height="436"/>
+                                                        <connections>
+                                                            <segue destination="aUt-I0-4mm" kind="embed" id="n9e-5m-UAB"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNl-QZ-EmM">
+                                                        <rect key="frame" x="0.0" y="42" width="393" height="436"/>
+                                                        <connections>
+                                                            <segue destination="fRe-cU-j40" kind="embed" id="xWh-43-QkE"/>
+                                                        </connections>
+                                                    </containerView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="kaO-nQ-Mlu" secondAttribute="trailing" id="3UD-ea-iXh"/>
+                                                    <constraint firstItem="iL3-FK-0Pu" firstAttribute="leading" secondItem="x1o-62-h4t" secondAttribute="leading" id="6KG-mQ-Oy1"/>
                                                     <constraint firstItem="kaO-nQ-Mlu" firstAttribute="top" secondItem="x1o-62-h4t" secondAttribute="top" id="A2s-kD-6Xx"/>
+                                                    <constraint firstAttribute="bottom" secondItem="iL3-FK-0Pu" secondAttribute="bottom" id="GSM-kh-w0M"/>
+                                                    <constraint firstAttribute="trailing" secondItem="eNl-QZ-EmM" secondAttribute="trailing" id="LOQ-Fi-Nf5"/>
+                                                    <constraint firstItem="eNl-QZ-EmM" firstAttribute="leading" secondItem="x1o-62-h4t" secondAttribute="leading" id="PVH-VI-Hua"/>
+                                                    <constraint firstItem="iL3-FK-0Pu" firstAttribute="top" secondItem="kaO-nQ-Mlu" secondAttribute="bottom" id="ZIF-KE-zc2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="eNl-QZ-EmM" secondAttribute="bottom" id="aOj-wQ-bUW"/>
+                                                    <constraint firstItem="eNl-QZ-EmM" firstAttribute="top" secondItem="kaO-nQ-Mlu" secondAttribute="bottom" id="dS6-FL-vOq"/>
                                                     <constraint firstItem="kaO-nQ-Mlu" firstAttribute="leading" secondItem="x1o-62-h4t" secondAttribute="leading" id="fQ2-o6-170"/>
+                                                    <constraint firstAttribute="trailing" secondItem="iL3-FK-0Pu" secondAttribute="trailing" id="gUs-vg-UC1"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -209,7 +230,7 @@
                                             <constraint firstItem="vJl-Q4-rLM" firstAttribute="top" secondItem="hxF-6G-PzN" secondAttribute="bottom" constant="15" id="EyM-RT-aXM"/>
                                             <constraint firstItem="mz3-HU-5Ft" firstAttribute="top" secondItem="G57-ze-UFp" secondAttribute="top" id="GWS-gr-PIL"/>
                                             <constraint firstItem="mz3-HU-5Ft" firstAttribute="leading" secondItem="G57-ze-UFp" secondAttribute="leading" constant="15" id="HDS-a2-bjG"/>
-                                            <constraint firstAttribute="height" constant="1000" id="HpY-Vq-1WT"/>
+                                            <constraint firstAttribute="height" constant="800" id="HpY-Vq-1WT"/>
                                             <constraint firstItem="x1o-62-h4t" firstAttribute="top" secondItem="vJl-Q4-rLM" secondAttribute="bottom" constant="10" id="MJf-vy-n91"/>
                                             <constraint firstItem="hxF-6G-PzN" firstAttribute="leading" secondItem="G57-ze-UFp" secondAttribute="leading" constant="15" id="NPj-Wx-gd5"/>
                                             <constraint firstItem="vJl-Q4-rLM" firstAttribute="leading" secondItem="G57-ze-UFp" secondAttribute="leading" constant="15" id="PDS-cW-kf1"/>
@@ -219,6 +240,7 @@
                                             <constraint firstAttribute="bottom" secondItem="x1o-62-h4t" secondAttribute="bottom" id="pTd-Ss-XpI"/>
                                             <constraint firstItem="nx1-Ph-n3Z" firstAttribute="height" secondItem="mz3-HU-5Ft" secondAttribute="height" multiplier="0.5" id="syF-wi-SyQ"/>
                                             <constraint firstAttribute="trailing" secondItem="nx1-Ph-n3Z" secondAttribute="trailing" constant="15" id="uon-iB-DaJ"/>
+                                            <constraint firstItem="kaO-nQ-Mlu" firstAttribute="height" secondItem="hxF-6G-PzN" secondAttribute="height" multiplier="1.2" id="wUb-uT-vxo"/>
                                             <constraint firstItem="nx1-Ph-n3Z" firstAttribute="leading" secondItem="G57-ze-UFp" secondAttribute="leading" constant="15" id="xuj-1h-pcv"/>
                                             <constraint firstAttribute="trailing" secondItem="vJl-Q4-rLM" secondAttribute="trailing" constant="15" id="yB8-8k-qF2"/>
                                         </constraints>
@@ -248,19 +270,50 @@
                     <connections>
                         <outlet property="feedView" destination="x1o-62-h4t" id="qp9-oT-kax"/>
                         <outlet property="highlightView" destination="vJl-Q4-rLM" id="OKs-EU-J6v"/>
+                        <outlet property="myFeedView" destination="iL3-FK-0Pu" id="P8F-nu-wNv"/>
+                        <outlet property="segmentedControl" destination="kaO-nQ-Mlu" id="RLb-4I-2a8"/>
                         <outlet property="storyHighlight" destination="MJf-vy-n91" id="FJ9-69-rTG"/>
+                        <outlet property="tagFeedView" destination="eNl-QZ-EmM" id="H5J-BC-esK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbS-fh-032" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1464.885496183206" y="-35.211267605633807"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="IrC-af-cu7">
+            <objects>
+                <viewController id="aUt-I0-4mm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dsc-S3-aAK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6yH-Yh-0rB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2179" y="535"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uhb-Ju-DEd">
+            <objects>
+                <viewController id="fRe-cU-j40" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HtV-Zs-fX0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="436"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pnw-RC-ugZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-809" y="551"/>
+        </scene>
     </scenes>
     <resources>
         <image name="facebook_circle" width="100" height="90"/>
         <image name="myfeed_checked" width="32" height="30"/>
         <image name="profile_friend" width="20" height="21"/>
-        <image name="tagfeed_unchecked" width="32" height="30"/>
+        <image name="tagfeed_checked" width="32" height="33"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -269,9 +322,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

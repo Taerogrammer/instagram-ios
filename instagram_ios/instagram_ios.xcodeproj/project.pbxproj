@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A09627A29892B51001A472E /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09627929892B51001A472E /* UISegmentedControl.swift */; };
+		5A09627D29892F81001A472E /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09627C29892F81001A472E /* FollowViewController.swift */; };
+		5A09627F29892F95001A472E /* FollowViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A09627E29892F95001A472E /* FollowViewController.storyboard */; };
+		5A0962812989334E001A472E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0962802989334E001A472E /* UIView.swift */; };
+		5A09628B29893B9B001A472E /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09628A29893B9B001A472E /* ActivityViewController.swift */; };
+		5A09628D29893BDC001A472E /* KeepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09628C29893BDC001A472E /* KeepViewController.swift */; };
+		5A09628F29893C16001A472E /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09628E29893C16001A472E /* QRViewController.swift */; };
+		5A09629129893C43001A472E /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09629029893C43001A472E /* SavedViewController.swift */; };
+		5A09629329893C85001A472E /* DigitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09629229893C85001A472E /* DigitalViewController.swift */; };
+		5A09629529893CBE001A472E /* BestFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09629429893CBE001A472E /* BestFriendsViewController.swift */; };
+		5A09629729893CF6001A472E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09629629893CF6001A472E /* FavoriteViewController.swift */; };
 		5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */; };
 		5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A38298757F30020C74F /* InfoViewController.swift */; };
 		5A3D7A3C2987580E0020C74F /* InfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3B2987580E0020C74F /* InfoViewController.storyboard */; };
@@ -67,6 +78,17 @@
 
 /* Begin PBXFileReference section */
 		3CC65BFA27945CCE918CE860 /* Pods-instagram_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios/Pods-instagram_ios.release.xcconfig"; sourceTree = "<group>"; };
+		5A09627929892B51001A472E /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
+		5A09627C29892F81001A472E /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		5A09627E29892F95001A472E /* FollowViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FollowViewController.storyboard; sourceTree = "<group>"; };
+		5A0962802989334E001A472E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		5A09628A29893B9B001A472E /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		5A09628C29893BDC001A472E /* KeepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepViewController.swift; sourceTree = "<group>"; };
+		5A09628E29893C16001A472E /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		5A09629029893C43001A472E /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		5A09629229893C85001A472E /* DigitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalViewController.swift; sourceTree = "<group>"; };
+		5A09629429893CBE001A472E /* BestFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestFriendsViewController.swift; sourceTree = "<group>"; };
+		5A09629629893CF6001A472E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5A3D7A38298757F30020C74F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		5A3D7A3B2987580E0020C74F /* InfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoViewController.storyboard; sourceTree = "<group>"; };
@@ -152,8 +174,138 @@
 			isa = PBXGroup;
 			children = (
 				5AE866CC29889D5800903022 /* SettingViewController.swift */,
+				5A09627B29892F74001A472E /* Follow */,
+				5A096282298939DD001A472E /* Alarm */,
+				5A096283298939F6001A472E /* Private */,
+				5A096284298939FB001A472E /* Manage */,
+				5A09628529893A1D001A472E /* Security */,
+				5A09628629893A39001A472E /* Advertise */,
+				5A09628729893A4A001A472E /* Account */,
+				5A09628829893A51001A472E /* Help */,
+				5A09628929893A55001A472E /* Information */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		5A09627129890E9A001A472E /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				5A09628A29893B9B001A472E /* ActivityViewController.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		5A09627229890EAD001A472E /* Keep */ = {
+			isa = PBXGroup;
+			children = (
+				5A09628C29893BDC001A472E /* KeepViewController.swift */,
+			);
+			path = Keep;
+			sourceTree = "<group>";
+		};
+		5A09627329890EC1001A472E /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				5A09628E29893C16001A472E /* QRViewController.swift */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		5A09627429890EC9001A472E /* Saved */ = {
+			isa = PBXGroup;
+			children = (
+				5A09629029893C43001A472E /* SavedViewController.swift */,
+			);
+			path = Saved;
+			sourceTree = "<group>";
+		};
+		5A09627529890ECF001A472E /* Digital */ = {
+			isa = PBXGroup;
+			children = (
+				5A09629229893C85001A472E /* DigitalViewController.swift */,
+			);
+			path = Digital;
+			sourceTree = "<group>";
+		};
+		5A09627629890ED5001A472E /* BestFriends */ = {
+			isa = PBXGroup;
+			children = (
+				5A09629429893CBE001A472E /* BestFriendsViewController.swift */,
+			);
+			path = BestFriends;
+			sourceTree = "<group>";
+		};
+		5A09627729890EEB001A472E /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				5A09629629893CF6001A472E /* FavoriteViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		5A09627B29892F74001A472E /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+				5A09627C29892F81001A472E /* FollowViewController.swift */,
+				5A09627E29892F95001A472E /* FollowViewController.storyboard */,
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		5A096282298939DD001A472E /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		5A096283298939F6001A472E /* Private */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		5A096284298939FB001A472E /* Manage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manage;
+			sourceTree = "<group>";
+		};
+		5A09628529893A1D001A472E /* Security */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		5A09628629893A39001A472E /* Advertise */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Advertise;
+			sourceTree = "<group>";
+		};
+		5A09628729893A4A001A472E /* Account */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		5A09628829893A51001A472E /* Help */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		5A09628929893A55001A472E /* Information */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Information;
 			sourceTree = "<group>";
 		};
 		5A3D7A3529874EBA0020C74F /* Register */ = {
@@ -335,7 +487,9 @@
 				5A7D6FAC2985474B002A1996 /* UIButton.swift */,
 				5A7D6FAE29854754002A1996 /* UIViewController.swift */,
 				5A7D6FB029854760002A1996 /* UINavigationBar.swift */,
+				5A0962802989334E001A472E /* UIView.swift */,
 				5A4B3AF02988BE38009C221F /* UINavigationController.swift */,
+				5A09627929892B51001A472E /* UISegmentedControl.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -347,6 +501,13 @@
 				5A7D6FC02985F960002A1996 /* ModalTableViewCell.swift */,
 				5A7D6FBA298566B5002A1996 /* ProfileModalViewController.storyboard */,
 				5A09627029890B53001A472E /* Setting */,
+				5A09627129890E9A001A472E /* Activity */,
+				5A09627229890EAD001A472E /* Keep */,
+				5A09627329890EC1001A472E /* QR */,
+				5A09627429890EC9001A472E /* Saved */,
+				5A09627529890ECF001A472E /* Digital */,
+				5A09627629890ED5001A472E /* BestFriends */,
+				5A09627729890EEB001A472E /* Favorites */,
 			);
 			path = Profile_Modal;
 			sourceTree = "<group>";
@@ -509,6 +670,7 @@
 				5A820B722984FBCD00F3784F /* LaunchScreen.storyboard in Resources */,
 				5A7D6F9E2985456B002A1996 /* NotoSansCJKkr-Bold.otf in Resources */,
 				5A820B6F2984FBCD00F3784F /* Assets.xcassets in Resources */,
+				5A09627F29892F95001A472E /* FollowViewController.storyboard in Resources */,
 				5A3D7A3C2987580E0020C74F /* InfoViewController.storyboard in Resources */,
 				5A7D6FBB298566B5002A1996 /* ProfileModalViewController.storyboard in Resources */,
 				5A820B8129850F0600F3784F /* ProfileViewController.storyboard in Resources */,
@@ -578,10 +740,13 @@
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
 				5A7D6FA729854736002A1996 /* String.swift in Sources */,
 				5A3D7A4F298793260020C74F /* ConfirmViewController.swift in Sources */,
+				5A09629129893C43001A472E /* SavedViewController.swift in Sources */,
 				5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */,
 				5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */,
+				5A09628F29893C16001A472E /* QRViewController.swift in Sources */,
 				5A3D7A5B2987F77A0020C74F /* PhoneViewController.swift in Sources */,
 				5A7D6FC529861E49002A1996 /* LoginViewController.swift in Sources */,
+				5A09627D29892F81001A472E /* FollowViewController.swift in Sources */,
 				5A3D7A522987AD920020C74F /* FacebookViewController.swift in Sources */,
 				5A3D7A5E298807C90020C74F /* UserInfoRequest.swift in Sources */,
 				5A7D6FB3298548C9002A1996 /* ShopNavigationBarViewController.swift in Sources */,
@@ -596,9 +761,13 @@
 				5A7D6FC12985F960002A1996 /* ModalTableViewCell.swift in Sources */,
 				5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */,
 				5A7D6FB72985639B002A1996 /* ProfileModalViewController.swift in Sources */,
+				5A09627A29892B51001A472E /* UISegmentedControl.swift in Sources */,
 				5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */,
 				5A7D6FA0298545E2002A1996 /* IndicatorView.swift in Sources */,
+				5A0962812989334E001A472E /* UIView.swift in Sources */,
 				5A7D6FAB29854742002A1996 /* UIFont.swift in Sources */,
+				5A09629729893CF6001A472E /* FavoriteViewController.swift in Sources */,
+				5A09629529893CBE001A472E /* BestFriendsViewController.swift in Sources */,
 				5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */,
 				5A3D7A572987F2CE0020C74F /* FacebookResponse.swift in Sources */,
 				5A3D7A6629883F310020C74F /* LoginRequest.swift in Sources */,
@@ -606,12 +775,15 @@
 				5A7D6F9129853B6E002A1996 /* SearchBarViewController.swift in Sources */,
 				5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */,
 				5A820B662984FBCB00F3784F /* AppDelegate.swift in Sources */,
+				5A09629329893C85001A472E /* DigitalViewController.swift in Sources */,
+				5A09628D29893BDC001A472E /* KeepViewController.swift in Sources */,
 				5A3D7A552987F2110020C74F /* FacebookRequest.swift in Sources */,
 				5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */,
 				5A3D7A4629878A280020C74F /* NameViewController.swift in Sources */,
 				5A7D6FB129854760002A1996 /* UINavigationBar.swift in Sources */,
 				5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */,
 				5A3D7A62298823200020C74F /* ConfirmDataManager.swift in Sources */,
+				5A09628B29893B9B001A472E /* ActivityViewController.swift in Sources */,
 				5A820B682984FBCB00F3784F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

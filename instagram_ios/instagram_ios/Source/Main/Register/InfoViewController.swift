@@ -20,6 +20,12 @@ class InfoViewController : UIViewController {
         
         navigationBar()
         defaultSeg()
+        segmentedControl.addUnderlineForSelectedSegment()
+        
+        let deviderImage = UIImage()
+        self.segmentedControl.setDividerImage(deviderImage, forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
+        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, .font: UIFont.systemFont(ofSize: 20, weight: .semibold)], for: .normal)
+        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, .font: UIFont.systemFont(ofSize: 20, weight: .semibold)], for: .selected)
         
     }
     
@@ -66,13 +72,15 @@ class InfoViewController : UIViewController {
         self.segmentedControl.setBackgroundImage(backgroundImage, for: .normal, barMetrics: .default)
         self.segmentedControl.setBackgroundImage(backgroundImage, for: .selected, barMetrics: .default)
         self.segmentedControl.setBackgroundImage(backgroundImage, for: .highlighted, barMetrics: .default)
-        
-        let deviderImage = UIImage()
-        self.segmentedControl.setDividerImage(deviderImage, forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
-        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, .font: UIFont.systemFont(ofSize: 20, weight: .semibold)], for: .normal)
-        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, .font: UIFont.systemFont(ofSize: 20, weight: .semibold)], for: .selected)
+
     }
-    
+    @IBAction func segmentedControlDidChange(_ sender: UISegmentedControl){
+            segmentedControl.changeUnderlinePosition()
+//        let deviderImage = UIImage()
+//        self.segmentedControl.setDividerImage(deviderImage, forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
+//        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, .font: UIFont.systemFont(ofSize: 20, weight: .semibold)], for: .normal)
+//        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, .font: UIFont.systemFont(ofSize: 20, weight: .semibold)], for: .selected)
+        }
     
     
 }

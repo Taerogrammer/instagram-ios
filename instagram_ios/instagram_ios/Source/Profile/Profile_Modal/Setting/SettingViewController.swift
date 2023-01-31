@@ -15,11 +15,19 @@ class SettingViewController : UIViewController {
         super.viewDidLoad()
         print("SettingViewController loaded")
         navibar()
+        border()
+    }
+    
+    @IBOutlet weak var testView : UIView!
+    
+    func border() {
+        testView.layer.addBorder([.bottom], color: UIColor.gray, width: 0.5)
     }
     
     
     
     func navibar() {
+        title = "설정"
         let instaImage = UIImage(named: "backBtn")!
 
         let instaBtn = UIButton(frame: CGRect(
@@ -42,6 +50,6 @@ class SettingViewController : UIViewController {
     }
     
     @objc func onClickBack() {
-        print("onClickBack()")
+        self.navigationController?.popViewController(animated: true)
     }
 }
