@@ -12,6 +12,11 @@ class ProfileModalViewController : UIViewController, UISheetPresentationControll
     
     @IBOutlet weak var modalTableView : UITableView!
     
+    weak var delegate: SettingModalProtocol?
+    
+    var rootView: ProfileNavigationBarViewController?
+
+    
     let menuList = ["설정", "내 활동", "보관", "QR 코드", "저장됨", "디지털 자산", "친한 친구", "즐겨찾기"]
     let imageArray: Array<UIImage> = [UIImage(named:"menu1" )!, UIImage(named: "menu2")!, UIImage(named:"menu3")!, UIImage(named: "menu4")!, UIImage(named: "menu5")!, UIImage(named: "menu6")!, UIImage(named: "menu7")!, UIImage(named: "menu8")!]
     
@@ -76,16 +81,11 @@ extension ProfileModalViewController: UITableViewDelegate, UITableViewDataSource
         let segueIdentifier: String
         switch indexPath.row {
         case 0: //For "one"
-//             segueIdentifier = "showView1"
-//            self.modalPresentationStyle = .fullScreen
             print("설정 clicked")
-            
-//            let vcName = self.storyboard?.instantiateViewController(withIdentifier: "firstVC")
-//            vcName?.modalPresentationStyle = .fullScreen
-//            vcName?.modalTransitionStyle = .coverVertical
-//            self.navigationController?.pushViewController(vcName!, animated: true)
-//            self.present(vcName!, animated: true, completion: nil)
-            
+
+            delegate?.deliverySetting()
+            self.dismiss(animated: true, completion: nil)
+
         case 1: //For "two"
              segueIdentifier = "showView2"
         default: //For "three"
@@ -95,7 +95,9 @@ extension ProfileModalViewController: UITableViewDelegate, UITableViewDataSource
 
         
     }
-    
-    
-    
+
+}
+
+protocol SettingModalProtocol: class {
+    func deliverySetting()
 }

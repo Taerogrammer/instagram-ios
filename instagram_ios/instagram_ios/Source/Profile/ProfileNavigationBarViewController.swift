@@ -8,17 +8,23 @@
 import Foundation
 import UIKit
 
-class ProfileNavigationBarViewController : UIViewController {
+class ProfileNavigationBarViewController : UIViewController, SettingModalProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Profile NAVIGATION BAR")
         navigationBarSetting()
     }
     
+    func deliverySetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("clicked")
+        
+    }
+
     
-    
-    
+
     
     
     
@@ -71,14 +77,10 @@ class ProfileNavigationBarViewController : UIViewController {
     }
     @objc func onClickMenu() {
         print("onClickMenu()")
-
         let storyboard = UIStoryboard(name: "ProfileModalViewController", bundle: nil)
         let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "ProfileModalViewController") as! ProfileModalViewController
-
+        sheetPresentationController.rootView = self
+        sheetPresentationController.delegate = self
         self.present(sheetPresentationController, animated: true)
-        
     }
-    
-    
-    
 }

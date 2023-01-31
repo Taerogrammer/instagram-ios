@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MZd-5j-sWL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="boD-5H-O20">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -415,27 +415,27 @@
             <objects>
                 <viewController storyboardIdentifier="FacebookViewController" id="EaB-Cm-XBA" customClass="FacebookViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kDH-2B-jcA">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_circle" translatesAutoresizingMaskIntoConstraints="NO" id="enu-fZ-Kwh">
-                                <rect key="frame" x="95" y="179" width="240" height="128"/>
+                                <rect key="frame" x="95" y="223" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="enu-fZ-Kwh" secondAttribute="height" multiplier="15:8" id="9rY-fY-9Bb"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호 또는 이메일 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qz0-45-Zeh">
-                                <rect key="frame" x="25" y="407" width="380" height="34"/>
+                                <rect key="frame" x="25" y="451" width="380" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29q-AV-5zy">
-                                <rect key="frame" x="25" y="441" width="380" height="38"/>
+                                <rect key="frame" x="25" y="485" width="380" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-6J-GUQ">
-                                <rect key="frame" x="25" y="489" width="380" height="34.333333333333371"/>
+                                <rect key="frame" x="25" y="533" width="380" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그인"/>
                                 <connections>
@@ -475,6 +475,7 @@
         <scene sceneID="yzz-PW-DZD">
             <objects>
                 <tabBarController id="boD-5H-O20" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="nU7-Po-Enx"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1Ei-fj-hRn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -548,7 +549,7 @@
         <!--Profile Navigation Bar View Controller-->
         <scene sceneID="M5K-Ja-oSZ">
             <objects>
-                <viewController id="8vw-hz-O2j" customClass="ProfileNavigationBarViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileNavigationBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8vw-hz-O2j" customClass="ProfileNavigationBarViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n0G-wo-cxP">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -571,6 +572,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabbar_profile" id="5lF-9t-Phl"/>
                     <navigationItem key="navigationItem" id="msI-Bu-Mqe"/>
+                    <connections>
+                        <segue destination="YPr-7a-E4M" kind="show" id="YiH-lN-bN1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxa-21-n7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -584,7 +588,23 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gg-oo-0Zh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="1573"/>
+            <point key="canvasLocation" x="1900" y="1636"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="qVJ-uz-TIT">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YPr-7a-E4M" customClass="SettingViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iB0-LF-7pU">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nop-us-p2p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VPf-Z1-RzZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hIE-Ye-Hpc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2747" y="1573"/>
         </scene>
         <!--Item-->
         <scene sceneID="Sa3-mt-MiB">
@@ -762,7 +782,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xxv-r3-AXs"/>
+        <segue reference="6nG-h2-FCC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="facebook_circle" width="100" height="90"/>
