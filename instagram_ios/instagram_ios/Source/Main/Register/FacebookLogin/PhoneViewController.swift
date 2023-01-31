@@ -12,7 +12,6 @@ class PhoneViewController : UIViewController {
     
     var textCnt : Int = 0
     var phoneData : String = ""
-        
     @IBOutlet weak var phoneText: UITextField!
     @IBOutlet weak var facebookContinueView : UIView!
     @IBAction func onClickName() {
@@ -28,10 +27,7 @@ class PhoneViewController : UIViewController {
         else if phoneData.validatePhone() == false {
             self.presentAlert(title: "핸드폰 형식을 맞춰주세요.\n(01x-xxxx-xxxx)")
         }
-        
     }
-    
-    
     
     @IBOutlet weak var nextButton: UIButton!
     
