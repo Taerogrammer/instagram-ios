@@ -75,6 +75,12 @@
 		5A820B8D298513CD00F3784F /* ShopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A820B8C298513CD00F3784F /* ShopViewController.storyboard */; };
 		5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B8E298513D200F3784F /* ShopViewController.swift */; };
 		5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE866CC29889D5800903022 /* SettingViewController.swift */; };
+		5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193AF298A2CEE0011F1AD /* EditViewController.swift */; };
+		5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193B3298A49720011F1AD /* EditNameViewController.swift */; };
+		5AF193BB298A4DD50011F1AD /* EditUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193BA298A4DD50011F1AD /* EditUserNameViewController.swift */; };
+		5AF193BD298A4DE00011F1AD /* EditIntroduceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193BC298A4DE00011F1AD /* EditIntroduceViewController.swift */; };
+		5AF193BF298A4DE70011F1AD /* EditLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193BE298A4DE70011F1AD /* EditLinkViewController.swift */; };
+		5AF193C1298A4DEF0011F1AD /* EditPrivateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193C0298A4DEF0011F1AD /* EditPrivateViewController.swift */; };
 		C54250334CD8ECA185B1F976 /* Pods_instagram_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAE0D9BF487D34AC969B879E /* Pods_instagram_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +156,12 @@
 		5A820B8C298513CD00F3784F /* ShopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopViewController.storyboard; sourceTree = "<group>"; };
 		5A820B8E298513D200F3784F /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		5AE866CC29889D5800903022 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		5AF193AF298A2CEE0011F1AD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		5AF193B3298A49720011F1AD /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		5AF193BA298A4DD50011F1AD /* EditUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserNameViewController.swift; sourceTree = "<group>"; };
+		5AF193BC298A4DE00011F1AD /* EditIntroduceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIntroduceViewController.swift; sourceTree = "<group>"; };
+		5AF193BE298A4DE70011F1AD /* EditLinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLinkViewController.swift; sourceTree = "<group>"; };
+		5AF193C0298A4DEF0011F1AD /* EditPrivateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPrivateViewController.swift; sourceTree = "<group>"; };
 		89087EE05009C17450D9DE31 /* Pods-instagram_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios.debug.xcconfig"; path = "Target Support Files/Pods-instagram_ios/Pods-instagram_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		DAE0D9BF487D34AC969B879E /* Pods_instagram_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_instagram_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -588,6 +600,7 @@
 				5A820B8029850F0600F3784F /* ProfileViewController.storyboard */,
 				5A7D6FB429855EAE002A1996 /* ProfileNavigationBarViewController.swift */,
 				5A820B8229850F0E00F3784F /* ProfileViewController.swift */,
+				5AF193AE298A2CE20011F1AD /* Edit */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -602,6 +615,59 @@
 				5A820B7E29850EE200F3784F /* Shop */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		5AF193AE298A2CE20011F1AD /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				5AF193AF298A2CEE0011F1AD /* EditViewController.swift */,
+				5AF193B5298A49A70011F1AD /* Name */,
+				5AF193B6298A49AE0011F1AD /* UserName */,
+				5AF193B7298A49B50011F1AD /* Introduce */,
+				5AF193B8298A49C20011F1AD /* Link */,
+				5AF193B9298A49D70011F1AD /* Private */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		5AF193B5298A49A70011F1AD /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				5AF193B3298A49720011F1AD /* EditNameViewController.swift */,
+			);
+			path = Name;
+			sourceTree = "<group>";
+		};
+		5AF193B6298A49AE0011F1AD /* UserName */ = {
+			isa = PBXGroup;
+			children = (
+				5AF193BA298A4DD50011F1AD /* EditUserNameViewController.swift */,
+			);
+			path = UserName;
+			sourceTree = "<group>";
+		};
+		5AF193B7298A49B50011F1AD /* Introduce */ = {
+			isa = PBXGroup;
+			children = (
+				5AF193BC298A4DE00011F1AD /* EditIntroduceViewController.swift */,
+			);
+			path = Introduce;
+			sourceTree = "<group>";
+		};
+		5AF193B8298A49C20011F1AD /* Link */ = {
+			isa = PBXGroup;
+			children = (
+				5AF193BE298A4DE70011F1AD /* EditLinkViewController.swift */,
+			);
+			path = Link;
+			sourceTree = "<group>";
+		};
+		5AF193B9298A49D70011F1AD /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				5AF193C0298A4DEF0011F1AD /* EditPrivateViewController.swift */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		FAE3F2791B9A97F758D8A200 /* Pods */ = {
@@ -738,12 +804,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF193BD298A4DE00011F1AD /* EditIntroduceViewController.swift in Sources */,
 				5A7D6FA2298546F5002A1996 /* Device.swift in Sources */,
 				5A3D7A4329877BE10020C74F /* EmailViewController.swift in Sources */,
 				5A3D7A6C298841450020C74F /* LoginResponse.swift in Sources */,
 				5A0962992989F9D3001A472E /* BFDescriptionViewController.swift in Sources */,
 				5A3D7A492987907E0020C74F /* PasswordViewController.swift in Sources */,
 				5A7D6FA92985473C002A1996 /* UIColor.swift in Sources */,
+				5AF193BB298A4DD50011F1AD /* EditUserNameViewController.swift in Sources */,
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
 				5A7D6FA729854736002A1996 /* String.swift in Sources */,
 				5A3D7A4F298793260020C74F /* ConfirmViewController.swift in Sources */,
@@ -768,12 +836,14 @@
 				5A7D6FAF29854754002A1996 /* UIViewController.swift in Sources */,
 				5A7D6FC12985F960002A1996 /* ModalTableViewCell.swift in Sources */,
 				5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */,
+				5AF193BF298A4DE70011F1AD /* EditLinkViewController.swift in Sources */,
 				5A7D6FB72985639B002A1996 /* ProfileModalViewController.swift in Sources */,
 				5A09627A29892B51001A472E /* UISegmentedControl.swift in Sources */,
 				5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */,
 				5A7D6FA0298545E2002A1996 /* IndicatorView.swift in Sources */,
 				5A0962812989334E001A472E /* UIView.swift in Sources */,
 				5A7D6FAB29854742002A1996 /* UIFont.swift in Sources */,
+				5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */,
 				5A09629729893CF6001A472E /* FavoriteViewController.swift in Sources */,
 				5A09629529893CBE001A472E /* BestFriendsViewController.swift in Sources */,
 				5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */,
@@ -786,9 +856,11 @@
 				5A09629329893C85001A472E /* DigitalViewController.swift in Sources */,
 				5A09628D29893BDC001A472E /* KeepViewController.swift in Sources */,
 				5A3D7A552987F2110020C74F /* FacebookRequest.swift in Sources */,
+				5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */,
 				5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */,
 				5A3D7A4629878A280020C74F /* NameViewController.swift in Sources */,
 				5A7D6FB129854760002A1996 /* UINavigationBar.swift in Sources */,
+				5AF193C1298A4DEF0011F1AD /* EditPrivateViewController.swift in Sources */,
 				5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */,
 				5A3D7A62298823200020C74F /* ConfirmDataManager.swift in Sources */,
 				5A09628B29893B9B001A472E /* ActivityViewController.swift in Sources */,

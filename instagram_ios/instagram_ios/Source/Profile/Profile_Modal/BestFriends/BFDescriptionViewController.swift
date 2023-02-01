@@ -8,8 +8,6 @@
 import Foundation
 import UIKit
 
-//Commit 확인용
-
 class BFDescriptionViewController : UIViewController {
     
     override var sheetPresentationController: UISheetPresentationController {
@@ -34,8 +32,7 @@ class BFDescriptionViewController : UIViewController {
             }
         ]
     }
-    
-    
+
     //MARK: 소개 글
     func titleSetting() {
         titleLbl.text = "친한 친구 기능 소개"
