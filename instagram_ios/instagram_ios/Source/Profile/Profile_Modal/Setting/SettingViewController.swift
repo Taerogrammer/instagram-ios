@@ -15,13 +15,18 @@ class SettingViewController : UIViewController {
         super.viewDidLoad()
         print("SettingViewController loaded")
         navibar()
-        border()
+        ViewBorder()
+        loginText()
     }
     
-    @IBOutlet weak var testView : UIView!
+    @IBOutlet weak var ListView : UIView!
+    @IBOutlet weak var loginLbl: UILabel!
+    @IBOutlet weak var addAccountButton : UIButton!
+    @IBOutlet weak var logoutButton : UIButton!
     
-    func border() {
-        testView.layer.addBorder([.bottom], color: UIColor.gray, width: 0.5)
+    
+    func ViewBorder() {
+        ListView.layer.addBorder([.bottom], color: UIColor.gray, width: 0.5)
     }
     
     
@@ -48,8 +53,20 @@ class SettingViewController : UIViewController {
 
         self.navigationItem.leftBarButtonItem = instaButton
     }
-    
     @objc func onClickBack() {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func loginText() {
+        loginLbl.text = "로그인"
+        loginLbl.font = .NotoSans(.bold, size: 16)
+        addAccountButton.setTitle("계정 추가", for: .normal)
+        addAccountButton.titleLabel?.font = .NotoSans(.medium, size: 12)
+        addAccountButton.tintColor = .facebook_check
+        logoutButton.setTitle("(유저네임) 로그아웃", for: .normal)
+        logoutButton.titleLabel?.font = .NotoSans(.medium, size: 12)
+        logoutButton.tintColor = .facebook_check
+    }
+    
+    
 }

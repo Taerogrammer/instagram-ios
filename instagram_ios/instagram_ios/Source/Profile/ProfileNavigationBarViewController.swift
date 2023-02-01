@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-class ProfileNavigationBarViewController : UIViewController, SettingModalProtocol {
+class ProfileNavigationBarViewController : UIViewController {
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,12 +18,7 @@ class ProfileNavigationBarViewController : UIViewController, SettingModalProtoco
         navigationBarSetting()
     }
     
-    func deliverySetting() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
-        self.navigationController?.pushViewController(vc, animated: true)
-        print("clicked")
-        
-    }
+
 
     
 
@@ -35,9 +32,7 @@ class ProfileNavigationBarViewController : UIViewController, SettingModalProtoco
         titleLabel.text = "rla_xogud"
         titleLabel.font = .NotoSans(.bold, size: 28)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
-        
-        
-        
+
         let addImage = UIImage(named: "profile_add")!
         let addButton = UIButton(frame: CGRect(
             x: 0,
@@ -74,13 +69,65 @@ class ProfileNavigationBarViewController : UIViewController, SettingModalProtoco
     
     @objc func onClickAdd() {
         print("onClickAdd()")
+
     }
     @objc func onClickMenu() {
-        print("onClickMenu()")
         let storyboard = UIStoryboard(name: "ProfileModalViewController", bundle: nil)
         let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "ProfileModalViewController") as! ProfileModalViewController
         sheetPresentationController.rootView = self
         sheetPresentationController.delegate = self
+        sheetPresentationController.activityDelegate = self
+        sheetPresentationController.keepDelegate = self
+        sheetPresentationController.QRDelegate = self
+        sheetPresentationController.saveDelegate = self
+        sheetPresentationController.digitalDelegate = self
+        sheetPresentationController.bestFriendDelegate = self
+        sheetPresentationController.favoriteDelegate = self
         self.present(sheetPresentationController, animated: true)
+
+    }
+}
+
+extension ProfileNavigationBarViewController : SettingModalProtocol, ActivityModalProtocol, KeepModalProtocol, QRModalProtocol, SavedModalProtocol, DigitalModalProtocol, BestFriendsModalProtocol, FavoriteModalProtocol {
+    func deliverySetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("clicked")
+        
+    }
+    func activitySetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ActivityViewController") as! ActivityViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("ActivityViewController()")
+    }
+    func keepSetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "KeepViewController") as! KeepViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("KeepViewController()")
+    }
+    func QRSetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "QRViewController") as! QRViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("QRViewController()")
+    }
+    func saveSetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SavedViewController") as! SavedViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("SavedViewController()")
+    }
+    func digitalSetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DigitalViewController") as! DigitalViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("DigitalViewController()")
+    }
+    func bestFriendsSetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "BestFriendsViewController") as! BestFriendsViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("BestFriendsViewController()")
+    }
+    func favoriteSetting() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "FavoriteViewController") as! FavoriteViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        print("FavoriteViewController()")
     }
 }

@@ -13,6 +13,13 @@ class ProfileModalViewController : UIViewController, UISheetPresentationControll
     @IBOutlet weak var modalTableView : UITableView!
     
     weak var delegate: SettingModalProtocol?
+    weak var activityDelegate: ActivityModalProtocol?
+    weak var keepDelegate: KeepModalProtocol?
+    weak var QRDelegate: QRModalProtocol?
+    weak var saveDelegate: SavedModalProtocol?
+    weak var digitalDelegate: DigitalModalProtocol?
+    weak var bestFriendDelegate: BestFriendsModalProtocol?
+    weak var favoriteDelegate: FavoriteModalProtocol?
     
     var rootView: ProfileNavigationBarViewController?
 
@@ -39,7 +46,7 @@ class ProfileModalViewController : UIViewController, UISheetPresentationControll
     }
     
     
-    //MARK: modal
+    //MARK: modal 크기 퍼센트
     func modalSetting() {
         sheetPresentationController.prefersGrabberVisible = true
         sheetPresentationController.preferredCornerRadius = 20
@@ -78,26 +85,87 @@ extension ProfileModalViewController: UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let segueIdentifier: String
-        switch indexPath.row {
-        case 0: //For "one"
-            print("설정 clicked")
 
+        switch indexPath.row {
+        case 0:
             delegate?.deliverySetting()
             self.dismiss(animated: true, completion: nil)
 
-        case 1: //For "two"
-             segueIdentifier = "showView2"
-        default: //For "three"
-             segueIdentifier = "showView3"
+        case 1:
+
+            activityDelegate?.activitySetting()
+            self.dismiss(animated: true, completion: nil)
+            print("내 활동 clicked")
+        case 2:
+
+            keepDelegate?.keepSetting()
+            self.dismiss(animated: true, completion: nil)
+            print("보관함")
+        case 3:
+
+            QRDelegate?.QRSetting()
+            self.dismiss(animated: true, completion: nil)
+            print("QR code")
+        case 4:
+
+            saveDelegate?.saveSetting()
+            self.dismiss(animated: true, completion: nil)
+            print("저장됨")
+        case 5:
+
+            digitalDelegate?.digitalSetting()
+            self.dismiss(animated: true, completion: nil)
+            print("디지털 자산")
+        case 6:
+
+            bestFriendDelegate?.bestFriendsSetting()
+            self.dismiss(animated: true, completion: nil)
+            print("친한 친구")
+        case 7:
+
+            favoriteDelegate?.favoriteSetting()
+            self.dismiss(animated: true, completion: nil)
+            print("즐겨찾기")
+
+        default:
+            print("default clicked")
         }
-//        self.performSegue(withIdentifier: segueIdentifier, sender: self)
+
 
         
     }
 
 }
 
+//MARK: protocol
 protocol SettingModalProtocol: class {
     func deliverySetting()
+}
+
+protocol ActivityModalProtocol: class {
+    func activitySetting()
+}
+
+protocol KeepModalProtocol: class {
+    func keepSetting()
+}
+
+protocol QRModalProtocol: class {
+    func QRSetting()
+}
+
+protocol SavedModalProtocol: class {
+    func saveSetting()
+}
+
+protocol DigitalModalProtocol: class {
+    func digitalSetting()
+}
+
+protocol BestFriendsModalProtocol: class {
+    func bestFriendsSetting()
+}
+
+protocol FavoriteModalProtocol: class {
+    func favoriteSetting()
 }
