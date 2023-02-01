@@ -89,13 +89,15 @@ class EditViewController : UIViewController {
         let NameVC = storyboard?.instantiateViewController(withIdentifier: "EditPrivateViewController") as! EditPrivateViewController
         self.navigationController?.pushViewController(NameVC, animated: true)
     }
+
+    
+    //MARK: button 안에 정보 넣기
     
     var textName: String = "name 받기"
     var textUserName: String = "userName 받기"
     var textIntro: String = "introduce 받기"
     var textLink: String = "link 받기"
     
-    //MARK: button 안에 정보 넣기
     func InfoInButton() {
         nameBtn.setTitle("\(textName)", for: .normal)
         nameBtn.setTitleColor(.gray, for: .normal)

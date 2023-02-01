@@ -20,7 +20,7 @@ class EditLinkViewController : UIViewController {
     
     func navibar() {
         title = "링크"
-
+        
         let backImage = UIImage(named: "backBtn")!
         let backButton = UIButton(frame: CGRect(
             x: 0,
@@ -30,9 +30,9 @@ class EditLinkViewController : UIViewController {
         backButton.setImage(backImage, for: .normal)
         backButton.addTarget(self, action: #selector(onClickBack), for: .touchUpInside)
         let barBackButton = UIBarButtonItem(customView: backButton)
-
+        
         self.navigationItem.leftBarButtonItem = barBackButton
-
+        
     }
     
     @objc func onClickBack() {
@@ -40,5 +40,12 @@ class EditLinkViewController : UIViewController {
     }
     @objc func onClickPost() {
         print("Post 완료")
+    }
+    
+    @IBAction func onClickAddLink(_ sender: AnyObject) {
+        let addVC = storyboard?.instantiateViewController(withIdentifier: "AddLinkViewController") as! AddLinkViewController
+        self.navigationController?.pushViewController(addVC, animated: true)
+        
+        
     }
 }
