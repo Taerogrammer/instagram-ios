@@ -608,11 +608,11 @@
 		5A820B90298515B200F3784F /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5A7D6F8B29851610002A1996 /* Reels */,
 				5A820B7B29850EA700F3784F /* Main */,
 				5A820B7C29850ED400F3784F /* Search */,
-				5A820B7F29850EE700F3784F /* Profile */,
+				5A7D6F8B29851610002A1996 /* Reels */,
 				5A820B7E29850EE200F3784F /* Shop */,
+				5A820B7F29850EE700F3784F /* Profile */,
 			);
 			path = Source;
 			sourceTree = "<group>";
