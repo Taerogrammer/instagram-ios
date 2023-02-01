@@ -12,40 +12,9 @@ class EditUserNameViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navibar()
-    }
-    
-    
-    
-    
-    func navibar() {
+        BackAndPost()
         title = "사용자 이름"
-
-        let backImage = UIImage(named: "backBtn")!
-        let backButton = UIButton(frame: CGRect(
-            x: 0,
-            y: 0,
-            width: backImage.size.width,
-            height: backImage.size.height))
-        backButton.setImage(backImage, for: .normal)
-        backButton.addTarget(self, action: #selector(onClickBack), for: .touchUpInside)
-        let barBackButton = UIBarButtonItem(customView: backButton)
         
-        let postBtn = UIButton()
-        postBtn.setTitle("완료", for: .normal)
-        postBtn.setTitleColor(.systemBlue, for: .normal)
-        postBtn.addTarget(self, action: #selector(onClickPost), for: .touchUpInside)
-        let postButton = UIBarButtonItem(customView: postBtn)
+    }
 
-        self.navigationItem.leftBarButtonItem = barBackButton
-        self.navigationItem.rightBarButtonItem = postButton
-    }
-    
-    @objc func onClickBack() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    @objc func onClickPost() {
-        print("Post 완료")
-    }
-    
 }

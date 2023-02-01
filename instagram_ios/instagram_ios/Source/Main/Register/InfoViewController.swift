@@ -46,10 +46,6 @@ class InfoViewController : UIViewController {
         self.navigationItem.leftBarButtonItem = barBackButton
         
     }
-    @objc func onClickBack() {
-        self.navigationController?.popToRootViewController(animated: true)
-        
-    }
     
     //MARK: segment control
     @IBAction func switchViews(_ sender: UISegmentedControl) {
@@ -76,10 +72,6 @@ class InfoViewController : UIViewController {
     }
     @IBAction func segmentedControlDidChange(_ sender: UISegmentedControl){
             segmentedControl.changeUnderlinePosition()
-//        let deviderImage = UIImage()
-//        self.segmentedControl.setDividerImage(deviderImage, forLeftSegmentState: .selected, rightSegmentState: .normal, barMetrics: .default)
-//        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.gray, .font: UIFont.systemFont(ofSize: 20, weight: .semibold)], for: .normal)
-//        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black, .font: UIFont.systemFont(ofSize: 20, weight: .semibold)], for: .selected)
         }
     
     

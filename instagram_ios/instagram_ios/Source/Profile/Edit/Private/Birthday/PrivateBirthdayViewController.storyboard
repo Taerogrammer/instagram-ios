@@ -15,9 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5lv-MK-53a">
+                                <rect key="frame" x="0.0" y="99" width="393" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="aFi-x3-1Jc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5lv-MK-53a" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="PT8-Wo-tDH"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5lv-MK-53a" secondAttribute="trailing" id="mjJ-56-0dc"/>
+                            <constraint firstItem="5lv-MK-53a" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="qQ0-RS-HN2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateTextField" destination="5lv-MK-53a" id="lBu-jQ-H1d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

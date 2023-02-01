@@ -49,10 +49,7 @@ class ActivityViewController : UIViewController {
 
         self.navigationItem.leftBarButtonItem = instaButton
     }
-    @objc func onClickBack() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+
     //MARK: 처음 설명
     func description() {
         titleLbl.text = "한곳에서 모든 활동을 관리해보세요"

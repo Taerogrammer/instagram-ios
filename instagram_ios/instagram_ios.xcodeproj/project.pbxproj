@@ -88,6 +88,7 @@
 		5A87F3FB298A99AF0016F69A /* PrivateGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3FA298A99AF0016F69A /* PrivateGenderViewController.swift */; };
 		5A87F3FD298A99CA0016F69A /* PrivateBirthdayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A87F3FC298A99CA0016F69A /* PrivateBirthdayViewController.storyboard */; };
 		5A87F3FF298A99D40016F69A /* PrivateBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */; };
+		5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADD3D5F298ABCE600DB02CB /* UITextField.swift */; };
 		5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE866CC29889D5800903022 /* SettingViewController.swift */; };
 		5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193AF298A2CEE0011F1AD /* EditViewController.swift */; };
 		5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193B3298A49720011F1AD /* EditNameViewController.swift */; };
@@ -183,6 +184,7 @@
 		5A87F3FA298A99AF0016F69A /* PrivateGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateGenderViewController.swift; sourceTree = "<group>"; };
 		5A87F3FC298A99CA0016F69A /* PrivateBirthdayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateBirthdayViewController.storyboard; sourceTree = "<group>"; };
 		5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateBirthdayViewController.swift; sourceTree = "<group>"; };
+		5ADD3D5F298ABCE600DB02CB /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		5AE866CC29889D5800903022 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5AF193AF298A2CEE0011F1AD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		5AF193B3298A49720011F1AD /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 				5A7D6FB029854760002A1996 /* UINavigationBar.swift */,
 				5A0962802989334E001A472E /* UIView.swift */,
 				5A4B3AF02988BE38009C221F /* UINavigationController.swift */,
+				5ADD3D5F298ABCE600DB02CB /* UITextField.swift */,
 				5A87F3DF298A6F470016F69A /* CustomTextFields.swift */,
 				5A09627929892B51001A472E /* UISegmentedControl.swift */,
 			);
@@ -901,6 +904,7 @@
 				5A7D6FA92985473C002A1996 /* UIColor.swift in Sources */,
 				5A87F3FB298A99AF0016F69A /* PrivateGenderViewController.swift in Sources */,
 				5AF193BB298A4DD50011F1AD /* EditUserNameViewController.swift in Sources */,
+				5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */,
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
 				5A7D6FA729854736002A1996 /* String.swift in Sources */,
 				5A3D7A4F298793260020C74F /* ConfirmViewController.swift in Sources */,

@@ -53,9 +53,7 @@ class SettingViewController : UIViewController {
 
         self.navigationItem.leftBarButtonItem = instaButton
     }
-    @objc func onClickBack() {
-        self.navigationController?.popViewController(animated: true)
-    }
+
     
     func loginText() {
         loginLbl.text = "로그인"

@@ -45,10 +45,7 @@ class KeepViewController : UIViewController {
         self.navigationItem.leftBarButtonItem = backButton
         self.navigationItem.rightBarButtonItem = dotButton
     }
-    @objc func onClickBack() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+
     @objc func onClickMore() {
         print("더 보기")
     }

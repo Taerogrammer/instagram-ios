@@ -40,12 +40,12 @@ class EditPrivateViewController : UIViewController {
         self.navigationItem.leftBarButtonItem = barBackButton
     }
     
-    @objc func onClickBack() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    @objc func onClickPost() {
-        print("Post 완료")
-    }
+//    @objc func onClickBack() {
+//        self.navigationController?.popViewController(animated: true)
+//    }
+//    @objc func onClickPost() {
+//        print("Post 완료")
+//    }
     
     
     

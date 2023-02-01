@@ -21,39 +21,12 @@ class EditViewController : UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navibar()
         makeImageCircle()
         InfoInButton()
-    }
-    
-    
-    
-    func navibar() {
+        BackAndPost()
         title = "프로필 수정"
-        let instaBtn = UIButton()
-        instaBtn.setTitle("취소", for: .normal)
-        instaBtn.setTitleColor(.black, for: .normal)
-        instaBtn.addTarget(self, action: #selector(onClickBack), for: .touchUpInside)
-        let instaButton = UIBarButtonItem(customView: instaBtn)
-        
-        let postBtn = UIButton()
-        postBtn.setTitle("완료", for: .normal)
-        postBtn.setTitleColor(.systemBlue, for: .normal)
-        postBtn.addTarget(self, action: #selector(onClickPost), for: .touchUpInside)
-        let postButton = UIBarButtonItem(customView: postBtn)
+    }
 
-        self.navigationItem.leftBarButtonItem = instaButton
-        self.navigationItem.rightBarButtonItem = postButton
-    }
-    
-    @objc func onClickBack() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    @objc func onClickPost() {
-        print("Post 완료")
-    }
-    
-    
     //MARK: profile and avatar image
     func makeImageCircle() {
         profileImage.layer.cornerRadius = profileImage.frame.height / 2

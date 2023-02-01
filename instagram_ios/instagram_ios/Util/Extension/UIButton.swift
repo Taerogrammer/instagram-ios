@@ -27,3 +27,26 @@ extension UIButton {
         }
     }
 }
+
+//MARK: Radio Button
+class RadioButton: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.initButton()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.initButton()
+    }
+    
+    func initButton() {
+        self.backgroundColor = .clear
+        self.tintColor = .clear
+        self.setTitle("", for: .normal)
+        self.setImage(UIImage(named: "radio_uncheck")?.withRenderingMode(.alwaysOriginal), for: .normal)
+        self.setImage(UIImage(named: "radio_check")?.withRenderingMode(.alwaysOriginal), for: .highlighted)
+        self.setImage(UIImage(named: "radio_check")?.withRenderingMode(.alwaysOriginal), for: .selected)
+    }
+    
+}

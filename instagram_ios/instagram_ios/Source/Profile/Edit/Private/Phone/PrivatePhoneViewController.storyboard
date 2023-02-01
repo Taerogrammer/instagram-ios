@@ -15,9 +15,27 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYG-Mg-rBf">
+                                <rect key="frame" x="15" y="89" width="378" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="97I-Et-I42"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MYG-Mg-rBf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="6FQ-Kf-ZN5"/>
+                            <constraint firstItem="MYG-Mg-rBf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="U3K-3x-peF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MYG-Mg-rBf" secondAttribute="trailing" id="gHD-GJ-o5E"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="MYG-Mg-rBf" id="Xva-I9-1Ca"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

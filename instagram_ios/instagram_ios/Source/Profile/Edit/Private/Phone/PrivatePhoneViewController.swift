@@ -10,5 +10,27 @@ import UIKit
 
 class PrivatePhoneViewController : UIViewController {
     
+    @IBOutlet weak var textField : UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        textFieldImage()
+        title = "휴대폰 번호"
+        BackAndPost()
+    }
+
+    
+    //MARK: text field 옆에 이미지 띄우기
+    func textFieldImage() {
+        textField.addLeftImage(image: UIImage(named: "private_phone")!)
+        textField.placeholder = "전화번호"
+    }
+    
+    
+    
+
+
+    
+    
     
 }

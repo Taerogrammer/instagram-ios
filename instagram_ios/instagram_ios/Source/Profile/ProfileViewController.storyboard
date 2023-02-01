@@ -843,7 +843,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Yu2-qh-wB6">
-                                <rect key="frame" x="15" y="114.33333333333331" width="400" height="200.00000000000006"/>
+                                <rect key="frame" x="15" y="114.33333333333331" width="400" height="200"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzN-Q9-ts4">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>

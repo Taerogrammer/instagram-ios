@@ -49,10 +49,7 @@ class SavedViewController : UIViewController {
         self.navigationItem.leftBarButtonItem = backButton
         self.navigationItem.rightBarButtonItem = plusButton
     }
-    @objc func onClickBack() {
-        self.navigationController?.popViewController(animated: true)
-    }
-    
+
     @objc func onClickPlus() {
         print("컬렉션 추가")
     }
