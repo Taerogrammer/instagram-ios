@@ -39,16 +39,7 @@ class EditPrivateViewController : UIViewController {
 
         self.navigationItem.leftBarButtonItem = barBackButton
     }
-    
-//    @objc func onClickBack() {
-//        self.navigationController?.popViewController(animated: true)
-//    }
-//    @objc func onClickPost() {
-//        print("Post 완료")
-//    }
-    
-    
-    
+
     func labelSetting() {
         textLbl.text = "비즈니스나 반려동물 등을 위한 계정인 경우에도 회원님의 개인정보를 입력하세요. 해당 정보는 공개 프로필에 포함되지 않습니다.\n\n계정 보안 유지를 위해 다른 사람 소유의 이메일 또는 전화번호를 입력하지 마세요."
         textLbl.textColor = .gray

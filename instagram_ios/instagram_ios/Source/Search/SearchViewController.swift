@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchCollectionView: UICollectionView!
     
-    var designPhoto: [String] = ["menu1", "menu2", "menu3", "menu4", "menu5", "menu6","menu7","menu8","profile_add","facebook_logo"]
+    var designPhoto: [String] = ["menu1", "menu2", "menu3", "menu4", "menu5", "menu6","menu7","menu8","profile_add","facebook_logo", "menu1", "menu2", "menu3", "menu4", "menu5", "menu6","menu7","menu8","profile_add","facebook_logo"]
     
     
     override func viewDidLoad() {

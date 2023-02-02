@@ -42,7 +42,7 @@
 		5A4B3AF12988BE38009C221F /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B3AF02988BE38009C221F /* UINavigationController.swift */; };
 		5A7D6F8D2985161F002A1996 /* ReelsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D6F8C2985161F002A1996 /* ReelsViewController.storyboard */; };
 		5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F8E2985162A002A1996 /* ReelsViewController.swift */; };
-		5A7D6F9129853B6E002A1996 /* SearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F9029853B6E002A1996 /* SearchBarViewController.swift */; };
+		5A7D6F9129853B6E002A1996 /* SearchNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F9029853B6E002A1996 /* SearchNavigationBarViewController.swift */; };
 		5A7D6F942985441D002A1996 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F932985441D002A1996 /* Constant.swift */; };
 		5A7D6F9C2985456B002A1996 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D6F992985456B002A1996 /* NotoSansCJKkr-Medium.otf */; };
 		5A7D6F9D2985456B002A1996 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D6F9A2985456B002A1996 /* NotoSansCJKkr-Regular.otf */; };
@@ -76,6 +76,7 @@
 		5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B8E298513D200F3784F /* ShopViewController.swift */; };
 		5A84D9D7298B721F006E8D66 /* SearchTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9D6298B721F006E8D66 /* SearchTapViewController.swift */; };
 		5A84D9DB298B7411006E8D66 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9DA298B7411006E8D66 /* SearchCollectionViewCell.swift */; };
+		5A84D9DD298B87B7006E8D66 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9DC298B87B7006E8D66 /* UIImage.swift */; };
 		5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3DF298A6F470016F69A /* CustomTextFields.swift */; };
 		5A87F3E2298A7FBA0016F69A /* EditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E1298A7FBA0016F69A /* EditRequest.swift */; };
 		5A87F3E5298A809F0016F69A /* EditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E4298A809F0016F69A /* EditResponse.swift */; };
@@ -138,7 +139,7 @@
 		5A4B3AF02988BE38009C221F /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		5A7D6F8C2985161F002A1996 /* ReelsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsViewController.storyboard; sourceTree = "<group>"; };
 		5A7D6F8E2985162A002A1996 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
-		5A7D6F9029853B6E002A1996 /* SearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewController.swift; sourceTree = "<group>"; };
+		5A7D6F9029853B6E002A1996 /* SearchNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationBarViewController.swift; sourceTree = "<group>"; };
 		5A7D6F932985441D002A1996 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		5A7D6F992985456B002A1996 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Medium.otf"; path = "../../../../../../../../Downloads/ios-template-storyboard-master/EduTemplate/Configuration/Font/NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
 		5A7D6F9A2985456B002A1996 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansCJKkr-Regular.otf"; path = "../../../../../../../../Downloads/ios-template-storyboard-master/EduTemplate/Configuration/Font/NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
@@ -174,6 +175,7 @@
 		5A820B8E298513D200F3784F /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		5A84D9D6298B721F006E8D66 /* SearchTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTapViewController.swift; sourceTree = "<group>"; };
 		5A84D9DA298B7411006E8D66 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A84D9DC298B87B7006E8D66 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		5A87F3DF298A6F470016F69A /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		5A87F3E1298A7FBA0016F69A /* EditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRequest.swift; sourceTree = "<group>"; };
 		5A87F3E4298A809F0016F69A /* EditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditResponse.swift; sourceTree = "<group>"; };
@@ -541,6 +543,7 @@
 				5A7D6FAE29854754002A1996 /* UIViewController.swift */,
 				5A7D6FB029854760002A1996 /* UINavigationBar.swift */,
 				5A0962802989334E001A472E /* UIView.swift */,
+				5A84D9DC298B87B7006E8D66 /* UIImage.swift */,
 				5A4B3AF02988BE38009C221F /* UINavigationController.swift */,
 				5ADD3D5F298ABCE600DB02CB /* UITextField.swift */,
 				5A87F3DF298A6F470016F69A /* CustomTextFields.swift */,
@@ -616,7 +619,7 @@
 				5A820B842985127B00F3784F /* SearchViewController.storyboard */,
 				5A84D9DA298B7411006E8D66 /* SearchCollectionViewCell.swift */,
 				5A84D9D6298B721F006E8D66 /* SearchTapViewController.swift */,
-				5A7D6F9029853B6E002A1996 /* SearchBarViewController.swift */,
+				5A7D6F9029853B6E002A1996 /* SearchNavigationBarViewController.swift */,
 				5A820B862985128500F3784F /* SearchViewController.swift */,
 			);
 			path = Search;
@@ -950,12 +953,13 @@
 				5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */,
 				5A87F3EB298A8C7C0016F69A /* UIAlertAction.swift in Sources */,
 				5A09629729893CF6001A472E /* FavoriteViewController.swift in Sources */,
+				5A84D9DD298B87B7006E8D66 /* UIImage.swift in Sources */,
 				5A09629529893CBE001A472E /* BestFriendsViewController.swift in Sources */,
 				5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */,
 				5A3D7A572987F2CE0020C74F /* FacebookResponse.swift in Sources */,
 				5A3D7A6629883F310020C74F /* LoginRequest.swift in Sources */,
 				5A7D6FA529854724002A1996 /* Date.swift in Sources */,
-				5A7D6F9129853B6E002A1996 /* SearchBarViewController.swift in Sources */,
+				5A7D6F9129853B6E002A1996 /* SearchNavigationBarViewController.swift in Sources */,
 				5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */,
 				5A820B662984FBCB00F3784F /* AppDelegate.swift in Sources */,
 				5A09629329893C85001A472E /* DigitalViewController.swift in Sources */,

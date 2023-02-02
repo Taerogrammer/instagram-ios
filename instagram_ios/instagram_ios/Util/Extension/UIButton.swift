@@ -26,9 +26,6 @@ extension UIButton {
             }
         }
     }
-    //MARK: 상단에 있는 버튼 -> 프로필 + 사용자이름 + 더보기
-
-    
     
 }
 
