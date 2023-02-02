@@ -29,7 +29,7 @@ class LoginViewController : UIViewController {
         //Request Sign In
         self.dismissKeyboard()
         self.showIndicator()
-        let input = LoginRequest(loginId: id, password: password)
+        let input = LoginRequest(loginInput: id, password: password)
         dataManager.postLogin(input, delegate: self)
     }
 
@@ -120,10 +120,12 @@ extension LoginViewController {
         self.presentAlert(title: "로그인 성공", message: "로그인에 성공하였습니다")
         //result.jwt
         print("get jwt")
-//        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-//            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier:"MainViewController")else{return}
-//            self.navigationController?.pushViewController(nextVC, animated: true)
-//        }
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier:"TabBarController")else{return}
+            nextVC.modalPresentationStyle = .fullScreen
+            self.present(nextVC, animated: true)
+        }
     }
     
     func failedToRequest(message: String) {

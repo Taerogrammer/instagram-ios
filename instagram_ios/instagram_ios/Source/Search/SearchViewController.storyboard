@@ -289,17 +289,41 @@
             </objects>
             <point key="canvasLocation" x="1251.145038167939" y="-35.211267605633807"/>
         </scene>
-        <!--View Controller-->
+        <!--Comment View Controller-->
         <scene sceneID="Zac-oJ-UJe">
             <objects>
-                <viewController id="hkZ-Ux-etf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hkZ-Ux-etf" customClass="CommentViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mo0-R1-q7Q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vy-Rg-K26">
+                                <rect key="frame" x="30" y="141" width="345" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcm-j6-9b1">
+                                <rect key="frame" x="0.0" y="162" width="375" height="616"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xzl-GE-92C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qcm-j6-9b1" firstAttribute="top" secondItem="7Vy-Rg-K26" secondAttribute="bottom" id="ChB-eS-M3g"/>
+                            <constraint firstItem="7Vy-Rg-K26" firstAttribute="top" secondItem="xzl-GE-92C" secondAttribute="top" constant="50" id="K7r-5g-CLr"/>
+                            <constraint firstItem="xzl-GE-92C" firstAttribute="bottom" secondItem="Qcm-j6-9b1" secondAttribute="bottom" id="fZs-Tw-yNj"/>
+                            <constraint firstItem="7Vy-Rg-K26" firstAttribute="leading" secondItem="xzl-GE-92C" secondAttribute="leading" constant="30" id="gC9-f1-cAh"/>
+                            <constraint firstItem="xzl-GE-92C" firstAttribute="trailing" secondItem="Qcm-j6-9b1" secondAttribute="trailing" id="ouC-0K-I2S"/>
+                            <constraint firstItem="Qcm-j6-9b1" firstAttribute="leading" secondItem="xzl-GE-92C" secondAttribute="leading" id="wIz-uR-h1y"/>
+                            <constraint firstItem="xzl-GE-92C" firstAttribute="trailing" secondItem="7Vy-Rg-K26" secondAttribute="trailing" id="yEk-KK-ixv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ddY-0i-GTu"/>
+                    <connections>
+                        <outlet property="testLbl" destination="7Vy-Rg-K26" id="nvl-IT-euf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lW-Uz-4FZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -307,7 +331,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xH4-sv-ctR"/>
+        <segue reference="15f-56-Lhv"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="comment" width="61" height="55"/>
@@ -320,6 +344,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

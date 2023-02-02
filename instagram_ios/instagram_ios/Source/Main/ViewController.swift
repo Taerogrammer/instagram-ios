@@ -11,7 +11,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
+        print("view controller did load")
         
         navigationBarSetting()
     }
@@ -106,15 +107,7 @@ class ViewController: UIViewController {
     }
     
     @objc func onClickInstagram(_ sender: AnyObject) {
-        
-//        let modalVC = self.storyboard?.instantiateViewController(withIdentifier: "ModalViewController")
-//
-//        modalVC?.modalPresentationStyle = .pageSheet
-//        self.present(modalVC!, animated: true, completion: nil)
-//        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "MainViewController")
-//        self.navigationController?.popViewController(animated: true)
-        
-        
+
         print("onclickInstagram()")
         
     }

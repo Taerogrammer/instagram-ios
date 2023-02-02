@@ -9,7 +9,7 @@ import Alamofire
 
 class LoginDataManager {
     func postLogin(_ parameter: LoginRequest, delegate: LoginViewController) {
-        AF.request("zz", method: .post, parameters: parameter, encoder: JSONParameterEncoder(), headers: nil).validate().responseDecodable(of: LoginResponse.self) { response in
+        AF.request("\(Constant.Base_URL)/app/users/login", method: .post, parameters: parameter, encoder: JSONParameterEncoder(), headers: nil).validate().responseDecodable(of: LoginResponse.self) { response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess, let result = response.result {
@@ -17,9 +17,15 @@ class LoginDataManager {
                 }
                 else {
                     switch response.code {
-                        case 2000: delegate.failedToRequest(message: "request 오류 등")
-                        
-                    default: delegate.failedToRequest(message: "나중에 하기")
+                    case 2010: delegate.failedToRequest(message: "유저 아이디 값을 확인해주세요.")
+                    case 2015: delegate.failedToRequest(message: "이메일을 입력해주세요.")
+                    case 2016: delegate.failedToRequest(message: "이메일 형식을 확인해주세요.")
+                    case 2017: delegate.failedToRequest(message: "중복된 이메일입니다.")
+                    case 2018: delegate.failedToRequest(message: "이메일 또는 전화번호를 입력해주세요")
+                    case 2019: delegate.failedToRequest(message: "중복된 전화번호입니다.")
+                    case 2020: delegate.failedToRequest(message: "이미 존재하는 유저 네임입니다.")
+                    case 4011: delegate.failedToRequest(message: "비밀번호 암호화에 실패하였습니다.")
+                    default: delegate.failedToRequest(message: "이외의 다른 오류입니다")
                     }
                 }
             case .failure(let error):

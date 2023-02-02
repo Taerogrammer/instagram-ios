@@ -53,9 +53,14 @@ extension ConfirmViewController {
         //result.jwt
         print("get jwt")
         let userIdentifier = result.jwt
-        UserDefaults.standard.set(userIdentifier, forKey: "LoginIdentifier")
-                        
-        print(UserDefaults.standard.string(forKey: "LoginIdentifier"))
+//        UserDefaults.standard.set(userIdentifier, forKey: "LoginIdentifier")
+//        print(UserDefaults.standard.string(forKey: "LoginIdentifier"))
+        UserDefaults.standard.removeObject(forKey: "LoginIdentifier")
+        
+//        let registerVC = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+//        self.navigationController?.pushViewController(registerVC, animated: true)
+        
+        
     }
     
     func failedToRequest(message: String) {
