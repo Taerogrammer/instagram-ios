@@ -2,13 +2,29 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kZS-1b-RVu">
+            <objects>
+                <navigationController id="tMt-8C-7m2" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IXs-lq-z42">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="ugt-j0-SfD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j2Q-65-fGK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-889" y="-35"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
@@ -16,16 +32,111 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="SearchViewController" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZOQ-q7-Oau">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="U5z-DV-thv">
+                                    <size key="itemSize" width="150" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SearchCollectionViewCell" reuseIdentifier="cell" id="KRd-ei-LC8" customClass="SearchCollectionViewCell" customModule="instagram_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9HD-Pb-zf4">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xRg-IU-ViA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xRg-IU-ViA" firstAttribute="leading" secondItem="9HD-Pb-zf4" secondAttribute="leading" id="Lv2-5m-vd5"/>
+                                                <constraint firstAttribute="trailing" secondItem="xRg-IU-ViA" secondAttribute="trailing" id="bKR-Jx-N8C"/>
+                                                <constraint firstItem="xRg-IU-ViA" firstAttribute="top" secondItem="9HD-Pb-zf4" secondAttribute="top" id="g4j-UW-ls3"/>
+                                                <constraint firstAttribute="bottom" secondItem="xRg-IU-ViA" secondAttribute="bottom" id="zqn-zr-HZ7"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="myImage" destination="xRg-IU-ViA" id="W5h-iN-I1F"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="1fZ-d8-FTn"/>
+                                    <outlet property="delegate" destination="Y6W-OH-hqX" id="3Yt-aY-5ir"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ZOQ-q7-Oau" secondAttribute="trailing" id="Cwh-QS-dZa"/>
+                            <constraint firstItem="ZOQ-q7-Oau" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="M5M-f7-Wsr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ZOQ-q7-Oau" secondAttribute="bottom" id="hgM-f5-TzA"/>
+                            <constraint firstItem="ZOQ-q7-Oau" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sXC-Wx-Tbd"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="uNa-oK-cKZ"/>
+                    <connections>
+                        <outlet property="searchCollectionView" destination="ZOQ-q7-Oau" id="Lax-2a-kcp"/>
+                        <segue destination="jYn-pw-POh" kind="show" id="CDn-6i-meu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+        <!--Search Tap View Controller-->
+        <scene sceneID="RpW-2y-HgK">
+            <objects>
+                <viewController storyboardIdentifier="SearchTapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jYn-pw-POh" customClass="SearchTapViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YxF-0l-y9Y">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JKa-cT-qEu">
+                                <rect key="frame" x="0.0" y="139" width="393" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="iDb-ce-KWq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-MC-w8g">
+                                <rect key="frame" x="0.0" y="103" width="393" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="fEn-NV-Vup"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.circle" catalog="system" imagePlacement="leading" title="userName" titleAlignment="leading"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="S0p-Yj-aXU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JKa-cT-qEu" firstAttribute="top" secondItem="eAo-MC-w8g" secondAttribute="bottom" id="7yB-6i-eb2"/>
+                            <constraint firstItem="S0p-Yj-aXU" firstAttribute="trailing" secondItem="eAo-MC-w8g" secondAttribute="trailing" id="Sij-K9-i7o"/>
+                            <constraint firstItem="S0p-Yj-aXU" firstAttribute="trailing" secondItem="JKa-cT-qEu" secondAttribute="trailing" id="fzG-HZ-BHk"/>
+                            <constraint firstItem="eAo-MC-w8g" firstAttribute="top" secondItem="S0p-Yj-aXU" secondAttribute="top" id="l8R-A4-mfF"/>
+                            <constraint firstItem="JKa-cT-qEu" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" id="odq-Hp-4rJ"/>
+                            <constraint firstItem="eAo-MC-w8g" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" id="rV7-U9-RsM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ri0-03-yuk"/>
+                    <connections>
+                        <outlet property="designImage" destination="JKa-cT-qEu" id="PH9-JB-qAX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpR-Ag-g30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1259" y="-35"/>
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -21,7 +21,7 @@ class SearchNavigationBarViewController : UIViewController {
     //MARK: Navigation Bar
     func navigationBarSetting() {
         navigationController?.hidesBarsOnSwipe = true
-        
+
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "검색"
         searchController.searchBar.setValue("취소", forKey: "cancelButtonText")

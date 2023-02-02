@@ -49,7 +49,7 @@ class SavedViewController : UIViewController {
         self.navigationItem.leftBarButtonItem = backButton
         self.navigationItem.rightBarButtonItem = plusButton
     }
-
+    
     @objc func onClickPlus() {
         print("컬렉션 추가")
     }

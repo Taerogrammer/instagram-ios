@@ -74,6 +74,8 @@
 		5A820B872985128500F3784F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B862985128500F3784F /* SearchViewController.swift */; };
 		5A820B8D298513CD00F3784F /* ShopViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A820B8C298513CD00F3784F /* ShopViewController.storyboard */; };
 		5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B8E298513D200F3784F /* ShopViewController.swift */; };
+		5A84D9D7298B721F006E8D66 /* SearchTapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9D6298B721F006E8D66 /* SearchTapViewController.swift */; };
+		5A84D9DB298B7411006E8D66 /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9DA298B7411006E8D66 /* SearchCollectionViewCell.swift */; };
 		5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3DF298A6F470016F69A /* CustomTextFields.swift */; };
 		5A87F3E2298A7FBA0016F69A /* EditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E1298A7FBA0016F69A /* EditRequest.swift */; };
 		5A87F3E5298A809F0016F69A /* EditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E4298A809F0016F69A /* EditResponse.swift */; };
@@ -170,6 +172,8 @@
 		5A820B862985128500F3784F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5A820B8C298513CD00F3784F /* ShopViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShopViewController.storyboard; sourceTree = "<group>"; };
 		5A820B8E298513D200F3784F /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		5A84D9D6298B721F006E8D66 /* SearchTapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTapViewController.swift; sourceTree = "<group>"; };
+		5A84D9DA298B7411006E8D66 /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A87F3DF298A6F470016F69A /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		5A87F3E1298A7FBA0016F69A /* EditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRequest.swift; sourceTree = "<group>"; };
 		5A87F3E4298A809F0016F69A /* EditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditResponse.swift; sourceTree = "<group>"; };
@@ -610,6 +614,8 @@
 			isa = PBXGroup;
 			children = (
 				5A820B842985127B00F3784F /* SearchViewController.storyboard */,
+				5A84D9DA298B7411006E8D66 /* SearchCollectionViewCell.swift */,
+				5A84D9D6298B721F006E8D66 /* SearchTapViewController.swift */,
 				5A7D6F9029853B6E002A1996 /* SearchBarViewController.swift */,
 				5A820B862985128500F3784F /* SearchViewController.swift */,
 			);
@@ -931,6 +937,7 @@
 				5A7D6FAF29854754002A1996 /* UIViewController.swift in Sources */,
 				5A7D6FC12985F960002A1996 /* ModalTableViewCell.swift in Sources */,
 				5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */,
+				5A84D9DB298B7411006E8D66 /* SearchCollectionViewCell.swift in Sources */,
 				5AF193BF298A4DE70011F1AD /* EditLinkViewController.swift in Sources */,
 				5A87F3E9298A87B90016F69A /* AddLinkViewController.swift in Sources */,
 				5A7D6FB72985639B002A1996 /* ProfileModalViewController.swift in Sources */,
@@ -963,6 +970,7 @@
 				5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */,
 				5A3D7A62298823200020C74F /* ConfirmDataManager.swift in Sources */,
 				5A09628B29893B9B001A472E /* ActivityViewController.swift in Sources */,
+				5A84D9D7298B721F006E8D66 /* SearchTapViewController.swift in Sources */,
 				5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */,
 				5A820B682984FBCB00F3784F /* SceneDelegate.swift in Sources */,
 			);

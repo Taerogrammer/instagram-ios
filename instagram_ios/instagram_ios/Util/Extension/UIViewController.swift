@@ -118,7 +118,6 @@ extension UIViewController {
     //MARK: back 버튼 && 완료
     
     func BackAndPost() {
-//        title = "휴대폰 번호"
         let backImage = UIImage(named: "backBtn")!
         let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: backImage.size.width, height: backImage.size.height))
         backButton.setImage(backImage, for: .normal)
