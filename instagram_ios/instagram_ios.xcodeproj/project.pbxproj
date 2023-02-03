@@ -86,6 +86,20 @@
 		5A84D9FF298CCE84006E8D66 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9FD298CCE84006E8D66 /* StoryCollectionViewCell.swift */; };
 		5A84DA00298CCE84006E8D66 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A84D9FE298CCE84006E8D66 /* StoryCollectionViewCell.xib */; };
 		5A84DA02298CDD20006E8D66 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA01298CDD20006E8D66 /* StoryViewController.swift */; };
+		5A84DA04298CF0EC006E8D66 /* DefaultNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA03298CF0EC006E8D66 /* DefaultNavigationController.swift */; };
+		5A84DA07298CFC11006E8D66 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA05298CFC11006E8D66 /* FeedCollectionViewCell.swift */; };
+		5A84DA08298CFC11006E8D66 /* FeedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A84DA06298CFC11006E8D66 /* FeedCollectionViewCell.xib */; };
+		5A84DA0B298CFC2E006E8D66 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA09298CFC2E006E8D66 /* FeedTableViewCell.swift */; };
+		5A84DA0C298CFC2E006E8D66 /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A84DA0A298CFC2E006E8D66 /* FeedTableViewCell.xib */; };
+		5A84DA0F298D0A5C006E8D66 /* ProfileMakeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A84DA0E298D0A5C006E8D66 /* ProfileMakeViewController.storyboard */; };
+		5A84DA11298D0A67006E8D66 /* ProfileMakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA10298D0A67006E8D66 /* ProfileMakeViewController.swift */; };
+		5A84DA18298D26C8006E8D66 /* MakeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA17298D26C8006E8D66 /* MakeTableViewCell.swift */; };
+		5A84DA1A298D332E006E8D66 /* MakeReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA19298D332E006E8D66 /* MakeReelsViewController.swift */; };
+		5A84DA1E298D3363006E8D66 /* MakeContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA1D298D3363006E8D66 /* MakeContentsViewController.swift */; };
+		5A84DA22298D3391006E8D66 /* MakeStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA21298D3391006E8D66 /* MakeStoryViewController.swift */; };
+		5A84DA28298D377F006E8D66 /* MakeHighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA27298D377F006E8D66 /* MakeHighlightsViewController.swift */; };
+		5A84DA2A298D37A6006E8D66 /* MakeLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA29298D37A6006E8D66 /* MakeLiveViewController.swift */; };
+		5A84DA2F298D3A06006E8D66 /* MakeGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA2E298D3A06006E8D66 /* MakeGuideViewController.swift */; };
 		5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3DF298A6F470016F69A /* CustomTextFields.swift */; };
 		5A87F3E2298A7FBA0016F69A /* EditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E1298A7FBA0016F69A /* EditRequest.swift */; };
 		5A87F3E5298A809F0016F69A /* EditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E4298A809F0016F69A /* EditResponse.swift */; };
@@ -194,6 +208,20 @@
 		5A84D9FD298CCE84006E8D66 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A84D9FE298CCE84006E8D66 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		5A84DA01298CDD20006E8D66 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		5A84DA03298CF0EC006E8D66 /* DefaultNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNavigationController.swift; sourceTree = "<group>"; };
+		5A84DA05298CFC11006E8D66 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A84DA06298CFC11006E8D66 /* FeedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCollectionViewCell.xib; sourceTree = "<group>"; };
+		5A84DA09298CFC2E006E8D66 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		5A84DA0A298CFC2E006E8D66 /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		5A84DA0E298D0A5C006E8D66 /* ProfileMakeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileMakeViewController.storyboard; sourceTree = "<group>"; };
+		5A84DA10298D0A67006E8D66 /* ProfileMakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMakeViewController.swift; sourceTree = "<group>"; };
+		5A84DA17298D26C8006E8D66 /* MakeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeTableViewCell.swift; sourceTree = "<group>"; };
+		5A84DA19298D332E006E8D66 /* MakeReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeReelsViewController.swift; sourceTree = "<group>"; };
+		5A84DA1D298D3363006E8D66 /* MakeContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeContentsViewController.swift; sourceTree = "<group>"; };
+		5A84DA21298D3391006E8D66 /* MakeStoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeStoryViewController.swift; sourceTree = "<group>"; };
+		5A84DA27298D377F006E8D66 /* MakeHighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeHighlightsViewController.swift; sourceTree = "<group>"; };
+		5A84DA29298D37A6006E8D66 /* MakeLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeLiveViewController.swift; sourceTree = "<group>"; };
+		5A84DA2E298D3A06006E8D66 /* MakeGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGuideViewController.swift; sourceTree = "<group>"; };
 		5A87F3DF298A6F470016F69A /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		5A87F3E1298A7FBA0016F69A /* EditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRequest.swift; sourceTree = "<group>"; };
 		5A87F3E4298A809F0016F69A /* EditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditResponse.swift; sourceTree = "<group>"; };
@@ -627,6 +655,7 @@
 				5A3D7A3529874EBA0020C74F /* Register */,
 				5A84D9E2298BF713006E8D66 /* UITabBarController.swift */,
 				5A820B6B2984FBCB00F3784F /* Main.storyboard */,
+				5A84DA03298CF0EC006E8D66 /* DefaultNavigationController.swift */,
 				5A820B692984FBCB00F3784F /* ViewController.swift */,
 				5A84D9F8298CC703006E8D66 /* Story */,
 				5A84D9EC298CC052006E8D66 /* Feed */,
@@ -661,11 +690,12 @@
 		5A820B7F29850EE700F3784F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				5A7D6FB829856684002A1996 /* Profile_Modal */,
 				5A820B8029850F0600F3784F /* ProfileViewController.storyboard */,
 				5A7D6FB429855EAE002A1996 /* ProfileNavigationBarViewController.swift */,
 				5A820B8229850F0E00F3784F /* ProfileViewController.swift */,
+				5A7D6FB829856684002A1996 /* Profile_Modal */,
 				5AF193AE298A2CE20011F1AD /* Edit */,
+				5A84DA0D298D099A006E8D66 /* Profile_Make */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -710,6 +740,10 @@
 		5A84D9EC298CC052006E8D66 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				5A84DA05298CFC11006E8D66 /* FeedCollectionViewCell.swift */,
+				5A84DA06298CFC11006E8D66 /* FeedCollectionViewCell.xib */,
+				5A84DA09298CFC2E006E8D66 /* FeedTableViewCell.swift */,
+				5A84DA0A298CFC2E006E8D66 /* FeedTableViewCell.xib */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -724,6 +758,70 @@
 				5A84DA01298CDD20006E8D66 /* StoryViewController.swift */,
 			);
 			path = Story;
+			sourceTree = "<group>";
+		};
+		5A84DA0D298D099A006E8D66 /* Profile_Make */ = {
+			isa = PBXGroup;
+			children = (
+				5A84DA12298D0AA6006E8D66 /* Make_Reels */,
+				5A84DA13298D0AAE006E8D66 /* Make_Contents */,
+				5A84DA14298D0ABA006E8D66 /* Make_Story */,
+				5A84DA15298D0AC1006E8D66 /* Make_Highlights */,
+				5A84DA16298D0ACF006E8D66 /* Make_Live */,
+				5A84DA2D298D39DF006E8D66 /* Make_Guide */,
+				5A84DA0E298D0A5C006E8D66 /* ProfileMakeViewController.storyboard */,
+				5A84DA17298D26C8006E8D66 /* MakeTableViewCell.swift */,
+				5A84DA10298D0A67006E8D66 /* ProfileMakeViewController.swift */,
+			);
+			path = Profile_Make;
+			sourceTree = "<group>";
+		};
+		5A84DA12298D0AA6006E8D66 /* Make_Reels */ = {
+			isa = PBXGroup;
+			children = (
+				5A84DA19298D332E006E8D66 /* MakeReelsViewController.swift */,
+			);
+			path = Make_Reels;
+			sourceTree = "<group>";
+		};
+		5A84DA13298D0AAE006E8D66 /* Make_Contents */ = {
+			isa = PBXGroup;
+			children = (
+				5A84DA1D298D3363006E8D66 /* MakeContentsViewController.swift */,
+			);
+			path = Make_Contents;
+			sourceTree = "<group>";
+		};
+		5A84DA14298D0ABA006E8D66 /* Make_Story */ = {
+			isa = PBXGroup;
+			children = (
+				5A84DA21298D3391006E8D66 /* MakeStoryViewController.swift */,
+			);
+			path = Make_Story;
+			sourceTree = "<group>";
+		};
+		5A84DA15298D0AC1006E8D66 /* Make_Highlights */ = {
+			isa = PBXGroup;
+			children = (
+				5A84DA27298D377F006E8D66 /* MakeHighlightsViewController.swift */,
+			);
+			path = Make_Highlights;
+			sourceTree = "<group>";
+		};
+		5A84DA16298D0ACF006E8D66 /* Make_Live */ = {
+			isa = PBXGroup;
+			children = (
+				5A84DA29298D37A6006E8D66 /* MakeLiveViewController.swift */,
+			);
+			path = Make_Live;
+			sourceTree = "<group>";
+		};
+		5A84DA2D298D39DF006E8D66 /* Make_Guide */ = {
+			isa = PBXGroup;
+			children = (
+				5A84DA2E298D3A06006E8D66 /* MakeGuideViewController.swift */,
+			);
+			path = Make_Guide;
 			sourceTree = "<group>";
 		};
 		5A87F3E3298A7FE90016F69A /* Entity */ = {
@@ -900,10 +998,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A84DA0F298D0A5C006E8D66 /* ProfileMakeViewController.storyboard in Resources */,
 				5A87F3FD298A99CA0016F69A /* PrivateBirthdayViewController.storyboard in Resources */,
 				5A84D9E8298CABA5006E8D66 /* NoticeViewController.storyboard in Resources */,
 				5A84D9FC298CCE5B006E8D66 /* StoryTableViewCell.xib in Resources */,
 				5A87F3F7298A998B0016F69A /* PrivatePhoneViewController.storyboard in Resources */,
+				5A84DA08298CFC11006E8D66 /* FeedCollectionViewCell.xib in Resources */,
 				5A820B722984FBCD00F3784F /* LaunchScreen.storyboard in Resources */,
 				5A7D6F9E2985456B002A1996 /* NotoSansCJKkr-Bold.otf in Resources */,
 				5A87F3F3298A984D0016F69A /* PrivateEmailViewController.storyboard in Resources */,
@@ -918,6 +1018,7 @@
 				5A87F3F9298A99A40016F69A /* PrivateGenderViewController.storyboard in Resources */,
 				5A84DA00298CCE84006E8D66 /* StoryCollectionViewCell.xib in Resources */,
 				5A820B852985127B00F3784F /* SearchViewController.storyboard in Resources */,
+				5A84DA0C298CFC2E006E8D66 /* FeedTableViewCell.xib in Resources */,
 				5A820B6D2984FBCB00F3784F /* Main.storyboard in Resources */,
 				5A7D6F9C2985456B002A1996 /* NotoSansCJKkr-Medium.otf in Resources */,
 			);
@@ -980,20 +1081,24 @@
 				5A87F3E2298A7FBA0016F69A /* EditRequest.swift in Sources */,
 				5A3D7A4329877BE10020C74F /* EmailViewController.swift in Sources */,
 				5A3D7A6C298841450020C74F /* LoginResponse.swift in Sources */,
+				5A84DA22298D3391006E8D66 /* MakeStoryViewController.swift in Sources */,
 				5A0962992989F9D3001A472E /* BFDescriptionViewController.swift in Sources */,
 				5A3D7A492987907E0020C74F /* PasswordViewController.swift in Sources */,
 				5A7D6FA92985473C002A1996 /* UIColor.swift in Sources */,
+				5A84DA18298D26C8006E8D66 /* MakeTableViewCell.swift in Sources */,
 				5A87F3FB298A99AF0016F69A /* PrivateGenderViewController.swift in Sources */,
 				5AF193BB298A4DD50011F1AD /* EditUserNameViewController.swift in Sources */,
 				5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */,
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
 				5A7D6FA729854736002A1996 /* String.swift in Sources */,
 				5A3D7A4F298793260020C74F /* ConfirmViewController.swift in Sources */,
+				5A84DA2F298D3A06006E8D66 /* MakeGuideViewController.swift in Sources */,
 				5A09629129893C43001A472E /* SavedViewController.swift in Sources */,
 				5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */,
 				5A87F3E7298A82F90016F69A /* EditSingleton.swift in Sources */,
 				5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */,
 				5A84DA02298CDD20006E8D66 /* StoryViewController.swift in Sources */,
+				5A84DA2A298D37A6006E8D66 /* MakeLiveViewController.swift in Sources */,
 				5A09628F29893C16001A472E /* QRViewController.swift in Sources */,
 				5A3D7A5B2987F77A0020C74F /* PhoneViewController.swift in Sources */,
 				5A7D6FC529861E49002A1996 /* LoginViewController.swift in Sources */,
@@ -1009,6 +1114,7 @@
 				5A7D6F942985441D002A1996 /* Constant.swift in Sources */,
 				5A87F3FF298A99D40016F69A /* PrivateBirthdayViewController.swift in Sources */,
 				5A7D6FB529855EAE002A1996 /* ProfileNavigationBarViewController.swift in Sources */,
+				5A84DA0B298CFC2E006E8D66 /* FeedTableViewCell.swift in Sources */,
 				5A820B8329850F0E00F3784F /* ProfileViewController.swift in Sources */,
 				5A7D6FAF29854754002A1996 /* UIViewController.swift in Sources */,
 				5A7D6FC12985F960002A1996 /* ModalTableViewCell.swift in Sources */,
@@ -1016,6 +1122,7 @@
 				5A84D9DB298B7411006E8D66 /* SearchCollectionViewCell.swift in Sources */,
 				5AF193BF298A4DE70011F1AD /* EditLinkViewController.swift in Sources */,
 				5A87F3E9298A87B90016F69A /* AddLinkViewController.swift in Sources */,
+				5A84DA07298CFC11006E8D66 /* FeedCollectionViewCell.swift in Sources */,
 				5A7D6FB72985639B002A1996 /* ProfileModalViewController.swift in Sources */,
 				5A09627A29892B51001A472E /* UISegmentedControl.swift in Sources */,
 				5A87F3F5298A99740016F69A /* PrivatePhoneViewController.swift in Sources */,
@@ -1027,14 +1134,17 @@
 				5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */,
 				5A84D9FB298CCE5B006E8D66 /* StoryTableViewCell.swift in Sources */,
 				5A87F3EB298A8C7C0016F69A /* UIAlertAction.swift in Sources */,
+				5A84DA04298CF0EC006E8D66 /* DefaultNavigationController.swift in Sources */,
 				5A09629729893CF6001A472E /* FavoriteViewController.swift in Sources */,
 				5A84D9DD298B87B7006E8D66 /* UIImage.swift in Sources */,
 				5A09629529893CBE001A472E /* BestFriendsViewController.swift in Sources */,
 				5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */,
 				5A3D7A572987F2CE0020C74F /* FacebookResponse.swift in Sources */,
+				5A84DA11298D0A67006E8D66 /* ProfileMakeViewController.swift in Sources */,
 				5A3D7A6629883F310020C74F /* LoginRequest.swift in Sources */,
 				5A84D9E1298BD281006E8D66 /* CommentViewController.swift in Sources */,
 				5A7D6FA529854724002A1996 /* Date.swift in Sources */,
+				5A84DA1E298D3363006E8D66 /* MakeContentsViewController.swift in Sources */,
 				5A7D6F9129853B6E002A1996 /* SearchNavigationBarViewController.swift in Sources */,
 				5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */,
 				5A820B662984FBCB00F3784F /* AppDelegate.swift in Sources */,
@@ -1048,7 +1158,9 @@
 				5A7D6FB129854760002A1996 /* UINavigationBar.swift in Sources */,
 				5AF193C1298A4DEF0011F1AD /* EditPrivateViewController.swift in Sources */,
 				5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */,
+				5A84DA28298D377F006E8D66 /* MakeHighlightsViewController.swift in Sources */,
 				5A3D7A62298823200020C74F /* ConfirmDataManager.swift in Sources */,
+				5A84DA1A298D332E006E8D66 /* MakeReelsViewController.swift in Sources */,
 				5A09628B29893B9B001A472E /* ActivityViewController.swift in Sources */,
 				5A84D9D7298B721F006E8D66 /* SearchTapViewController.swift in Sources */,
 				5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */,

@@ -11,7 +11,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     
-    
     @IBOutlet weak var homeTableView: UITableView!
     
     var stories = [Story]()
@@ -32,6 +31,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         stories.append(Story(userName: "4444", userImage: "tabbar_shop"))
         stories.append(Story(userName: "55", userImage: "tabbar_profile"))
 
+        
+        
+        
+        
+        
         
     }
     
@@ -174,3 +178,5 @@ struct Story {
         self.userImage = userImage
     }
 }
+
+

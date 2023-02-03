@@ -117,11 +117,10 @@ class LoginViewController : UIViewController {
 
 extension LoginViewController {
     func didSuccessLogin(_ result: LoginResult) {
-        self.presentAlert(title: "로그인 성공", message: "로그인에 성공하였습니다")
         //result.jwt
         print("get jwt")
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
             guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier:"TabBarController")else{return}
             nextVC.modalPresentationStyle = .fullScreen
             self.present(nextVC, animated: true)

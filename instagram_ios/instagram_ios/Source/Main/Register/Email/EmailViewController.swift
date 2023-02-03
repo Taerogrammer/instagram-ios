@@ -19,6 +19,7 @@ class EmailViewController : UIViewController {
         if emailData.validateEmail() == true && textCnt > 0 {
             let singleton = UserInfoSingleton.shared
             singleton.email = emailData
+            singleton.phone = nil
             guard let nameVC = self.storyboard?.instantiateViewController(identifier: "NameViewController") else {return}
             nameVC.modalPresentationStyle = .fullScreen
             self.present(nameVC, animated: false)

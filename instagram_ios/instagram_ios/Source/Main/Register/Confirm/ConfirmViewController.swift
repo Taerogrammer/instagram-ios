@@ -14,7 +14,7 @@ class ConfirmViewController : UIViewController {
     lazy var dataManager : ConfirmDataManager = ConfirmDataManager()
     
     let singleton = UserInfoSingleton.shared
-    
+    let main = UIStoryboard(name: "Main", bundle: nil)
 
     
     
@@ -23,20 +23,17 @@ class ConfirmViewController : UIViewController {
         self.dismissKeyboard()
         self.showIndicator()
         let name = singleton.name ?? ""
-        let email = singleton.email ?? ""
+        let email = singleton.email
         let password = singleton.password ?? ""
-        let phone = singleton.phone ?? ""
+        let phone = singleton.phone
         let userName = singleton.userName ?? ""
         
         let input = UserInfoRequest(name: name, email: email, password: password, phone: phone, userName: userName)
         dataManager.postRegister(input, delegate: self)
         
-        print("\(name) \(email) \(password) \(phone) \(userName)")
+        print("\(name) email: \(email) phone : \(password) \(phone) \(userName)")
     }
-    
-    
-    
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         confirmButton.tintColor = .facebook_check
@@ -53,12 +50,13 @@ extension ConfirmViewController {
         //result.jwt
         print("get jwt")
         let userIdentifier = result.jwt
-//        UserDefaults.standard.set(userIdentifier, forKey: "LoginIdentifier")
-//        print(UserDefaults.standard.string(forKey: "LoginIdentifier"))
-        UserDefaults.standard.removeObject(forKey: "LoginIdentifier")
         
-//        let registerVC = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
-//        self.navigationController?.pushViewController(registerVC, animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            guard let nextVC = self.main.instantiateViewController(withIdentifier:"DefaultNavigationController") as? DefaultNavigationController else{return}
+            nextVC.modalPresentationStyle = .fullScreen
+            self.present(nextVC, animated: true)
+        }
         
         
     }

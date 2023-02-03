@@ -18,6 +18,7 @@ class PhoneViewController : UIViewController {
         if phoneData.validatePhone() == true && textCnt > 0 {
             let singleton = UserInfoSingleton.shared
             singleton.phone = phoneData
+            singleton.email = nil
             guard let nameVC = self.storyboard?.instantiateViewController(identifier: "NameViewController") else {return}
             nameVC.modalPresentationStyle = .fullScreen
             self.present(nameVC, animated: false)

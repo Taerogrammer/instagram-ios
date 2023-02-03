@@ -10,7 +10,6 @@ import UIKit
 class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     
-    
     static let identifier = "StoryTableViewCell"
     
     static func nib() -> UINib {
@@ -65,15 +64,14 @@ class StoryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
 //            print("그 외의 것")
 //        }
         print(indexPath.row)
+
         
         
         //MARK: 스토리 클릭 시 화면 전달 구현 예정
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let storyVC = storyboard.instantiateViewController(withIdentifier: "StoryViewController") as! StoryViewController
-        
-        
-        
-        
+//        let storyboard = UIStoryboard(name: "StoryViewController", bundle: nil)
+//        let storyVC = storyboard.instantiateViewController(withIdentifier: "StoryViewController") as! StoryViewController
+
+  
     }
     
 }

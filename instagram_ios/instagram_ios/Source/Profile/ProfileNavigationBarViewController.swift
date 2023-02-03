@@ -17,13 +17,7 @@ class ProfileNavigationBarViewController : UIViewController {
         print("Profile NAVIGATION BAR")
         navigationBarSetting()
     }
-    
 
-
-    
-
-    
-    
     
     //MARK: Navigation Bar
     func navigationBarSetting() {
@@ -40,7 +34,7 @@ class ProfileNavigationBarViewController : UIViewController {
             width: addImage.size.width,
             height: addImage.size.height))
         addButton.setImage(addImage, for: .normal)
-        addButton.addTarget(self, action: #selector(onClickAdd), for: .touchUpInside)
+        addButton.addTarget(self, action: #selector(onClickMake), for: .touchUpInside)
         
 
         let barAddButton = UIBarButtonItem(customView: addButton)
@@ -67,8 +61,18 @@ class ProfileNavigationBarViewController : UIViewController {
         
     }
     
-    @objc func onClickAdd() {
-        print("onClickAdd()")
+    @objc func onClickMake() {
+        let storyboard = UIStoryboard(name: "ProfileMakeViewController", bundle: nil)
+        let sheetPresentationController = storyboard.instantiateViewController(withIdentifier: "ProfileMakeViewController") as! ProfileMakeViewController
+        sheetPresentationController.reelsDelegate = self
+        sheetPresentationController.contentsDelegate = self
+        sheetPresentationController.storyDelegate = self
+        sheetPresentationController.highlightDelegate = self
+        sheetPresentationController.liveDelegate = self
+        sheetPresentationController.guideDelegate = self
+        self.present(sheetPresentationController, animated: true)
+        
+        
 
     }
     @objc func onClickMenu() {
@@ -88,7 +92,37 @@ class ProfileNavigationBarViewController : UIViewController {
     }
 }
 
-extension ProfileNavigationBarViewController : SettingModalProtocol, ActivityModalProtocol, KeepModalProtocol, QRModalProtocol, SavedModalProtocol, DigitalModalProtocol, BestFriendsModalProtocol, FavoriteModalProtocol {
+extension ProfileNavigationBarViewController : SettingModalProtocol, ActivityModalProtocol, KeepModalProtocol, QRModalProtocol, SavedModalProtocol, DigitalModalProtocol, BestFriendsModalProtocol, FavoriteModalProtocol, ReelsProtocol, ContentsProtocol, StoryProtocol, HighlightProtocol, LiveProtocol, GuideProtocol {
+    func reelsSetting() {
+        let reelsVC = storyboard?.instantiateViewController(withIdentifier: "MakeReelsViewController") as! MakeReelsViewController
+        self.navigationController?.pushViewController(reelsVC, animated: true)
+    }
+    
+    func contentsSetting() {
+        let contentsVC = storyboard?.instantiateViewController(withIdentifier: "MakeContentsViewController") as! MakeContentsViewController
+        self.navigationController?.pushViewController(contentsVC, animated: true)
+    }
+    
+    func storySetting() {
+        let storyVC = storyboard?.instantiateViewController(withIdentifier: "MakeStoryViewController") as! MakeStoryViewController
+        self.navigationController?.pushViewController(storyVC, animated: true)
+    }
+    
+    func highlightSetting() {
+        let highlightVC = storyboard?.instantiateViewController(withIdentifier: "MakeHighlightsViewController") as! MakeHighlightsViewController
+        self.navigationController?.pushViewController(highlightVC, animated: true)
+    }
+    
+    func liveSetting() {
+        let liveVC = storyboard?.instantiateViewController(withIdentifier: "MakeLiveViewController") as! MakeLiveViewController
+        self.navigationController?.pushViewController(liveVC, animated: true)
+    }
+    
+    func guideSetting() {
+        let guideVC = storyboard?.instantiateViewController(withIdentifier: "MakeGuideViewController") as! MakeGuideViewController
+        self.navigationController?.pushViewController(guideVC, animated: true)
+    }
+    
     func deliverySetting() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "SettingViewController") as! SettingViewController
         self.navigationController?.pushViewController(vc, animated: true)
@@ -130,4 +164,5 @@ extension ProfileNavigationBarViewController : SettingModalProtocol, ActivityMod
         self.navigationController?.pushViewController(vc, animated: true)
         print("FavoriteViewController()")
     }
+
 }
