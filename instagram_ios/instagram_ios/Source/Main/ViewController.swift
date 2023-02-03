@@ -7,14 +7,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+    
+    
+    
+    @IBOutlet weak var homeTableView: UITableView!
+    
+    var stories = [Story]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        print("view controller did load")
-        
+
         navigationBarSetting()
+        
+        homeTableView.dataSource = self
+        homeTableView.delegate = self
+        homeTableView.register(StoryTableViewCell.nib(), forCellReuseIdentifier: StoryTableViewCell.identifier)
+        
+        
+        stories.append(Story(userName: "11111", userImage: "tabbar_home"))
+        stories.append(Story(userName: "22222", userImage: "tabbar_search"))
+        stories.append(Story(userName: "33", userImage: "tabbar_reels"))
+        stories.append(Story(userName: "4444", userImage: "tabbar_shop"))
+        stories.append(Story(userName: "55", userImage: "tabbar_profile"))
+
+        
     }
     
     //MARK: navigationbar setting
@@ -99,8 +117,8 @@ class ViewController: UIViewController {
     //다른 vc으로 이동하기
     @objc func onclickLike(_ sender: AnyObject) {
         
-//        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "AlarmViewController")
-//        self.navigationController?.pushViewController(pushVC!, animated: true)
+        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "NoticeViewController")
+        self.navigationController?.pushViewController(pushVC!, animated: true)
         print("onclickLike() success")
 
         
@@ -126,7 +144,33 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
+    //MARK: 스토리 테이블뷰
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {   //story는 하나라서
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = homeTableView.dequeueReusableCell(withIdentifier: StoryTableViewCell.identifier, for: indexPath) as! StoryTableViewCell
+        cell.configure(with: stories)
+        return cell
+    }
 
-
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
 }
 
+
+struct Story {
+    var userName: String
+    var userImage: String
+    
+    init(userName: String, userImage: String) {
+        self.userName = userName
+        self.userImage = userImage
+    }
+}

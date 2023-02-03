@@ -11,7 +11,7 @@ import UIKit
 class CommentViewController : UIViewController {
     
     @IBOutlet weak var userNameLbl: UILabel!
-    @IBOutlet weak var testLbl: UILabel!
+    @IBOutlet weak var contentLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,9 +59,9 @@ class CommentViewController : UIViewController {
     
     //MARK: 게시글 내용
     func contentField() {
-        testLbl.text = "크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크"
-        testLbl.numberOfLines = 0
-        let newSize = testLbl.sizeThatFits(CGSize(width: view.frame.width, height: CGFloat.greatestFiniteMagnitude))
+        contentLbl.text = "크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크"
+        contentLbl.numberOfLines = 0
+        let newSize = contentLbl.sizeThatFits(CGSize(width: view.frame.width, height: CGFloat.greatestFiniteMagnitude))
         userNameLbl.text = "rla_xogud"
     }
     

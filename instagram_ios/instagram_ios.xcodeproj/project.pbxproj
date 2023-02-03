@@ -79,6 +79,13 @@
 		5A84D9DD298B87B7006E8D66 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9DC298B87B7006E8D66 /* UIImage.swift */; };
 		5A84D9E1298BD281006E8D66 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9E0298BD281006E8D66 /* CommentViewController.swift */; };
 		5A84D9E3298BF714006E8D66 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9E2298BF713006E8D66 /* UITabBarController.swift */; };
+		5A84D9E6298CAB8F006E8D66 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9E5298CAB8F006E8D66 /* NoticeViewController.swift */; };
+		5A84D9E8298CABA5006E8D66 /* NoticeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A84D9E7298CABA5006E8D66 /* NoticeViewController.storyboard */; };
+		5A84D9FB298CCE5B006E8D66 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9F9298CCE5B006E8D66 /* StoryTableViewCell.swift */; };
+		5A84D9FC298CCE5B006E8D66 /* StoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A84D9FA298CCE5B006E8D66 /* StoryTableViewCell.xib */; };
+		5A84D9FF298CCE84006E8D66 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84D9FD298CCE84006E8D66 /* StoryCollectionViewCell.swift */; };
+		5A84DA00298CCE84006E8D66 /* StoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A84D9FE298CCE84006E8D66 /* StoryCollectionViewCell.xib */; };
+		5A84DA02298CDD20006E8D66 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA01298CDD20006E8D66 /* StoryViewController.swift */; };
 		5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3DF298A6F470016F69A /* CustomTextFields.swift */; };
 		5A87F3E2298A7FBA0016F69A /* EditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E1298A7FBA0016F69A /* EditRequest.swift */; };
 		5A87F3E5298A809F0016F69A /* EditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E4298A809F0016F69A /* EditResponse.swift */; };
@@ -180,6 +187,13 @@
 		5A84D9DC298B87B7006E8D66 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		5A84D9E0298BD281006E8D66 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		5A84D9E2298BF713006E8D66 /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
+		5A84D9E5298CAB8F006E8D66 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		5A84D9E7298CABA5006E8D66 /* NoticeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticeViewController.storyboard; sourceTree = "<group>"; };
+		5A84D9F9298CCE5B006E8D66 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		5A84D9FA298CCE5B006E8D66 /* StoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableViewCell.xib; sourceTree = "<group>"; };
+		5A84D9FD298CCE84006E8D66 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A84D9FE298CCE84006E8D66 /* StoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		5A84DA01298CDD20006E8D66 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		5A87F3DF298A6F470016F69A /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		5A87F3E1298A7FBA0016F69A /* EditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRequest.swift; sourceTree = "<group>"; };
 		5A87F3E4298A809F0016F69A /* EditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditResponse.swift; sourceTree = "<group>"; };
@@ -611,9 +625,12 @@
 			isa = PBXGroup;
 			children = (
 				5A3D7A3529874EBA0020C74F /* Register */,
-				5A820B692984FBCB00F3784F /* ViewController.swift */,
 				5A84D9E2298BF713006E8D66 /* UITabBarController.swift */,
 				5A820B6B2984FBCB00F3784F /* Main.storyboard */,
+				5A820B692984FBCB00F3784F /* ViewController.swift */,
+				5A84D9F8298CC703006E8D66 /* Story */,
+				5A84D9EC298CC052006E8D66 /* Feed */,
+				5A84D9E4298CAB71006E8D66 /* Notice */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -679,6 +696,34 @@
 				5A84D9E0298BD281006E8D66 /* CommentViewController.swift */,
 			);
 			path = Comment;
+			sourceTree = "<group>";
+		};
+		5A84D9E4298CAB71006E8D66 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				5A84D9E5298CAB8F006E8D66 /* NoticeViewController.swift */,
+				5A84D9E7298CABA5006E8D66 /* NoticeViewController.storyboard */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		5A84D9EC298CC052006E8D66 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		5A84D9F8298CC703006E8D66 /* Story */ = {
+			isa = PBXGroup;
+			children = (
+				5A84D9F9298CCE5B006E8D66 /* StoryTableViewCell.swift */,
+				5A84D9FA298CCE5B006E8D66 /* StoryTableViewCell.xib */,
+				5A84D9FD298CCE84006E8D66 /* StoryCollectionViewCell.swift */,
+				5A84D9FE298CCE84006E8D66 /* StoryCollectionViewCell.xib */,
+				5A84DA01298CDD20006E8D66 /* StoryViewController.swift */,
+			);
+			path = Story;
 			sourceTree = "<group>";
 		};
 		5A87F3E3298A7FE90016F69A /* Entity */ = {
@@ -856,6 +901,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A87F3FD298A99CA0016F69A /* PrivateBirthdayViewController.storyboard in Resources */,
+				5A84D9E8298CABA5006E8D66 /* NoticeViewController.storyboard in Resources */,
+				5A84D9FC298CCE5B006E8D66 /* StoryTableViewCell.xib in Resources */,
 				5A87F3F7298A998B0016F69A /* PrivatePhoneViewController.storyboard in Resources */,
 				5A820B722984FBCD00F3784F /* LaunchScreen.storyboard in Resources */,
 				5A7D6F9E2985456B002A1996 /* NotoSansCJKkr-Bold.otf in Resources */,
@@ -869,6 +916,7 @@
 				5A7D6F9D2985456B002A1996 /* NotoSansCJKkr-Regular.otf in Resources */,
 				5A820B8D298513CD00F3784F /* ShopViewController.storyboard in Resources */,
 				5A87F3F9298A99A40016F69A /* PrivateGenderViewController.storyboard in Resources */,
+				5A84DA00298CCE84006E8D66 /* StoryCollectionViewCell.xib in Resources */,
 				5A820B852985127B00F3784F /* SearchViewController.storyboard in Resources */,
 				5A820B6D2984FBCB00F3784F /* Main.storyboard in Resources */,
 				5A7D6F9C2985456B002A1996 /* NotoSansCJKkr-Medium.otf in Resources */,
@@ -924,6 +972,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A84D9FF298CCE84006E8D66 /* StoryCollectionViewCell.swift in Sources */,
 				5A84D9E3298BF714006E8D66 /* UITabBarController.swift in Sources */,
 				5AF193BD298A4DE00011F1AD /* EditIntroduceViewController.swift in Sources */,
 				5A7D6FA2298546F5002A1996 /* Device.swift in Sources */,
@@ -944,6 +993,7 @@
 				5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */,
 				5A87F3E7298A82F90016F69A /* EditSingleton.swift in Sources */,
 				5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */,
+				5A84DA02298CDD20006E8D66 /* StoryViewController.swift in Sources */,
 				5A09628F29893C16001A472E /* QRViewController.swift in Sources */,
 				5A3D7A5B2987F77A0020C74F /* PhoneViewController.swift in Sources */,
 				5A7D6FC529861E49002A1996 /* LoginViewController.swift in Sources */,
@@ -970,10 +1020,12 @@
 				5A09627A29892B51001A472E /* UISegmentedControl.swift in Sources */,
 				5A87F3F5298A99740016F69A /* PrivatePhoneViewController.swift in Sources */,
 				5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */,
+				5A84D9E6298CAB8F006E8D66 /* NoticeViewController.swift in Sources */,
 				5A7D6FA0298545E2002A1996 /* IndicatorView.swift in Sources */,
 				5A0962812989334E001A472E /* UIView.swift in Sources */,
 				5A7D6FAB29854742002A1996 /* UIFont.swift in Sources */,
 				5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */,
+				5A84D9FB298CCE5B006E8D66 /* StoryTableViewCell.swift in Sources */,
 				5A87F3EB298A8C7C0016F69A /* UIAlertAction.swift in Sources */,
 				5A09629729893CF6001A472E /* FavoriteViewController.swift in Sources */,
 				5A84D9DD298B87B7006E8D66 /* UIImage.swift in Sources */,

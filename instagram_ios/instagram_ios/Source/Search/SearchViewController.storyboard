@@ -330,7 +330,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ddY-0i-GTu"/>
                     <connections>
-                        <outlet property="testLbl" destination="7Vy-Rg-K26" id="nvl-IT-euf"/>
+                        <outlet property="contentLbl" destination="7Vy-Rg-K26" id="EKH-Td-BJ9"/>
                         <outlet property="userNameLbl" destination="cdm-ap-kyK" id="okG-2r-NHN"/>
                     </connections>
                 </viewController>

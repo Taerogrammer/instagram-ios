@@ -519,15 +519,55 @@
                     <view key="view" contentMode="scaleToFill" id="WKg-xp-Crg">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pow-XX-9Zv">
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cUa-oF-2OH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pow-XX-9Zv" firstAttribute="top" secondItem="cUa-oF-2OH" secondAttribute="top" id="113-Q1-ock"/>
+                            <constraint firstItem="cUa-oF-2OH" firstAttribute="bottom" secondItem="pow-XX-9Zv" secondAttribute="bottom" id="QbR-la-PTY"/>
+                            <constraint firstItem="pow-XX-9Zv" firstAttribute="leading" secondItem="cUa-oF-2OH" secondAttribute="leading" id="gQV-dz-Nhd"/>
+                            <constraint firstItem="cUa-oF-2OH" firstAttribute="trailing" secondItem="pow-XX-9Zv" secondAttribute="trailing" id="xgI-4f-C92"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabbar_home" id="wqG-zJ-ljI"/>
                     <navigationItem key="navigationItem" id="5V9-6f-fw9"/>
+                    <connections>
+                        <outlet property="homeTableView" destination="pow-XX-9Zv" id="FKc-zB-lIx"/>
+                        <segue destination="J1C-XC-drc" kind="show" identifier="StorySegue" customClass="StorySegue" id="1tL-a1-1Th"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKy-W1-qv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="543" y="-1594"/>
+        </scene>
+        <!--NoticeViewController-->
+        <scene sceneID="Mam-9D-Qg9">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="NoticeViewController" storyboardName="NoticeViewController" referencedIdentifier="NoticeViewController" id="CUL-4V-39z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nmg-FI-zam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1233" y="-2052"/>
+        </scene>
+        <!--Story View Controller-->
+        <scene sceneID="dOD-54-BMF">
+            <objects>
+                <viewController storyboardIdentifier="StoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J1C-XC-drc" customClass="StoryViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xci-oz-XjC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="z8d-JJ-h3e"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gPz-nd-vW4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qYK-0a-9pa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984" y="-1595"/>
         </scene>
         <!--Item-->
         <scene sceneID="hZp-OW-mrc">
@@ -1645,6 +1685,9 @@
         <image name="tip3" width="869" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
