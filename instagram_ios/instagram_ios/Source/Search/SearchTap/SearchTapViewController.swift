@@ -41,7 +41,17 @@ class SearchTapViewController: UIViewController {
         
         topButton()
         bottomSetting()
-
+        
+        
+        self.view.addSubview(self.thumbnailView)
+        self.thumbnailView.snp.makeConstraints { make in
+            make.top.equalTo(buttonTop)
+            make.size.width.height.equalTo(40)
+        }
+        buttonTop.snp.makeConstraints { make in
+            make.left.equalTo(thumbnailView.snp.right)
+        }
+        
     }
 
     func backNavigationSetting() {
@@ -56,26 +66,64 @@ class SearchTapViewController: UIViewController {
         navigationController?.hidesBarsOnSwipe = false
         self.navigationItem.leftBarButtonItem = barBackButton
     }
+    
+    //MARK: 이미지 동그랗게 + 그라데이션까지?
+    
+//    func fetchPhoto(url: URL, completionHanlder: @escaping (UIImage?, Error?) -> Void) {
+//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            if let error = error {
+//                completionHanlder(nil, error)
+//            }
+//            if let data = data, let httpResponse = response as? HTTPURLResponse,
+//               httpResponse.statusCode == 200 {
+//                DispatchQueue.main.async {
+//                    completionHanlder(UIImage(data: data), nil)
+//                    let thumnail = ThumbnailView().then {
+//                        $0.image = UIImage(data: data)
+//                        $0.shouldShowGreenDot = true
+//                    }
+//                }
+//            }
+//            else {
+//                completionHanlder(nil, error)
+//            }
+//        }
+//        task.resume()
+//    }
+
+    //MARK: 비동기 처리 수행 해줘야함
+    private let thumbnailView = ThumbnailView().then {
+        var profileUrl = URL(string: "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E")
+        var data = try? Data(contentsOf: profileUrl!)
+        $0.image = UIImage(data: data!)
+//      $0.shouldShowGreenDot = false
+    }
+    
+    
 
     //MARK: button custom --> 이미지 url로 렌더링하기
     func topButton() {
         var userName: String = "rla_xogud"
-        var profileUrl = URL(string: "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E")
-        var profileImage: UIImage?
-        var renderedImage: UIImage?
+//        var profileUrl = URL(string: "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E")
+//        var profileImage: UIImage?
+//        var renderedImage: UIImage?
         
-        DispatchQueue.global().async {
-            let data = try? Data(contentsOf: profileUrl!)
-            DispatchQueue.main.async {
-                profileImage = UIImage(data: data!)
-                renderedImage = profileImage?.circularImage(30)
-                self.buttonTop.setImage(renderedImage?.resizeImage(image: renderedImage!, newWidth: 60).circularImage(38), for: .normal)
-                self.buttonTop.setTitle("  \(userName)", for: .normal)
-                self.buttonTop.setTitleColor(UIColor.black, for: .normal)
-                self.buttonTop.contentHorizontalAlignment = .left
-            }
-            
-        }
+//        DispatchQueue.global().async {
+//            var data = try? Data(contentsOf: profileUrl!)
+//
+//            DispatchQueue.main.async {
+//                profileImage = UIImage(data: data!)
+//                renderedImage = profileImage?.circularImage(30)
+//                self.buttonTop.setImage(renderedImage?.resizeImage(image: renderedImage!, newWidth: 60).circularImage(38), for: .normal)
+//                self.buttonTop.setTitle("  \(userName)", for: .normal)
+//                self.buttonTop.setTitleColor(UIColor.black, for: .normal)
+//                self.buttonTop.contentHorizontalAlignment = .left
+//            }
+//
+//        }
+        self.buttonTop.setTitle(" \(userName)", for: .normal)
+        self.buttonTop.contentHorizontalAlignment = .leading
+        self.buttonTop.contentVerticalAlignment = .top
     }
 
     //MARK: buttom setting (좋아요, userName, 문구, 댓글, 날짜)

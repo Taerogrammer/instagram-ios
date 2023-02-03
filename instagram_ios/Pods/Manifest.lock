@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (5.6.4)
   - SnapKit (5.6.0)
+  - Then (3.0.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire
   - SnapKit (~> 5.6.0)
+  - Then
   - Toast-Swift (~> 5.0.1)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - SnapKit
+    - Then
     - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 4cdbd75a055755ae301e998d0f05240f0c293c1d
+PODFILE CHECKSUM: 401bf90e308f986e4fd82219aea0c7a8de27a554
 
 COCOAPODS: 1.11.3

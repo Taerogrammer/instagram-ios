@@ -106,13 +106,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-MC-w8g">
-                                <rect key="frame" x="0.0" y="91" width="375" height="60"/>
+                                <rect key="frame" x="49" y="91" width="326" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="fEn-NV-Vup"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.circle" catalog="system" imagePlacement="leading" title="userName" titleAlignment="leading"/>
+                                <buttonConfiguration key="configuration" style="plain" title="userName" titleAlignment="leading"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdI-GA-78p">
                                 <rect key="frame" x="0.0" y="471" width="375" height="40"/>
@@ -265,7 +265,7 @@
                             <constraint firstItem="eAo-MC-w8g" firstAttribute="top" secondItem="S0p-Yj-aXU" secondAttribute="top" id="l8R-A4-mfF"/>
                             <constraint firstItem="OdI-GA-78p" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" id="nO7-ZI-w2F"/>
                             <constraint firstItem="JKa-cT-qEu" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" id="odq-Hp-4rJ"/>
-                            <constraint firstItem="eAo-MC-w8g" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" id="rV7-U9-RsM"/>
+                            <constraint firstItem="eAo-MC-w8g" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" constant="49" id="rV7-U9-RsM"/>
                             <constraint firstItem="OdI-GA-78p" firstAttribute="top" secondItem="JKa-cT-qEu" secondAttribute="bottom" id="sz3-gr-S0k"/>
                             <constraint firstItem="S0p-Yj-aXU" firstAttribute="bottom" secondItem="lmR-ZG-rde" secondAttribute="bottom" id="w5Z-OL-f56"/>
                         </constraints>
@@ -298,24 +298,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vy-Rg-K26">
-                                <rect key="frame" x="30" y="141" width="345" height="21"/>
+                                <rect key="frame" x="40" y="122" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qcm-j6-9b1">
-                                <rect key="frame" x="0.0" y="162" width="375" height="616"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <rect key="frame" x="0.0" y="143" width="375" height="635"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdm-ap-kyK">
+                                <rect key="frame" x="40" y="91" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xzl-GE-92C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7Vy-Rg-K26" firstAttribute="top" secondItem="cdm-ap-kyK" secondAttribute="bottom" constant="10" id="1C6-dM-RlQ"/>
                             <constraint firstItem="Qcm-j6-9b1" firstAttribute="top" secondItem="7Vy-Rg-K26" secondAttribute="bottom" id="ChB-eS-M3g"/>
-                            <constraint firstItem="7Vy-Rg-K26" firstAttribute="top" secondItem="xzl-GE-92C" secondAttribute="top" constant="50" id="K7r-5g-CLr"/>
                             <constraint firstItem="xzl-GE-92C" firstAttribute="bottom" secondItem="Qcm-j6-9b1" secondAttribute="bottom" id="fZs-Tw-yNj"/>
-                            <constraint firstItem="7Vy-Rg-K26" firstAttribute="leading" secondItem="xzl-GE-92C" secondAttribute="leading" constant="30" id="gC9-f1-cAh"/>
+                            <constraint firstItem="7Vy-Rg-K26" firstAttribute="leading" secondItem="xzl-GE-92C" secondAttribute="leading" constant="40" id="gC9-f1-cAh"/>
+                            <constraint firstItem="cdm-ap-kyK" firstAttribute="leading" secondItem="xzl-GE-92C" secondAttribute="leading" constant="40" id="gFx-vk-l3B"/>
                             <constraint firstItem="xzl-GE-92C" firstAttribute="trailing" secondItem="Qcm-j6-9b1" secondAttribute="trailing" id="ouC-0K-I2S"/>
+                            <constraint firstItem="cdm-ap-kyK" firstAttribute="top" secondItem="xzl-GE-92C" secondAttribute="top" id="qIz-e5-WwV"/>
                             <constraint firstItem="Qcm-j6-9b1" firstAttribute="leading" secondItem="xzl-GE-92C" secondAttribute="leading" id="wIz-uR-h1y"/>
                             <constraint firstItem="xzl-GE-92C" firstAttribute="trailing" secondItem="7Vy-Rg-K26" secondAttribute="trailing" id="yEk-KK-ixv"/>
                         </constraints>
@@ -323,6 +331,7 @@
                     <navigationItem key="navigationItem" id="ddY-0i-GTu"/>
                     <connections>
                         <outlet property="testLbl" destination="7Vy-Rg-K26" id="nvl-IT-euf"/>
+                        <outlet property="userNameLbl" destination="cdm-ap-kyK" id="okG-2r-NHN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lW-Uz-4FZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -338,15 +347,11 @@
         <image name="dm" width="58" height="52"/>
         <image name="like_uncheck" width="61" height="55"/>
         <image name="save_uncheck" width="68" height="68"/>
-        <image name="square.and.arrow.up.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
