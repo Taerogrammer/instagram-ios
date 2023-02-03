@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="boD-5H-O20">
-    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,23 +14,23 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nWf-Al-QX4" customClass="LoginViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4xH-N7-dSu">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호, 사용자 이름 또는 이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-fL-Q2D">
-                                <rect key="frame" x="15" y="316.33333333333331" width="400" height="48"/>
+                                <rect key="frame" x="15" y="313.33333333333331" width="398" height="48"/>
                                 <color key="textColor" red="0.033189580619999999" green="0.041728019339999999" blue="0.098039209840000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_instagram" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-I5-vFv">
-                                <rect key="frame" x="100" y="204.33333333333334" width="230" height="92.000000000000028"/>
+                                <rect key="frame" x="100" y="202" width="228" height="91.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vGm-I5-vFv" secondAttribute="height" multiplier="5:2" id="huS-bF-zxJ"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7j-IX-fOb">
-                                <rect key="frame" x="15" y="384.33333333333331" width="400" height="48"/>
+                                <rect key="frame" x="15" y="381.33333333333331" width="398" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="MrF-p2-gRT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="k4E-m4-gDv"/>
@@ -38,7 +39,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmy-M3-h7N">
-                                <rect key="frame" x="306" y="452.33333333333331" width="114" height="27.333333333333314"/>
+                                <rect key="frame" x="304" y="449.33333333333331" width="114" height="27.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -55,7 +56,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aqx-GV-TtZ">
-                                <rect key="frame" x="15" y="499.66666666666674" width="400" height="48"/>
+                                <rect key="frame" x="15" y="496.66666666666674" width="398" height="48"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그인"/>
                                 <connections>
@@ -63,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2j-TB-Iu0">
-                                <rect key="frame" x="382" y="394.33333333333331" width="24" height="28"/>
+                                <rect key="frame" x="380" y="391.33333333333331" width="24" height="28"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain"/>
                                 <connections>
@@ -71,23 +72,23 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jfW-zf-DI5">
-                                <rect key="frame" x="15" y="547.66666666666663" width="400" height="48"/>
+                                <rect key="frame" x="15" y="544.66666666666663" width="398" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="또는" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1C-QD-CCR">
-                                        <rect key="frame" x="189.66666666666666" y="17" width="21" height="14.333333333333336"/>
+                                        <rect key="frame" x="188.66666666666666" y="17" width="21" height="14.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3du-RS-ZOP">
-                                        <rect key="frame" x="0.0" y="24" width="159.66666666666666" height="1"/>
+                                        <rect key="frame" x="0.0" y="24" width="158.66666666666666" height="1"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud8-sh-Hw3">
-                                        <rect key="frame" x="240.66666666666663" y="24" width="159.33333333333337" height="1"/>
+                                        <rect key="frame" x="239.66666666666663" y="24" width="158.33333333333337" height="1"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <nil key="textColor"/>
@@ -107,7 +108,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQp-YO-4Qb">
-                                <rect key="frame" x="128.33333333333331" y="595.66666666666663" width="173.33333333333331" height="39"/>
+                                <rect key="frame" x="127.33333333333333" y="592.66666666666663" width="173.33333333333337" height="39"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="facebook_logo" title="  페이스북으로 로그인하기">
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="12"/>
@@ -117,20 +118,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIc-VM-vgD">
-                                <rect key="frame" x="15" y="836.66666666666663" width="400" height="1.3333333333333712"/>
+                                <rect key="frame" x="15" y="830.66666666666663" width="398" height="1.3333333333333712"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정이 없으신가요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="svn-12-9Q4">
-                                <rect key="frame" x="168.66666666666666" y="853" width="92.666666666666657" height="25"/>
+                                <rect key="frame" x="167.66666666666666" y="847" width="92.666666666666657" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-Xw-jGy">
-                                <rect key="frame" x="261.33333333333331" y="853" width="55.333333333333314" height="25"/>
+                                <rect key="frame" x="260.33333333333331" y="847" width="55.333333333333314" height="25"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -205,7 +206,7 @@
             <objects>
                 <navigationController storyboardIdentifier="DefaultNavigationController" id="MZd-5j-sWL" customClass="DefaultNavigationController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qOa-WI-Jse">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -221,11 +222,11 @@
             <objects>
                 <viewController id="TXc-s6-kcl" customClass="RegisterViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Cg-gD-kwD">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Uc-SP-CFL">
-                                <rect key="frame" x="30" y="442" width="370" height="48"/>
+                                <rect key="frame" x="30" y="439" width="368" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="aO2-GZ-Yp9"/>
                                 </constraints>
@@ -271,35 +272,35 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_instagram" translatesAutoresizingMaskIntoConstraints="NO" id="Rhr-sa-tuu">
-                                <rect key="frame" x="100" y="193" width="230" height="92"/>
+                                <rect key="frame" x="100" y="190.66666666666666" width="228" height="91.333333333333343"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Rhr-sa-tuu" secondAttribute="height" multiplier="5:2" id="Ovm-7h-ok0"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구들의 사진과 동영상을 보려면 가입하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X6d-FI-6dH">
-                                <rect key="frame" x="73" y="305" width="284" height="19.333333333333314"/>
+                                <rect key="frame" x="72" y="302" width="284" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZkJ-Q5-BcQ">
-                                <rect key="frame" x="30" y="490" width="370" height="48"/>
+                                <rect key="frame" x="30" y="487" width="368" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sut-St-aII">
-                                        <rect key="frame" x="0.0" y="23.666666666666629" width="144.66666666666666" height="1"/>
+                                        <rect key="frame" x="0.0" y="23.666666666666686" width="143.66666666666666" height="1"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="또는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjG-ce-cDZ">
-                                        <rect key="frame" x="174.66666666666666" y="17.333333333333314" width="21" height="13.333333333333336"/>
+                                        <rect key="frame" x="173.66666666666666" y="17.333333333333314" width="21" height="13.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euQ-h8-pSg">
-                                        <rect key="frame" x="225.66666666666663" y="23.666666666666629" width="144.33333333333337" height="1"/>
+                                        <rect key="frame" x="224.66666666666663" y="23.666666666666686" width="143.33333333333337" height="1"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <nil key="textColor"/>
@@ -319,7 +320,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQq-DR-zwx">
-                                <rect key="frame" x="117.33333333333333" y="548" width="195.66666666666669" height="28.666666666666629"/>
+                                <rect key="frame" x="116.33333333333333" y="545" width="195.66666666666669" height="28.666666666666629"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="휴대폰 번호 또는 이메일 주소로 가입">
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="12"/>
@@ -329,20 +330,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28w-O3-qS0">
-                                <rect key="frame" x="15" y="836.66666666666663" width="400" height="1.3333333333333712"/>
+                                <rect key="frame" x="15" y="830.66666666666663" width="398" height="1.3333333333333712"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이미 계정이 있으신가요?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5J-fk-6cz">
-                                <rect key="frame" x="156.66666666666666" y="853" width="116.99999999999997" height="25"/>
+                                <rect key="frame" x="155.66666666666666" y="847" width="116.99999999999997" height="25"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBF-NR-cjH">
-                                <rect key="frame" x="273.66666666666669" y="853" width="47.666666666666686" height="25"/>
+                                <rect key="frame" x="272.66666666666669" y="847" width="47.666666666666686" height="25"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -415,27 +416,27 @@
             <objects>
                 <viewController storyboardIdentifier="FacebookViewController" id="EaB-Cm-XBA" customClass="FacebookViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kDH-2B-jcA">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="863"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_circle" translatesAutoresizingMaskIntoConstraints="NO" id="enu-fZ-Kwh">
-                                <rect key="frame" x="95" y="179" width="240" height="128"/>
+                                <rect key="frame" x="95" y="167" width="238" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="enu-fZ-Kwh" secondAttribute="height" multiplier="15:8" id="9rY-fY-9Bb"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호 또는 이메일 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qz0-45-Zeh">
-                                <rect key="frame" x="25" y="407" width="380" height="34"/>
+                                <rect key="frame" x="25" y="394" width="378" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29q-AV-5zy">
-                                <rect key="frame" x="25" y="441" width="380" height="38"/>
+                                <rect key="frame" x="25" y="428" width="378" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-6J-GUQ">
-                                <rect key="frame" x="25" y="489" width="380" height="34.333333333333371"/>
+                                <rect key="frame" x="25" y="476" width="378" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그인"/>
                                 <connections>
@@ -501,7 +502,7 @@
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sxz-Pj-n7R">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -517,11 +518,11 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zy8-Nq-BBz" customClass="ViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WKg-xp-Crg">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="pow-XX-9Zv">
-                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <rect key="frame" x="0.0" y="91" width="428" height="752"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -557,7 +558,7 @@
             <objects>
                 <viewController storyboardIdentifier="StoryViewController" id="1o2-F4-tLV" customClass="StoryViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kk7-r0-zTp">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="7gD-pJ-hly"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
@@ -573,7 +574,7 @@
                 <navigationController id="gsK-GN-QH6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="KD5-RE-ukU"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zbi-Ui-gHQ">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -589,11 +590,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileNavigationBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8vw-hz-O2j" customClass="ProfileNavigationBarViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="n0G-wo-cxP">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="amE-jg-5eW">
-                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <rect key="frame" x="0.0" y="91" width="428" height="752"/>
                                 <connections>
                                     <segue destination="1Gs-K6-2kz" kind="embed" id="Qgd-sL-17E"/>
                                 </connections>
@@ -623,29 +624,29 @@
             <objects>
                 <viewController storyboardIdentifier="ActivityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o3S-8L-pWr" customClass="ActivityViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bJB-UR-fMF">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DoO-dp-h9a">
-                                <rect key="frame" x="0.0" y="59" width="430" height="839"/>
+                                <rect key="frame" x="0.0" y="47" width="428" height="845"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZE4-6X-O4g">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="1000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="1000"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="63S-fq-JNA">
-                                                <rect key="frame" x="0.0" y="0.0" width="430" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="428" height="200"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QBr-2A-AO0">
-                                                        <rect key="frame" x="0.0" y="15" width="430" height="170"/>
+                                                        <rect key="frame" x="0.0" y="15" width="428" height="170"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJt-El-qce">
-                                                                <rect key="frame" x="15" y="0.0" width="400" height="85"/>
+                                                                <rect key="frame" x="15" y="0.0" width="398" height="85"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MF7-un-Jbo">
-                                                                <rect key="frame" x="30" y="85" width="370" height="85"/>
+                                                                <rect key="frame" x="30" y="85" width="368" height="85"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -671,69 +672,69 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDz-ma-jXm">
-                                                <rect key="frame" x="0.0" y="200" width="430" height="800"/>
+                                                <rect key="frame" x="0.0" y="200" width="428" height="800"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Fa-oO-uPM">
-                                                        <rect key="frame" x="0.0" y="0.0" width="430" height="800"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="428" height="800"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2XF-23-DIY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="430" height="89"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="428" height="89"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity1"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ske-zr-0fm">
-                                                                <rect key="frame" x="0.0" y="89" width="430" height="88.666666666666686"/>
+                                                                <rect key="frame" x="0.0" y="89" width="428" height="88.666666666666686"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity2"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r81-Jx-nwF">
-                                                                <rect key="frame" x="0.0" y="177.66666666666669" width="430" height="89"/>
+                                                                <rect key="frame" x="0.0" y="177.66666666666669" width="428" height="89"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity3"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohm-7u-EFT">
-                                                                <rect key="frame" x="0.0" y="266.66666666666663" width="430" height="89"/>
+                                                                <rect key="frame" x="0.0" y="266.66666666666663" width="428" height="89"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity4"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yA8-16-NJL">
-                                                                <rect key="frame" x="0.0" y="355.66666666666663" width="430" height="88.666666666666686"/>
+                                                                <rect key="frame" x="0.0" y="355.66666666666663" width="428" height="88.666666666666686"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity5"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZO-7U-9n0">
-                                                                <rect key="frame" x="0.0" y="444.33333333333337" width="430" height="89"/>
+                                                                <rect key="frame" x="0.0" y="444.33333333333337" width="428" height="89"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity6"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajf-Q8-VAm">
-                                                                <rect key="frame" x="0.0" y="533.33333333333337" width="430" height="89"/>
+                                                                <rect key="frame" x="0.0" y="533.33333333333337" width="428" height="89"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity7"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxO-Ai-jPe">
-                                                                <rect key="frame" x="0.0" y="622.33333333333337" width="430" height="88.666666666666629"/>
+                                                                <rect key="frame" x="0.0" y="622.33333333333337" width="428" height="88.666666666666629"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity8"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzc-kQ-ZUt">
-                                                                <rect key="frame" x="0.0" y="711" width="430" height="89"/>
+                                                                <rect key="frame" x="0.0" y="711" width="428" height="89"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="activity9"/>
@@ -805,22 +806,114 @@
             <objects>
                 <viewController storyboardIdentifier="MakeContentsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="x9X-L6-6Fc" customClass="MakeContentsViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="esA-P6-mTr">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="사진 업로드" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6pf-mv-MiU">
+                                <rect key="frame" x="15" y="62" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyi-7K-fGM">
+                                <rect key="frame" x="15" y="118" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="YWb-zj-iHG"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="iz6-ZK-R1M"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="plus.app" catalog="system"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="addImageTapped:" destination="x9X-L6-6Fc" eventType="touchUpInside" id="Vde-h6-Ed2"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ci6-51-LBb">
+                                <rect key="frame" x="0.0" y="238" width="428" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="X4i-j2-KXV"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="abL-WR-kYt">
+                                    <size key="itemSize" width="180" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="ContentsImageCollectionViewCell" reuseIdentifier="cell" id="gN7-te-cBG" customClass="ContentsImageCollectionViewCell" customModule="instagram_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="C3p-5A-yEp">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oL0-BV-eKy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="200"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXk-tn-g9u">
+                                                    <rect key="frame" x="131" y="0.0" width="49" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="Eio-V1-HUH"/>
+                                                        <constraint firstAttribute="height" constant="35" id="mC2-aM-cPt"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="clear.fill" catalog="system">
+                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="deleteImageTapped:" destination="x9X-L6-6Fc" eventType="touchUpInside" id="oxT-ke-oqW"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="HXk-tn-g9u" firstAttribute="top" secondItem="C3p-5A-yEp" secondAttribute="top" id="5cp-4a-Asv"/>
+                                                <constraint firstAttribute="trailing" secondItem="HXk-tn-g9u" secondAttribute="trailing" id="BR6-FS-hKc"/>
+                                                <constraint firstAttribute="trailing" secondItem="oL0-BV-eKy" secondAttribute="trailing" constant="15" id="Erc-xp-tzF"/>
+                                                <constraint firstItem="oL0-BV-eKy" firstAttribute="leading" secondItem="C3p-5A-yEp" secondAttribute="leading" id="Nfm-bk-zJn"/>
+                                                <constraint firstItem="oL0-BV-eKy" firstAttribute="top" secondItem="C3p-5A-yEp" secondAttribute="top" id="bvm-eE-Xyp"/>
+                                                <constraint firstAttribute="bottom" secondItem="oL0-BV-eKy" secondAttribute="bottom" id="iIL-9M-n5u"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="180" height="200"/>
+                                        <connections>
+                                            <outlet property="deleteBtnCell" destination="HXk-tn-g9u" id="DHp-3X-q2w"/>
+                                            <outlet property="imageCell" destination="oL0-BV-eKy" id="g8j-Tz-MuO"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Fc1-R8-ncO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="Ci6-51-LBb" firstAttribute="leading" secondItem="Fc1-R8-ncO" secondAttribute="leading" id="08W-G0-9bB"/>
+                            <constraint firstItem="Fc1-R8-ncO" firstAttribute="trailing" secondItem="Ci6-51-LBb" secondAttribute="trailing" id="De5-1h-KlY"/>
+                            <constraint firstItem="6pf-mv-MiU" firstAttribute="leading" secondItem="Fc1-R8-ncO" secondAttribute="leading" constant="15" id="Jl2-p7-QvR"/>
+                            <constraint firstItem="Lyi-7K-fGM" firstAttribute="leading" secondItem="Fc1-R8-ncO" secondAttribute="leading" constant="15" id="gP7-Yf-K9U"/>
+                            <constraint firstItem="Lyi-7K-fGM" firstAttribute="top" secondItem="6pf-mv-MiU" secondAttribute="bottom" constant="35" id="ga7-IV-w4E"/>
+                            <constraint firstItem="Ci6-51-LBb" firstAttribute="top" secondItem="Lyi-7K-fGM" secondAttribute="bottom" constant="20" id="hvQ-gD-7v5"/>
+                            <constraint firstItem="6pf-mv-MiU" firstAttribute="top" secondItem="Fc1-R8-ncO" secondAttribute="top" constant="15" id="m1e-VE-tp4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Ci6-51-LBb" id="6zJ-qS-n9w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMX-1Q-LzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4348" y="1954"/>
+            <point key="canvasLocation" x="4347.1962616822429" y="1953.563714902808"/>
         </scene>
         <!--Keep View Controller-->
         <scene sceneID="t7T-cL-7zm">
             <objects>
                 <viewController storyboardIdentifier="KeepViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1C7-5E-VEt" customClass="KeepViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WN2-XT-Uhy">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BZL-77-ZjA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -835,7 +928,7 @@
             <objects>
                 <viewController storyboardIdentifier="MakeStoryViewController" id="odn-ZU-Gw6" customClass="MakeStoryViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gKC-HP-Jbs">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Fei-cu-mYr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -850,7 +943,7 @@
             <objects>
                 <viewController storyboardIdentifier="QRViewController" title="QR코드" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fsy-fm-lYb" customClass="QRViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nEo-39-HST">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="KL3-0s-sWP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -865,7 +958,7 @@
             <objects>
                 <viewController storyboardIdentifier="MakeHighlightsViewController" id="3j6-xE-WLt" customClass="MakeHighlightsViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3J-Pc-WiK">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="41D-9I-8D7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -880,7 +973,7 @@
             <objects>
                 <viewController storyboardIdentifier="SavedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SJf-Pp-WSv" customClass="SavedViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GHr-v1-Yy3">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Ohb-RC-bRN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -895,7 +988,7 @@
             <objects>
                 <viewController storyboardIdentifier="MakeLiveViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4KB-jX-MlW" customClass="MakeLiveViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RPF-Hd-cKz">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Nrs-BS-SHS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -910,7 +1003,7 @@
             <objects>
                 <viewController storyboardIdentifier="DigitalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xs7-cR-Eiy" customClass="DigitalViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dyI-cG-kNY">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="sSQ-zy-zvE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -925,17 +1018,17 @@
             <objects>
                 <viewController storyboardIdentifier="BestFriendsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="plw-b4-frN" customClass="BestFriendsViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QRK-ZB-ZUU">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8CE-Qe-P54">
-                                <rect key="frame" x="40" y="59.000000000000007" width="350" height="20.333333333333336"/>
+                                <rect key="frame" x="40" y="47" width="348" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cK3-2J-vSA">
-                                <rect key="frame" x="188.66666666666666" y="84.333333333333329" width="53" height="35"/>
+                                <rect key="frame" x="187.66666666666666" y="72.333333333333329" width="53" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="text"/>
                                 <connections>
@@ -943,21 +1036,21 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1I-ru-xrR">
-                                <rect key="frame" x="0.0" y="134.33333333333331" width="430" height="763.66666666666674"/>
+                                <rect key="frame" x="0.0" y="122.33333333333331" width="428" height="769.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(친한친구 명수)명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTP-XR-kpW">
-                                        <rect key="frame" x="15.000000000000007" y="20" width="119.66666666666669" height="35"/>
+                                        <rect key="frame" x="15.000000000000007" y="20.000000000000014" width="119.66666666666669" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s9M-kG-NVo">
-                                        <rect key="frame" x="313" y="20" width="102" height="35"/>
+                                        <rect key="frame" x="311" y="20.000000000000014" width="102" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="모두 지우기"/>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZzI-Uu-tX8">
-                                        <rect key="frame" x="0.0" y="75" width="430" height="688.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="75" width="428" height="694.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -1003,7 +1096,7 @@
             <objects>
                 <viewController storyboardIdentifier="MakeGuideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mpo-Xr-jtm" customClass="MakeGuideViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gKl-o4-Gb3">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="krn-Ii-nAj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1018,11 +1111,11 @@
             <objects>
                 <viewController storyboardIdentifier="BFDescriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ag4-Z7-6dO" customClass="BFDescriptionViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZRi-aE-bye">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akv-y9-VcC">
-                                <rect key="frame" x="0.0" y="59" width="430" height="80"/>
+                                <rect key="frame" x="0.0" y="47" width="428" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="qcm-n2-Qm3"/>
                                 </constraints>
@@ -1031,13 +1124,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="p48-IL-fNO">
-                                <rect key="frame" x="0.0" y="139" width="430" height="759"/>
+                                <rect key="frame" x="0.0" y="127" width="428" height="765"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Lp-9A-16j">
-                                        <rect key="frame" x="15" y="0.0" width="400" height="176.33333333333334"/>
+                                        <rect key="frame" x="15" y="0.0" width="398" height="177.66666666666666"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tip1" translatesAutoresizingMaskIntoConstraints="NO" id="FTb-CQ-vOk">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="176.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="177.66666666666666"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1049,10 +1142,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wzB-1r-tzj">
-                                        <rect key="frame" x="15" y="181.33333333333334" width="400" height="352.33333333333326"/>
+                                        <rect key="frame" x="15" y="182.66666666666671" width="398" height="355.33333333333326"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tip2" translatesAutoresizingMaskIntoConstraints="NO" id="VJv-jN-338">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="352.33333333333331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="355.33333333333331"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1064,10 +1157,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBe-gC-sQi">
-                                        <rect key="frame" x="15" y="538.66666666666663" width="400" height="220.33333333333337"/>
+                                        <rect key="frame" x="15" y="543" width="398" height="222"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tip3" translatesAutoresizingMaskIntoConstraints="NO" id="yTz-Ip-5tt">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="220.33333333333334"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="222"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1114,17 +1207,17 @@
             <objects>
                 <viewController storyboardIdentifier="FavoriteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gfC-el-YRJ" customClass="FavoriteViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qau-AS-HeY">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQt-L9-GfD">
-                                <rect key="frame" x="40" y="59.000000000000007" width="350" height="20.333333333333336"/>
+                                <rect key="frame" x="40" y="47" width="348" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBv-We-gfh">
-                                <rect key="frame" x="177.66666666666666" y="84.333333333333329" width="75" height="35"/>
+                                <rect key="frame" x="176.66666666666666" y="72.333333333333329" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -1132,21 +1225,21 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZG-L8-L94">
-                                <rect key="frame" x="0.0" y="134.33333333333331" width="430" height="763.66666666666674"/>
+                                <rect key="frame" x="0.0" y="122.33333333333331" width="428" height="769.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v99-WU-zpV">
-                                        <rect key="frame" x="15" y="20" width="59" height="35"/>
+                                        <rect key="frame" x="15" y="20.000000000000014" width="59" height="35"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-ZX-kWE">
-                                        <rect key="frame" x="327.66666666666669" y="20" width="87.333333333333314" height="35"/>
+                                        <rect key="frame" x="325.66666666666669" y="20.000000000000014" width="87.333333333333314" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="모두 삭제"/>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zmT-Sf-uzR">
-                                        <rect key="frame" x="0.0" y="75" width="430" height="688.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="75" width="428" height="694.66666666666663"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -1192,11 +1285,11 @@
             <objects>
                 <viewController storyboardIdentifier="FavDescriptionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="afO-pQ-a1p" customClass="FavDescriptionViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e3O-37-MwM">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9D-FK-DIU">
-                                <rect key="frame" x="0.0" y="59" width="430" height="80"/>
+                                <rect key="frame" x="0.0" y="47" width="428" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="dF5-0t-lCe"/>
                                 </constraints>
@@ -1205,13 +1298,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PUs-pd-ZaR">
-                                <rect key="frame" x="0.0" y="139" width="430" height="160"/>
+                                <rect key="frame" x="0.0" y="127" width="428" height="160"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyn-tI-Keg">
-                                        <rect key="frame" x="15" y="0.0" width="400" height="50"/>
+                                        <rect key="frame" x="15" y="0.0" width="398" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav1" translatesAutoresizingMaskIntoConstraints="NO" id="q1F-cR-ako">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="130"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="130"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="130" id="Mdk-eB-WuV"/>
                                                 </constraints>
@@ -1226,10 +1319,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvr-S6-6PG">
-                                        <rect key="frame" x="15" y="55" width="400" height="50"/>
+                                        <rect key="frame" x="15" y="55" width="398" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav2" translatesAutoresizingMaskIntoConstraints="NO" id="sp1-EL-Y1g">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1241,10 +1334,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XR8-97-AAJ">
-                                        <rect key="frame" x="15" y="110" width="400" height="50"/>
+                                        <rect key="frame" x="15" y="110" width="398" height="50"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fav3" translatesAutoresizingMaskIntoConstraints="NO" id="FPT-vo-DK0">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="50"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1300,30 +1393,30 @@
             <objects>
                 <viewController storyboardIdentifier="SettingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YPr-7a-E4M" customClass="SettingViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iB0-LF-7pU">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rB-av-978">
-                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <rect key="frame" x="0.0" y="91" width="428" height="752"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6f-Je-xc4">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="900"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="900"/>
                                         <subviews>
                                             <searchBar contentMode="redraw" placeholder="검색" translatesAutoresizingMaskIntoConstraints="NO" id="RNb-Ne-ivc">
-                                                <rect key="frame" x="0.0" y="0.0" width="430" height="56"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="428" height="56"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
                                                     <outlet property="delegate" destination="YPr-7a-E4M" id="vbe-tA-O0F"/>
                                                 </connections>
                                             </searchBar>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWy-bZ-kba">
-                                                <rect key="frame" x="0.0" y="56" width="430" height="480"/>
+                                                <rect key="frame" x="0.0" y="56" width="428" height="480"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="smh-qW-8ws">
-                                                        <rect key="frame" x="0.0" y="0.0" width="430" height="480"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="428" height="480"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCy-n7-KwM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="430" height="53.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="428" height="53.333333333333336"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List1"/>
@@ -1333,56 +1426,56 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPL-Bs-Tpg">
-                                                                <rect key="frame" x="0.0" y="53.333333333333343" width="430" height="53.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="53.333333333333343" width="428" height="53.333333333333343"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List2"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7o-ib-cwa">
-                                                                <rect key="frame" x="0.0" y="106.66666666666667" width="430" height="53.333333333333329"/>
+                                                                <rect key="frame" x="0.0" y="106.66666666666664" width="428" height="53.333333333333329"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List3"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLf-1b-Kbm">
-                                                                <rect key="frame" x="0.0" y="160" width="430" height="53.333333333333343"/>
+                                                                <rect key="frame" x="0.0" y="160" width="428" height="53.333333333333343"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List4"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcB-qE-Znu">
-                                                                <rect key="frame" x="0.0" y="213.33333333333331" width="430" height="53.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="213.33333333333331" width="428" height="53.333333333333314"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List5"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLE-UD-4WK">
-                                                                <rect key="frame" x="0.0" y="266.66666666666669" width="430" height="53.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="266.66666666666669" width="428" height="53.333333333333314"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List6"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJU-IZ-lTB">
-                                                                <rect key="frame" x="0.0" y="320" width="430" height="53.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="320" width="428" height="53.333333333333314"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List7"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7x-cF-UZX">
-                                                                <rect key="frame" x="0.0" y="373.33333333333337" width="430" height="53.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="373.33333333333337" width="428" height="53.333333333333314"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List8"/>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ8-XW-oGG">
-                                                                <rect key="frame" x="0.0" y="426.66666666666663" width="430" height="53.333333333333314"/>
+                                                                <rect key="frame" x="0.0" y="426.66666666666663" width="428" height="53.333333333333314"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain">
                                                                     <backgroundConfiguration key="background" image="List9"/>
@@ -1429,20 +1522,20 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5Y-6S-JlM">
-                                                <rect key="frame" x="0.0" y="536" width="430" height="160"/>
+                                                <rect key="frame" x="0.0" y="536" width="428" height="160"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background" image="meta_account"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLl-kM-xYf">
-                                                <rect key="frame" x="0.0" y="696" width="430" height="160"/>
+                                                <rect key="frame" x="0.0" y="696" width="428" height="160"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gtt-Kt-dx1">
-                                                        <rect key="frame" x="15" y="0.0" width="400" height="160"/>
+                                                        <rect key="frame" x="15" y="0.0" width="398" height="160"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AS-74-mj4">
-                                                                <rect key="frame" x="0.0" y="0.0" width="400" height="53.333333333333336"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="53.333333333333336"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1549,7 +1642,7 @@
             <objects>
                 <viewController storyboardIdentifier="MakeReelsViewController" id="g1C-1R-IRg" customClass="MakeReelsViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8mp-E0-aHi">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="KAh-WB-DMH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1565,7 +1658,7 @@
                 <navigationController id="35s-EP-U3A" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="vaR-Mt-9Eo"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1gx-CU-Rlb">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1581,11 +1674,11 @@
             <objects>
                 <viewController id="EC3-MD-Ucc" customClass="SearchNavigationBarViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QVC-Nf-9kj">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRt-3g-N1Z">
-                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <rect key="frame" x="0.0" y="91" width="428" height="752"/>
                                 <connections>
                                     <segue destination="sbY-fT-my0" kind="embed" id="b3I-ff-F27"/>
                                 </connections>
@@ -1623,7 +1716,7 @@
                 <navigationController id="1HE-2e-s8f" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="q1T-4t-NPw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hd9-nl-N54">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1639,11 +1732,11 @@
             <objects>
                 <viewController id="Msy-uw-jr3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jme-Lj-yfZ">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8c-yt-Y1T">
-                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <rect key="frame" x="0.0" y="91" width="428" height="752"/>
                                 <connections>
                                     <segue destination="Isx-nG-LnC" kind="embed" id="Kcg-cY-JoV"/>
                                 </connections>
@@ -1681,7 +1774,7 @@
                 <navigationController id="0ur-6u-WZo" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="RCy-hr-r4c"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5eh-fu-jcz">
-                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <rect key="frame" x="0.0" y="47" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1697,11 +1790,11 @@
             <objects>
                 <viewController id="zZs-JH-Mpc" customClass="ShopNavigationBarViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nEb-7U-7wJ">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UdO-Nt-vqr">
-                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <rect key="frame" x="0.0" y="91" width="428" height="752"/>
                                 <connections>
                                     <segue destination="QHT-33-m41" kind="embed" id="9UD-Lm-aS5"/>
                                 </connections>
@@ -1756,6 +1849,7 @@
         <image name="activity7" width="867" height="165"/>
         <image name="activity8" width="868" height="166"/>
         <image name="activity9" width="868" height="166"/>
+        <image name="clear.fill" catalog="system" width="128" height="114"/>
         <image name="facebook_circle" width="100" height="90"/>
         <image name="facebook_logo" width="25" height="25"/>
         <image name="fav1" width="871" height="239"/>
@@ -1763,6 +1857,7 @@
         <image name="fav3" width="870" height="252"/>
         <image name="home_instagram" width="120" height="45"/>
         <image name="meta_account" width="868" height="276"/>
+        <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="tabbar_home" width="40" height="47"/>
         <image name="tabbar_profile" width="40" height="39"/>
         <image name="tabbar_reels" width="50" height="49"/>

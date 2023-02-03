@@ -10,4 +10,5 @@ target 'instagram_ios' do
   pod 'Toast-Swift', '~> 5.0.1'
   pod 'SnapKit', '~> 5.6.0'
   pod 'Then'
+  pod "BSImagePicker", "~> 3.1"
 end

@@ -100,6 +100,7 @@
 		5A84DA28298D377F006E8D66 /* MakeHighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA27298D377F006E8D66 /* MakeHighlightsViewController.swift */; };
 		5A84DA2A298D37A6006E8D66 /* MakeLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA29298D37A6006E8D66 /* MakeLiveViewController.swift */; };
 		5A84DA2F298D3A06006E8D66 /* MakeGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA2E298D3A06006E8D66 /* MakeGuideViewController.swift */; };
+		5A84DA33298D799D006E8D66 /* ContentsImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A84DA32298D799D006E8D66 /* ContentsImageCollectionViewCell.swift */; };
 		5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3DF298A6F470016F69A /* CustomTextFields.swift */; };
 		5A87F3E2298A7FBA0016F69A /* EditRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E1298A7FBA0016F69A /* EditRequest.swift */; };
 		5A87F3E5298A809F0016F69A /* EditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3E4298A809F0016F69A /* EditResponse.swift */; };
@@ -222,6 +223,7 @@
 		5A84DA27298D377F006E8D66 /* MakeHighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeHighlightsViewController.swift; sourceTree = "<group>"; };
 		5A84DA29298D37A6006E8D66 /* MakeLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeLiveViewController.swift; sourceTree = "<group>"; };
 		5A84DA2E298D3A06006E8D66 /* MakeGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeGuideViewController.swift; sourceTree = "<group>"; };
+		5A84DA32298D799D006E8D66 /* ContentsImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A87F3DF298A6F470016F69A /* CustomTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFields.swift; sourceTree = "<group>"; };
 		5A87F3E1298A7FBA0016F69A /* EditRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditRequest.swift; sourceTree = "<group>"; };
 		5A87F3E4298A809F0016F69A /* EditResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditResponse.swift; sourceTree = "<group>"; };
@@ -788,6 +790,7 @@
 			isa = PBXGroup;
 			children = (
 				5A84DA1D298D3363006E8D66 /* MakeContentsViewController.swift */,
+				5A84DA32298D799D006E8D66 /* ContentsImageCollectionViewCell.swift */,
 			);
 			path = Make_Contents;
 			sourceTree = "<group>";
@@ -1113,6 +1116,7 @@
 				5A820B6A2984FBCB00F3784F /* ViewController.swift in Sources */,
 				5A7D6F942985441D002A1996 /* Constant.swift in Sources */,
 				5A87F3FF298A99D40016F69A /* PrivateBirthdayViewController.swift in Sources */,
+				5A84DA33298D799D006E8D66 /* ContentsImageCollectionViewCell.swift in Sources */,
 				5A7D6FB529855EAE002A1996 /* ProfileNavigationBarViewController.swift in Sources */,
 				5A84DA0B298CFC2E006E8D66 /* FeedTableViewCell.swift in Sources */,
 				5A820B8329850F0E00F3784F /* ProfileViewController.swift in Sources */,
