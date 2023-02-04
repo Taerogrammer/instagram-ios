@@ -135,9 +135,6 @@ class SearchTapViewController: UIViewController {
         commentAllBtn.setTitle("댓글 \(commentCount)개 모두 보기", for: .normal)
         commentAllBtn.contentHorizontalAlignment = .left
         postDateLbl.text = postDateText
-        
-        
-        
     }
     
     

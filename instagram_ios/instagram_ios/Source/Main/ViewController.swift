@@ -7,36 +7,28 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController {
 
+    var storyPhoto: [String] = ["menu1","menu2","menu3","menu4","tip1","tip2","tip3","fav1","facebook_logo","facebook_logo_black","like_check","like_uncheck"]
+    var userName: [String] = ["user1","user2","user3","user4","user5","user6","tip3","fav1","facebook_logo","facebook_logo_black","like_check","like_uncheck"]
+    
+    var userFeed: [Feed] = [
+        Feed(userImage: "facebook_logo", userName: "user1", images: ["menu1", "menu2", ",menu3"], likeNumber: 4, content: "안녕여여영영", commentNumber: 6, postData: "2023년 2월 4일"),
+        Feed(userImage: "tip3", userName: "user22222", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdasas", commentNumber: 6, postData: "2023년 2월 4일"),
+        Feed(userImage: "fav1", userName: "user3333333", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdqwdqwqwf", commentNumber: 7, postData: "2023년 2월 4일")
+    ]
     
     
-    @IBOutlet weak var homeTableView: UITableView!
     
-    var stories = [Story]()
+    @IBOutlet weak var storyCollectionView : UICollectionView!
+    @IBOutlet weak var feedCollectionView : UICollectionView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationBarSetting()
-        
-        homeTableView.dataSource = self
-        homeTableView.delegate = self
-        homeTableView.register(StoryTableViewCell.nib(), forCellReuseIdentifier: StoryTableViewCell.identifier)
-        
-        
-        stories.append(Story(userName: "11111", userImage: "tabbar_home"))
-        stories.append(Story(userName: "22222", userImage: "tabbar_search"))
-        stories.append(Story(userName: "33", userImage: "tabbar_reels"))
-        stories.append(Story(userName: "4444", userImage: "tabbar_shop"))
-        stories.append(Story(userName: "55", userImage: "tabbar_profile"))
-
-        
-        
-        
-        
-        
-        
+  
     }
     
     //MARK: navigationbar setting
@@ -146,37 +138,99 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("onclickDM")
         
     }
-    
-    
-    
-    
-    //MARK: 스토리 테이블뷰
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {   //story는 하나라서
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = homeTableView.dequeueReusableCell(withIdentifier: StoryTableViewCell.identifier, for: indexPath) as! StoryTableViewCell
-        cell.configure(with: stories)
-        return cell
-    }
 
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
 }
 
 
-struct Story {
-    var userName: String
+
+
+extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == storyCollectionView {
+            return storyPhoto.count
+        }
+        else {
+            return userFeed.count
+        }
+
+//        return storyPhoto.count
+    }
+    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        if collectionView == feedCollectionView {
+//
+//        }
+//
+//    }
+    
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == storyCollectionView {
+            guard let storyCell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: "storyCell", for: indexPath) as? StoryCollectionViewCell
+            else {
+                return UICollectionViewCell()
+            }
+            storyCell.storyImage.image = UIImage(named: storyPhoto[indexPath.row])
+            storyCell.storyUserName.text = userName[indexPath.row]
+            return storyCell
+        }
+        else  {
+            guard let feedCell = feedCollectionView.dequeueReusableCell(withReuseIdentifier: "feedCell", for: indexPath) as? FeedCollectionViewCell
+            else {
+                return UICollectionViewCell()
+            }
+            //프사 없음!!!!!!
+            feedCell.userNameLbl.text = userFeed[indexPath.row].userName
+            feedCell.contentImages.image = UIImage(named: userFeed[indexPath.row].userImage)    //일단은 유저 프사로
+            
+//            let newWidth = 180
+//            let newHeight = 180
+//            let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
+//            UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+//            feedCell.contentImages.image?.draw(in: newImageRect)
+            
+            
+            
+            
+            feedCell.contentsLbl.text = userFeed[indexPath.row].content
+            feedCell.commentAllLbl.setTitle("댓글 \(userFeed[indexPath.row].commentNumber)개 모두 보기", for: .normal)
+            feedCell.postDataLbl.text = userFeed[indexPath.row].postData
+            return feedCell
+        }
+//        let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: "storyCell", for: indexPath) as! StoryCollectionViewCell
+//        cell.storyImage.image = UIImage(named: storyPhoto[indexPath.row])
+//        cell.storyUserName.text = userName[indexPath.row]
+//
+//        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        switch indexPath.row {
+        case 0:
+            print("첫 번째 셀 clicked")
+        case 1:
+            print("두 번째 셀 clicked")
+        default:
+            print("이건 error일듯")
+        }
+        
+        
+        
+//        let storyVC = self.storyboard?.instantiateViewController(withIdentifier: "StoryViewController") as! StoryViewController
+//        storyVC.imagePassed = storyPhoto[indexPath.row]
+//        self.navigationController?.pushViewController(storyVC, animated: true)
+    }
+
+}
+
+
+struct Feed {
     var userImage: String
-    
-    init(userName: String, userImage: String) {
-        self.userName = userName
-        self.userImage = userImage
-    }
+    var userName: String
+    var images: Array<String>
+    var likeNumber : Int
+    var content: String
+    var commentNumber: Int
+    var postData: String
 }
-
-

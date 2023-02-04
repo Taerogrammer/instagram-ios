@@ -106,7 +106,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAo-MC-w8g">
-                                <rect key="frame" x="49" y="91" width="326" height="60"/>
+                                <rect key="frame" x="50" y="91" width="325" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="fEn-NV-Vup"/>
                                 </constraints>
@@ -265,7 +265,7 @@
                             <constraint firstItem="eAo-MC-w8g" firstAttribute="top" secondItem="S0p-Yj-aXU" secondAttribute="top" id="l8R-A4-mfF"/>
                             <constraint firstItem="OdI-GA-78p" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" id="nO7-ZI-w2F"/>
                             <constraint firstItem="JKa-cT-qEu" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" id="odq-Hp-4rJ"/>
-                            <constraint firstItem="eAo-MC-w8g" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" constant="49" id="rV7-U9-RsM"/>
+                            <constraint firstItem="eAo-MC-w8g" firstAttribute="leading" secondItem="S0p-Yj-aXU" secondAttribute="leading" constant="50" id="rV7-U9-RsM"/>
                             <constraint firstItem="OdI-GA-78p" firstAttribute="top" secondItem="JKa-cT-qEu" secondAttribute="bottom" id="sz3-gr-S0k"/>
                             <constraint firstItem="S0p-Yj-aXU" firstAttribute="bottom" secondItem="lmR-ZG-rde" secondAttribute="bottom" id="w5Z-OL-f56"/>
                         </constraints>
