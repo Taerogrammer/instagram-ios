@@ -206,14 +206,37 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        switch indexPath.row {
-        case 0:
-            print("첫 번째 셀 clicked")
-        case 1:
-            print("두 번째 셀 clicked")
-        default:
-            print("이건 error일듯")
+        if collectionView == storyCollectionView {
+            switch indexPath.row {
+            case 0:
+                print("스토리 첫 번째 셀 clicked")
+            case 1:
+                print("스토리 두 번째 셀 clicked")
+            default:
+                print("이건 error일듯")
+            }
+            let storyVC = self.storyboard?.instantiateViewController(withIdentifier: "StoryViewController") as! StoryViewController
+            storyVC.imagePassed = storyPhoto[indexPath.row]
+            self.navigationController?.pushViewController(storyVC, animated: true)
+            
         }
+        else {      //feed collection view
+            switch indexPath.row {
+            case 0:
+                print("첫 번째 피드 click")
+            case 1:
+                print("두 번째 피드 click")
+            case 2:
+                print("세 번째 피드 click")
+            default:
+                print("나머지 피즈 clicked")
+            }
+            let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+            self.navigationController?.pushViewController(feedVC, animated: true)
+            
+            
+        }
+
         
         
         

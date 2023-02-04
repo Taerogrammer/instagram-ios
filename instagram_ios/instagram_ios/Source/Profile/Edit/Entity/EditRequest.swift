@@ -10,4 +10,5 @@ struct EditRequest: Codable {
     var userName: String
     var pronouns: String
     var links: String
+    var profileUrl: String
 }

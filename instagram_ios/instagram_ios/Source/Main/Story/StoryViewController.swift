@@ -17,9 +17,11 @@ class StoryViewController : UIViewController {
         super.viewDidLoad()
         
         storyImage.image = UIImage(named: imagePassed)
+        
 
 //        imageSetting()
         
+        naviUserNameAndClose()
     }
     
 //    func imageSetting() {
@@ -30,6 +32,30 @@ class StoryViewController : UIViewController {
 //        storyImage.clipsToBounds = true
 //
 //    }
+    
+    
+    
+    func naviUserNameAndClose() {
+        let userNameButton = UIButton()
+        userNameButton.setTitle("userName 넣기", for: .normal)
+        userNameButton.setTitleColor(.black, for: .normal)
+        userNameButton.addTarget(self, action: #selector(onClickProfile), for: .touchUpInside)
+        let barUserNameButton = UIBarButtonItem(customView: userNameButton)
+        
+        let closeImage = UIImage(named: "closeBtn")!
+        let closeButton = UIButton(frame: CGRect(x: 0, y: 0, width: closeImage.size.width, height: closeImage.size.height))
+        closeButton.setImage(closeImage, for: .normal)
+        closeButton.addTarget(self, action: #selector(onClickBack), for: .touchUpInside)
+        let barCloseButton = UIBarButtonItem(customView: closeButton)
+        
+        self.navigationItem.leftBarButtonItem = barUserNameButton
+        self.navigationItem.rightBarButtonItem = barCloseButton
+        
+    }
+    
+    @objc func onClickProfile() {
+        print("프로필 넘어가기")
+    }
     
 
     

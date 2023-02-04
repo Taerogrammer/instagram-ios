@@ -9,6 +9,8 @@ import UIKit
 
 class FeedCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var topUserNameBtn : UIButton!
+    
     @IBOutlet weak var likeBtn: UIButton!
     @IBOutlet weak var commentBtn: UIButton!
     @IBOutlet weak var dmBtn: UIButton!
