@@ -24,7 +24,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_instagram" translatesAutoresizingMaskIntoConstraints="NO" id="vGm-I5-vFv">
-                                <rect key="frame" x="100" y="202" width="228" height="91.333333333333258"/>
+                                <rect key="frame" x="100" y="202" width="228" height="91.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vGm-I5-vFv" secondAttribute="height" multiplier="5:2" id="huS-bF-zxJ"/>
                                 </constraints>
@@ -752,7 +752,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="427" height="639"/>
                                         <connections>
-                                            <outlet property="commentAllLbl" destination="E0B-OF-eRq" id="MdB-Az-lHx"/>
+                                            <outlet property="commentAllLbl" destination="E0B-OF-eRq" id="wFF-p7-5F0"/>
                                             <outlet property="commentBtn" destination="s4i-gp-QIv" id="uxj-7S-pra"/>
                                             <outlet property="contentImages" destination="jBy-bg-gcQ" id="lbm-rJ-eRL"/>
                                             <outlet property="contentsLbl" destination="P0q-Dd-oLs" id="D7K-HO-mJk"/>
@@ -802,7 +802,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="NoticeViewController" storyboardName="NoticeViewController" referencedIdentifier="NoticeViewController" id="CUL-4V-39z" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmg-FI-zam" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="-1560"/>
+            <point key="canvasLocation" x="1518" y="-1539"/>
         </scene>
         <!--Story View Controller-->
         <scene sceneID="ENn-ZE-0Gd">
@@ -2043,10 +2043,11 @@
                         <viewLayoutGuide key="safeArea" id="xz3-xv-lhI"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nMe-TD-Dnq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YhU-Cv-FKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936" y="-1595"/>
+            <point key="canvasLocation" x="3439" y="-1559"/>
         </scene>
         <!--SearchViewController-->
         <scene sceneID="6j7-7E-3ko">

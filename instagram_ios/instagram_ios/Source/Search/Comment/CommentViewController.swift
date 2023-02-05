@@ -10,7 +10,7 @@ import UIKit
 
 class CommentViewController : UIViewController {
     
-    @IBOutlet weak var userNameLbl: UILabel!
+    @IBOutlet weak var userNameBtn : UIButton!
     @IBOutlet weak var contentLbl: UILabel!
     
     override func viewDidLoad() {
@@ -22,10 +22,10 @@ class CommentViewController : UIViewController {
         //MARK: 이미지
         self.view.addSubview(self.thumbnailView)
         self.thumbnailView.snp.makeConstraints { make in
-            make.top.equalTo(userNameLbl)
+            make.top.equalTo(userNameBtn)
             make.size.width.height.equalTo(40)
         }
-        userNameLbl.snp.makeConstraints { make in
+        userNameBtn.snp.makeConstraints { make in
             make.left.equalTo(thumbnailView.snp.right)
         }
         
@@ -62,7 +62,11 @@ class CommentViewController : UIViewController {
         contentLbl.text = "크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크크크크크킄크"
         contentLbl.numberOfLines = 0
         let newSize = contentLbl.sizeThatFits(CGSize(width: view.frame.width, height: CGFloat.greatestFiniteMagnitude))
-        userNameLbl.text = "rla_xogud"
+        userNameBtn.setTitle("userName 이름!", for: .normal)
+        userNameBtn.setTitleColor(.black, for: .normal)
+        userNameBtn.addTarget(self, action: #selector(onClickProfile), for: .touchUpInside)
+        
+        
     }
     
     //MARK: 비동기 처리 수행 해줘야함
@@ -71,6 +75,14 @@ class CommentViewController : UIViewController {
         var data = try? Data(contentsOf: profileUrl!)
         $0.image = UIImage(data: data!)
 //      $0.shouldShowGreenDot = false
+    }
+    
+    
+    
+    @objc func onClickProfile() {
+        let otherProfileVC = storyboard?.instantiateViewController(withIdentifier: "OtherProfileViewController") as! OtherProfileViewController
+        self.navigationController?.pushViewController(otherProfileVC, animated: true)
+        
     }
     
     

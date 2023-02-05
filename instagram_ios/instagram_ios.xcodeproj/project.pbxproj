@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A086503298F4BA2000A4F49 /* OtherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A086502298F4BA2000A4F49 /* OtherProfileViewController.swift */; };
+		5A086505298F7684000A4F49 /* EditDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A086504298F7684000A4F49 /* EditDataManager.swift */; };
 		5A09627A29892B51001A472E /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09627929892B51001A472E /* UISegmentedControl.swift */; };
 		5A09627D29892F81001A472E /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09627C29892F81001A472E /* FollowViewController.swift */; };
 		5A09627F29892F95001A472E /* FollowViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A09627E29892F95001A472E /* FollowViewController.storyboard */; };
@@ -125,6 +127,8 @@
 
 /* Begin PBXFileReference section */
 		3CC65BFA27945CCE918CE860 /* Pods-instagram_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-instagram_ios.release.xcconfig"; path = "Target Support Files/Pods-instagram_ios/Pods-instagram_ios.release.xcconfig"; sourceTree = "<group>"; };
+		5A086502298F4BA2000A4F49 /* OtherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherProfileViewController.swift; sourceTree = "<group>"; };
+		5A086504298F7684000A4F49 /* EditDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataManager.swift; sourceTree = "<group>"; };
 		5A09627929892B51001A472E /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		5A09627C29892F81001A472E /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		5A09627E29892F95001A472E /* FollowViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FollowViewController.storyboard; sourceTree = "<group>"; };
@@ -262,6 +266,14 @@
 				DAE0D9BF487D34AC969B879E /* Pods_instagram_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A086501298F4B76000A4F49 /* Other_Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5A086502298F4BA2000A4F49 /* OtherProfileViewController.swift */,
+			);
+			path = Other_Profile;
 			sourceTree = "<group>";
 		};
 		5A09627029890B53001A472E /* Setting */ = {
@@ -696,6 +708,7 @@
 				5A820B862985128500F3784F /* SearchViewController.swift */,
 				5A84D9DE298BD24D006E8D66 /* SearchTap */,
 				5A84D9DF298BD26A006E8D66 /* Comment */,
+				5A086501298F4B76000A4F49 /* Other_Profile */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -876,6 +889,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF193AF298A2CEE0011F1AD /* EditViewController.swift */,
+				5A086504298F7684000A4F49 /* EditDataManager.swift */,
 				5A87F3E3298A7FE90016F69A /* Entity */,
 				5AF193B5298A49A70011F1AD /* Name */,
 				5AF193B6298A49AE0011F1AD /* UserName */,
@@ -1096,6 +1110,7 @@
 				5A87F3E7298A82F90016F69A /* EditSingleton.swift in Sources */,
 				5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */,
 				5A84DA2A298D37A6006E8D66 /* MakeLiveViewController.swift in Sources */,
+				5A086503298F4BA2000A4F49 /* OtherProfileViewController.swift in Sources */,
 				5A09628F29893C16001A472E /* QRViewController.swift in Sources */,
 				5A3D7A5B2987F77A0020C74F /* PhoneViewController.swift in Sources */,
 				5A7D6FC529861E49002A1996 /* LoginViewController.swift in Sources */,
@@ -1113,6 +1128,7 @@
 				5A84DA33298D799D006E8D66 /* ContentsImageCollectionViewCell.swift in Sources */,
 				5A7D6FB529855EAE002A1996 /* ProfileNavigationBarViewController.swift in Sources */,
 				5A7FD343298DFB7500872DB1 /* StoryCollectionViewCell.swift in Sources */,
+				5A086505298F7684000A4F49 /* EditDataManager.swift in Sources */,
 				5A820B8329850F0E00F3784F /* ProfileViewController.swift in Sources */,
 				5A7D6FAF29854754002A1996 /* UIViewController.swift in Sources */,
 				5A7D6FC12985F960002A1996 /* ModalTableViewCell.swift in Sources */,

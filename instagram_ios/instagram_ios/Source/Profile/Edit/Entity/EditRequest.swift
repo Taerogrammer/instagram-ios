@@ -8,7 +8,7 @@
 struct EditRequest: Codable {
     var name: String
     var userName: String
-    var pronouns: String
-    var links: String
+    var bio: String
+    var link: String
     var profileUrl: String
 }

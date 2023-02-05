@@ -13,6 +13,6 @@ struct ProfileResponse : Codable {
 }
 
 struct ProfileResult: Codable {
-    var id: Int
-    var name: String
+    var pageOwnerState: Bool
+    var postCount: Int
 }

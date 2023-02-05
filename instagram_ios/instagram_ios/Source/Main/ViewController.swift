@@ -231,8 +231,8 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             default:
                 print("나머지 피즈 clicked")
             }
-            let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
-            self.navigationController?.pushViewController(feedVC, animated: true)
+//            let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
+//            self.navigationController?.pushViewController(feedVC, animated: true)
             
             
         }

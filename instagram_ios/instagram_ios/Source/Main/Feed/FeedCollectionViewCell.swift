@@ -24,6 +24,17 @@ class FeedCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var contentImages: UIImageView!
     
+
+    
+    
+//    @IBAction func onClickComment() {
+//        
+//        let storyboard = UIStoryboard(name: "CommentViewController", bundle: nil)
+//        let commentVC = storyboard.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
+////        self.navigationController?.pushViewController(commentVC, animated: true)
+//        commentVC.present(commentVC, animated: true)
+//        
+//    }
     
     
     

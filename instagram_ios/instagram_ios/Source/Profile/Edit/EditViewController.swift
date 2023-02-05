@@ -91,3 +91,17 @@ class EditViewController : UIViewController {
     
     
 }
+
+extension EditViewController {
+    func didSuccessEdit(_ result: EditResult) {
+        self.presentAlert(title: "회원 정보 수정", message: "회원 정보가 수정되었습니다")
+        
+        print("didSuccessEdit() success")
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
+    
+    
+}
