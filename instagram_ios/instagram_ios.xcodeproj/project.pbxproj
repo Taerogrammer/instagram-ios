@@ -22,8 +22,11 @@
 		5A09629729893CF6001A472E /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09629629893CF6001A472E /* FavoriteViewController.swift */; };
 		5A0962992989F9D3001A472E /* BFDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0962982989F9D3001A472E /* BFDescriptionViewController.swift */; };
 		5A09629B298A10B0001A472E /* FavDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A09629A298A10B0001A472E /* FavDescriptionViewController.swift */; };
+		5A0CD9B8298F9AC700A1E894 /* FollowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9B7298F9AC700A1E894 /* FollowListViewController.swift */; };
+		5A0CD9BC298F9D4A00A1E894 /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */; };
+		5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */; };
+		5A0CD9C0298FF66100A1E894 /* LoginValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BF298FF66100A1E894 /* LoginValue.swift */; };
 		5A21F3F4298EA5EB00B114E3 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */; };
-		5A21F3F6298EA5F300B114E3 /* ProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F3F5298EA5F300B114E3 /* ProfileRequest.swift */; };
 		5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */; };
 		5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A38298757F30020C74F /* InfoViewController.swift */; };
 		5A3D7A3C2987580E0020C74F /* InfoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3B2987580E0020C74F /* InfoViewController.storyboard */; };
@@ -142,8 +145,11 @@
 		5A09629629893CF6001A472E /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		5A0962982989F9D3001A472E /* BFDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFDescriptionViewController.swift; sourceTree = "<group>"; };
 		5A09629A298A10B0001A472E /* FavDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavDescriptionViewController.swift; sourceTree = "<group>"; };
+		5A0CD9B7298F9AC700A1E894 /* FollowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListViewController.swift; sourceTree = "<group>"; };
+		5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
+		5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeViewController.swift; sourceTree = "<group>"; };
+		5A0CD9BF298FF66100A1E894 /* LoginValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValue.swift; sourceTree = "<group>"; };
 		5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
-		5A21F3F5298EA5F300B114E3 /* ProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequest.swift; sourceTree = "<group>"; };
 		5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5A3D7A38298757F30020C74F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		5A3D7A3B2987580E0020C74F /* InfoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoViewController.storyboard; sourceTree = "<group>"; };
@@ -416,11 +422,36 @@
 			path = Information;
 			sourceTree = "<group>";
 		};
+		5A0CD9B6298F971000A1E894 /* FolloweeAndFollwer */ = {
+			isa = PBXGroup;
+			children = (
+				5A0CD9B7298F9AC700A1E894 /* FollowListViewController.swift */,
+				5A0CD9B9298F9D3400A1E894 /* Follower */,
+				5A0CD9BA298F9D3B00A1E894 /* Followee */,
+			);
+			path = FolloweeAndFollwer;
+			sourceTree = "<group>";
+		};
+		5A0CD9B9298F9D3400A1E894 /* Follower */ = {
+			isa = PBXGroup;
+			children = (
+				5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */,
+			);
+			path = Follower;
+			sourceTree = "<group>";
+		};
+		5A0CD9BA298F9D3B00A1E894 /* Followee */ = {
+			isa = PBXGroup;
+			children = (
+				5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */,
+			);
+			path = Followee;
+			sourceTree = "<group>";
+		};
 		5A21F3F2298EA5BF00B114E3 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */,
-				5A21F3F5298EA5F300B114E3 /* ProfileRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -536,6 +567,7 @@
 			children = (
 				5A3D7A6529883F310020C74F /* LoginRequest.swift */,
 				5A3D7A6B298841450020C74F /* LoginResponse.swift */,
+				5A0CD9BF298FF66100A1E894 /* LoginValue.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -726,6 +758,7 @@
 		5A820B7F29850EE700F3784F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				5A0CD9B6298F971000A1E894 /* FolloweeAndFollwer */,
 				5A21F3F2298EA5BF00B114E3 /* Entity */,
 				5A820B8029850F0600F3784F /* ProfileViewController.storyboard */,
 				5A7D6FB429855EAE002A1996 /* ProfileNavigationBarViewController.swift */,
@@ -1091,9 +1124,11 @@
 				5A87F3E5298A809F0016F69A /* EditResponse.swift in Sources */,
 				5A87F3E2298A7FBA0016F69A /* EditRequest.swift in Sources */,
 				5A3D7A4329877BE10020C74F /* EmailViewController.swift in Sources */,
+				5A0CD9BC298F9D4A00A1E894 /* FollowerViewController.swift in Sources */,
 				5A3D7A6C298841450020C74F /* LoginResponse.swift in Sources */,
 				5A84DA22298D3391006E8D66 /* MakeStoryViewController.swift in Sources */,
 				5A0962992989F9D3001A472E /* BFDescriptionViewController.swift in Sources */,
+				5A0CD9B8298F9AC700A1E894 /* FollowListViewController.swift in Sources */,
 				5A3D7A492987907E0020C74F /* PasswordViewController.swift in Sources */,
 				5A7D6FA92985473C002A1996 /* UIColor.swift in Sources */,
 				5A84DA18298D26C8006E8D66 /* MakeTableViewCell.swift in Sources */,
@@ -1104,7 +1139,6 @@
 				5A7D6FA729854736002A1996 /* String.swift in Sources */,
 				5A3D7A4F298793260020C74F /* ConfirmViewController.swift in Sources */,
 				5A84DA2F298D3A06006E8D66 /* MakeGuideViewController.swift in Sources */,
-				5A21F3F6298EA5F300B114E3 /* ProfileRequest.swift in Sources */,
 				5A09629129893C43001A472E /* SavedViewController.swift in Sources */,
 				5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */,
 				5A87F3E7298A82F90016F69A /* EditSingleton.swift in Sources */,
@@ -1168,11 +1202,13 @@
 				5A7FD345298E28DF00872DB1 /* FeedCollectionViewCell.swift in Sources */,
 				5A3D7A552987F2110020C74F /* FacebookRequest.swift in Sources */,
 				5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */,
+				5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */,
 				5A87F3F1298A98340016F69A /* PrivateEmailViewController.swift in Sources */,
 				5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */,
 				5A3D7A4629878A280020C74F /* NameViewController.swift in Sources */,
 				5A7D6FB129854760002A1996 /* UINavigationBar.swift in Sources */,
 				5AF193C1298A4DEF0011F1AD /* EditPrivateViewController.swift in Sources */,
+				5A0CD9C0298FF66100A1E894 /* LoginValue.swift in Sources */,
 				5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */,
 				5A84DA28298D377F006E8D66 /* MakeHighlightsViewController.swift in Sources */,
 				5A3D7A62298823200020C74F /* ConfirmDataManager.swift in Sources */,

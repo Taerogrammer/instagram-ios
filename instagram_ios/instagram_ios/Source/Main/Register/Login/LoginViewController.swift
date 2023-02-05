@@ -82,13 +82,11 @@ class LoginViewController : UIViewController {
         if let id = textField.text {
             if id.count > 0 {
                 idCnt = true
-                print("\(idCnt) : ID Bool")
                 loginButton.tintColor = .facebook_check
             }
             else {
                 loginButton.tintColor = .facebook_uncheck
                 idCnt = false
-                print("\(idCnt) : ID Bool")
             }
         }
     }
@@ -97,13 +95,11 @@ class LoginViewController : UIViewController {
         
         if let pwd = textField.text {
             if pwd.count > 0 {
-                print("\(pwdCnt) : PWD Bool")
                 loginButton.tintColor = .facebook_check
                 
             }
             else {
                 pwdCnt = false
-                print("\(pwdCnt) : PWD Bool")
                 loginButton.tintColor = .facebook_uncheck
             }
         }
@@ -119,6 +115,11 @@ extension LoginViewController {
     func didSuccessLogin(_ result: LoginResult) {
         //result.jwt
         print("get jwt")
+        
+        
+        
+        print("singleton jwt == \(loginSingleton.jwt!)")
+        print("singleton userIdx == \(loginSingleton.userIdx!)")
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier:"TabBarController")else{return}

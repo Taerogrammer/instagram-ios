@@ -52,6 +52,8 @@ extension ConfirmViewController {
         let userIdentifier = result.jwt
         
         
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             guard let nextVC = self.main.instantiateViewController(withIdentifier:"DefaultNavigationController") as? DefaultNavigationController else{return}
             nextVC.modalPresentationStyle = .fullScreen

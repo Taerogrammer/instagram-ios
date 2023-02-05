@@ -8,8 +8,10 @@
 import Alamofire
 
 class EditDataManager {
+    let singleton = LoginSingleton.shared
+    
     func patchEdit(_ parameter: EditRequest, delegate: EditViewController) {
-        AF.request("\(Constant.Base_URL)/app/users/:userId", method: .patch, parameters: parameter, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN" : "Header값 넣기"]).validate().responseDecodable(of: EditResponse.self) { response in
+        AF.request("\(Constant.Base_URL)/app/users/\(singleton.userIdx)", method: .patch, parameters: parameter, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN" : "Header값 넣기"]).validate().responseDecodable(of: EditResponse.self) { response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess, let result = response.result {

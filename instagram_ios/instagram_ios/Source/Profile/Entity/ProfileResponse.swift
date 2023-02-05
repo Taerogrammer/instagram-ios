@@ -15,4 +15,17 @@ struct ProfileResponse : Codable {
 struct ProfileResult: Codable {
     var pageOwnerState: Bool
     var postCount: Int
+    var followState: Bool
+    var follower: Int
+    var following: Int
+    var profileUserDto: UserInfo?
+    var thumbnailUrls: Array<String>
+}
+
+struct UserInfo: Codable {
+    var username: String
+    var name: String
+    var bio: String
+    var profileUrl: String
+    var site: String
 }

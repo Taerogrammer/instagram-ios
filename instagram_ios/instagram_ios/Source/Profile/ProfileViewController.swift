@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class ProfileViewController : UIViewController {
  
     @IBOutlet weak var highlightView : UIView!
@@ -21,21 +22,30 @@ class ProfileViewController : UIViewController {
     @IBOutlet weak var introduceLbl: UILabel!
     @IBOutlet weak var linkLbl: UILabel!
     
-    
-    
-    
     var countHighlight: Int = 0
+    
+    let singleton = LoginSingleton.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        print(LoginSingleton.shared)
         print("ProfileVC load")
         DispatchQueue.main.async {
             self.HighlightOnOff()
         }
+
         
         defaultSeg()
         segmentedControl.addUnderlineForSelectedSegment()
         fontSetting()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print("view will appear")
+        print("\(singleton.jwt)")
+        print("\(singleton.userIdx)")
     }
     
     //MARK: story highlight 유무
@@ -75,7 +85,6 @@ class ProfileViewController : UIViewController {
     @IBAction func segmentedControlUnderLine(_ sender: UISegmentedControl) {
         segmentedControl.changeUnderlinePosition()
     }
-    
     @IBAction func editProfile(_ sender: AnyObject) {
         let editVC = storyboard?.instantiateViewController(withIdentifier: "EditViewController") as! EditViewController
         self.navigationController?.pushViewController(editVC, animated: true)
@@ -94,6 +103,10 @@ class ProfileViewController : UIViewController {
     
     
     
+    func getLogin() {
+        print()
+    }
     
-    
+
 }
+
