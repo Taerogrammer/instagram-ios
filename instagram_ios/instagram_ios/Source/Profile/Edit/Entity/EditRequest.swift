@@ -9,6 +9,6 @@ struct EditRequest: Codable {
     var name: String
     var userName: String
     var bio: String
-    var link: String
+    var site: String
     var profileUrl: String
 }

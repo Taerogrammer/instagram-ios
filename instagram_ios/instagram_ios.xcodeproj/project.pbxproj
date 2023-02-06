@@ -25,6 +25,7 @@
 		5A0CD9B8298F9AC700A1E894 /* FollowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9B7298F9AC700A1E894 /* FollowListViewController.swift */; };
 		5A0CD9BC298F9D4A00A1E894 /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */; };
 		5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */; };
+		5A10E1852990E45300E4265C /* MakePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E1842990E45300E4265C /* MakePostViewController.swift */; };
 		5A21F3F4298EA5EB00B114E3 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */; };
 		5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */; };
 		5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A38298757F30020C74F /* InfoViewController.swift */; };
@@ -147,6 +148,7 @@
 		5A0CD9B7298F9AC700A1E894 /* FollowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListViewController.swift; sourceTree = "<group>"; };
 		5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
 		5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeViewController.swift; sourceTree = "<group>"; };
+		5A10E1842990E45300E4265C /* MakePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePostViewController.swift; sourceTree = "<group>"; };
 		5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5A3D7A38298757F30020C74F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -444,6 +446,14 @@
 				5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */,
 			);
 			path = Followee;
+			sourceTree = "<group>";
+		};
+		5A10E1832990E44300E4265C /* Make_Post */ = {
+			isa = PBXGroup;
+			children = (
+				5A10E1842990E45300E4265C /* MakePostViewController.swift */,
+			);
+			path = Make_Post;
 			sourceTree = "<group>";
 		};
 		5A21F3F2298EA5BF00B114E3 /* Entity */ = {
@@ -807,6 +817,7 @@
 		5A84DA0D298D099A006E8D66 /* Profile_Make */ = {
 			isa = PBXGroup;
 			children = (
+				5A10E1832990E44300E4265C /* Make_Post */,
 				5A84DA12298D0AA6006E8D66 /* Make_Reels */,
 				5A84DA13298D0AAE006E8D66 /* Make_Contents */,
 				5A84DA14298D0ABA006E8D66 /* Make_Story */,
@@ -1174,6 +1185,7 @@
 				5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */,
 				5A84D9E6298CAB8F006E8D66 /* NoticeViewController.swift in Sources */,
 				5A7D6FA0298545E2002A1996 /* IndicatorView.swift in Sources */,
+				5A10E1852990E45300E4265C /* MakePostViewController.swift in Sources */,
 				5A0962812989334E001A472E /* UIView.swift in Sources */,
 				5A7D6FAB29854742002A1996 /* UIFont.swift in Sources */,
 				5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */,

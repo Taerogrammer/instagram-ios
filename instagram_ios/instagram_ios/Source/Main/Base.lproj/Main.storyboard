@@ -416,27 +416,27 @@
             <objects>
                 <viewController storyboardIdentifier="FacebookViewController" id="EaB-Cm-XBA" customClass="FacebookViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kDH-2B-jcA">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="869"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_circle" translatesAutoresizingMaskIntoConstraints="NO" id="enu-fZ-Kwh">
-                                <rect key="frame" x="95" y="167" width="238" height="127"/>
+                                <rect key="frame" x="95" y="211" width="238" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="enu-fZ-Kwh" secondAttribute="height" multiplier="15:8" id="9rY-fY-9Bb"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="전화번호 또는 이메일 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qz0-45-Zeh">
-                                <rect key="frame" x="25" y="394" width="378" height="34"/>
+                                <rect key="frame" x="25" y="438" width="378" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="29q-AV-5zy">
-                                <rect key="frame" x="25" y="428" width="378" height="38"/>
+                                <rect key="frame" x="25" y="472" width="378" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mwd-6J-GUQ">
-                                <rect key="frame" x="25" y="476" width="378" height="34.333333333333314"/>
+                                <rect key="frame" x="25" y="520" width="378" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그인"/>
                                 <connections>
@@ -795,7 +795,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKy-W1-qv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541.12149532710282" y="-1594.6004319654428"/>
+            <point key="canvasLocation" x="543" y="-1595"/>
         </scene>
         <!--NoticeViewController-->
         <scene sceneID="Mam-9D-Qg9">
@@ -1102,6 +1102,80 @@
             </objects>
             <point key="canvasLocation" x="2774" y="1954"/>
         </scene>
+        <!--Make Post View Controller-->
+        <scene sceneID="HMu-7y-kIz">
+            <objects>
+                <viewController storyboardIdentifier="MakePostViewController" id="r47-Le-LwM" customClass="MakePostViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L26-JE-57U">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RoI-85-e5C">
+                                <rect key="frame" x="0.0" y="47" width="428" height="120"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="szK-QB-o31">
+                                        <rect key="frame" x="20" y="20" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="szK-QB-o31" secondAttribute="height" multiplier="1:1" id="Pey-WV-uUe"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="문구 입력..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atD-B6-iFR">
+                                        <rect key="frame" x="115" y="20" width="313" height="80"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="037-U6-AcD"/>
+                                    <constraint firstItem="szK-QB-o31" firstAttribute="top" secondItem="RoI-85-e5C" secondAttribute="top" constant="20" id="ITb-Hg-AvJ"/>
+                                    <constraint firstItem="szK-QB-o31" firstAttribute="leading" secondItem="RoI-85-e5C" secondAttribute="leading" constant="20" id="O5E-72-khm"/>
+                                    <constraint firstItem="atD-B6-iFR" firstAttribute="top" secondItem="RoI-85-e5C" secondAttribute="top" constant="20" id="aXf-Dz-8NM"/>
+                                    <constraint firstAttribute="trailing" secondItem="atD-B6-iFR" secondAttribute="trailing" id="kSq-Vq-RwH"/>
+                                    <constraint firstAttribute="bottom" secondItem="szK-QB-o31" secondAttribute="bottom" constant="20" id="kdP-Lq-0X7"/>
+                                    <constraint firstAttribute="bottom" secondItem="atD-B6-iFR" secondAttribute="bottom" constant="20" id="ryd-wk-Ulr"/>
+                                    <constraint firstItem="atD-B6-iFR" firstAttribute="leading" secondItem="szK-QB-o31" secondAttribute="trailing" constant="15" id="uLP-Xs-KAh"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akA-Pq-dQ3">
+                                <rect key="frame" x="0.0" y="227" width="428" height="60"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="위치 태그"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBU-nU-cGy">
+                                <rect key="frame" x="0.0" y="167" width="428" height="60"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="사람 추가"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Mr-CF-kdW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jBU-nU-cGy" firstAttribute="height" secondItem="RoI-85-e5C" secondAttribute="height" multiplier="0.5" id="0fh-fj-zdl"/>
+                            <constraint firstItem="jBU-nU-cGy" firstAttribute="leading" secondItem="4Mr-CF-kdW" secondAttribute="leading" id="6Mz-ql-QNM"/>
+                            <constraint firstItem="jBU-nU-cGy" firstAttribute="top" secondItem="RoI-85-e5C" secondAttribute="bottom" id="7Fy-91-WpX"/>
+                            <constraint firstItem="4Mr-CF-kdW" firstAttribute="trailing" secondItem="akA-Pq-dQ3" secondAttribute="trailing" id="JGV-v4-OmK"/>
+                            <constraint firstItem="akA-Pq-dQ3" firstAttribute="leading" secondItem="4Mr-CF-kdW" secondAttribute="leading" id="Pwo-Aa-RAO"/>
+                            <constraint firstItem="4Mr-CF-kdW" firstAttribute="trailing" secondItem="jBU-nU-cGy" secondAttribute="trailing" id="Sz7-9L-Sbq"/>
+                            <constraint firstItem="4Mr-CF-kdW" firstAttribute="trailing" secondItem="RoI-85-e5C" secondAttribute="trailing" id="YFw-9H-waz"/>
+                            <constraint firstItem="akA-Pq-dQ3" firstAttribute="height" secondItem="jBU-nU-cGy" secondAttribute="height" id="cuq-39-Rik"/>
+                            <constraint firstItem="akA-Pq-dQ3" firstAttribute="top" secondItem="jBU-nU-cGy" secondAttribute="bottom" id="eAj-BS-HWY"/>
+                            <constraint firstItem="RoI-85-e5C" firstAttribute="top" secondItem="4Mr-CF-kdW" secondAttribute="top" id="tMJ-T6-2c8"/>
+                            <constraint firstItem="RoI-85-e5C" firstAttribute="leading" secondItem="4Mr-CF-kdW" secondAttribute="leading" id="wMW-xo-Q1i"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextField" destination="atD-B6-iFR" id="PQK-Ih-dr7"/>
+                        <outlet property="locationBtn" destination="akA-Pq-dQ3" id="SWP-9L-ITd"/>
+                        <outlet property="personBtn" destination="jBU-nU-cGy" id="c3I-kU-1fx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RM4-lz-XY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="574.76635514018687" y="-2408.4233261339095"/>
+        </scene>
         <!--Make Contents View Controller-->
         <scene sceneID="CsW-TR-LJI">
             <objects>
@@ -1238,7 +1312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMX-1Q-LzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4347.1962616822429" y="1953.563714902808"/>
+            <point key="canvasLocation" x="6006" y="1970"/>
         </scene>
         <!--Keep View Controller-->
         <scene sceneID="t7T-cL-7zm">
@@ -2048,7 +2122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YhU-Cv-FKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3439" y="-1559"/>
+            <point key="canvasLocation" x="3725" y="-1608"/>
         </scene>
         <!--SearchViewController-->
         <scene sceneID="6j7-7E-3ko">
@@ -2176,7 +2250,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xxv-r3-AXs"/>
+        <segue reference="6nG-h2-FCC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="List1" width="869" height="133"/>
@@ -2222,6 +2296,9 @@
         <image name="tip3" width="869" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

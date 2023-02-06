@@ -41,7 +41,6 @@ class EditNameViewController : UIViewController {
     }
     
     @objc func onClickPost() {
-        print("asdasd")
         singleton.name = ""
         singleton.name = nameTextField.text ?? ""
         

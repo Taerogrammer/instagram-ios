@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import YPImagePicker
 
 class ViewController: UIViewController {
 
@@ -17,6 +18,9 @@ class ViewController: UIViewController {
         Feed(userImage: "tip3", userName: "user22222", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdasas", commentNumber: 6, postData: "2023년 2월 4일"),
         Feed(userImage: "fav1", userName: "user3333333", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdqwdqwqwf", commentNumber: 7, postData: "2023년 2월 4일")
     ]
+    
+    var pickedImages: [String] = []
+    var FirstImage: [UIImage] = []
     
     
     
@@ -75,12 +79,7 @@ class ViewController: UIViewController {
             height: dmImage.size.height))
         dmButton.setImage(dmImage, for: .normal)
         dmButton.addTarget(self, action: #selector(onClickDM), for: .touchUpInside)
-        
-
         let barDmButton = UIBarButtonItem(customView: dmButton)
-        
-
-        
         let instaImage = UIImage(named: "home_instagram")!
 
         let instaBtn = UIButton(frame: CGRect(
@@ -91,8 +90,6 @@ class ViewController: UIViewController {
 
         instaBtn.setImage(instaImage, for: .normal)
         instaBtn.addTarget(self, action: #selector(onClickInstagram), for: .touchUpInside)
-
-
         let instaButton = UIBarButtonItem(customView: instaBtn)
         
         let spacer = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
@@ -104,10 +101,29 @@ class ViewController: UIViewController {
     }
     
     @objc func onclickAdd(_ sender: AnyObject) {
-        // ...
-//        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "SideMenuNavigation") as! SideMenuNavigation
-//        self.navigationController?.show(pushVC, sender: self)
-        print("onClickAdd() success")
+
+        var config = YPImagePickerConfiguration()
+        config.library.maxNumberOfItems = 10 // 최대 선택 가능한 사진 개수 제한
+        config.library.mediaType = .photo // 미디어타입(사진, 사진/동영상, 동영상)
+      
+        let picker = YPImagePicker(configuration: config)
+      
+        picker.didFinishPicking { [unowned picker] items, _ in
+          if let photo = items.singlePhoto {
+                print(photo.fromCamera) // Image source (camera or library)
+                print(photo.image) // Final image selected by the user
+                print(photo.originalImage) // original image selected by the user, unfiltered
+                print(photo.modifiedImage) // Transformed image, can be nil
+                print(photo.exifMeta) // Print exif meta data of original image.
+            }
+            picker.dismiss(animated: true, completion: nil)
+            let postVC = self.storyboard?.instantiateViewController(withIdentifier: "MakePostViewController") as! MakePostViewController
+            
+            self.navigationController?.pushViewController(postVC, animated: true)
+        }
+        
+        present(picker, animated: true, completion: nil)
+        
     }
     
     //다른 vc으로 이동하기
@@ -116,8 +132,6 @@ class ViewController: UIViewController {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "NoticeViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
         print("onclickLike() success")
-
-        
     }
     
     @objc func onClickInstagram(_ sender: AnyObject) {

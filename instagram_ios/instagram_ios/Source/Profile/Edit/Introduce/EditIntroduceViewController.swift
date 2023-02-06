@@ -10,6 +10,10 @@ import UIKit
 
 class EditIntroduceViewController : UIViewController {
     
+    let singleton = EditSingleton.shared
+    
+    @IBOutlet weak var introduceTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NavigationBack()
@@ -28,6 +32,8 @@ class EditIntroduceViewController : UIViewController {
     }
     
     @objc func onClickPost() {
-        print("Add Link 포스트 완료")
+        singleton.bio = ""
+        singleton.bio = introduceTextField.text ?? ""
+        self.navigationController?.popViewController(animated: true)
     }
 }

@@ -19,7 +19,8 @@ class EditViewController : UIViewController {
     @IBOutlet weak var linkBtn : UIButton!
     
     let singleton = EditSingleton.shared
-
+    
+    lazy var dataManager: EditDataManager = EditDataManager()
     
     
     override func viewDidLoad() {
@@ -37,7 +38,6 @@ class EditViewController : UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("single 바꼈나 >> \(singleton.name!)")
         InfoInButton()
         
     }
@@ -66,7 +66,13 @@ class EditViewController : UIViewController {
     }
     
     @objc func onClickPost() {
-        print("Edit VC 포스트 완료")
+        self.dismissKeyboard()
+        self.showIndicator()
+        
+        let input = EditRequest(name: singleton.name ?? "", userName: singleton.userName ?? "", bio: singleton.bio ?? "", site: singleton.site ?? "", profileUrl: singleton.profileUrl ?? "")
+        print("\(singleton.name!) >> \(singleton.userName!) >> \(singleton.bio!) >> \(singleton.site!) >> \(singleton.profileUrl!)")
+        dataManager.patchEdit(input, delegate: self)
+        
     }
     
     

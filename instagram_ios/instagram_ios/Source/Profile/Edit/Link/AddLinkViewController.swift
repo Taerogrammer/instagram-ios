@@ -10,6 +10,9 @@ import UIKit
 
 class AddLinkViewController: UIViewController {
     
+    let singleton = EditSingleton.shared
+    
+    @IBOutlet weak var linkTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +47,9 @@ class AddLinkViewController: UIViewController {
     }
     
     @objc func onClickPost() {
-        print("Add Link 포스트 완료")
+        singleton.site = ""
+        singleton.site = linkTextField.text ?? ""
+        self.navigationController?.popViewController(animated: true)
     }
     
     

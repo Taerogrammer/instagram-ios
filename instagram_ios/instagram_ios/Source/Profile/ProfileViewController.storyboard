@@ -617,6 +617,9 @@
                             <constraint firstItem="ty2-BL-lIi" firstAttribute="leading" secondItem="ZiT-kv-4Ws" secondAttribute="leading" id="jHy-2O-oGn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userNameTextField" destination="ty2-BL-lIi" id="Otj-tw-Qs9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8M-RA-bqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -635,23 +638,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="글자수 제한" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EnB-sf-CGs">
-                                <rect key="frame" x="332" y="133" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pf7-Ar-fgj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pf7-Ar-fgj" firstAttribute="trailing" secondItem="STu-FK-rnI" secondAttribute="trailing" id="PHg-Pb-Zfe"/>
                             <constraint firstItem="STu-FK-rnI" firstAttribute="top" secondItem="pf7-Ar-fgj" secondAttribute="top" id="bDN-pq-SEI"/>
-                            <constraint firstItem="pf7-Ar-fgj" firstAttribute="trailing" secondItem="EnB-sf-CGs" secondAttribute="trailing" constant="20" id="cKx-wT-S9b"/>
                             <constraint firstItem="STu-FK-rnI" firstAttribute="leading" secondItem="pf7-Ar-fgj" secondAttribute="leading" id="t0d-1H-Ae7"/>
-                            <constraint firstItem="EnB-sf-CGs" firstAttribute="top" secondItem="STu-FK-rnI" secondAttribute="bottom" constant="40" id="zz8-RD-wan"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="introduceTextField" destination="STu-FK-rnI" id="SQS-Yz-z2O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vaf-iB-sml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -864,6 +862,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HAq-iW-wPs"/>
+                    <connections>
+                        <outlet property="linkTextField" destination="lQA-sN-f0T" id="Q49-WU-zCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXb-n9-L7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

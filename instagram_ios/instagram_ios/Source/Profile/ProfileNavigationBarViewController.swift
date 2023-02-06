@@ -114,7 +114,7 @@ extension ProfileNavigationBarViewController : SettingModalProtocol, ActivityMod
         self.navigationController?.pushViewController(reelsVC, animated: true)
     }
     
-    func contentsSetting() {
+    func contentsSetting() {    //MakeContentsViewController랑 교체
         let contentsVC = storyboard?.instantiateViewController(withIdentifier: "MakeContentsViewController") as! MakeContentsViewController
         self.navigationController?.pushViewController(contentsVC, animated: true)
     }
