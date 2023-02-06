@@ -26,6 +26,7 @@
 		5A0CD9BC298F9D4A00A1E894 /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */; };
 		5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */; };
 		5A10E1852990E45300E4265C /* MakePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E1842990E45300E4265C /* MakePostViewController.swift */; };
+		5A10E188299105E100E4265C /* PostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E187299105E100E4265C /* PostContent.swift */; };
 		5A21F3F4298EA5EB00B114E3 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */; };
 		5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */; };
 		5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A38298757F30020C74F /* InfoViewController.swift */; };
@@ -149,6 +150,7 @@
 		5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
 		5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeViewController.swift; sourceTree = "<group>"; };
 		5A10E1842990E45300E4265C /* MakePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePostViewController.swift; sourceTree = "<group>"; };
+		5A10E187299105E100E4265C /* PostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContent.swift; sourceTree = "<group>"; };
 		5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5A3D7A38298757F30020C74F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -456,6 +458,14 @@
 			path = Make_Post;
 			sourceTree = "<group>";
 		};
+		5A10E186299105C600E4265C /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				5A10E187299105E100E4265C /* PostContent.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
 		5A21F3F2298EA5BF00B114E3 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -731,6 +741,7 @@
 				5A820B6B2984FBCB00F3784F /* Main.storyboard */,
 				5A84DA03298CF0EC006E8D66 /* DefaultNavigationController.swift */,
 				5A820B692984FBCB00F3784F /* ViewController.swift */,
+				5A10E186299105C600E4265C /* Post */,
 				5A7FD33E298DFB0100872DB1 /* Story */,
 				5A7FD33F298DFB0800872DB1 /* Feed */,
 				5A84D9E4298CAB71006E8D66 /* Notice */,
@@ -1211,6 +1222,7 @@
 				5A7FD345298E28DF00872DB1 /* FeedCollectionViewCell.swift in Sources */,
 				5A3D7A552987F2110020C74F /* FacebookRequest.swift in Sources */,
 				5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */,
+				5A10E188299105E100E4265C /* PostContent.swift in Sources */,
 				5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */,
 				5A87F3F1298A98340016F69A /* PrivateEmailViewController.swift in Sources */,
 				5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */,

@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var pickedImages: [String] = []
     var FirstImage: [UIImage] = []
     
+    private var postContentDataModel: PostContent = PostContent.shared
     
     
     @IBOutlet weak var storyCollectionView : UICollectionView!
@@ -109,13 +110,26 @@ class ViewController: UIViewController {
         let picker = YPImagePicker(configuration: config)
       
         picker.didFinishPicking { [unowned picker] items, _ in
-          if let photo = items.singlePhoto {
-                print(photo.fromCamera) // Image source (camera or library)
-                print(photo.image) // Final image selected by the user
-                print(photo.originalImage) // original image selected by the user, unfiltered
-                print(photo.modifiedImage) // Transformed image, can be nil
-                print(photo.exifMeta) // Print exif meta data of original image.
+//          if let photo = items.singlePhoto {
+//                print(photo.fromCamera) // Image source (camera or library)
+//                print(photo.image) // Final image selected by the user
+//                print(photo.originalImage) // original image selected by the user, unfiltered
+//                print(photo.modifiedImage) // Transformed image, can be nil
+//                print(photo.exifMeta) // Print exif meta data of original image.
+//            }
+            
+            for item in items {
+                switch item {
+                case .photo(let p):
+                    self.FirstImage.append(p.image)
+                    self.postContentDataModel.setContentImage(result: p.image)
+                default:
+                    print("Photo 아님!!")
+                }
             }
+            
+            
+            
             picker.dismiss(animated: true, completion: nil)
             let postVC = self.storyboard?.instantiateViewController(withIdentifier: "MakePostViewController") as! MakePostViewController
             

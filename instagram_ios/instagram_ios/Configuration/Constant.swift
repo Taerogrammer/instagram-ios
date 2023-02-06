@@ -11,6 +11,6 @@ struct Constant {
     //일반 회원가입 url
     static let Register_URL = ""
     static let Facebook_URL = ""
-    static let Base_URL = "http://m1ndy52.shop:9000"
-    
+    static let Base_URL = "http://diana-instagram.shop:9000"
+    static let Olive_URL = "http://m1ndy52.shop:9000"
 }
