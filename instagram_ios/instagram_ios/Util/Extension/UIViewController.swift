@@ -117,30 +117,26 @@ extension UIViewController {
     
     //MARK: back 버튼 && 완료
     
-    func BackAndPost() {
+    func NavigationBack() {
         let backImage = UIImage(named: "backBtn")!
         let backButton = UIButton(frame: CGRect(x: 0, y: 0, width: backImage.size.width, height: backImage.size.height))
         backButton.setImage(backImage, for: .normal)
         backButton.addTarget(self, action: #selector(onClickBack), for: .touchUpInside)
         let barBackButton = UIBarButtonItem(customView: backButton)
-        
-        let postBtn = UIButton()
-        postBtn.setTitle("완료", for: .normal)
-        postBtn.setTitleColor(.black, for: .normal)
-        postBtn.addTarget(self, action: #selector(onClickPost), for: .touchUpInside)
-        let postButton = UIBarButtonItem(customView: postBtn)
-
         self.navigationItem.leftBarButtonItem = barBackButton
-        self.navigationItem.rightBarButtonItem = postButton
+
+//        let postBtn = UIButton()
+//        postBtn.setTitle("완료", for: .normal)
+//        postBtn.setTitleColor(.black, for: .normal)
+//        postBtn.addTarget(self, action: #selector(onClickPost), for: .touchUpInside)
+//        let postButton = UIBarButtonItem(customView: postBtn)
+//        self.navigationItem.rightBarButtonItem = postButton
     }
     
     @objc func onClickBack() {
         self.navigationController?.popViewController(animated: true)
     }
-    @objc func onClickPost() {
-        print("Post 완료")
-    }
-    
+
     
 }
 

@@ -117,9 +117,17 @@ extension LoginViewController {
         print("get jwt")
         
         
+        let userIdx = result.userIdx
+        let userJwt = result.jwt
         
-        print("singleton jwt == \(loginSingleton.jwt!)")
-        print("singleton userIdx == \(loginSingleton.userIdx!)")
+        UserDefaults.standard.set(userIdx, forKey: "userIdx")
+        UserDefaults.standard.set(userJwt, forKey: "userJwt")
+        
+        print(userIdx)
+        print(userJwt)
+        
+        print("UserDefaults == \(UserDefaults.standard.integer(forKey: "userIdx"))")
+    
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {
             guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier:"TabBarController")else{return}

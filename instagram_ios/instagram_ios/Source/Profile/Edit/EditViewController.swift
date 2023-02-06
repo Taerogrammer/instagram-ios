@@ -18,13 +18,28 @@ class EditViewController : UIViewController {
     @IBOutlet weak var introduceBtn : UIButton!
     @IBOutlet weak var linkBtn : UIButton!
     
+    let singleton = EditSingleton.shared
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeImageCircle()
-        InfoInButton()
-        BackAndPost()
+        
+//        InfoInButton()
+        NavigationBack()
         title = "프로필 수정"
+        print("viewdidload()")
+        NavigationPost()
+
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("single 바꼈나 >> \(singleton.name!)")
+        InfoInButton()
+        
     }
 
     //MARK: profile and avatar image
@@ -38,6 +53,20 @@ class EditViewController : UIViewController {
         avatarImage.layer.borderWidth = 1
         avatarImage.layer.borderColor = CGColor(gray: 1, alpha: 1)
         avatarImage.clipsToBounds = true
+    }
+    
+    
+    func NavigationPost() {
+        let postBtn = UIButton()
+        postBtn.setTitle("완료", for: .normal)
+        postBtn.setTitleColor(.black, for: .normal)
+        postBtn.addTarget(self, action: #selector(onClickPost), for: .touchUpInside)
+        let postButton = UIBarButtonItem(customView: postBtn)
+        self.navigationItem.rightBarButtonItem = postButton
+    }
+    
+    @objc func onClickPost() {
+        print("Edit VC 포스트 완료")
     }
     
     
@@ -66,25 +95,72 @@ class EditViewController : UIViewController {
     
     //MARK: button 안에 정보 넣기
     
-    var textName: String = "name 받기"
+    
+    var textName: String = ""
     var textUserName: String = "userName 받기"
     var textIntro: String = "introduce 받기"
     var textLink: String = "link 받기"
     
     func InfoInButton() {
+        
+        
+        textName = singleton.name ?? ""
+        textUserName = singleton.userName ?? ""
+        textIntro = singleton.bio ?? ""
+        textLink = singleton.site ?? ""
+        
+        print("잘 들어가있나? \(textName) \(textUserName) \(textIntro)  \(textLink)")
+        
         nameBtn.setTitle("\(textName)", for: .normal)
-        nameBtn.setTitleColor(.gray, for: .normal)
         nameBtn.contentHorizontalAlignment = .left
         userNameBtn.setTitle("\(textUserName)", for: .normal)
-        userNameBtn.setTitleColor(.gray, for: .normal)
         userNameBtn.contentHorizontalAlignment = .left
         introduceBtn.setTitle("\(textIntro)", for: .normal)
-        introduceBtn.setTitleColor(.gray, for: .normal)
         introduceBtn.contentHorizontalAlignment = .left
         linkBtn.setTitle("\(textLink)", for: .normal)
-        linkBtn.setTitleColor(.gray, for: .normal)
         linkBtn.contentHorizontalAlignment = .left
         
+        
+        if textName == "" {
+            nameBtn.setTitleColor(.gray, for: .normal)
+            nameBtn.setTitle("이름", for: .normal)
+            
+        }
+        else {
+            nameBtn.setTitleColor(.black, for: .normal)
+        }
+        
+        if textUserName == "" {
+            userNameBtn.setTitleColor(.gray, for: .normal)
+            userNameBtn.setTitle("사용자 이름", for: .normal)
+        }
+        else {
+            userNameBtn.setTitleColor(.black, for: .normal)
+        }
+        
+        if textIntro == "" {
+            introduceBtn.setTitleColor(.gray, for: .normal)
+            introduceBtn.setTitle("소개", for: .normal)
+        }
+        else {
+            introduceBtn.setTitleColor(.black, for: .normal)
+        }
+        
+        if textLink == "" {
+            linkBtn.setTitleColor(.gray, for: .normal)
+            linkBtn.setTitle("링크", for: .normal )
+        }
+        else {
+            linkBtn.setTitleColor(.black, for: .normal)
+        }
+        
+        //이미지 url
+//        if textLink == "" {
+//            nameBtn.setTitleColor(.gray, for: .normal)
+//        }
+//        else {
+//            userNameBtn.setTitleColor(.black, for: .normal)
+//        }
     }
     
     

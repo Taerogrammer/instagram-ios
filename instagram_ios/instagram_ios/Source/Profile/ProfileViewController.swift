@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 
 class ProfileViewController : UIViewController {
@@ -18,20 +19,29 @@ class ProfileViewController : UIViewController {
     @IBOutlet weak var myFeedView : UIView!
     @IBOutlet weak var tagFeedView : UIView!
     
+    @IBOutlet weak var postCount: UILabel!
+    @IBOutlet weak var followerCount: UILabel!
+    @IBOutlet weak var followingCount: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    
+    
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var introduceLbl: UILabel!
     @IBOutlet weak var linkLbl: UILabel!
     
     var countHighlight: Int = 0
     
-    let singleton = LoginSingleton.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(LoginSingleton.shared)
         print("ProfileVC load")
+        
+        print("UserDefaults == \(UserDefaults.standard.integer(forKey: "userIdx"))")
+        print("UserDefaults == \(UserDefaults.standard.string(forKey: "userJwt")!)")
         DispatchQueue.main.async {
+            self.getProfile()
             self.HighlightOnOff()
         }
 
@@ -43,9 +53,7 @@ class ProfileViewController : UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        print("view will appear")
-        print("\(singleton.jwt)")
-        print("\(singleton.userIdx)")
+
     }
     
     //MARK: story highlight 유무
@@ -103,8 +111,35 @@ class ProfileViewController : UIViewController {
     
     
     
-    func getLogin() {
-        print()
+    func getProfile() {
+        AF.request("\(Constant.Base_URL)/app/users/profile/\(UserDefaults.standard.integer(forKey: "userIdx"))", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: ProfileResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("SUCCESS >>> \(response)")
+//                print(response.result?.follower)  형식
+                self.postCount.text = String(response.result?.postCount ?? 0)
+                self.followerCount.text = String(response.result?.follower ?? 0)
+                self.followingCount.text = String(response.result?.following ?? 0)
+                self.nameLbl.text = response.result?.profileUserDto?.name ?? ""
+                self.introduceLbl.text = response.result?.profileUserDto?.bio ?? ""
+                self.linkLbl.text = response.result?.profileUserDto?.site ?? ""
+                
+                
+                
+//                print("uesrName Data --> \(self.userNameData)")
+                let editSingle = EditSingleton.shared
+
+                editSingle.userName = response.result?.profileUserDto?.username ?? ""
+                editSingle.name = response.result?.profileUserDto?.name ?? ""
+                editSingle.bio = response.result?.profileUserDto?.bio ?? ""
+                editSingle.profileUrl = response.result?.profileUserDto?.profileUrl ?? ""
+                editSingle.site = response.result?.profileUserDto?.site ?? ""
+                                
+            case.failure(let error):
+                print("FAILED ..\(error)")
+            }
+            
+        }
     }
     
 

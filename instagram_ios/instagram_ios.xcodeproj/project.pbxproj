@@ -25,7 +25,6 @@
 		5A0CD9B8298F9AC700A1E894 /* FollowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9B7298F9AC700A1E894 /* FollowListViewController.swift */; };
 		5A0CD9BC298F9D4A00A1E894 /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */; };
 		5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */; };
-		5A0CD9C0298FF66100A1E894 /* LoginValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BF298FF66100A1E894 /* LoginValue.swift */; };
 		5A21F3F4298EA5EB00B114E3 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */; };
 		5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */; };
 		5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A38298757F30020C74F /* InfoViewController.swift */; };
@@ -148,7 +147,6 @@
 		5A0CD9B7298F9AC700A1E894 /* FollowListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowListViewController.swift; sourceTree = "<group>"; };
 		5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
 		5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeViewController.swift; sourceTree = "<group>"; };
-		5A0CD9BF298FF66100A1E894 /* LoginValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValue.swift; sourceTree = "<group>"; };
 		5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5A3D7A38298757F30020C74F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -567,7 +565,6 @@
 			children = (
 				5A3D7A6529883F310020C74F /* LoginRequest.swift */,
 				5A3D7A6B298841450020C74F /* LoginResponse.swift */,
-				5A0CD9BF298FF66100A1E894 /* LoginValue.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1208,7 +1205,6 @@
 				5A3D7A4629878A280020C74F /* NameViewController.swift in Sources */,
 				5A7D6FB129854760002A1996 /* UINavigationBar.swift in Sources */,
 				5AF193C1298A4DEF0011F1AD /* EditPrivateViewController.swift in Sources */,
-				5A0CD9C0298FF66100A1E894 /* LoginValue.swift in Sources */,
 				5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */,
 				5A84DA28298D377F006E8D66 /* MakeHighlightsViewController.swift in Sources */,
 				5A3D7A62298823200020C74F /* ConfirmDataManager.swift in Sources */,

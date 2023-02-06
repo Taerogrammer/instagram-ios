@@ -17,7 +17,8 @@ class PrivateBirthdayViewController: UIViewController {
         DatePicker()
         title = "생일"
 
-        BackAndPost()
+        NavigationBack()
+        NavigationPost()
         
     }
     
@@ -41,6 +42,18 @@ class PrivateBirthdayViewController: UIViewController {
         return formatter.string(from: date)
     }
 
+    func NavigationPost() {
+        let postBtn = UIButton()
+        postBtn.setTitle("완료", for: .normal)
+        postBtn.setTitleColor(.black, for: .normal)
+        postBtn.addTarget(self, action: #selector(onClickPost), for: .touchUpInside)
+        let postButton = UIBarButtonItem(customView: postBtn)
+        self.navigationItem.rightBarButtonItem = postButton
+    }
+    
+    @objc func onClickPost() {
+        print("생일 포스트 완료")
+    }
     
     
     

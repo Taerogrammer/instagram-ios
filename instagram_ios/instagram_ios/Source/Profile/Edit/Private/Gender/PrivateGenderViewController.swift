@@ -66,7 +66,8 @@ class PrivateGenderViewController : UIViewController {
         textFieldView.isHidden = true
         bySelfHeight.constant = 0 - textFieldView.frame.height
         buttonHeight.constant = 0 - textFieldView.frame.height
-        BackAndPost()
+        NavigationBack()
+        NavigationPost()
         title = "성별"
         
     }
@@ -83,9 +84,21 @@ class PrivateGenderViewController : UIViewController {
         btnSelf.setImage(UIImage.init(named: "radio_check"), for:  .selected)
         btnNoShow.setImage(UIImage.init(named: "radio_uncheck"), for:  .normal)
         btnNoShow.setImage(UIImage.init(named: "radio_check"), for:  .selected)
-
     }
 
+    
+    func NavigationPost() {
+        let postBtn = UIButton()
+        postBtn.setTitle("완료", for: .normal)
+        postBtn.setTitleColor(.black, for: .normal)
+        postBtn.addTarget(self, action: #selector(onClickPost), for: .touchUpInside)
+        let postButton = UIBarButtonItem(customView: postBtn)
+        self.navigationItem.rightBarButtonItem = postButton
+    }
+    
+    @objc func onClickPost() {
+        print("성별 포스트 완료")
+    }
     
     
 }

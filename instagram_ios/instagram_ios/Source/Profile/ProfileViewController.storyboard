@@ -279,11 +279,15 @@
                     <navigationItem key="navigationItem" id="ULL-I4-mch"/>
                     <connections>
                         <outlet property="feedView" destination="x1o-62-h4t" id="qp9-oT-kax"/>
+                        <outlet property="followerCount" destination="cVg-MZ-9Gc" id="FLc-71-7Kb"/>
+                        <outlet property="followingCount" destination="4VW-r9-kOO" id="V9w-Fc-ufE"/>
                         <outlet property="highlightView" destination="vJl-Q4-rLM" id="OKs-EU-J6v"/>
                         <outlet property="introduceLbl" destination="5te-mP-sxc" id="SDu-bO-LUI"/>
                         <outlet property="linkLbl" destination="8ni-IH-lKq" id="bhW-Q0-j33"/>
                         <outlet property="myFeedView" destination="iL3-FK-0Pu" id="P8F-nu-wNv"/>
                         <outlet property="nameLbl" destination="1Ei-Va-WiP" id="tEx-3q-3s4"/>
+                        <outlet property="postCount" destination="rht-bd-WuC" id="TJr-3g-jtB"/>
+                        <outlet property="profileImage" destination="Q6L-PC-izd" id="WrE-9F-UNc"/>
                         <outlet property="segmentedControl" destination="kaO-nQ-Mlu" id="RLb-4I-2a8"/>
                         <outlet property="storyHighlight" destination="MJf-vy-n91" id="FJ9-69-rTG"/>
                         <outlet property="tagFeedView" destination="eNl-QZ-EmM" id="H5J-BC-esK"/>
@@ -914,7 +918,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Yu2-qh-wB6">
-                                <rect key="frame" x="15" y="114.33333333333331" width="400" height="200"/>
+                                <rect key="frame" x="15" y="114.33333333333331" width="400" height="200.00000000000006"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzN-Q9-ts4">
                                         <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>

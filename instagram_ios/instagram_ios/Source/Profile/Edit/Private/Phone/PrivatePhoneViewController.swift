@@ -16,7 +16,8 @@ class PrivatePhoneViewController : UIViewController {
         super.viewDidLoad()
         textFieldImage()
         title = "휴대폰 번호"
-        BackAndPost()
+        NavigationBack()
+        NavigationPost()
     }
 
     
@@ -26,6 +27,18 @@ class PrivatePhoneViewController : UIViewController {
         textField.placeholder = "전화번호"
     }
     
+    func NavigationPost() {
+        let postBtn = UIButton()
+        postBtn.setTitle("완료", for: .normal)
+        postBtn.setTitleColor(.black, for: .normal)
+        postBtn.addTarget(self, action: #selector(onClickPost), for: .touchUpInside)
+        let postButton = UIBarButtonItem(customView: postBtn)
+        self.navigationItem.rightBarButtonItem = postButton
+    }
+    
+    @objc func onClickPost() {
+        print("private phone 포스트 완료")
+    }
     
     
 

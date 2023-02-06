@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class ProfileNavigationBarViewController : UIViewController {
 
@@ -16,6 +17,10 @@ class ProfileNavigationBarViewController : UIViewController {
         super.viewDidLoad()
         print("Profile NAVIGATION BAR")
         navigationBarSetting()
+        DispatchQueue.main.async {
+            self.getUserName()
+        }
+        
     }
 
     
@@ -23,7 +28,7 @@ class ProfileNavigationBarViewController : UIViewController {
     func navigationBarSetting() {
         let titleLabel = UILabel()
         titleLabel.textColor = UIColor.black
-        titleLabel.text = "rla_xogud"
+//        titleLabel.text = "rla_xogud"
         titleLabel.font = .NotoSans(.bold, size: 28)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
 
@@ -57,8 +62,6 @@ class ProfileNavigationBarViewController : UIViewController {
         spacer.width = 28
         
         self.navigationItem.rightBarButtonItems = [barMenuButton, spacer, barAddButton]
-
-        
     }
     
     @objc func onClickMake() {
@@ -71,9 +74,6 @@ class ProfileNavigationBarViewController : UIViewController {
         sheetPresentationController.liveDelegate = self
         sheetPresentationController.guideDelegate = self
         self.present(sheetPresentationController, animated: true)
-        
-        
-
     }
     @objc func onClickMenu() {
         let storyboard = UIStoryboard(name: "ProfileModalViewController", bundle: nil)
@@ -88,8 +88,24 @@ class ProfileNavigationBarViewController : UIViewController {
         sheetPresentationController.bestFriendDelegate = self
         sheetPresentationController.favoriteDelegate = self
         self.present(sheetPresentationController, animated: true)
-
     }
+    
+    
+    
+    //MARK: userName 불러오기
+    func getUserName() {
+        AF.request("\(Constant.Base_URL)/app/users/profile/\(UserDefaults.standard.integer(forKey: "userIdx"))", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: ProfileResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("SUCCESS >>> \(response)")
+                self.title = response.result?.profileUserDto?.username
+         case.failure(let error):
+                print("FAILED ..\(error)")
+            }
+            
+        }
+    }
+
 }
 
 extension ProfileNavigationBarViewController : SettingModalProtocol, ActivityModalProtocol, KeepModalProtocol, QRModalProtocol, SavedModalProtocol, DigitalModalProtocol, BestFriendsModalProtocol, FavoriteModalProtocol, ReelsProtocol, ContentsProtocol, StoryProtocol, HighlightProtocol, LiveProtocol, GuideProtocol {

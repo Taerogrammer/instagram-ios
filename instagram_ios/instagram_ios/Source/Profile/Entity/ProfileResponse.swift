@@ -23,9 +23,9 @@ struct ProfileResult: Codable {
 }
 
 struct UserInfo: Codable {
-    var username: String
-    var name: String
-    var bio: String
-    var profileUrl: String
-    var site: String
+    var username: String?
+    var name: String?
+    var bio: String?
+    var profileUrl: String?
+    var site: String?
 }
