@@ -128,10 +128,6 @@ class ProfileViewController : UIViewController {
                 var urlString: String = response.result?.profileUserDto?.profileUrl ?? ""
                 var baseUrl: String = "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg"
                 self.profileImage.load(url: ((URL(string: urlString) ?? URL(string: baseUrl))!))
-                
-                
-                
-                
 //                print("uesrName Data --> \(self.userNameData)")
                 let editSingle = EditSingleton.shared
 
@@ -140,7 +136,7 @@ class ProfileViewController : UIViewController {
                 editSingle.bio = response.result?.profileUserDto?.bio ?? ""
                 editSingle.profileUrl = response.result?.profileUserDto?.profileUrl ?? ""
                 editSingle.link = response.result?.profileUserDto?.link ?? ""
-                                
+         
             case.failure(let error):
                 print("FAILED ..\(error)")
             }

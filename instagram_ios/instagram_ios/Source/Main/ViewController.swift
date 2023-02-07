@@ -134,7 +134,7 @@ class ViewController: UIViewController {
     }
     
     @objc func uploadPhoto() {
-
+        print("Upload complete")
     }
     
     

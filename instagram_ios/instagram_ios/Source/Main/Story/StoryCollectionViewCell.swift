@@ -9,6 +9,7 @@ import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
     
+
     @IBOutlet weak var storyImage: RoundImageView!
     @IBOutlet weak var storyUserName : UILabel!
     

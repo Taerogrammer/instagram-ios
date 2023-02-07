@@ -121,6 +121,7 @@
 		5A87F3FB298A99AF0016F69A /* PrivateGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3FA298A99AF0016F69A /* PrivateGenderViewController.swift */; };
 		5A87F3FD298A99CA0016F69A /* PrivateBirthdayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A87F3FC298A99CA0016F69A /* PrivateBirthdayViewController.storyboard */; };
 		5A87F3FF298A99D40016F69A /* PrivateBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */; };
+		5AAF113E299270C400260D46 /* FolloweeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF113D299270C400260D46 /* FolloweeResponse.swift */; };
 		5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADD3D5F298ABCE600DB02CB /* UITextField.swift */; };
 		5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE866CC29889D5800903022 /* SettingViewController.swift */; };
 		5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193AF298A2CEE0011F1AD /* EditViewController.swift */; };
@@ -250,6 +251,7 @@
 		5A87F3FA298A99AF0016F69A /* PrivateGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateGenderViewController.swift; sourceTree = "<group>"; };
 		5A87F3FC298A99CA0016F69A /* PrivateBirthdayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateBirthdayViewController.storyboard; sourceTree = "<group>"; };
 		5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateBirthdayViewController.swift; sourceTree = "<group>"; };
+		5AAF113D299270C400260D46 /* FolloweeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeResponse.swift; sourceTree = "<group>"; };
 		5ADD3D5F298ABCE600DB02CB /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		5AE866CC29889D5800903022 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5AF193AF298A2CEE0011F1AD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 			isa = PBXGroup;
 			children = (
 				5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */,
+				5AAF113D299270C400260D46 /* FolloweeResponse.swift */,
 			);
 			path = Followee;
 			sourceTree = "<group>";
@@ -1200,6 +1203,7 @@
 				5A84D9DB298B7411006E8D66 /* SearchCollectionViewCell.swift in Sources */,
 				5A7FD347298E28E900872DB1 /* FeedViewController.swift in Sources */,
 				5AF193BF298A4DE70011F1AD /* EditLinkViewController.swift in Sources */,
+				5AAF113E299270C400260D46 /* FolloweeResponse.swift in Sources */,
 				5A87F3E9298A87B90016F69A /* AddLinkViewController.swift in Sources */,
 				5A7D6FB72985639B002A1996 /* ProfileModalViewController.swift in Sources */,
 				5A09627A29892B51001A472E /* UISegmentedControl.swift in Sources */,

@@ -17,10 +17,16 @@ class ProfileNavigationBarViewController : UIViewController {
         super.viewDidLoad()
         print("Profile NAVIGATION BAR")
         navigationBarSetting()
+        
+        self.tabBarItem.title = ""
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         DispatchQueue.main.async {
             self.getUserName()
         }
-        
     }
 
     
