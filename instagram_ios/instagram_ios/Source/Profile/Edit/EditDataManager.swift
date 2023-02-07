@@ -9,7 +9,9 @@ import Alamofire
 
 class EditDataManager {
     func patchEdit(_ parameter: EditRequest, delegate: EditViewController) {
-        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))", method: .patch, parameters: parameter, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "jwt"))"]).validate().responseDecodable(of: EditResponse.self) { response in
+        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))", method: .patch, parameters: parameter, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: EditResponse.self) { response in
+            print("URL >> \(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))")
+            print("JWT >> \(Constant.Base_URL)/app/users/\(UserDefaults.standard.string(forKey: "userJwt")!)")
             switch response.result {
             case .success(let response):
                 if response.isSuccess, let result = response.result {

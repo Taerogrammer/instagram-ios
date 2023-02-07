@@ -47,8 +47,8 @@ class AddLinkViewController: UIViewController {
     }
     
     @objc func onClickPost() {
-        singleton.site = ""
-        singleton.site = linkTextField.text ?? ""
+        singleton.link = ""
+        singleton.link = linkTextField.text ?? ""
         self.navigationController?.popViewController(animated: true)
     }
     

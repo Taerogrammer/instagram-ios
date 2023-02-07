@@ -1149,6 +1149,12 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="사람 추가"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oo4-Ky-oLB">
+                                <rect key="frame" x="50" y="474" width="328" height="328"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Oo4-Ky-oLB" secondAttribute="height" multiplier="1:1" id="Z7H-5Y-K0p"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Mr-CF-kdW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1156,10 +1162,13 @@
                             <constraint firstItem="jBU-nU-cGy" firstAttribute="height" secondItem="RoI-85-e5C" secondAttribute="height" multiplier="0.5" id="0fh-fj-zdl"/>
                             <constraint firstItem="jBU-nU-cGy" firstAttribute="leading" secondItem="4Mr-CF-kdW" secondAttribute="leading" id="6Mz-ql-QNM"/>
                             <constraint firstItem="jBU-nU-cGy" firstAttribute="top" secondItem="RoI-85-e5C" secondAttribute="bottom" id="7Fy-91-WpX"/>
+                            <constraint firstItem="4Mr-CF-kdW" firstAttribute="trailing" secondItem="Oo4-Ky-oLB" secondAttribute="trailing" constant="50" id="7N1-Uy-eJd"/>
+                            <constraint firstItem="Oo4-Ky-oLB" firstAttribute="leading" secondItem="4Mr-CF-kdW" secondAttribute="leading" constant="50" id="ECC-o9-Fxk"/>
                             <constraint firstItem="4Mr-CF-kdW" firstAttribute="trailing" secondItem="akA-Pq-dQ3" secondAttribute="trailing" id="JGV-v4-OmK"/>
                             <constraint firstItem="akA-Pq-dQ3" firstAttribute="leading" secondItem="4Mr-CF-kdW" secondAttribute="leading" id="Pwo-Aa-RAO"/>
                             <constraint firstItem="4Mr-CF-kdW" firstAttribute="trailing" secondItem="jBU-nU-cGy" secondAttribute="trailing" id="Sz7-9L-Sbq"/>
                             <constraint firstItem="4Mr-CF-kdW" firstAttribute="trailing" secondItem="RoI-85-e5C" secondAttribute="trailing" id="YFw-9H-waz"/>
+                            <constraint firstItem="4Mr-CF-kdW" firstAttribute="bottom" secondItem="Oo4-Ky-oLB" secondAttribute="bottom" constant="90" id="YO2-q0-6fj"/>
                             <constraint firstItem="akA-Pq-dQ3" firstAttribute="height" secondItem="jBU-nU-cGy" secondAttribute="height" id="cuq-39-Rik"/>
                             <constraint firstItem="akA-Pq-dQ3" firstAttribute="top" secondItem="jBU-nU-cGy" secondAttribute="bottom" id="eAj-BS-HWY"/>
                             <constraint firstItem="RoI-85-e5C" firstAttribute="top" secondItem="4Mr-CF-kdW" secondAttribute="top" id="tMJ-T6-2c8"/>
@@ -1167,14 +1176,46 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appearedImage" destination="Oo4-Ky-oLB" id="idE-cu-yOX"/>
                         <outlet property="contentTextField" destination="atD-B6-iFR" id="PQK-Ih-dr7"/>
+                        <outlet property="firstImage" destination="szK-QB-o31" id="CYa-k4-jVz"/>
                         <outlet property="locationBtn" destination="akA-Pq-dQ3" id="SWP-9L-ITd"/>
                         <outlet property="personBtn" destination="jBU-nU-cGy" id="c3I-kU-1fx"/>
+                        <outlet property="retrievedImages" destination="Oo4-Ky-oLB" id="p8M-tm-AES"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RM4-lz-XY8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="574.76635514018687" y="-2408.4233261339095"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="HKz-fX-FHq">
+            <objects>
+                <viewController storyboardIdentifier="ImageViewController" id="vT1-7K-RbV" customClass="ImageViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sFe-nQ-gtQ">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzC-gl-s1w">
+                                <rect key="frame" x="94" y="127" width="240" height="565"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q5e-3H-Cq5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fzC-gl-s1w" firstAttribute="leading" secondItem="Q5e-3H-Cq5" secondAttribute="leading" constant="94" id="0PZ-4m-d85"/>
+                            <constraint firstItem="Q5e-3H-Cq5" firstAttribute="trailing" secondItem="fzC-gl-s1w" secondAttribute="trailing" constant="94" id="Imi-Re-tUZ"/>
+                            <constraint firstItem="fzC-gl-s1w" firstAttribute="top" secondItem="Q5e-3H-Cq5" secondAttribute="top" constant="80" id="fHB-sF-WTo"/>
+                            <constraint firstItem="Q5e-3H-Cq5" firstAttribute="bottom" secondItem="fzC-gl-s1w" secondAttribute="bottom" constant="200" id="pNO-zr-PgL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="fzC-gl-s1w" id="eaq-g6-lvD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEZ-8l-UPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1621" y="-2408"/>
         </scene>
         <!--Make Contents View Controller-->
         <scene sceneID="CsW-TR-LJI">

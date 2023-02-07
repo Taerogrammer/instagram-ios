@@ -126,7 +126,7 @@ extension LoginViewController {
         print(userIdx)
         print(userJwt)
         
-        print("UserDefaults == \(UserDefaults.standard.integer(forKey: "userIdx"))")
+        print("JWT UserDefaults == \(UserDefaults.standard.string(forKey: "userJwt"))")
     
         
         DispatchQueue.main.asyncAfter(deadline: .now()) {

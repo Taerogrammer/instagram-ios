@@ -16,6 +16,6 @@ struct EditResult: Decodable {
     var name: String?
     var userName: String
     var bio: String?
-    var site: String?
+    var link: String?
     var profileUrl: String?
 }

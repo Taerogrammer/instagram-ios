@@ -69,8 +69,10 @@ class EditViewController : UIViewController {
         self.dismissKeyboard()
         self.showIndicator()
         
-        let input = EditRequest(name: singleton.name ?? "", userName: singleton.userName ?? "", bio: singleton.bio ?? "", site: singleton.site ?? "", profileUrl: singleton.profileUrl ?? "")
-        print("\(singleton.name!) >> \(singleton.userName!) >> \(singleton.bio!) >> \(singleton.site!) >> \(singleton.profileUrl!)")
+        
+        let input = EditRequest(name: singleton.name ?? "", userName: singleton.userName ?? "", bio: singleton.bio ?? "", link: singleton.link ?? "", profileUrl: "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")
+        singleton.profileUrl = "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg"
+        print("\(singleton.name!) >> \(singleton.userName!) >> \(singleton.bio!) >> \(singleton.link!) >> \(singleton.profileUrl!)")  //프사 singleton으로 안함
         dataManager.patchEdit(input, delegate: self)
         
     }
@@ -113,7 +115,7 @@ class EditViewController : UIViewController {
         textName = singleton.name ?? ""
         textUserName = singleton.userName ?? ""
         textIntro = singleton.bio ?? ""
-        textLink = singleton.site ?? ""
+        textLink = singleton.link ?? ""
         
         print("잘 들어가있나? \(textName) \(textUserName) \(textIntro)  \(textLink)")
         

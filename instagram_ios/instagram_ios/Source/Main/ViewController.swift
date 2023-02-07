@@ -7,6 +7,7 @@
 
 import UIKit
 import YPImagePicker
+import FirebaseStorage
 
 class ViewController: UIViewController {
 
@@ -19,16 +20,16 @@ class ViewController: UIViewController {
         Feed(userImage: "fav1", userName: "user3333333", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdqwdqwqwf", commentNumber: 7, postData: "2023년 2월 4일")
     ]
     
-    var pickedImages: [String] = []
-    var FirstImage: [UIImage] = []
     
-    private var postContentDataModel: PostContent = PostContent.shared
-    
+    var images: [UIImage] = []
+
     
     @IBOutlet weak var storyCollectionView : UICollectionView!
     @IBOutlet weak var feedCollectionView : UICollectionView!
     
-
+    let storage = Storage.storage()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -102,43 +103,41 @@ class ViewController: UIViewController {
     }
     
     @objc func onclickAdd(_ sender: AnyObject) {
-
         var config = YPImagePickerConfiguration()
-        config.library.maxNumberOfItems = 10 // 최대 선택 가능한 사진 개수 제한
-        config.library.mediaType = .photo // 미디어타입(사진, 사진/동영상, 동영상)
-      
+        config.startOnScreen = .library
+        config.screens = [.library, .photo, .video]
+        config.library.maxNumberOfItems = 10
         let picker = YPImagePicker(configuration: config)
-      
-        picker.didFinishPicking { [unowned picker] items, _ in
-//          if let photo = items.singlePhoto {
-//                print(photo.fromCamera) // Image source (camera or library)
-//                print(photo.image) // Final image selected by the user
-//                print(photo.originalImage) // original image selected by the user, unfiltered
-//                print(photo.modifiedImage) // Transformed image, can be nil
-//                print(photo.exifMeta) // Print exif meta data of original image.
-//            }
-            
-            for item in items {
-                switch item {
-                case .photo(let p):
-                    self.FirstImage.append(p.image)
-                    self.postContentDataModel.setContentImage(result: p.image)
-                default:
-                    print("Photo 아님!!")
-                }
+        picker.didFinishPicking { [unowned picker] items, cancelled in
+            self.images = []
+
+            if cancelled == true {
+                picker.dismiss(animated: true, completion: nil)
             }
-            
-            
-            
-            picker.dismiss(animated: true, completion: nil)
-            let postVC = self.storyboard?.instantiateViewController(withIdentifier: "MakePostViewController") as! MakePostViewController
-            
-            self.navigationController?.pushViewController(postVC, animated: true)
+            else {
+                for item in items {
+                    switch item {
+                    case.photo(let photo):
+                        self.images.append(photo.image)
+                    default:
+                        print("Photo가 아님")
+                    }
+                }
+                print(self.images)
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MakePostViewController") as? MakePostViewController else { return }
+                vc.selectedImages = self.images
+                picker.dismiss(animated: true)
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
         }
-        
-        present(picker, animated: true, completion: nil)
-        
+        present(picker, animated: true)
     }
+    
+    @objc func uploadPhoto() {
+
+    }
+    
+    
     
     //다른 vc으로 이동하기
     @objc func onclickLike(_ sender: AnyObject) {
@@ -146,6 +145,8 @@ class ViewController: UIViewController {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: "NoticeViewController")
         self.navigationController?.pushViewController(pushVC!, animated: true)
         print("onclickLike() success")
+
+        
     }
     
     @objc func onClickInstagram(_ sender: AnyObject) {

@@ -9,7 +9,7 @@ import Alamofire
 
 class LoginDataManager {
     func postLogin(_ parameter: LoginRequest, delegate: LoginViewController) {
-        AF.request("\(Constant.Base_URL)/app/users/login", method: .post, parameters: parameter, encoder: JSONParameterEncoder(), headers: nil).validate().responseDecodable(of: LoginResponse.self) { response in
+        AF.request("\(Constant.Olive_URL)/app/users/login", method: .post, parameters: parameter, encoder: JSONParameterEncoder(), headers: nil).validate().responseDecodable(of: LoginResponse.self) { response in
             switch response.result {
             case .success(let response):
                 if response.isSuccess, let result = response.result {

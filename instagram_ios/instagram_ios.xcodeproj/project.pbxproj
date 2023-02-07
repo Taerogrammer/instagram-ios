@@ -26,7 +26,10 @@
 		5A0CD9BC298F9D4A00A1E894 /* FollowerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */; };
 		5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */; };
 		5A10E1852990E45300E4265C /* MakePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E1842990E45300E4265C /* MakePostViewController.swift */; };
-		5A10E188299105E100E4265C /* PostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E187299105E100E4265C /* PostContent.swift */; };
+		5A10E1982991F49F00E4265C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A10E1972991F49F00E4265C /* GoogleService-Info.plist */; };
+		5A10E19E2992420600E4265C /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E19D2992420600E4265C /* FirebaseStorageManager.swift */; };
+		5A10E1A02992477000E4265C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E19F2992477000E4265C /* ImageViewController.swift */; };
+		5A10E1A229924A1900E4265C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E1A129924A1900E4265C /* UIImageView.swift */; };
 		5A21F3F4298EA5EB00B114E3 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */; };
 		5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */; };
 		5A3D7A39298757F30020C74F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A38298757F30020C74F /* InfoViewController.swift */; };
@@ -150,7 +153,10 @@
 		5A0CD9BB298F9D4A00A1E894 /* FollowerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerViewController.swift; sourceTree = "<group>"; };
 		5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeViewController.swift; sourceTree = "<group>"; };
 		5A10E1842990E45300E4265C /* MakePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePostViewController.swift; sourceTree = "<group>"; };
-		5A10E187299105E100E4265C /* PostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContent.swift; sourceTree = "<group>"; };
+		5A10E1972991F49F00E4265C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5A10E19D2992420600E4265C /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
+		5A10E19F2992477000E4265C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		5A10E1A129924A1900E4265C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5A3D7A38298757F30020C74F /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -454,6 +460,8 @@
 			isa = PBXGroup;
 			children = (
 				5A10E1842990E45300E4265C /* MakePostViewController.swift */,
+				5A10E19D2992420600E4265C /* FirebaseStorageManager.swift */,
+				5A10E19F2992477000E4265C /* ImageViewController.swift */,
 			);
 			path = Make_Post;
 			sourceTree = "<group>";
@@ -461,7 +469,6 @@
 		5A10E186299105C600E4265C /* Post */ = {
 			isa = PBXGroup;
 			children = (
-				5A10E187299105E100E4265C /* PostContent.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -652,6 +659,7 @@
 				5A7D6FAA29854742002A1996 /* UIFont.swift */,
 				5A7D6FAC2985474B002A1996 /* UIButton.swift */,
 				5A87F3EA298A8C7C0016F69A /* UIAlertAction.swift */,
+				5A10E1A129924A1900E4265C /* UIImageView.swift */,
 				5A7D6FAE29854754002A1996 /* UIViewController.swift */,
 				5A7D6FB029854760002A1996 /* UINavigationBar.swift */,
 				5A0962802989334E001A472E /* UIView.swift */,
@@ -729,6 +737,7 @@
 				5A820B90298515B200F3784F /* Source */,
 				5A820B702984FBCD00F3784F /* LaunchScreen.storyboard */,
 				5A820B732984FBCD00F3784F /* Info.plist */,
+				5A10E1972991F49F00E4265C /* GoogleService-Info.plist */,
 			);
 			path = instagram_ios;
 			sourceTree = "<group>";
@@ -1083,6 +1092,7 @@
 				5A820B8D298513CD00F3784F /* ShopViewController.storyboard in Resources */,
 				5A87F3F9298A99A40016F69A /* PrivateGenderViewController.storyboard in Resources */,
 				5A820B852985127B00F3784F /* SearchViewController.storyboard in Resources */,
+				5A10E1982991F49F00E4265C /* GoogleService-Info.plist in Resources */,
 				5A820B6D2984FBCB00F3784F /* Main.storyboard in Resources */,
 				5A7D6F9C2985456B002A1996 /* NotoSansCJKkr-Medium.otf in Resources */,
 			);
@@ -1152,6 +1162,7 @@
 				5A7D6FA92985473C002A1996 /* UIColor.swift in Sources */,
 				5A84DA18298D26C8006E8D66 /* MakeTableViewCell.swift in Sources */,
 				5A87F3FB298A99AF0016F69A /* PrivateGenderViewController.swift in Sources */,
+				5A10E19E2992420600E4265C /* FirebaseStorageManager.swift in Sources */,
 				5AF193BB298A4DD50011F1AD /* EditUserNameViewController.swift in Sources */,
 				5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */,
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
@@ -1218,12 +1229,13 @@
 				5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */,
 				5A820B662984FBCB00F3784F /* AppDelegate.swift in Sources */,
 				5A09629329893C85001A472E /* DigitalViewController.swift in Sources */,
+				5A10E1A229924A1900E4265C /* UIImageView.swift in Sources */,
 				5A09628D29893BDC001A472E /* KeepViewController.swift in Sources */,
 				5A7FD345298E28DF00872DB1 /* FeedCollectionViewCell.swift in Sources */,
 				5A3D7A552987F2110020C74F /* FacebookRequest.swift in Sources */,
 				5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */,
-				5A10E188299105E100E4265C /* PostContent.swift in Sources */,
 				5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */,
+				5A10E1A02992477000E4265C /* ImageViewController.swift in Sources */,
 				5A87F3F1298A98340016F69A /* PrivateEmailViewController.swift in Sources */,
 				5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */,
 				5A3D7A4629878A280020C74F /* NameViewController.swift in Sources */,

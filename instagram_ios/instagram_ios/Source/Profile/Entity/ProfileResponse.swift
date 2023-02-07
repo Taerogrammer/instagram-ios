@@ -27,5 +27,5 @@ struct UserInfo: Codable {
     var name: String?
     var bio: String?
     var profileUrl: String?
-    var site: String?
+    var link: String?
 }
