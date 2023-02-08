@@ -23,6 +23,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var postDataLbl: UILabel!
     
     @IBOutlet weak var contentImages: UIImageView!
+    @IBOutlet weak var profileImage: UIImageView!
     
 
     

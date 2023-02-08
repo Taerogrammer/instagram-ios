@@ -834,7 +834,7 @@
             <objects>
                 <viewController id="fRe-cU-j40" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HtV-Zs-fX0">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="426.33333333333331"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="426"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="xD4-8b-Ref"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -925,6 +925,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="430" height="60"/>
                                         <connections>
+                                            <outlet property="followBtn" destination="hKS-rm-pGe" id="HVB-Cw-Aml"/>
                                             <outlet property="nameLbl" destination="CWO-J4-jQ1" id="OB3-IA-jUl"/>
                                             <outlet property="profileImage" destination="rL1-ji-UZh" id="pWX-TO-Bcj"/>
                                             <outlet property="userNameBtn" destination="CHP-Wt-8xh" id="zDd-mY-HgZ"/>

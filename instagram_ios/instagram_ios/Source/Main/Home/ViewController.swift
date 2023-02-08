@@ -15,22 +15,18 @@ class ViewController: UIViewController {
     var storyPhoto: [String] = ["menu1","menu2","menu3","menu4","tip1","tip2","tip3","fav1","facebook_logo","facebook_logo_black","like_check","like_uncheck"]
     var userName: [String] = ["user1","user2","user3","user4","user5","user6","tip3","fav1","facebook_logo","facebook_logo_black","like_check","like_uncheck"]
     
-    var userFeed: [Feed] = [
-        Feed(userImage: "facebook_logo", userName: "user1", images: ["menu1", "menu2", ",menu3"], likeNumber: 4, content: "안녕여여영ㅈ빙배ㅑ앱쟈오배쟈왭ㅈ야ㅙㅈ뱌왭쟈왭ㅈ야ㅙㅂ쟝ㅂ재야ㅗㅂ재ㅑㅇㅂ영", commentNumber: 6, postData: "2023년 2월 4일"),
-        Feed(userImage: "tip3", userName: "user22222", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdasas", commentNumber: 6, postData: "2023년 2월 4일"),
-        Feed(userImage: "fav1", userName: "user3333333", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdqwdqwqwf", commentNumber: 7, postData: "2023년 2월 4일")
-    ]
+    var userInfo: [HomeUserResult] = []
     
-    
-    
-    
-    
+    var feedImages: [String] = []
     
     var images: [UIImage] = []
 
+    let defaultUrl = URL(string: "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!
+    
     
     @IBOutlet weak var storyCollectionView : UICollectionView!
     @IBOutlet weak var feedCollectionView : UICollectionView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     let storage = Storage.storage()
     
@@ -39,7 +35,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         navigationBarSetting()
+        
+        storyCollectionView.delegate = self
+        storyCollectionView.dataSource = self
+        feedCollectionView.delegate = self
+        feedCollectionView.dataSource = self
   
+        
+        pageControl.currentPage = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -120,12 +123,12 @@ class ViewController: UIViewController {
             switch response.result {
             case .success(let response):
                 print("USER INFO SUCCESS >>> \(response)")
-                
-                
-                print(response.result[0])
-                
-                
-                
+                                
+                DispatchQueue.main.async {
+                    self.userInfo = response.result
+                    self.feedCollectionView.reloadData()
+                }
+
             case .failure(let error):
                 print(error)
             }
@@ -179,6 +182,7 @@ class ViewController: UIViewController {
         
     }
     
+    
     @objc func onClickInstagram(_ sender: AnyObject) {
 
         print("onclickInstagram()")
@@ -209,18 +213,11 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             return storyPhoto.count
         }
         else {
-            return userFeed.count
+            
+            return userInfo.count
         }
 
-//        return storyPhoto.count
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if collectionView == feedCollectionView {
-//
-//        }
-//
-//    }
     
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -238,13 +235,28 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             else {
                 return UICollectionViewCell()
             }
-            //프사 없음!!!!!!
-            feedCell.userNameLbl.text = userFeed[indexPath.row].userName
-            feedCell.contentImages.image = UIImage(named: userFeed[indexPath.row].userImage)    //일단은 유저 프사로
-
-            feedCell.contentsLbl.text = userFeed[indexPath.row].content
-            feedCell.commentAllLbl.setTitle("댓글 \(userFeed[indexPath.row].commentNumber)개 모두 보기", for: .normal)
-            feedCell.postDataLbl.text = userFeed[indexPath.row].postData
+            feedCell.topUserNameBtn.setTitle(userInfo[indexPath.row].userName, for: .normal)
+            feedCell.topUserNameBtn.setTitleColor(.black, for: .normal)
+            feedCell.topUserNameBtn.contentHorizontalAlignment = .left
+            feedCell.likeLbl.text = "좋아요 " + "\(userInfo[indexPath.row].likeCount)" + "개"
+            feedCell.userNameLbl.text = "\(userInfo[indexPath.row].userName)"
+            feedCell.userNameLbl.font = .NotoSans(.bold, size: 16)
+            feedCell.contentsLbl.text = "\(userInfo[indexPath.row].content!)"
+            feedCell.contentsLbl.font = .NotoSans(.medium, size: 16)
+            feedCell.commentAllLbl.setTitle("댓글 " + "\(userInfo[indexPath.row].commentCount)" + "개 보기", for: .normal)
+            feedCell.postDataLbl.text = "\(userInfo[indexPath.row].dayInfo!.month)" + "월 " + "\(userInfo[indexPath.row].dayInfo!.day)" + "일"
+            
+            feedCell.profileImage.load(url: URL(string: userInfo[indexPath.row].userProfileUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
+            
+            feedImages = userInfo[indexPath.row].imgUrls
+            pageControl.numberOfPages = userInfo[indexPath.row].imgUrls.count
+            
+            print("페이지 컨트롤 : \(pageControl.numberOfPages)")
+            
+            feedCell.contentImages.load(url: URL(string: userInfo[indexPath.row].imgUrls[0])!)
+            
+            
+            
             return feedCell
         }
     }
@@ -290,16 +302,5 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
 //        self.navigationController?.pushViewController(storyVC, animated: true)
     }
 
-}
-
-
-struct Feed {
-    var userImage: String
-    var userName: String
-    var images: Array<String>
-    var likeNumber : Int
-    var content: String
-    var commentNumber: Int
-    var postData: String
 }
 
