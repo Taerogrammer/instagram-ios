@@ -185,7 +185,5 @@ extension EditViewController {
     
     func failedToRequest(message: String) {
         self.presentAlert(title: message)
-    }
-    
-    
+    }  
 }

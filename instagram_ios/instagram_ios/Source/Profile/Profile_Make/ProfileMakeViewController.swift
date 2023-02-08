@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import YPImagePicker
 
 class ProfileMakeViewController : UIViewController, UISheetPresentationControllerDelegate {
     
@@ -83,10 +84,9 @@ extension ProfileMakeViewController: UITableViewDelegate, UITableViewDataSource 
             self.dismiss(animated: true, completion: nil)
             print("내 활동 clicked")
         case 2:
-
             storyDelegate?.storySetting()
             self.dismiss(animated: true, completion: nil)
-            print("보관함")
+            print("스토리")
         case 3:
 
             highlightDelegate?.highlightSetting()
@@ -107,7 +107,13 @@ extension ProfileMakeViewController: UITableViewDelegate, UITableViewDataSource 
         }
     }
 
+    
+    
+    
+
 }
+
+
 
 
 //MARK: Protocol

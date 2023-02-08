@@ -9,7 +9,7 @@ struct FolloweeResponse: Codable {
     var isSuccess: Bool
     var code: Int
     var message: String
-    var result: FolloweeResult?
+    var result: [FolloweeResult]
 }
 
 struct FolloweeResult: Codable {

@@ -340,7 +340,7 @@
         <!--Other Profile View Controller-->
         <scene sceneID="mQy-jE-8Z8">
             <objects>
-                <viewController storyboardIdentifier="OtherProfileViewController" id="LFQ-IO-ryZ" customClass="OtherProfileViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OtherProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LFQ-IO-ryZ" customClass="OtherProfileViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gDz-Tr-Ntr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

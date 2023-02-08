@@ -51,6 +51,10 @@
 		5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A69298840950020C74F /* LoginDataManager.swift */; };
 		5A3D7A6C298841450020C74F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A6B298841450020C74F /* LoginResponse.swift */; };
 		5A4B3AF12988BE38009C221F /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B3AF02988BE38009C221F /* UINavigationController.swift */; };
+		5A6002812992A2EC005F4F05 /* FolloweeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6002802992A2EC005F4F05 /* FolloweeCollectionViewCell.swift */; };
+		5A6002842992B61B005F4F05 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6002832992B61B005F4F05 /* StoryResponse.swift */; };
+		5A60028629931AF2005F4F05 /* StoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A60028529931AF2005F4F05 /* StoryRequest.swift */; };
+		5A60028829931BA6005F4F05 /* StoryDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A60028729931BA6005F4F05 /* StoryDataManager.swift */; };
 		5A7D6F8D2985161F002A1996 /* ReelsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A7D6F8C2985161F002A1996 /* ReelsViewController.storyboard */; };
 		5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F8E2985162A002A1996 /* ReelsViewController.swift */; };
 		5A7D6F9129853B6E002A1996 /* SearchNavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6F9029853B6E002A1996 /* SearchNavigationBarViewController.swift */; };
@@ -122,6 +126,7 @@
 		5A87F3FD298A99CA0016F69A /* PrivateBirthdayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A87F3FC298A99CA0016F69A /* PrivateBirthdayViewController.storyboard */; };
 		5A87F3FF298A99D40016F69A /* PrivateBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */; };
 		5AAF113E299270C400260D46 /* FolloweeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF113D299270C400260D46 /* FolloweeResponse.swift */; };
+		5ACD712129935BBA004C74EE /* OtherFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */; };
 		5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADD3D5F298ABCE600DB02CB /* UITextField.swift */; };
 		5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE866CC29889D5800903022 /* SettingViewController.swift */; };
 		5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193AF298A2CEE0011F1AD /* EditViewController.swift */; };
@@ -179,6 +184,10 @@
 		5A3D7A69298840950020C74F /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		5A3D7A6B298841450020C74F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		5A4B3AF02988BE38009C221F /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		5A6002802992A2EC005F4F05 /* FolloweeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A6002832992B61B005F4F05 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
+		5A60028529931AF2005F4F05 /* StoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryRequest.swift; sourceTree = "<group>"; };
+		5A60028729931BA6005F4F05 /* StoryDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDataManager.swift; sourceTree = "<group>"; };
 		5A7D6F8C2985161F002A1996 /* ReelsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReelsViewController.storyboard; sourceTree = "<group>"; };
 		5A7D6F8E2985162A002A1996 /* ReelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelsViewController.swift; sourceTree = "<group>"; };
 		5A7D6F9029853B6E002A1996 /* SearchNavigationBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationBarViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +261,7 @@
 		5A87F3FC298A99CA0016F69A /* PrivateBirthdayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateBirthdayViewController.storyboard; sourceTree = "<group>"; };
 		5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateBirthdayViewController.swift; sourceTree = "<group>"; };
 		5AAF113D299270C400260D46 /* FolloweeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeResponse.swift; sourceTree = "<group>"; };
+		5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFeedViewController.swift; sourceTree = "<group>"; };
 		5ADD3D5F298ABCE600DB02CB /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		5AE866CC29889D5800903022 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5AF193AF298A2CEE0011F1AD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
@@ -455,6 +465,7 @@
 			children = (
 				5A0CD9BD298F9D5E00A1E894 /* FolloweeViewController.swift */,
 				5AAF113D299270C400260D46 /* FolloweeResponse.swift */,
+				5A6002802992A2EC005F4F05 /* FolloweeCollectionViewCell.swift */,
 			);
 			path = Followee;
 			sourceTree = "<group>";
@@ -595,6 +606,15 @@
 			children = (
 				5A3D7A6529883F310020C74F /* LoginRequest.swift */,
 				5A3D7A6B298841450020C74F /* LoginResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5A6002822992B60E005F4F05 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A6002832992B61B005F4F05 /* StoryResponse.swift */,
+				5A60028529931AF2005F4F05 /* StoryRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -789,6 +809,7 @@
 			isa = PBXGroup;
 			children = (
 				5A0CD9B6298F971000A1E894 /* FolloweeAndFollwer */,
+				5ACD711F29935B94004C74EE /* OtherFeed */,
 				5A21F3F2298EA5BF00B114E3 /* Entity */,
 				5A820B8029850F0600F3784F /* ProfileViewController.storyboard */,
 				5A7D6FB429855EAE002A1996 /* ProfileNavigationBarViewController.swift */,
@@ -875,6 +896,8 @@
 			isa = PBXGroup;
 			children = (
 				5A84DA21298D3391006E8D66 /* MakeStoryViewController.swift */,
+				5A60028729931BA6005F4F05 /* StoryDataManager.swift */,
+				5A6002822992B60E005F4F05 /* Entity */,
 			);
 			path = Make_Story;
 			sourceTree = "<group>";
@@ -947,6 +970,14 @@
 				5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */,
 			);
 			path = Birthday;
+			sourceTree = "<group>";
+		};
+		5ACD711F29935B94004C74EE /* OtherFeed */ = {
+			isa = PBXGroup;
+			children = (
+				5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */,
+			);
+			path = OtherFeed;
 			sourceTree = "<group>";
 		};
 		5AF193AE298A2CE20011F1AD /* Edit */ = {
@@ -1166,12 +1197,15 @@
 				5A84DA18298D26C8006E8D66 /* MakeTableViewCell.swift in Sources */,
 				5A87F3FB298A99AF0016F69A /* PrivateGenderViewController.swift in Sources */,
 				5A10E19E2992420600E4265C /* FirebaseStorageManager.swift in Sources */,
+				5A60028829931BA6005F4F05 /* StoryDataManager.swift in Sources */,
 				5AF193BB298A4DD50011F1AD /* EditUserNameViewController.swift in Sources */,
 				5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */,
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
+				5A60028629931AF2005F4F05 /* StoryRequest.swift in Sources */,
 				5A7D6FA729854736002A1996 /* String.swift in Sources */,
 				5A3D7A4F298793260020C74F /* ConfirmViewController.swift in Sources */,
 				5A84DA2F298D3A06006E8D66 /* MakeGuideViewController.swift in Sources */,
+				5A6002812992A2EC005F4F05 /* FolloweeCollectionViewCell.swift in Sources */,
 				5A09629129893C43001A472E /* SavedViewController.swift in Sources */,
 				5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */,
 				5A87F3E7298A82F90016F69A /* EditSingleton.swift in Sources */,
@@ -1185,6 +1219,7 @@
 				5A3D7A522987AD920020C74F /* FacebookViewController.swift in Sources */,
 				5A3D7A5E298807C90020C74F /* UserInfoRequest.swift in Sources */,
 				5A7D6FB3298548C9002A1996 /* ShopNavigationBarViewController.swift in Sources */,
+				5A6002842992B61B005F4F05 /* StoryResponse.swift in Sources */,
 				5A4B3AF12988BE38009C221F /* UINavigationController.swift in Sources */,
 				5A7D6FAD2985474B002A1996 /* UIButton.swift in Sources */,
 				5A820B872985128500F3784F /* SearchViewController.swift in Sources */,
@@ -1231,6 +1266,7 @@
 				5A84DA1E298D3363006E8D66 /* MakeContentsViewController.swift in Sources */,
 				5A7D6F9129853B6E002A1996 /* SearchNavigationBarViewController.swift in Sources */,
 				5A3D7A60298807D30020C74F /* UserInfoResponse.swift in Sources */,
+				5ACD712129935BBA004C74EE /* OtherFeedViewController.swift in Sources */,
 				5A820B662984FBCB00F3784F /* AppDelegate.swift in Sources */,
 				5A09629329893C85001A472E /* DigitalViewController.swift in Sources */,
 				5A10E1A229924A1900E4265C /* UIImageView.swift in Sources */,

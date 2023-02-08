@@ -211,26 +211,12 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             //프사 없음!!!!!!
             feedCell.userNameLbl.text = userFeed[indexPath.row].userName
             feedCell.contentImages.image = UIImage(named: userFeed[indexPath.row].userImage)    //일단은 유저 프사로
-            
-//            let newWidth = 180
-//            let newHeight = 180
-//            let newImageRect = CGRect(x: 0, y: 0, width: newWidth, height: newHeight)
-//            UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
-//            feedCell.contentImages.image?.draw(in: newImageRect)
-            
-            
-            
-            
+
             feedCell.contentsLbl.text = userFeed[indexPath.row].content
             feedCell.commentAllLbl.setTitle("댓글 \(userFeed[indexPath.row].commentNumber)개 모두 보기", for: .normal)
             feedCell.postDataLbl.text = userFeed[indexPath.row].postData
             return feedCell
         }
-//        let cell = storyCollectionView.dequeueReusableCell(withReuseIdentifier: "storyCell", for: indexPath) as! StoryCollectionViewCell
-//        cell.storyImage.image = UIImage(named: storyPhoto[indexPath.row])
-//        cell.storyUserName.text = userName[indexPath.row]
-//
-//        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
