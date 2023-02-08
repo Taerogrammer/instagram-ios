@@ -27,6 +27,10 @@ class OtherFeedViewController: UIViewController {
     @IBOutlet weak var tagFeedView : UIView!
     
     
+    @IBOutlet weak var otherCollectionView: UICollectionView!
+    var imageList: Array<String> = []
+    
+    
     var feedUserId: Int = 0     //유저 고유 인덱스 아이디
     
     override func viewDidLoad() {
@@ -34,11 +38,18 @@ class OtherFeedViewController: UIViewController {
         print(feedUserId)
         defaultSeg()
         segmentedControl.addUnderlineForSelectedSegment()
+        
+        NavigationBack()
+        otherCollectionView.delegate = self
+        otherCollectionView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         DispatchQueue.main.async {
             self.getOtherInfo()
         }
-        
-        NavigationBack()
     }
     
     
@@ -93,7 +104,7 @@ class OtherFeedViewController: UIViewController {
                 self.messageBtn.contentHorizontalAlignment = .center
                 self.messageBtn.layer.cornerRadius = 10
                 if response.result?.followState == true {   //내가 구독을 한 사람의 피드를 볼 때
-                    self.followStateBtn.setTitle("팔로잉v", for: .normal)
+                    self.followStateBtn.setTitle("팔로잉", for: .normal)
                     self.followStateBtn.setTitleColor(.black, for: .normal)
                     self.followStateBtn.titleLabel?.font = .NotoSans(.bold, size: 4)
                     self.followStateBtn.backgroundColor = .systemGray6
@@ -109,6 +120,12 @@ class OtherFeedViewController: UIViewController {
                     self.followStateBtn.layer.cornerRadius = 10
                 }
                 
+                self.imageList = response.result?.thumbnailUrls ?? []
+                print("other에 get 들어옴 >> \(self.imageList)")
+                DispatchQueue.main.async {
+                    self.otherCollectionView.reloadData()
+                }
+                
 //                print("uesrName Data --> \(self.userNameData)")
             case.failure(let error):
                 print("FAILED ..\(error)")
@@ -119,4 +136,25 @@ class OtherFeedViewController: UIViewController {
     
     
     
+}
+
+
+extension OtherFeedViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("imageLIst >> \(imageList.count)")
+        return imageList.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = otherCollectionView.dequeueReusableCell(withReuseIdentifier: "otherFeedCell", for: indexPath) as! OtherFeedCollectionViewCell
+        
+        cell.feedImage.load(url: URL(string: imageList[indexPath.row])!)
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = (collectionView.frame.size.width) / 3
+        return CGSize(width: size, height: size)
+    }
+
 }

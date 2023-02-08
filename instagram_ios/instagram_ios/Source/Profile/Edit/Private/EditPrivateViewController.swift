@@ -13,7 +13,15 @@ class EditPrivateViewController : UIViewController {
         super.viewDidLoad()
         navibar()
         labelSetting()
-        InfoInButton()
+        
+        print("싱글톤 >> \(singleton.email) \(singleton.phone)")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.InfoInButton()
+        }
     }
     
     @IBOutlet weak var textLbl: UILabel!
@@ -22,7 +30,7 @@ class EditPrivateViewController : UIViewController {
     @IBOutlet weak var genderBtn : UIButton!
     @IBOutlet weak var birthdayBtn: UIButton!
     
-    
+    let singleton = PrivateSingleton.shared
     
     func navibar() {
         title = "개인정보"
@@ -55,12 +63,33 @@ class EditPrivateViewController : UIViewController {
     
     //MARK: button 안에 정보 넣기
     func InfoInButton() {
-        emailBtn.setTitle("\(textEmail)", for: .normal)
-        emailBtn.setTitleColor(.gray, for: .normal)
-        emailBtn.contentHorizontalAlignment = .left
-        phoneBtn.setTitle("\(textPhone)", for: .normal)
-        phoneBtn.setTitleColor(.gray, for: .normal)
-        phoneBtn.contentHorizontalAlignment = .left
+        
+        if singleton.email != nil && singleton.email != "" {
+            emailBtn.setTitle("\(singleton.email!)", for: .normal)
+            emailBtn.setTitleColor(.black, for: .normal)
+            emailBtn.contentHorizontalAlignment = .left
+        }
+        else {
+            print("nil값 맞음")
+            emailBtn.setTitle("\(textEmail)", for: .normal)
+            emailBtn.setTitleColor(.gray, for: .normal)
+            emailBtn.contentHorizontalAlignment = .left
+        }
+        
+        if singleton.phone != nil && singleton.phone != "" {
+            phoneBtn.setTitle("\(singleton.phone!)", for: .normal)
+            phoneBtn.setTitleColor(.black, for: .normal)
+            phoneBtn.contentHorizontalAlignment = .left
+        }
+        else {
+            print("nil값 맞음")
+            phoneBtn.setTitle("\(textPhone)", for: .normal)
+            phoneBtn.setTitleColor(.gray, for: .normal)
+            phoneBtn.contentHorizontalAlignment = .left
+        }
+        
+        
+        
         genderBtn.setTitle("\(textGender)", for: .normal)
         genderBtn.setTitleColor(.gray, for: .normal)
         genderBtn.contentHorizontalAlignment = .left

@@ -176,8 +176,6 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "feedCell", for: indexPath) as! MyFeedCollectionViewCell
         
         cell.feedImage.load(url: URL(string: imageList[indexPath.row])!)
-//        cell.feedImage.window?.canResizeToFitContent = true
-        
         return cell
     }
 

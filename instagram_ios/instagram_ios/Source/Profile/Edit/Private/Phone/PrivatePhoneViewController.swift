@@ -12,6 +12,9 @@ class PrivatePhoneViewController : UIViewController {
     
     @IBOutlet weak var textField : UITextField!
     
+    let singleton = PrivateSingleton.shared
+    lazy var dataManager: PrivatePhoneDataManager = PrivatePhoneDataManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldImage()
@@ -38,6 +41,10 @@ class PrivatePhoneViewController : UIViewController {
     
     @objc func onClickPost() {
         print("private phone 포스트 완료")
+        self.dismissKeyboard()
+        self.showIndicator()
+        let input = PrivatePhoneRequest(phone: textField.text ?? "")
+        dataManager.patchPhone(input, delegate: self)
     }
     
     
@@ -46,4 +53,16 @@ class PrivatePhoneViewController : UIViewController {
     
     
     
+}
+extension PrivatePhoneViewController {
+    func didSuccessEdit() {
+        self.presentAlert(title: "회원 정보 수정", message: "전화번호가 수정되었습니다")
+        singleton.phone = textField.text ?? ""
+        
+        print("didSuccessEdit() success")
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
 }

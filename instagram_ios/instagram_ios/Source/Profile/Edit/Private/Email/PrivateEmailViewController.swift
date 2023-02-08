@@ -12,6 +12,10 @@ class PrivateEmailViewController: UIViewController {
     
     @IBOutlet weak var textField : UITextField!
     
+    lazy var dataManager: PrivateEmailDataManager = PrivateEmailDataManager()
+    
+    let singleton = PrivateSingleton.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,7 +44,23 @@ class PrivateEmailViewController: UIViewController {
     
     @objc func onClickPost() {
         print("생일 포스트 완료")
+        self.dismissKeyboard()
+        self.showIndicator()
+        let input = PrivateEmailRequest(email: textField.text ?? "")
+        dataManager.patchEmail(input, delegate: self)
     }
     
     
+}
+extension PrivateEmailViewController {
+    func didSuccessEdit() {
+        self.presentAlert(title: "회원 정보 수정", message: "이메일 정보가 수정되었습니다")
+        singleton.email = textField.text ?? ""
+        
+        print("didSuccessEdit() success")
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
 }

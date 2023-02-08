@@ -10,6 +10,8 @@ import UIKit
 
 class PhoneViewController : UIViewController {
     
+    let singletonPrivate = PrivateSingleton.shared
+    
     var textCnt : Int = 0
     var phoneData : String = ""
     @IBOutlet weak var phoneText: UITextField!
@@ -19,6 +21,10 @@ class PhoneViewController : UIViewController {
             let singleton = UserInfoSingleton.shared
             singleton.phone = phoneData
             singleton.email = nil
+            
+            singletonPrivate.phone = phoneData
+            singletonPrivate.email = nil
+            
             guard let nameVC = self.storyboard?.instantiateViewController(identifier: "NameViewController") else {return}
             nameVC.modalPresentationStyle = .fullScreen
             self.present(nameVC, animated: false)

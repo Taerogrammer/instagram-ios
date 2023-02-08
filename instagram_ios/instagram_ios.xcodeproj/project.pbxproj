@@ -50,6 +50,14 @@
 		5A3D7A6629883F310020C74F /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A6529883F310020C74F /* LoginRequest.swift */; };
 		5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A69298840950020C74F /* LoginDataManager.swift */; };
 		5A3D7A6C298841450020C74F /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A6B298841450020C74F /* LoginResponse.swift */; };
+		5A4AC7B12993A5790021B4B1 /* PrivateEmailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC7B02993A5790021B4B1 /* PrivateEmailDataManager.swift */; };
+		5A4AC7B42993A5930021B4B1 /* PrivateEmailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC7B32993A5930021B4B1 /* PrivateEmailResponse.swift */; };
+		5A4AC7B62993A5FD0021B4B1 /* PrivateEmailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC7B52993A5FD0021B4B1 /* PrivateEmailRequest.swift */; };
+		5A4AC7B82993AB9D0021B4B1 /* PrivateSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC7B72993AB9D0021B4B1 /* PrivateSingleton.swift */; };
+		5A4AC7BA2993B3610021B4B1 /* OtherFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC7B92993B3610021B4B1 /* OtherFeedCollectionViewCell.swift */; };
+		5A4AC7BD2993B9850021B4B1 /* PrivatePhoneDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC7BC2993B9850021B4B1 /* PrivatePhoneDataManager.swift */; };
+		5A4AC7BF2993B9900021B4B1 /* PrivatePhoneResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC7BE2993B9900021B4B1 /* PrivatePhoneResponse.swift */; };
+		5A4AC7C12993B99B0021B4B1 /* PrivatePhoneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4AC7C02993B99B0021B4B1 /* PrivatePhoneRequest.swift */; };
 		5A4B3AF12988BE38009C221F /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B3AF02988BE38009C221F /* UINavigationController.swift */; };
 		5A6002812992A2EC005F4F05 /* FolloweeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6002802992A2EC005F4F05 /* FolloweeCollectionViewCell.swift */; };
 		5A6002842992B61B005F4F05 /* StoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6002832992B61B005F4F05 /* StoryResponse.swift */; };
@@ -187,6 +195,14 @@
 		5A3D7A6529883F310020C74F /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		5A3D7A69298840950020C74F /* LoginDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataManager.swift; sourceTree = "<group>"; };
 		5A3D7A6B298841450020C74F /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		5A4AC7B02993A5790021B4B1 /* PrivateEmailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateEmailDataManager.swift; sourceTree = "<group>"; };
+		5A4AC7B32993A5930021B4B1 /* PrivateEmailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateEmailResponse.swift; sourceTree = "<group>"; };
+		5A4AC7B52993A5FD0021B4B1 /* PrivateEmailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateEmailRequest.swift; sourceTree = "<group>"; };
+		5A4AC7B72993AB9D0021B4B1 /* PrivateSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateSingleton.swift; sourceTree = "<group>"; };
+		5A4AC7B92993B3610021B4B1 /* OtherFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A4AC7BC2993B9850021B4B1 /* PrivatePhoneDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivatePhoneDataManager.swift; sourceTree = "<group>"; };
+		5A4AC7BE2993B9900021B4B1 /* PrivatePhoneResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivatePhoneResponse.swift; sourceTree = "<group>"; };
+		5A4AC7C02993B99B0021B4B1 /* PrivatePhoneRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivatePhoneRequest.swift; sourceTree = "<group>"; };
 		5A4B3AF02988BE38009C221F /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		5A6002802992A2EC005F4F05 /* FolloweeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A6002832992B61B005F4F05 /* StoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryResponse.swift; sourceTree = "<group>"; };
@@ -604,9 +620,9 @@
 		5A3D7A6329883F0A0020C74F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				5A3D7A6429883F190020C74F /* Entity */,
 				5A7D6FC429861E49002A1996 /* LoginViewController.swift */,
 				5A3D7A69298840950020C74F /* LoginDataManager.swift */,
-				5A3D7A6429883F190020C74F /* Entity */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -616,6 +632,26 @@
 			children = (
 				5A3D7A6529883F310020C74F /* LoginRequest.swift */,
 				5A3D7A6B298841450020C74F /* LoginResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5A4AC7B22993A5810021B4B1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A4AC7B02993A5790021B4B1 /* PrivateEmailDataManager.swift */,
+				5A4AC7B52993A5FD0021B4B1 /* PrivateEmailRequest.swift */,
+				5A4AC7B32993A5930021B4B1 /* PrivateEmailResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5A4AC7BB2993B9750021B4B1 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A4AC7BC2993B9850021B4B1 /* PrivatePhoneDataManager.swift */,
+				5A4AC7BE2993B9900021B4B1 /* PrivatePhoneResponse.swift */,
+				5A4AC7C02993B99B0021B4B1 /* PrivatePhoneRequest.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -952,6 +988,7 @@
 			children = (
 				5A87F3F0298A98340016F69A /* PrivateEmailViewController.swift */,
 				5A87F3F2298A984D0016F69A /* PrivateEmailViewController.storyboard */,
+				5A4AC7B22993A5810021B4B1 /* Entity */,
 			);
 			path = Email;
 			sourceTree = "<group>";
@@ -959,6 +996,7 @@
 		5A87F3ED298A97DA0016F69A /* Phone */ = {
 			isa = PBXGroup;
 			children = (
+				5A4AC7BB2993B9750021B4B1 /* Entity */,
 				5A87F3F4298A99740016F69A /* PrivatePhoneViewController.swift */,
 				5A87F3F6298A998B0016F69A /* PrivatePhoneViewController.storyboard */,
 			);
@@ -987,6 +1025,7 @@
 			isa = PBXGroup;
 			children = (
 				5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */,
+				5A4AC7B92993B3610021B4B1 /* OtherFeedCollectionViewCell.swift */,
 			);
 			path = OtherFeed;
 			sourceTree = "<group>";
@@ -1056,6 +1095,7 @@
 				5A87F3EE298A97DF0016F69A /* Gender */,
 				5A87F3EF298A97E30016F69A /* Birthday */,
 				5AF193C0298A4DEF0011F1AD /* EditPrivateViewController.swift */,
+				5A4AC7B72993AB9D0021B4B1 /* PrivateSingleton.swift */,
 			);
 			path = Private;
 			sourceTree = "<group>";
@@ -1243,6 +1283,7 @@
 				5A6002842992B61B005F4F05 /* StoryResponse.swift in Sources */,
 				5A4B3AF12988BE38009C221F /* UINavigationController.swift in Sources */,
 				5A7D6FAD2985474B002A1996 /* UIButton.swift in Sources */,
+				5A4AC7C12993B99B0021B4B1 /* PrivatePhoneRequest.swift in Sources */,
 				5A820B872985128500F3784F /* SearchViewController.swift in Sources */,
 				5A09629B298A10B0001A472E /* FavDescriptionViewController.swift in Sources */,
 				5A820B6A2984FBCB00F3784F /* ViewController.swift in Sources */,
@@ -1266,6 +1307,7 @@
 				5A87F3F5298A99740016F69A /* PrivatePhoneViewController.swift in Sources */,
 				5A3D7A6A298840950020C74F /* LoginDataManager.swift in Sources */,
 				5A84D9E6298CAB8F006E8D66 /* NoticeViewController.swift in Sources */,
+				5A4AC7B42993A5930021B4B1 /* PrivateEmailResponse.swift in Sources */,
 				5A7D6FA0298545E2002A1996 /* IndicatorView.swift in Sources */,
 				5A10E1852990E45300E4265C /* MakePostViewController.swift in Sources */,
 				5A0962812989334E001A472E /* UIView.swift in Sources */,
@@ -1277,13 +1319,16 @@
 				5A84D9DD298B87B7006E8D66 /* UIImage.swift in Sources */,
 				5ACD712529936D57004C74EE /* FollowerCollectionViewCell.swift in Sources */,
 				5A09629529893CBE001A472E /* BestFriendsViewController.swift in Sources */,
+				5A4AC7B62993A5FD0021B4B1 /* PrivateEmailRequest.swift in Sources */,
 				5A820B8F298513D200F3784F /* ShopViewController.swift in Sources */,
 				5A3D7A572987F2CE0020C74F /* FacebookResponse.swift in Sources */,
+				5A4AC7BD2993B9850021B4B1 /* PrivatePhoneDataManager.swift in Sources */,
 				5A84DA11298D0A67006E8D66 /* ProfileMakeViewController.swift in Sources */,
 				5A7FD341298DFB1900872DB1 /* StoryViewController.swift in Sources */,
 				5A3D7A6629883F310020C74F /* LoginRequest.swift in Sources */,
 				5A21F3F4298EA5EB00B114E3 /* ProfileResponse.swift in Sources */,
 				5A84D9E1298BD281006E8D66 /* CommentViewController.swift in Sources */,
+				5A4AC7B12993A5790021B4B1 /* PrivateEmailDataManager.swift in Sources */,
 				5A7D6FA529854724002A1996 /* Date.swift in Sources */,
 				5A84DA1E298D3363006E8D66 /* MakeContentsViewController.swift in Sources */,
 				5A7D6F9129853B6E002A1996 /* SearchNavigationBarViewController.swift in Sources */,
@@ -1297,11 +1342,13 @@
 				5A3D7A552987F2110020C74F /* FacebookRequest.swift in Sources */,
 				5ACD712829938070004C74EE /* MyFeedViewController.swift in Sources */,
 				5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */,
+				5A4AC7B82993AB9D0021B4B1 /* PrivateSingleton.swift in Sources */,
 				5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */,
 				5A10E1A02992477000E4265C /* ImageViewController.swift in Sources */,
 				5A87F3F1298A98340016F69A /* PrivateEmailViewController.swift in Sources */,
 				5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */,
 				5A3D7A4629878A280020C74F /* NameViewController.swift in Sources */,
+				5A4AC7BA2993B3610021B4B1 /* OtherFeedCollectionViewCell.swift in Sources */,
 				5A7D6FB129854760002A1996 /* UINavigationBar.swift in Sources */,
 				5AF193C1298A4DEF0011F1AD /* EditPrivateViewController.swift in Sources */,
 				5A7D6F8F2985162A002A1996 /* ReelsViewController.swift in Sources */,
@@ -1312,6 +1359,7 @@
 				5A09628B29893B9B001A472E /* ActivityViewController.swift in Sources */,
 				5A84D9D7298B721F006E8D66 /* SearchTapViewController.swift in Sources */,
 				5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */,
+				5A4AC7BF2993B9900021B4B1 /* PrivatePhoneResponse.swift in Sources */,
 				5A820B682984FBCB00F3784F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
