@@ -26,7 +26,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var storyCollectionView : UICollectionView!
     @IBOutlet weak var feedCollectionView : UICollectionView!
-    @IBOutlet weak var pageControl: UIPageControl!
     
     let storage = Storage.storage()
     
@@ -42,7 +41,6 @@ class ViewController: UIViewController {
         feedCollectionView.dataSource = self
   
         
-        pageControl.currentPage = 0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,6 +114,9 @@ class ViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = instaButton
         self.navigationItem.rightBarButtonItems = [barDmButton, spacer, barLikeButton, spacer, barAddButton]
     }
+    
+    
+
     
     
     func getUserInfo() {
@@ -249,9 +250,13 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             feedCell.profileImage.load(url: URL(string: userInfo[indexPath.row].userProfileUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
             
             feedImages = userInfo[indexPath.row].imgUrls
-            pageControl.numberOfPages = userInfo[indexPath.row].imgUrls.count
+
             
-            print("페이지 컨트롤 : \(pageControl.numberOfPages)")
+            
+            let cell = feedCollectionView.dequeueReusableCell(withReuseIdentifier: "feedCell", for: indexPath) as! FeedCollectionViewCell
+            cell.images = userInfo[indexPath.row].imgUrls
+            
+            
             
             feedCell.contentImages.load(url: URL(string: userInfo[indexPath.row].imgUrls[0])!)
             

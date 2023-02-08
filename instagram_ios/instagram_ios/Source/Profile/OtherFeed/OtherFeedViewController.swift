@@ -83,8 +83,8 @@ class OtherFeedViewController: UIViewController {
     
     
     func getOtherInfo() {
-        AF.request("\(Constant.Base_URL)/app/users/profile/\(feedUserId)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: ProfileResponse.self) { response in
-            print("\(Constant.Base_URL)/app/users/profile/\(self.feedUserId)")
+        AF.request("\(Constant.Base_URL)/app/users/profiles/\(feedUserId)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: ProfileResponse.self) { response in
+            print("\(Constant.Base_URL)/app/users/profiles/\(self.feedUserId)")
             switch response.result {
             case .success(let response):
                 print("SUCCESS >>> \(response)")

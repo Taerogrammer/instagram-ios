@@ -100,7 +100,7 @@ class ProfileNavigationBarViewController : UIViewController {
     
     //MARK: userName 불러오기
     func getUserName() {
-        AF.request("\(Constant.Base_URL)/app/users/profile/\(UserDefaults.standard.integer(forKey: "userIdx"))", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: ProfileResponse.self) { response in
+        AF.request("\(Constant.Base_URL)/app/users/profiles/\(UserDefaults.standard.integer(forKey: "userIdx"))", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: ProfileResponse.self) { response in
             switch response.result {
             case .success(let response):
                 print("SUCCESS >>> \(response)")

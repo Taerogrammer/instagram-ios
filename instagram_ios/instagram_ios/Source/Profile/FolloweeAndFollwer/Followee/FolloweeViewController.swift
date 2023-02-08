@@ -35,7 +35,7 @@ class FolloweeViewController : UIViewController {
     
     
     func getFolloweeData() {
-        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/following-list", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: FolloweeResponse.self) { response in
+        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/following-lists", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: FolloweeResponse.self) { response in
             switch response.result {
             case .success(let response):
                 print("SUCCESS >> \(response)")

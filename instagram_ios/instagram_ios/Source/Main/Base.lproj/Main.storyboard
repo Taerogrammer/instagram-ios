@@ -654,6 +654,9 @@
                                                             <rect key="frame" x="145.66666666666666" y="7" width="115.99999999999997" height="26"/>
                                                             <color key="backgroundColor" red="0.41203592989999999" green="0.73667669290000004" blue="0.89328286079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="tintColor" systemColor="linkColor"/>
+                                                            <connections>
+                                                                <action selector="imageChange:" destination="J4r-yT-SL2" eventType="valueChanged" id="TpJ-L7-OXK"/>
+                                                            </connections>
                                                         </pageControl>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -774,6 +777,7 @@
                                             <outlet property="dmBtn" destination="Mnn-Tv-nc1" id="W8Z-mj-CjA"/>
                                             <outlet property="likeBtn" destination="KhC-ag-7KF" id="6uP-vR-TkV"/>
                                             <outlet property="likeLbl" destination="S23-YA-EmL" id="SZp-1P-iZO"/>
+                                            <outlet property="pageControl" destination="9ce-1M-ZIi" id="Tsb-yM-y00"/>
                                             <outlet property="postDataLbl" destination="ncc-eC-TbB" id="FMc-9Z-lro"/>
                                             <outlet property="profileImage" destination="v7t-nd-hHs" id="e89-df-fbU"/>
                                             <outlet property="saveBtn" destination="zPO-yi-rjS" id="dg6-Mp-Nzj"/>

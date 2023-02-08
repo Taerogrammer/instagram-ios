@@ -24,7 +24,7 @@ class FollowerViewController : UIViewController {
     var follower: [FollowerResult] = []
     
     func getFollowerData() {
-        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/follower-list", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: FollowerResponse.self) { response in
+        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/follower-lists", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: FollowerResponse.self) { response in
             switch response.result {
             case .success(let response):
                 print("SUCCESS >> \(response)")
