@@ -8,6 +8,7 @@
 import UIKit
 import YPImagePicker
 import FirebaseStorage
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -15,10 +16,14 @@ class ViewController: UIViewController {
     var userName: [String] = ["user1","user2","user3","user4","user5","user6","tip3","fav1","facebook_logo","facebook_logo_black","like_check","like_uncheck"]
     
     var userFeed: [Feed] = [
-        Feed(userImage: "facebook_logo", userName: "user1", images: ["menu1", "menu2", ",menu3"], likeNumber: 4, content: "안녕여여영영", commentNumber: 6, postData: "2023년 2월 4일"),
+        Feed(userImage: "facebook_logo", userName: "user1", images: ["menu1", "menu2", ",menu3"], likeNumber: 4, content: "안녕여여영ㅈ빙배ㅑ앱쟈오배쟈왭ㅈ야ㅙㅈ뱌왭쟈왭ㅈ야ㅙㅂ쟝ㅂ재야ㅗㅂ재ㅑㅇㅂ영", commentNumber: 6, postData: "2023년 2월 4일"),
         Feed(userImage: "tip3", userName: "user22222", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdasas", commentNumber: 6, postData: "2023년 2월 4일"),
         Feed(userImage: "fav1", userName: "user3333333", images: ["menu1", "menu2", ",menu3"], likeNumber: 6, content: "asdqwdqwqwf", commentNumber: 7, postData: "2023년 2월 4일")
     ]
+    
+    
+    
+    
     
     
     var images: [UIImage] = []
@@ -35,6 +40,13 @@ class ViewController: UIViewController {
 
         navigationBarSetting()
   
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.getUserInfo()
+        }
     }
     
     //MARK: navigationbar setting
@@ -100,6 +112,24 @@ class ViewController: UIViewController {
 
         self.navigationItem.leftBarButtonItem = instaButton
         self.navigationItem.rightBarButtonItems = [barDmButton, spacer, barLikeButton, spacer, barAddButton]
+    }
+    
+    
+    func getUserInfo() {
+        AF.request("\(Constant.Base_URL)/app/users/following-posts", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: HomeUserResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("USER INFO SUCCESS >>> \(response)")
+                
+                
+                print(response.result[0])
+                
+                
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     @objc func onclickAdd(_ sender: AnyObject) {
@@ -272,3 +302,4 @@ struct Feed {
     var commentNumber: Int
     var postData: String
 }
+

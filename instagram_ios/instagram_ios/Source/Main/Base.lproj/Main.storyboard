@@ -688,7 +688,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="게시글 올린 날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncc-eC-TbB">
-                                                            <rect key="frame" x="15" y="150.66666666666663" width="79.666666666666671" height="13.333333333333343"/>
+                                                            <rect key="frame" x="15" y="102" width="79.666666666666671" height="14.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -700,7 +700,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0B-OF-eRq">
-                                                            <rect key="frame" x="15" y="130.66666666666663" width="92.666666666666671" height="16"/>
+                                                            <rect key="frame" x="5" y="82" width="92.666666666666671" height="16"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="16" id="3kA-gQ-ctz"/>
                                                             </constraints>
@@ -725,12 +725,12 @@
                                                         <constraint firstItem="S23-YA-EmL" firstAttribute="leading" secondItem="pLb-mg-abW" secondAttribute="leading" constant="15" id="FgX-dN-0n5"/>
                                                         <constraint firstItem="P0q-Dd-oLs" firstAttribute="leading" secondItem="pLb-mg-abW" secondAttribute="leading" constant="15" id="HZJ-OR-X0i"/>
                                                         <constraint firstItem="ebY-08-OfK" firstAttribute="top" secondItem="S23-YA-EmL" secondAttribute="bottom" constant="8" id="Tq9-PT-enj"/>
-                                                        <constraint firstAttribute="bottom" secondItem="ncc-eC-TbB" secondAttribute="bottom" id="cTP-4B-q35"/>
-                                                        <constraint firstItem="E0B-OF-eRq" firstAttribute="leading" secondItem="pLb-mg-abW" secondAttribute="leading" constant="15" id="d6V-4K-Uqy"/>
+                                                        <constraint firstItem="E0B-OF-eRq" firstAttribute="leading" secondItem="pLb-mg-abW" secondAttribute="leading" constant="5" id="d6V-4K-Uqy"/>
                                                         <constraint firstItem="ncc-eC-TbB" firstAttribute="leading" secondItem="pLb-mg-abW" secondAttribute="leading" constant="15" id="jLI-lW-Amq"/>
                                                         <constraint firstItem="ncc-eC-TbB" firstAttribute="top" secondItem="E0B-OF-eRq" secondAttribute="bottom" constant="4" id="jaE-kY-Qnq"/>
                                                         <constraint firstItem="P0q-Dd-oLs" firstAttribute="top" secondItem="ebY-08-OfK" secondAttribute="bottom" id="nSc-Sf-p2j"/>
                                                         <constraint firstItem="E0B-OF-eRq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="P0q-Dd-oLs" secondAttribute="bottom" constant="8" id="owd-bu-0en"/>
+                                                        <constraint firstItem="E0B-OF-eRq" firstAttribute="top" secondItem="P0q-Dd-oLs" secondAttribute="bottom" constant="8" id="prh-zy-cvf"/>
                                                         <constraint firstItem="ebY-08-OfK" firstAttribute="leading" secondItem="pLb-mg-abW" secondAttribute="leading" constant="15" id="tHA-oA-gjT"/>
                                                         <constraint firstItem="S23-YA-EmL" firstAttribute="top" secondItem="pLb-mg-abW" secondAttribute="top" constant="8" id="tms-pu-Z3C"/>
                                                     </constraints>

@@ -36,5 +36,53 @@
             landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2AC3691C-89BB-469B-A80B-711FE60142AC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "instagram_ios/Source/Profile/OtherFeed/OtherFeedViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "getOtherInfo()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2AC3691C-89BB-469B-A80B-711FE60142AC - 480954d5da5bfc17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "instagram_ios.OtherFeedViewController.getOtherInfo() -&gt; ()"
+                  moduleName = "instagram_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/taehyung/Desktop/iOS/Rising_Camp/instagram_ios_taetae/instagram_ios/instagram_ios/Source/Profile/OtherFeed/OtherFeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "75">
+               </Location>
+               <Location
+                  uuid = "2AC3691C-89BB-469B-A80B-711FE60142AC - ba01e639384d2a98"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;instagram_ios.ProfileResponse, Alamofire.AFError&gt;) -&gt; () in instagram_ios.OtherFeedViewController.getOtherInfo() -&gt; ()"
+                  moduleName = "instagram_ios"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/taehyung/Desktop/iOS/Rising_Camp/instagram_ios_taetae/instagram_ios/instagram_ios/Source/Profile/OtherFeed/OtherFeedViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "518">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

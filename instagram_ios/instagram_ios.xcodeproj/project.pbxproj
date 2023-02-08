@@ -140,6 +140,7 @@
 		5ACD712829938070004C74EE /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD712729938070004C74EE /* MyFeedViewController.swift */; };
 		5ACD712A299380B3004C74EE /* MyFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD7129299380B3004C74EE /* MyFeedCollectionViewCell.swift */; };
 		5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADD3D5F298ABCE600DB02CB /* UITextField.swift */; };
+		5ADFEE2F2993D0FF0097343F /* HomeUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFEE2E2993D0FF0097343F /* HomeUserResponse.swift */; };
 		5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE866CC29889D5800903022 /* SettingViewController.swift */; };
 		5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193AF298A2CEE0011F1AD /* EditViewController.swift */; };
 		5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193B3298A49720011F1AD /* EditNameViewController.swift */; };
@@ -287,6 +288,7 @@
 		5ACD712729938070004C74EE /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
 		5ACD7129299380B3004C74EE /* MyFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		5ADD3D5F298ABCE600DB02CB /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		5ADFEE2E2993D0FF0097343F /* HomeUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUserResponse.swift; sourceTree = "<group>"; };
 		5AE866CC29889D5800903022 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		5AF193AF298A2CEE0011F1AD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		5AF193B3298A49720011F1AD /* EditNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
@@ -815,10 +817,10 @@
 			isa = PBXGroup;
 			children = (
 				5A3D7A3529874EBA0020C74F /* Register */,
+				5ADFEE2A2993D0BD0097343F /* Home */,
 				5A84D9E2298BF713006E8D66 /* UITabBarController.swift */,
 				5A820B6B2984FBCB00F3784F /* Main.storyboard */,
 				5A84DA03298CF0EC006E8D66 /* DefaultNavigationController.swift */,
-				5A820B692984FBCB00F3784F /* ViewController.swift */,
 				5A10E186299105C600E4265C /* Post */,
 				5A7FD33E298DFB0100872DB1 /* Story */,
 				5A7FD33F298DFB0800872DB1 /* Feed */,
@@ -1037,6 +1039,23 @@
 				5ACD7129299380B3004C74EE /* MyFeedCollectionViewCell.swift */,
 			);
 			path = MyFeed;
+			sourceTree = "<group>";
+		};
+		5ADFEE2A2993D0BD0097343F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5ADFEE2B2993D0D00097343F /* Entity */,
+				5A820B692984FBCB00F3784F /* ViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5ADFEE2B2993D0D00097343F /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5ADFEE2E2993D0FF0097343F /* HomeUserResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		5AF193AE298A2CE20011F1AD /* Edit */ = {
@@ -1358,6 +1377,7 @@
 				5A84DA1A298D332E006E8D66 /* MakeReelsViewController.swift in Sources */,
 				5A09628B29893B9B001A472E /* ActivityViewController.swift in Sources */,
 				5A84D9D7298B721F006E8D66 /* SearchTapViewController.swift in Sources */,
+				5ADFEE2F2993D0FF0097343F /* HomeUserResponse.swift in Sources */,
 				5A87F3E0298A6F470016F69A /* CustomTextFields.swift in Sources */,
 				5A4AC7BF2993B9900021B4B1 /* PrivatePhoneResponse.swift in Sources */,
 				5A820B682984FBCB00F3784F /* SceneDelegate.swift in Sources */,
