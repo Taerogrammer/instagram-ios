@@ -105,6 +105,13 @@ class ProfileNavigationBarViewController : UIViewController {
             case .success(let response):
                 print("SUCCESS >>> \(response)")
                 self.title = response.result?.profileUserDto?.username
+//                DispatchQueue.main.async {
+//                    let board = UIStoryboard(name: "ProfileViewController", bundle: nil)
+//                    let feedVC = board.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+//                    feedVC.imageList = response.result?.thumbnailUrls ?? []
+//                    print("FEED VC에서 보내기 >> \(feedVC.imageList)")
+//                    
+//                }
          case.failure(let error):
                 print("FAILED ..\(error)")
             }

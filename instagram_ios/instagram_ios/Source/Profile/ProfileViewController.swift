@@ -18,7 +18,6 @@ class ProfileViewController : UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var myFeedView : UIView!
     @IBOutlet weak var tagFeedView : UIView!
-    
     @IBOutlet weak var postCount: UILabel!
     @IBOutlet weak var followerCount: UILabel!
     @IBOutlet weak var followingCount: UILabel!
@@ -30,8 +29,13 @@ class ProfileViewController : UIViewController {
     @IBOutlet weak var introduceLbl: UILabel!
     @IBOutlet weak var linkLbl: UILabel!
     
-    var countHighlight: Int = 0
+    @IBOutlet weak var myCollectionView: UICollectionView!
     
+    
+    
+    var countHighlight: Int = 0
+    var imageList: Array<String> = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,19 +47,25 @@ class ProfileViewController : UIViewController {
         DispatchQueue.main.async {
             self.HighlightOnOff()
         }
-
         
         defaultSeg()
         segmentedControl.addUnderlineForSelectedSegment()
         fontSetting()
+        
+        myCollectionView.dataSource = self
+        myCollectionView.delegate = self
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-        print("view will appear")
         DispatchQueue.main.async {
             self.getProfile()
         }
+//        DispatchQueue.main.async {
+//            print("profile view dispatchQueue")
+//            print("Image List >> \(self.imageList)")
+//            self.myCollectionView.reloadData()
+//        }
     }
     
     //MARK: story highlight 유무
@@ -136,7 +146,16 @@ class ProfileViewController : UIViewController {
                 editSingle.bio = response.result?.profileUserDto?.bio ?? ""
                 editSingle.profileUrl = response.result?.profileUserDto?.profileUrl ?? ""
                 editSingle.link = response.result?.profileUserDto?.link ?? ""
-         
+                
+                self.imageList = response.result?.thumbnailUrls ?? []
+                
+                print("get 들어왔을 때 >> \(self.imageList)")
+                DispatchQueue.main.async {
+                    self.myCollectionView.reloadData()
+
+                }
+
+                
             case.failure(let error):
                 print("FAILED ..\(error)")
             }
@@ -147,3 +166,24 @@ class ProfileViewController : UIViewController {
 
 }
 
+extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("imageLIst >> \(imageList.count)")
+        return imageList.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "feedCell", for: indexPath) as! MyFeedCollectionViewCell
+        
+        cell.feedImage.load(url: URL(string: imageList[indexPath.row])!)
+//        cell.feedImage.window?.canResizeToFitContent = true
+        
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let size = (collectionView.frame.size.width) / 3
+        return CGSize(width: size, height: size)
+    }
+
+}

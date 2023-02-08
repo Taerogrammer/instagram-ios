@@ -18,10 +18,6 @@ class FolloweeViewController : UIViewController {
         followeeCollectionView.delegate = self
         followeeCollectionView.dataSource = self
         getFolloweeData()
-
-        
-
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,7 +66,10 @@ extension FolloweeViewController:  UICollectionViewDelegate, UICollectionViewDat
         cell.userNameBtn.setTitle(following[indexPath.row].userName, for: .normal)
         cell.userNameBtn.setTitleColor(.black, for: .normal)
         cell.userNameBtn.titleLabel?.font = .NotoSans(.bold, size: 10)
+        cell.userNameBtn.contentHorizontalAlignment = .left
+
         cell.nameLbl.text = following[indexPath.row].name
+        
 //        cell.layer.addBorder([.bottom], color: .black, width: 1)
 
         return cell

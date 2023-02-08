@@ -26,8 +26,9 @@ class FollowListViewController: TabmanViewController {
         viewControllers.append(followeeVC)
         
         
-        
-        
+        let singleton = EditSingleton.shared
+        title = singleton.userName
+
         self.dataSource = self
         
         let bar = TMBar.ButtonBar()
@@ -46,6 +47,8 @@ class FollowListViewController: TabmanViewController {
         bar.layout.transitionStyle = .snap
         
         addBar(bar, dataSource: self, at: .custom(view: tempView, layout: nil))
+        
+        NavigationBack()
     }
     
     

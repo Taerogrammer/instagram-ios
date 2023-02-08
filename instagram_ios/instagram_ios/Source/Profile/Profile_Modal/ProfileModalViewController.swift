@@ -100,10 +100,7 @@ extension ProfileModalViewController: UITableViewDelegate, UITableViewDataSource
 
             keepDelegate?.keepSetting()
             self.dismiss(animated: true, completion: nil)
-            
-            
-            
-            
+
         case 3:
 
             QRDelegate?.QRSetting()
