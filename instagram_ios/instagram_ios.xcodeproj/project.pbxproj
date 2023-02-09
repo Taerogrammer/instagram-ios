@@ -86,6 +86,10 @@
 		5A7D6FC12985F960002A1996 /* ModalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6FC02985F960002A1996 /* ModalTableViewCell.swift */; };
 		5A7D6FC529861E49002A1996 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D6FC429861E49002A1996 /* LoginViewController.swift */; };
 		5A7FBB1B299481430011DAC0 /* FollowButtonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FBB1A299481430011DAC0 /* FollowButtonResponse.swift */; };
+		5A7FBB1E2994B4CE0011DAC0 /* LikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FBB1D2994B4CE0011DAC0 /* LikeResponse.swift */; };
+		5A7FBB222994B9DF0011DAC0 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FBB212994B9DF0011DAC0 /* SearchResponse.swift */; };
+		5A7FBB242994C03C0011DAC0 /* ShopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FBB232994C03C0011DAC0 /* ShopCollectionViewCell.swift */; };
+		5A7FBB272994C0D40011DAC0 /* ShoppingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FBB262994C0D40011DAC0 /* ShoppingResponse.swift */; };
 		5A7FD341298DFB1900872DB1 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FD340298DFB1900872DB1 /* StoryViewController.swift */; };
 		5A7FD343298DFB7500872DB1 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FD342298DFB7500872DB1 /* StoryCollectionViewCell.swift */; };
 		5A7FD345298E28DF00872DB1 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FD344298E28DF00872DB1 /* FeedCollectionViewCell.swift */; };
@@ -233,6 +237,10 @@
 		5A7D6FC02985F960002A1996 /* ModalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTableViewCell.swift; sourceTree = "<group>"; };
 		5A7D6FC429861E49002A1996 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A7FBB1A299481430011DAC0 /* FollowButtonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowButtonResponse.swift; sourceTree = "<group>"; };
+		5A7FBB1D2994B4CE0011DAC0 /* LikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeResponse.swift; sourceTree = "<group>"; };
+		5A7FBB212994B9DF0011DAC0 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		5A7FBB232994C03C0011DAC0 /* ShopCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A7FBB262994C0D40011DAC0 /* ShoppingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingResponse.swift; sourceTree = "<group>"; };
 		5A7FD340298DFB1900872DB1 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		5A7FD342298DFB7500872DB1 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A7FD344298E28DF00872DB1 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -771,6 +779,30 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		5A7FBB1C2994B4BB0011DAC0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A7FBB1D2994B4CE0011DAC0 /* LikeResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5A7FBB202994B9D20011DAC0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A7FBB212994B9DF0011DAC0 /* SearchResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		5A7FBB252994C0C70011DAC0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5A7FBB262994C0D40011DAC0 /* ShoppingResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		5A7FD33E298DFB0100872DB1 /* Story */ = {
 			isa = PBXGroup;
 			children = (
@@ -783,6 +815,7 @@
 		5A7FD33F298DFB0800872DB1 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				5A7FBB1C2994B4BB0011DAC0 /* Entity */,
 				5A7FD344298E28DF00872DB1 /* FeedCollectionViewCell.swift */,
 				5A7FD346298E28E900872DB1 /* FeedViewController.swift */,
 			);
@@ -842,6 +875,7 @@
 		5A820B7C29850ED400F3784F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				5A7FBB202994B9D20011DAC0 /* Entity */,
 				5A820B842985127B00F3784F /* SearchViewController.storyboard */,
 				5A84D9DA298B7411006E8D66 /* SearchCollectionViewCell.swift */,
 				5A7D6F9029853B6E002A1996 /* SearchNavigationBarViewController.swift */,
@@ -856,7 +890,9 @@
 		5A820B7E29850EE200F3784F /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				5A7FBB252994C0C70011DAC0 /* Entity */,
 				5A820B8C298513CD00F3784F /* ShopViewController.storyboard */,
+				5A7FBB232994C03C0011DAC0 /* ShopCollectionViewCell.swift */,
 				5A820B8E298513D200F3784F /* ShopViewController.swift */,
 				5A7D6FB2298548C9002A1996 /* ShopNavigationBarViewController.swift */,
 			);
@@ -1273,6 +1309,7 @@
 			files = (
 				5A84D9E3298BF714006E8D66 /* UITabBarController.swift in Sources */,
 				5AF193BD298A4DE00011F1AD /* EditIntroduceViewController.swift in Sources */,
+				5A7FBB242994C03C0011DAC0 /* ShopCollectionViewCell.swift in Sources */,
 				5A7D6FA2298546F5002A1996 /* Device.swift in Sources */,
 				5A87F3E5298A809F0016F69A /* EditResponse.swift in Sources */,
 				5A87F3E2298A7FBA0016F69A /* EditRequest.swift in Sources */,
@@ -1330,6 +1367,7 @@
 				5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */,
 				5A84D9DB298B7411006E8D66 /* SearchCollectionViewCell.swift in Sources */,
 				5A7FD347298E28E900872DB1 /* FeedViewController.swift in Sources */,
+				5A7FBB272994C0D40011DAC0 /* ShoppingResponse.swift in Sources */,
 				5AF193BF298A4DE70011F1AD /* EditLinkViewController.swift in Sources */,
 				5AAF113E299270C400260D46 /* FolloweeResponse.swift in Sources */,
 				5A87F3E9298A87B90016F69A /* AddLinkViewController.swift in Sources */,
@@ -1343,6 +1381,7 @@
 				5A10E1852990E45300E4265C /* MakePostViewController.swift in Sources */,
 				5A0962812989334E001A472E /* UIView.swift in Sources */,
 				5A7D6FAB29854742002A1996 /* UIFont.swift in Sources */,
+				5A7FBB222994B9DF0011DAC0 /* SearchResponse.swift in Sources */,
 				5AF193B4298A49720011F1AD /* EditNameViewController.swift in Sources */,
 				5A87F3EB298A8C7C0016F69A /* UIAlertAction.swift in Sources */,
 				5A84DA04298CF0EC006E8D66 /* DefaultNavigationController.swift in Sources */,
@@ -1373,6 +1412,7 @@
 				5A3D7A552987F2110020C74F /* FacebookRequest.swift in Sources */,
 				5ACD712829938070004C74EE /* MyFeedViewController.swift in Sources */,
 				5AF193B0298A2CEF0011F1AD /* EditViewController.swift in Sources */,
+				5A7FBB1E2994B4CE0011DAC0 /* LikeResponse.swift in Sources */,
 				5A4AC7B82993AB9D0021B4B1 /* PrivateSingleton.swift in Sources */,
 				5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */,
 				5A10E1A02992477000E4265C /* ImageViewController.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FeedCollectionViewCell: UICollectionViewCell {
     
@@ -29,7 +30,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
     
     var images: [String] = []
     var isLike: Bool = false
-    
+    var postId: Int = 0
     
     
     override func awakeFromNib() {
@@ -101,11 +102,28 @@ class FeedCollectionViewCell: UICollectionViewCell {
     
     
     func postLikeButton() {
-        print("like button")
+        AF.request("\(Constant.Base_URL)/app/likes/\(postId)", method: .post, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: LikeResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("SUCCESS >> \(response)")
+             
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     func postUnlikeButton() {
-        print("unlike button")
+        AF.request("\(Constant.Base_URL)/app/unlikes/\(postId)", method: .post, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: LikeResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("SUCCESS >> \(response)")
+             
+            case .failure(let error):
+                print(error)
+            }
+        }
+
     }
     
 //    @IBAction func onClickComment() {
@@ -115,6 +133,18 @@ class FeedCollectionViewCell: UICollectionViewCell {
 ////        self.navigationController?.pushViewController(commentVC, animated: true)
 //        commentVC.present(commentVC, animated: true)
 //        
+//    }
+    
+//    extension EditViewController {
+//        func didSuccessEdit(_ result: EditResult) {
+//            self.presentAlert(title: "회원 정보 수정", message: "회원 정보가 수정되었습니다")
+//
+//            print("didSuccessEdit() success")
+//        }
+//
+//        func failedToRequest(message: String) {
+//            self.presentAlert(title: message)
+//        }
 //    }
     
     

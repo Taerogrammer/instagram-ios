@@ -2,10 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,13 +16,59 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="ShopViewController" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FTl-fK-gm1">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="boe-Fa-Bnw">
+                                    <size key="itemSize" width="190" height="171"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Jm9-ZS-K6i" customClass="ShopCollectionViewCell" customModule="instagram_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="171"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="74A-8Y-kmz">
+                                            <rect key="frame" x="0.0" y="0.0" width="190" height="171"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SET-mg-q8p">
+                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="171"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SET-mg-q8p" firstAttribute="leading" secondItem="74A-8Y-kmz" secondAttribute="leading" id="8a0-tA-HtE"/>
+                                                <constraint firstItem="SET-mg-q8p" firstAttribute="top" secondItem="74A-8Y-kmz" secondAttribute="top" id="Nxj-LV-Jnn"/>
+                                                <constraint firstAttribute="bottom" secondItem="SET-mg-q8p" secondAttribute="bottom" id="jTR-jh-cAA"/>
+                                                <constraint firstAttribute="trailing" secondItem="SET-mg-q8p" secondAttribute="trailing" id="jf5-y7-TSE"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="190" height="171"/>
+                                        <connections>
+                                            <outlet property="shoppingImage" destination="SET-mg-q8p" id="fvA-76-nHz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FTl-fK-gm1" secondAttribute="bottom" id="EFH-UU-dfw"/>
+                            <constraint firstItem="FTl-fK-gm1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="JvX-YJ-nZf"/>
+                            <constraint firstItem="FTl-fK-gm1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="arX-OA-AR9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FTl-fK-gm1" secondAttribute="trailing" id="dLw-AY-y2B"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ShopCollectionView" destination="FTl-fK-gm1" id="pod-p5-JXT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
     <resources>

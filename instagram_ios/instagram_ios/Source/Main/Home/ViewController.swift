@@ -251,6 +251,7 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             feedImages = userInfo[indexPath.row].imgUrls
             feedCell.images = userInfo[indexPath.row].imgUrls
             feedCell.contentImages.load(url: URL(string: userInfo[indexPath.row].imgUrls[0])!)
+            feedCell.postId = userInfo[indexPath.row].postId
             
             if userInfo[indexPath.row].likeState == 0 {     //like 안눌렀을 때
                 feedCell.likeBtn.setImage(UIImage(named: "like_uncheck"), for: .normal)
