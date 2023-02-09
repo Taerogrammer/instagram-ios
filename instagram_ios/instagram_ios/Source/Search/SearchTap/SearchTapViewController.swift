@@ -36,7 +36,7 @@ class SearchTapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        designImage.image = UIImage(named: imagePassed)
+        designImage.load(url: URL(string: imagePassed)!)
         backNavigationSetting()
         
         topButton()

@@ -104,7 +104,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6F641647-F0C3-425B-9677-0639719EF0FA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "instagram_ios/Source/Profile/FolloweeAndFollwer/Followee/FolloweeCollectionViewCell.swift"

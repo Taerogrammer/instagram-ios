@@ -29,7 +29,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     
     var images: [String] = []
-    var isLike: Bool = false
+    var isLike: Int = 0
     var postId: Int = 0
     
     
@@ -90,14 +90,20 @@ class FeedCollectionViewCell: UICollectionViewCell {
     
     @IBAction func onClickLikeButton() {
         print("좋아요 유무 >> \(isLike)")
-        if isLike == true {     //false로 바꿔야지
-            postUnlikeButton()
+        if isLike == 1 {     //false로 바꿔야지
+            DispatchQueue.main.async {
+                self.postUnlikeButton()
+            }
+            
+            print("like 눌려있을 때 >> \(isLike)")
         }
-        
         else {      //좋아요가 안눌려있으니, 누르면 좋아요 눌러지기
             postLikeButton()
+            DispatchQueue.main.async {
+                self.likeBtn.setImage(UIImage(named: "like_uncheck"), for: .normal)
+            }
+            print("like 안눌려있을 때 >> \(isLike)")
         }
-        
     }
     
     
@@ -106,7 +112,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
             switch response.result {
             case .success(let response):
                 print("SUCCESS >> \(response)")
-             
+                
             case .failure(let error):
                 print(error)
             }
@@ -118,7 +124,10 @@ class FeedCollectionViewCell: UICollectionViewCell {
             switch response.result {
             case .success(let response):
                 print("SUCCESS >> \(response)")
-             
+                DispatchQueue.main.async {
+                    self.likeBtn.setImage(UIImage(named: "like_check"), for: .normal)
+                
+                }
             case .failure(let error):
                 print(error)
             }

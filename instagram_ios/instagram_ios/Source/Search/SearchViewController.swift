@@ -32,6 +32,11 @@ class SearchViewController: UIViewController {
             switch response.result {
             case .success(let response):
                 print("SUCCESS >> \(response)")
+                DispatchQueue.main.async {
+                    self.searchList = response.result
+                    self.searchCollectionView.reloadData()
+                }
+                
             case .failure(let error):
                 print(error)
                 
@@ -51,7 +56,9 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = searchCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SearchCollectionViewCell
-        cell.myImage.image = UIImage(named: searchList[indexPath.row].mediaUrl)
+        
+        print(searchList[indexPath.row].mediaUrl)
+        cell.myImage.load(url: URL(string: searchList[indexPath.row].mediaUrl)!)
         return cell
     }
     

@@ -45,10 +45,17 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        print("view will appear")
         DispatchQueue.main.async {
             self.getUserInfo()
         }
     }
+    
+    
+    
+    
+    
     
     //MARK: navigationbar setting
     func navigationBarSetting() {
@@ -124,7 +131,7 @@ class ViewController: UIViewController {
             switch response.result {
             case .success(let response):
                 print("USER INFO SUCCESS >>> \(response)")
-                                
+                
                 DispatchQueue.main.async {
                     self.userInfo = response.result
                     self.feedCollectionView.reloadData()
@@ -144,7 +151,6 @@ class ViewController: UIViewController {
         let picker = YPImagePicker(configuration: config)
         picker.didFinishPicking { [unowned picker] items, cancelled in
             self.images = []
-
             if cancelled == true {
                 picker.dismiss(animated: true, completion: nil)
             }
@@ -253,13 +259,13 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             feedCell.contentImages.load(url: URL(string: userInfo[indexPath.row].imgUrls[0])!)
             feedCell.postId = userInfo[indexPath.row].postId
             
+            feedCell.isLike = userInfo[indexPath.row].likeState
+            
             if userInfo[indexPath.row].likeState == 0 {     //like 안눌렀을 때
                 feedCell.likeBtn.setImage(UIImage(named: "like_uncheck"), for: .normal)
-                feedCell.isLike = false
             }
             else {
                 feedCell.likeBtn.setImage(UIImage(named: "like_check"), for: .normal)
-                feedCell.isLike = true
             }
             
             
