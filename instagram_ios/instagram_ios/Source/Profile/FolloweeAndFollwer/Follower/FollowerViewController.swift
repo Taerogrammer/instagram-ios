@@ -18,6 +18,10 @@ class FollowerViewController : UIViewController {
         super.viewDidLoad()
         followerCollectionView.delegate = self
         followerCollectionView.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         getFollowerData()
     }
     
@@ -59,6 +63,7 @@ extension FollowerViewController:  UICollectionViewDelegate, UICollectionViewDat
         cell.nameLbl.text = follower[indexPath.row].name
         cell.userNameBtn.contentHorizontalAlignment = .left
 //        cell.layer.addBorder([.bottom], color: .black, width: 1)
+        cell.profileImage.load(url: URL(string: follower[indexPath.row].profileImageUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
 
         return cell
     }

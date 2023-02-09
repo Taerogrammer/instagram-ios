@@ -21,10 +21,8 @@ class FolloweeViewController : UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("view will appear")
-
-
+        super.viewWillAppear(true)
+        getFolloweeData()
     }
     
     
@@ -69,7 +67,7 @@ extension FolloweeViewController:  UICollectionViewDelegate, UICollectionViewDat
         cell.userNameBtn.contentHorizontalAlignment = .left
 
         cell.nameLbl.text = following[indexPath.row].name
-        
+        cell.profileImage.load(url: URL(string: following[indexPath.row].profileImageUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
 //        cell.layer.addBorder([.bottom], color: .black, width: 1)
 
         return cell

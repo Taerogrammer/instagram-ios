@@ -399,7 +399,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-j1-V69">
-                                                    <rect key="frame" x="15" y="10" width="50" height="40"/>
+                                                    <rect key="frame" x="30" y="10" width="50" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="X5E-KS-LXk"/>
                                                     </constraints>
@@ -415,13 +415,13 @@
                                                     </buttonConfiguration>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-vZ-zcj">
-                                                    <rect key="frame" x="95" y="32" width="26.333333333333329" height="13"/>
+                                                    <rect key="frame" x="110" y="37" width="26.333333333333343" height="8"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ox9-8o-zNn">
-                                                    <rect key="frame" x="80" y="15" width="75" height="15"/>
+                                                    <rect key="frame" x="95" y="20" width="75" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="uoN-PP-fLx"/>
                                                     </constraints>
@@ -435,9 +435,9 @@
                                                 <constraint firstItem="rXf-tG-CYN" firstAttribute="top" secondItem="E6b-VD-abn" secondAttribute="top" constant="15" id="DWB-9q-5hA"/>
                                                 <constraint firstAttribute="bottom" secondItem="dPc-j1-V69" secondAttribute="bottom" constant="10" id="NTd-tl-JRY"/>
                                                 <constraint firstAttribute="bottom" secondItem="rXf-tG-CYN" secondAttribute="bottom" constant="15" id="S7u-wN-Pmn"/>
-                                                <constraint firstItem="ox9-8o-zNn" firstAttribute="top" secondItem="E6b-VD-abn" secondAttribute="top" constant="15" id="TQz-PP-fHD"/>
+                                                <constraint firstItem="ox9-8o-zNn" firstAttribute="top" secondItem="E6b-VD-abn" secondAttribute="top" constant="20" id="TQz-PP-fHD"/>
                                                 <constraint firstItem="oCe-vZ-zcj" firstAttribute="leading" secondItem="dPc-j1-V69" secondAttribute="trailing" constant="30" id="fBa-uJ-1A5"/>
-                                                <constraint firstItem="dPc-j1-V69" firstAttribute="leading" secondItem="E6b-VD-abn" secondAttribute="leading" constant="15" id="hLp-ET-aeY"/>
+                                                <constraint firstItem="dPc-j1-V69" firstAttribute="leading" secondItem="E6b-VD-abn" secondAttribute="leading" constant="30" id="hLp-ET-aeY"/>
                                                 <constraint firstItem="ox9-8o-zNn" firstAttribute="leading" secondItem="dPc-j1-V69" secondAttribute="trailing" constant="15" id="ljd-mk-NTX"/>
                                                 <constraint firstItem="oCe-vZ-zcj" firstAttribute="top" secondItem="ox9-8o-zNn" secondAttribute="bottom" constant="2" id="x7N-vh-Vnv"/>
                                                 <constraint firstItem="dPc-j1-V69" firstAttribute="top" secondItem="E6b-VD-abn" secondAttribute="top" constant="10" id="zfa-wB-WDS"/>
@@ -834,10 +834,10 @@
             <objects>
                 <viewController id="fRe-cU-j40" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HtV-Zs-fX0">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="426"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="426.33333333333331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="xD4-8b-Ref"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnw-RC-ugZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -870,7 +870,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rL1-ji-UZh">
-                                                    <rect key="frame" x="15" y="10" width="50" height="40"/>
+                                                    <rect key="frame" x="30" y="10" width="50" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="qET-y9-m5Y"/>
                                                     </constraints>
@@ -886,13 +886,13 @@
                                                     </buttonConfiguration>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWO-J4-jQ1">
-                                                    <rect key="frame" x="95" y="32" width="26.333333333333329" height="13"/>
+                                                    <rect key="frame" x="110" y="37" width="26.333333333333343" height="8"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHP-Wt-8xh">
-                                                    <rect key="frame" x="80" y="15" width="75" height="15"/>
+                                                    <rect key="frame" x="95" y="20" width="75" height="15"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="15" id="Y8k-Yt-Spn"/>
                                                     </constraints>
@@ -910,9 +910,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="CWO-J4-jQ1" secondAttribute="bottom" constant="15" id="4TE-Ww-9aO"/>
                                                 <constraint firstItem="CHP-Wt-8xh" firstAttribute="leading" secondItem="rL1-ji-UZh" secondAttribute="trailing" constant="15" id="H6A-XO-2O6"/>
                                                 <constraint firstAttribute="bottom" secondItem="hKS-rm-pGe" secondAttribute="bottom" constant="15" id="HKc-06-XbA"/>
-                                                <constraint firstItem="CHP-Wt-8xh" firstAttribute="top" secondItem="opr-0M-ZeP" secondAttribute="top" constant="15" id="KNM-58-JKp"/>
+                                                <constraint firstItem="CHP-Wt-8xh" firstAttribute="top" secondItem="opr-0M-ZeP" secondAttribute="top" constant="20" id="KNM-58-JKp"/>
                                                 <constraint firstAttribute="bottom" secondItem="ERL-cb-g75" secondAttribute="bottom" constant="15" id="U0l-sO-qOe"/>
-                                                <constraint firstItem="rL1-ji-UZh" firstAttribute="leading" secondItem="opr-0M-ZeP" secondAttribute="leading" constant="15" id="fb4-tb-2IM"/>
+                                                <constraint firstItem="rL1-ji-UZh" firstAttribute="leading" secondItem="opr-0M-ZeP" secondAttribute="leading" constant="30" id="fb4-tb-2IM"/>
                                                 <constraint firstItem="CWO-J4-jQ1" firstAttribute="top" secondItem="CHP-Wt-8xh" secondAttribute="bottom" constant="2" id="jpY-2G-FT2"/>
                                                 <constraint firstItem="rL1-ji-UZh" firstAttribute="top" secondItem="opr-0M-ZeP" secondAttribute="top" constant="10" id="l0m-t6-38a"/>
                                                 <constraint firstAttribute="trailing" secondItem="hKS-rm-pGe" secondAttribute="trailing" constant="80" id="mbQ-pK-Jm9"/>
@@ -1053,6 +1053,7 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="editProfile:" destination="kEa-MC-KQd" eventType="touchUpInside" id="HfP-9i-1md"/>
+                                                            <action selector="followStateBtnClicked:" destination="UZD-hH-OXn" eventType="touchUpInside" id="H9y-mL-wjj"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPo-Ug-TAY">
@@ -1552,7 +1553,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="509"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="xgO-CX-6cO"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AIZ-5Q-9Uz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1581,9 +1582,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

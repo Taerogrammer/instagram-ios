@@ -28,7 +28,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pageControl: UIPageControl!
     
     var images: [String] = []
-    var isImageOne: Bool = true
+    var isLike: Bool = false
     
     
     
@@ -49,7 +49,9 @@ class FeedCollectionViewCell: UICollectionViewCell {
         DispatchQueue.main.async {
             print("FEED IMAGE >> \(self.images)")
             self.pageControl.numberOfPages = self.images.count
-            print(self.pageControl.numberOfPages)
+            if self.pageControl.numberOfPages == 1 {
+                self.pageControl.isHidden = true
+            }
             
         }
 
@@ -83,6 +85,27 @@ class FeedCollectionViewCell: UICollectionViewCell {
     @IBAction func imageChange(_ sender: UIPageControl) {
         let feedUrl = URL(string: images[pageControl.currentPage])
         contentImages.load(url: feedUrl!)
+    }
+    
+    @IBAction func onClickLikeButton() {
+        print("좋아요 유무 >> \(isLike)")
+        if isLike == true {     //false로 바꿔야지
+            postUnlikeButton()
+        }
+        
+        else {      //좋아요가 안눌려있으니, 누르면 좋아요 눌러지기
+            postLikeButton()
+        }
+        
+    }
+    
+    
+    func postLikeButton() {
+        print("like button")
+    }
+    
+    func postUnlikeButton() {
+        print("unlike button")
     }
     
 //    @IBAction func onClickComment() {

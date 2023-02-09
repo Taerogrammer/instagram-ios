@@ -601,7 +601,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBy-bg-gcQ">
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBy-bg-gcQ">
                                                     <rect key="frame" x="0.0" y="55" width="427" height="320"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="320" id="scl-O4-Agf"/>
@@ -617,8 +617,11 @@
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="plain">
-                                                                <backgroundConfiguration key="background" image="like_uncheck"/>
+                                                                <backgroundConfiguration key="background"/>
                                                             </buttonConfiguration>
+                                                            <connections>
+                                                                <action selector="onClickLikeButton" destination="J4r-yT-SL2" eventType="touchUpInside" id="nbX-c5-VQp"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4i-gp-QIv">
                                                             <rect key="frame" x="55" y="4" width="32" height="32"/>
@@ -652,8 +655,8 @@
                                                         </button>
                                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="9ce-1M-ZIi">
                                                             <rect key="frame" x="145.66666666666666" y="7" width="115.99999999999997" height="26"/>
-                                                            <color key="backgroundColor" red="0.41203592989999999" green="0.73667669290000004" blue="0.89328286079999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <color key="tintColor" systemColor="linkColor"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="tintColor" systemColor="systemBlueColor"/>
                                                             <connections>
                                                                 <action selector="imageChange:" destination="J4r-yT-SL2" eventType="valueChanged" id="TpJ-L7-OXK"/>
                                                             </connections>
@@ -2356,7 +2359,7 @@
         <image name="fav2" width="871" height="239"/>
         <image name="fav3" width="870" height="252"/>
         <image name="home_instagram" width="120" height="45"/>
-        <image name="like_uncheck" width="61" height="55"/>
+        <image name="like_uncheck" width="36" height="33"/>
         <image name="meta_account" width="868" height="276"/>
         <image name="plus.app" catalog="system" width="128" height="114"/>
         <image name="save_uncheck" width="68" height="68"/>
@@ -2368,11 +2371,11 @@
         <image name="tip1" width="869" height="223"/>
         <image name="tip2" width="869" height="300"/>
         <image name="tip3" width="869" height="300"/>
-        <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

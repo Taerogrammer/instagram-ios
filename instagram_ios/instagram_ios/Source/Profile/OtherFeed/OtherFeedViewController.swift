@@ -46,7 +46,6 @@ class OtherFeedViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         DispatchQueue.main.async {
             self.getOtherInfo()
         }
@@ -79,7 +78,29 @@ class OtherFeedViewController: UIViewController {
         segmentedControl.changeUnderlinePosition()
     }
     
+    @IBAction func followStateBtnClicked(_ sender: UIButton) {
+        self.postFollowButton()
+    }
+    
 
+    
+    
+    
+    func postFollowButton() {
+        AF.request("\(Constant.Base_URL)/app/follows/\(feedUserId)", method: .post, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: FollowButtonResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                self.didSuccessPost()
+                DispatchQueue.main.async {
+                    self.getOtherInfo()
+                    self.otherCollectionView.reloadData()
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
     
     func getOtherInfo() {
@@ -89,6 +110,7 @@ class OtherFeedViewController: UIViewController {
             case .success(let response):
                 print("SUCCESS >>> \(response)")
 //                print(response.result?.follower)  형식
+                
                 self.postCount.text = String(response.result?.postCount ?? 0)
                 self.followerCount.text = String(response.result?.follower ?? 0)
                 self.followingCount.text = String(response.result?.following ?? 0)
@@ -157,4 +179,36 @@ extension OtherFeedViewController: UICollectionViewDelegate, UICollectionViewDat
         return CGSize(width: size, height: size)
     }
 
+}
+
+extension OtherFeedViewController {
+    func didSuccessPost() {
+        print("didSuccessPost() success")
+        if followStateBtn.titleLabel?.text == "팔로잉" {
+            print("팔로잉 버튼임")
+            self.presentAlert(title: "팔로우 메시지", message: "유저를 언팔로우 했습니다.")
+            self.followStateBtn.setTitle("맞팔로우 하기", for: .normal)
+            self.followStateBtn.setTitleColor(.white, for: .normal)
+            self.followStateBtn.backgroundColor = .systemBlue
+            self.followStateBtn.titleLabel?.font = .NotoSans(.bold, size: 4)
+            self.followStateBtn.contentHorizontalAlignment = .center
+            self.followStateBtn.layer.cornerRadius = 10
+            
+        }
+        else {
+            print("언팔 중")
+            self.presentAlert(title: "팔로우 메시지", message: "유저를 팔로우 했습니다.")
+            self.followStateBtn.setTitle("팔로잉", for: .normal)
+            self.followStateBtn.setTitleColor(.black, for: .normal)
+            self.followStateBtn.titleLabel?.font = .NotoSans(.bold, size: 4)
+            self.followStateBtn.backgroundColor = .systemGray6
+            self.followStateBtn.contentVerticalAlignment = .center
+            self.followStateBtn.layer.cornerRadius = 10
+        }
+//        self.presentAlert(title: "회원 정보 수정", message: "회원 정보가 수정되었습니다")
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
 }

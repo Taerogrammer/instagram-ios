@@ -248,18 +248,18 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             feedCell.postDataLbl.text = "\(userInfo[indexPath.row].dayInfo!.month)" + "월 " + "\(userInfo[indexPath.row].dayInfo!.day)" + "일"
             
             feedCell.profileImage.load(url: URL(string: userInfo[indexPath.row].userProfileUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
-            
             feedImages = userInfo[indexPath.row].imgUrls
-
-            
-            
-            let cell = feedCollectionView.dequeueReusableCell(withReuseIdentifier: "feedCell", for: indexPath) as! FeedCollectionViewCell
-            cell.images = userInfo[indexPath.row].imgUrls
-            
-            
-            
+            feedCell.images = userInfo[indexPath.row].imgUrls
             feedCell.contentImages.load(url: URL(string: userInfo[indexPath.row].imgUrls[0])!)
             
+            if userInfo[indexPath.row].likeState == 0 {     //like 안눌렀을 때
+                feedCell.likeBtn.setImage(UIImage(named: "like_uncheck"), for: .normal)
+                feedCell.isLike = false
+            }
+            else {
+                feedCell.likeBtn.setImage(UIImage(named: "like_check"), for: .normal)
+                feedCell.isLike = true
+            }
             
             
             return feedCell
