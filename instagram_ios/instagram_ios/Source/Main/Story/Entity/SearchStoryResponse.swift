@@ -14,5 +14,6 @@ struct SearchStoryResponse: Codable {
 
 struct SearchStoryResult: Codable {
     var profileUrl: String
-    var userName: String 
+    var userName: String
+    var userId: Int
 }

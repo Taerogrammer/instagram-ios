@@ -13,5 +13,5 @@ struct Constant {
 //    static let Base_URL = "https://imklera-risingcamp.shop"
     static let Olive_URL = "https://m1ndy52.shop"
     
-    static let Base_URL = "http://prod.imklera-risingcamp.shop:9000"
+    static let Base_URL = "https://prod.imklera-risingcamp.shop"
 }

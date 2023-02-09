@@ -19,15 +19,7 @@ class CommentViewController : UIViewController {
         BackAndDM()
         contentField()
         
-        //MARK: 이미지
-        self.view.addSubview(self.thumbnailView)
-        self.thumbnailView.snp.makeConstraints { make in
-            make.top.equalTo(userNameBtn)
-            make.size.width.height.equalTo(40)
-        }
-        userNameBtn.snp.makeConstraints { make in
-            make.left.equalTo(thumbnailView.snp.right)
-        }
+
         
     }
     
@@ -67,14 +59,6 @@ class CommentViewController : UIViewController {
         userNameBtn.addTarget(self, action: #selector(onClickProfile), for: .touchUpInside)
         
         
-    }
-    
-    //MARK: 비동기 처리 수행 해줘야함
-    private let thumbnailView = ThumbnailView().then {
-        var profileUrl = URL(string: "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E")
-        var data = try? Data(contentsOf: profileUrl!)
-        $0.image = UIImage(data: data!)
-//      $0.shouldShowGreenDot = false
     }
     
     

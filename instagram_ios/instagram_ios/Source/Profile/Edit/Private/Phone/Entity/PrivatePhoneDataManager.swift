@@ -9,7 +9,7 @@ import Alamofire
 
 class PrivatePhoneDataManager {
     func patchPhone(_ parameter: PrivatePhoneRequest, delegate: PrivatePhoneViewController) {
-        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/phone", method: .patch, parameters: parameter, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: PrivatePhoneResponse.self) { response in
+        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/phones", method: .patch, parameters: parameter, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: PrivatePhoneResponse.self) { response in
             switch response.result {
             case . success(let response):
                 if response.isSuccess {

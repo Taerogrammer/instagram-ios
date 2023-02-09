@@ -9,8 +9,8 @@ import Alamofire
 
 class PrivateEmailDataManager {
     func patchEmail(_ parameter: PrivateEmailRequest, delegate: PrivateEmailViewController) {
-        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/email", method: .patch, parameters: parameter, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: PrivateEmailResponse.self) { response in
-            print("URL >> \(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/email")
+        AF.request("\(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/emails", method: .patch, parameters: parameter, encoder: JSONParameterEncoder(), headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: PrivateEmailResponse.self) { response in
+            print("URL >> \(Constant.Base_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/emails")
             switch response.result {
             case .success(let response):
                 if response.isSuccess {

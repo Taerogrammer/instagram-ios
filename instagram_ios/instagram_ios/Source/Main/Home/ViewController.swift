@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     let defaultUrl = URL(string: "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!
     
+    lazy var postId: Int = 0
     
     @IBOutlet weak var storyCollectionView : UICollectionView!
     @IBOutlet weak var feedCollectionView : UICollectionView!
@@ -134,6 +135,7 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.userInfo = response.result
                     self.feedCollectionView.reloadData()
+
                 }
 
             case .failure(let error):
@@ -146,7 +148,7 @@ class ViewController: UIViewController {
         AF.request("\(Constant.Olive_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/following-stories", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: SearchStoryResponse.self) { response in
             switch response.result {
             case .success(let response):
-                print("USER STORY INFO SUCCESS >>> \(response)")
+//                print("USER STORY INFO SUCCESS >>> \(response)")
                 
                 DispatchQueue.main.async {
                     self.storyInfo = response.result
@@ -158,6 +160,9 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
+    
     
     @objc func onclickAdd(_ sender: AnyObject) {
         var config = YPImagePickerConfiguration()
@@ -292,16 +297,16 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == storyCollectionView {
-            switch indexPath.row {
-            case 0:
-                print("스토리 첫 번째 셀 clicked")
-            case 1:
-                print("스토리 두 번째 셀 clicked")
-            default:
-                print("이건 error일듯")
-            }
+            print("클릭한 userId >> \(storyInfo[indexPath.row].userId)")
+            
+            let userId: Int = storyInfo[indexPath.row].userId
+            
+            
+            
             let storyVC = self.storyboard?.instantiateViewController(withIdentifier: "StoryViewController") as! StoryViewController
             storyVC.imagePassed = storyInfo[indexPath.row].profileUrl
+            storyVC.userId = storyInfo[indexPath.row].userId
+            
             self.navigationController?.pushViewController(storyVC, animated: true)
             
         }
@@ -318,6 +323,8 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             }
 //            let feedVC = self.storyboard?.instantiateViewController(withIdentifier: "FeedViewController") as! FeedViewController
 //            self.navigationController?.pushViewController(feedVC, animated: true)
+            postId = userInfo[indexPath.row].postId
+
             
             
         }

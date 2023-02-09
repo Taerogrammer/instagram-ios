@@ -542,7 +542,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-Ck-j1b" customClass="RoundImageView" customModule="instagram_ios" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgg-Ck-j1b" customClass="RoundImageView" customModule="instagram_ios" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="8" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="Ieg-kF-0Tf"/>
@@ -836,7 +836,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Zj-1y-KxA">
-                                <rect key="frame" x="0.0" y="91" width="428" height="752"/>
+                                <rect key="frame" x="0.0" y="40" width="428" height="803"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="메세지 보내기" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EB3-UU-iBm">
                                 <rect key="frame" x="20" y="794" width="298" height="34"/>
@@ -875,7 +875,7 @@
                             <constraint firstItem="ljS-fk-9rc" firstAttribute="leading" secondItem="EB3-UU-iBm" secondAttribute="trailing" constant="20" id="RdL-l3-NEG"/>
                             <constraint firstItem="7gD-pJ-hly" firstAttribute="bottom" secondItem="7Zj-1y-KxA" secondAttribute="bottom" id="Xbw-ah-J1K"/>
                             <constraint firstItem="7gD-pJ-hly" firstAttribute="bottom" secondItem="frU-9C-R1s" secondAttribute="bottom" constant="15" id="Xqa-ZI-w39"/>
-                            <constraint firstItem="7Zj-1y-KxA" firstAttribute="top" secondItem="7gD-pJ-hly" secondAttribute="top" id="bTD-Pj-I6b"/>
+                            <constraint firstItem="7Zj-1y-KxA" firstAttribute="top" secondItem="kk7-r0-zTp" secondAttribute="top" constant="40" id="bTD-Pj-I6b"/>
                             <constraint firstItem="7Zj-1y-KxA" firstAttribute="leading" secondItem="7gD-pJ-hly" secondAttribute="leading" id="iJg-9X-ZT0"/>
                             <constraint firstItem="ljS-fk-9rc" firstAttribute="width" secondItem="frU-9C-R1s" secondAttribute="width" id="mHi-zh-RIO"/>
                             <constraint firstItem="7gD-pJ-hly" firstAttribute="trailing" secondItem="frU-9C-R1s" secondAttribute="trailing" constant="15" id="ouR-MJ-Fq7"/>

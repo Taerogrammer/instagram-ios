@@ -143,6 +143,9 @@
 		5A87F3FB298A99AF0016F69A /* PrivateGenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3FA298A99AF0016F69A /* PrivateGenderViewController.swift */; };
 		5A87F3FD298A99CA0016F69A /* PrivateBirthdayViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A87F3FC298A99CA0016F69A /* PrivateBirthdayViewController.storyboard */; };
 		5A87F3FF298A99D40016F69A /* PrivateBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */; };
+		5AA4149C29954CE400EB45F8 /* CommentCountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4149B29954CE400EB45F8 /* CommentCountResponse.swift */; };
+		5AA4149E299553C700EB45F8 /* GetStoryIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4149D299553C700EB45F8 /* GetStoryIdResponse.swift */; };
+		5AA414A02995552B00EB45F8 /* GettingStoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4149F2995552B00EB45F8 /* GettingStoryResponse.swift */; };
 		5AAF113E299270C400260D46 /* FolloweeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF113D299270C400260D46 /* FolloweeResponse.swift */; };
 		5ACD712129935BBA004C74EE /* OtherFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */; };
 		5ACD712329936D35004C74EE /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD712229936D35004C74EE /* FollowerResponse.swift */; };
@@ -301,6 +304,9 @@
 		5A87F3FA298A99AF0016F69A /* PrivateGenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateGenderViewController.swift; sourceTree = "<group>"; };
 		5A87F3FC298A99CA0016F69A /* PrivateBirthdayViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrivateBirthdayViewController.storyboard; sourceTree = "<group>"; };
 		5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateBirthdayViewController.swift; sourceTree = "<group>"; };
+		5AA4149B29954CE400EB45F8 /* CommentCountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCountResponse.swift; sourceTree = "<group>"; };
+		5AA4149D299553C700EB45F8 /* GetStoryIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStoryIdResponse.swift; sourceTree = "<group>"; };
+		5AA4149F2995552B00EB45F8 /* GettingStoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStoryResponse.swift; sourceTree = "<group>"; };
 		5AAF113D299270C400260D46 /* FolloweeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeResponse.swift; sourceTree = "<group>"; };
 		5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFeedViewController.swift; sourceTree = "<group>"; };
 		5ACD712229936D35004C74EE /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
@@ -787,6 +793,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7FBB1D2994B4CE0011DAC0 /* LikeResponse.swift */,
+				5AA4149B29954CE400EB45F8 /* CommentCountResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -829,6 +836,8 @@
 			isa = PBXGroup;
 			children = (
 				5A7FBB35299519C60011DAC0 /* SearchStoryResponse.swift */,
+				5AA4149D299553C700EB45F8 /* GetStoryIdResponse.swift */,
+				5AA4149F2995552B00EB45F8 /* GettingStoryResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1347,6 +1356,7 @@
 				5A3D7A4329877BE10020C74F /* EmailViewController.swift in Sources */,
 				5A0CD9BC298F9D4A00A1E894 /* FollowerViewController.swift in Sources */,
 				5A3D7A6C298841450020C74F /* LoginResponse.swift in Sources */,
+				5AA4149E299553C700EB45F8 /* GetStoryIdResponse.swift in Sources */,
 				5A84DA22298D3391006E8D66 /* MakeStoryViewController.swift in Sources */,
 				5A0962992989F9D3001A472E /* BFDescriptionViewController.swift in Sources */,
 				5A0CD9B8298F9AC700A1E894 /* FollowListViewController.swift in Sources */,
@@ -1358,6 +1368,7 @@
 				5A60028829931BA6005F4F05 /* StoryDataManager.swift in Sources */,
 				5A7FBB1B299481430011DAC0 /* FollowButtonResponse.swift in Sources */,
 				5AF193BB298A4DD50011F1AD /* EditUserNameViewController.swift in Sources */,
+				5AA4149C29954CE400EB45F8 /* CommentCountResponse.swift in Sources */,
 				5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */,
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
 				5ACD712329936D35004C74EE /* FollowerResponse.swift in Sources */,
@@ -1391,6 +1402,7 @@
 				5A87F3FF298A99D40016F69A /* PrivateBirthdayViewController.swift in Sources */,
 				5A84DA33298D799D006E8D66 /* ContentsImageCollectionViewCell.swift in Sources */,
 				5A7D6FB529855EAE002A1996 /* ProfileNavigationBarViewController.swift in Sources */,
+				5AA414A02995552B00EB45F8 /* GettingStoryResponse.swift in Sources */,
 				5A7FD343298DFB7500872DB1 /* StoryCollectionViewCell.swift in Sources */,
 				5A086505298F7684000A4F49 /* EditDataManager.swift in Sources */,
 				5A820B8329850F0E00F3784F /* ProfileViewController.swift in Sources */,

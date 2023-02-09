@@ -398,7 +398,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-j1-V69">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-j1-V69" customClass="RoundImageView" customModule="instagram_ios" customModuleProvider="target">
                                                     <rect key="frame" x="30" y="10" width="50" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="X5E-KS-LXk"/>
@@ -415,7 +415,7 @@
                                                     </buttonConfiguration>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCe-vZ-zcj">
-                                                    <rect key="frame" x="110" y="37" width="26.333333333333343" height="8"/>
+                                                    <rect key="frame" x="110" y="40" width="26.333333333333343" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -430,7 +430,7 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="oCe-vZ-zcj" secondAttribute="bottom" constant="15" id="8Eh-55-hjh"/>
+                                                <constraint firstAttribute="bottom" secondItem="oCe-vZ-zcj" secondAttribute="bottom" constant="5" id="8Eh-55-hjh"/>
                                                 <constraint firstAttribute="trailing" secondItem="rXf-tG-CYN" secondAttribute="trailing" constant="50" id="CL7-fh-H5G"/>
                                                 <constraint firstItem="rXf-tG-CYN" firstAttribute="top" secondItem="E6b-VD-abn" secondAttribute="top" constant="15" id="DWB-9q-5hA"/>
                                                 <constraint firstAttribute="bottom" secondItem="dPc-j1-V69" secondAttribute="bottom" constant="10" id="NTd-tl-JRY"/>
@@ -439,7 +439,7 @@
                                                 <constraint firstItem="oCe-vZ-zcj" firstAttribute="leading" secondItem="dPc-j1-V69" secondAttribute="trailing" constant="30" id="fBa-uJ-1A5"/>
                                                 <constraint firstItem="dPc-j1-V69" firstAttribute="leading" secondItem="E6b-VD-abn" secondAttribute="leading" constant="30" id="hLp-ET-aeY"/>
                                                 <constraint firstItem="ox9-8o-zNn" firstAttribute="leading" secondItem="dPc-j1-V69" secondAttribute="trailing" constant="15" id="ljd-mk-NTX"/>
-                                                <constraint firstItem="oCe-vZ-zcj" firstAttribute="top" secondItem="ox9-8o-zNn" secondAttribute="bottom" constant="2" id="x7N-vh-Vnv"/>
+                                                <constraint firstItem="oCe-vZ-zcj" firstAttribute="top" secondItem="ox9-8o-zNn" secondAttribute="bottom" constant="5" id="x7N-vh-Vnv"/>
                                                 <constraint firstItem="dPc-j1-V69" firstAttribute="top" secondItem="E6b-VD-abn" secondAttribute="top" constant="10" id="zfa-wB-WDS"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -869,7 +869,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="430" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rL1-ji-UZh">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rL1-ji-UZh" customClass="RoundImageView" customModule="instagram_ios" customModuleProvider="target">
                                                     <rect key="frame" x="30" y="10" width="50" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="qET-y9-m5Y"/>
@@ -886,7 +886,7 @@
                                                     </buttonConfiguration>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWO-J4-jQ1">
-                                                    <rect key="frame" x="110" y="37" width="26.333333333333343" height="8"/>
+                                                    <rect key="frame" x="110" y="40" width="26.333333333333343" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -907,13 +907,13 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="CWO-J4-jQ1" secondAttribute="bottom" constant="15" id="4TE-Ww-9aO"/>
+                                                <constraint firstAttribute="bottom" secondItem="CWO-J4-jQ1" secondAttribute="bottom" constant="5" id="4TE-Ww-9aO"/>
                                                 <constraint firstItem="CHP-Wt-8xh" firstAttribute="leading" secondItem="rL1-ji-UZh" secondAttribute="trailing" constant="15" id="H6A-XO-2O6"/>
                                                 <constraint firstAttribute="bottom" secondItem="hKS-rm-pGe" secondAttribute="bottom" constant="15" id="HKc-06-XbA"/>
                                                 <constraint firstItem="CHP-Wt-8xh" firstAttribute="top" secondItem="opr-0M-ZeP" secondAttribute="top" constant="20" id="KNM-58-JKp"/>
                                                 <constraint firstAttribute="bottom" secondItem="ERL-cb-g75" secondAttribute="bottom" constant="15" id="U0l-sO-qOe"/>
                                                 <constraint firstItem="rL1-ji-UZh" firstAttribute="leading" secondItem="opr-0M-ZeP" secondAttribute="leading" constant="30" id="fb4-tb-2IM"/>
-                                                <constraint firstItem="CWO-J4-jQ1" firstAttribute="top" secondItem="CHP-Wt-8xh" secondAttribute="bottom" constant="2" id="jpY-2G-FT2"/>
+                                                <constraint firstItem="CWO-J4-jQ1" firstAttribute="top" secondItem="CHP-Wt-8xh" secondAttribute="bottom" constant="5" id="jpY-2G-FT2"/>
                                                 <constraint firstItem="rL1-ji-UZh" firstAttribute="top" secondItem="opr-0M-ZeP" secondAttribute="top" constant="10" id="l0m-t6-38a"/>
                                                 <constraint firstAttribute="trailing" secondItem="hKS-rm-pGe" secondAttribute="trailing" constant="80" id="mbQ-pK-Jm9"/>
                                                 <constraint firstItem="hKS-rm-pGe" firstAttribute="top" secondItem="opr-0M-ZeP" secondAttribute="top" constant="15" id="mq6-Dj-ksp"/>
@@ -968,8 +968,11 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gxt-kN-kJW">
                                                 <rect key="frame" x="15" y="0.0" width="400" height="120"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_circle" translatesAutoresizingMaskIntoConstraints="NO" id="OBE-zC-b16">
-                                                        <rect key="frame" x="0.0" y="15" width="100" height="90"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook_circle" translatesAutoresizingMaskIntoConstraints="NO" id="OBE-zC-b16" customClass="RoundImageView" customModule="instagram_ios" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="10" width="100" height="100"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="OBE-zC-b16" secondAttribute="height" multiplier="1:1" id="zcN-lj-IRX"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0Bj-Fh-KES">
                                                         <rect key="frame" x="100" y="32.666666666666671" width="100" height="54.666666666666671"/>
