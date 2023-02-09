@@ -28,6 +28,8 @@ class FeedCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var multiImages: UIImageView!
+    
     var images: [String] = []
     var isLike: Int = 0
     var postId: Int = 0
@@ -52,6 +54,10 @@ class FeedCollectionViewCell: UICollectionViewCell {
             self.pageControl.numberOfPages = self.images.count
             if self.pageControl.numberOfPages == 1 {
                 self.pageControl.isHidden = true
+                self.multiImages.isHidden = true
+            }
+            else {
+                self.multiImages.image = UIImage(named: "multi")
             }
         }
 

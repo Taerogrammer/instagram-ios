@@ -750,12 +750,20 @@
                                                         <constraint firstAttribute="width" constant="45" id="Cbn-vP-JDL"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4OQ-4J-O8Z">
+                                                    <rect key="frame" x="347" y="65" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="Z6b-iM-Ck1"/>
+                                                        <constraint firstAttribute="width" secondItem="4OQ-4J-O8Z" secondAttribute="height" multiplier="1:1" id="azw-g4-4xs"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="jBy-bg-gcQ" secondAttribute="trailing" id="2Ra-2O-8Ai"/>
                                                 <constraint firstItem="v7t-nd-hHs" firstAttribute="top" secondItem="1t0-Ue-bdV" secondAttribute="top" id="4L1-ws-MST"/>
                                                 <constraint firstItem="dXI-Kc-wBu" firstAttribute="top" secondItem="1t0-Ue-bdV" secondAttribute="top" id="5Dx-xc-bzI"/>
                                                 <constraint firstItem="jBy-bg-gcQ" firstAttribute="top" secondItem="v7t-nd-hHs" secondAttribute="bottom" constant="10" id="AvH-mA-YgC"/>
+                                                <constraint firstItem="4OQ-4J-O8Z" firstAttribute="top" secondItem="dXI-Kc-wBu" secondAttribute="bottom" constant="30" id="Fgc-Rg-she"/>
                                                 <constraint firstItem="dXI-Kc-wBu" firstAttribute="leading" secondItem="v7t-nd-hHs" secondAttribute="trailing" constant="10" id="Jhm-VE-Jwe"/>
                                                 <constraint firstAttribute="trailing" secondItem="pLb-mg-abW" secondAttribute="trailing" constant="20" id="RLc-c6-rJa"/>
                                                 <constraint firstItem="jBy-bg-gcQ" firstAttribute="leading" secondItem="1t0-Ue-bdV" secondAttribute="leading" id="TkS-H3-m7I"/>
@@ -764,6 +772,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="SmK-Ay-hja" secondAttribute="trailing" constant="10" id="XCM-SR-jIh"/>
                                                 <constraint firstItem="SmK-Ay-hja" firstAttribute="top" secondItem="jBy-bg-gcQ" secondAttribute="bottom" id="a60-NI-XJQ"/>
                                                 <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="pLb-mg-abW" secondAttribute="bottom" id="aD6-BD-Vv4"/>
+                                                <constraint firstAttribute="trailing" secondItem="4OQ-4J-O8Z" secondAttribute="trailing" constant="30" id="ghP-up-2jb"/>
                                                 <constraint firstItem="v7t-nd-hHs" firstAttribute="leading" secondItem="1t0-Ue-bdV" secondAttribute="leading" constant="30" id="iaD-7z-KQQ"/>
                                                 <constraint firstAttribute="trailing" secondItem="dXI-Kc-wBu" secondAttribute="trailing" id="inp-Nm-4jU"/>
                                                 <constraint firstItem="jBy-bg-gcQ" firstAttribute="top" secondItem="dXI-Kc-wBu" secondAttribute="bottom" constant="20" id="k5H-x1-1G8"/>
@@ -780,6 +789,7 @@
                                             <outlet property="dmBtn" destination="Mnn-Tv-nc1" id="W8Z-mj-CjA"/>
                                             <outlet property="likeBtn" destination="KhC-ag-7KF" id="6uP-vR-TkV"/>
                                             <outlet property="likeLbl" destination="S23-YA-EmL" id="SZp-1P-iZO"/>
+                                            <outlet property="multiImages" destination="4OQ-4J-O8Z" id="ZLC-Jb-sEW"/>
                                             <outlet property="pageControl" destination="9ce-1M-ZIi" id="Tsb-yM-y00"/>
                                             <outlet property="postDataLbl" destination="ncc-eC-TbB" id="FMc-9Z-lro"/>
                                             <outlet property="profileImage" destination="v7t-nd-hHs" id="e89-df-fbU"/>
@@ -817,7 +827,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKy-W1-qv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507" y="-1626"/>
+            <point key="canvasLocation" x="506.07476635514018" y="-1626.3498920086395"/>
         </scene>
         <!--NoticeViewController-->
         <scene sceneID="Mam-9D-Qg9">

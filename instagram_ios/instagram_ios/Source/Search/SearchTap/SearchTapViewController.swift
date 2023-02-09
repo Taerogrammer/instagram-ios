@@ -33,6 +33,7 @@ class SearchTapViewController: UIViewController {
     lazy var postId: Int = 0
     var images :[String] = []
     
+    var userInfo: SearchTapResult?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,6 +103,14 @@ class SearchTapViewController: UIViewController {
             case .success(let response):
                 print("GET SUCCESS >> \(Constant.Base_URL)/app/users/posts/\(self.postId)")
                 print(response)
+//                DispatchQueue.main.async {
+//                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
+//                    vc.profileImg.load(url: URL(string: response.result?.userProfileUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
+//                    vc.userNameBtn.setTitle("\(response.result?.userName)", for: .normal)
+//                    vc.contentLbl.text = "\(response.result?.content)"
+//                }
+                self.userInfo = response.result
+                
                 DispatchQueue.main.async {  //댓글 개수 조회
                     AF.request("\(Constant.Base_URL)/app/posts/\(response.result!.postId)/all-comments", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: GetCommentResponse.self) { response in
                         switch response.result {
@@ -159,6 +168,12 @@ class SearchTapViewController: UIViewController {
             }
         }
         
+    }
+    
+    @IBAction func onClickComment() {
+        let commentVC = self.storyboard?.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
+        commentVC.getUserInfo = userInfo
+        self.navigationController?.pushViewController(commentVC, animated: true)   
     }
 
     

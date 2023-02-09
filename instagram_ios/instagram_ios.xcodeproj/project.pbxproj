@@ -145,6 +145,8 @@
 		5AA4149E299553C700EB45F8 /* GetStoryIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4149D299553C700EB45F8 /* GetStoryIdResponse.swift */; };
 		5AA414A02995552B00EB45F8 /* GettingStoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4149F2995552B00EB45F8 /* GettingStoryResponse.swift */; };
 		5AA414A22995626C00EB45F8 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA414A12995626C00EB45F8 /* GetCommentResponse.swift */; };
+		5AA414A529957FE400EB45F8 /* CommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA414A429957FE400EB45F8 /* CommentResponse.swift */; };
+		5AA414A72995830800EB45F8 /* CommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA414A62995830800EB45F8 /* CommentCollectionViewCell.swift */; };
 		5AAF113E299270C400260D46 /* FolloweeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF113D299270C400260D46 /* FolloweeResponse.swift */; };
 		5ACD712129935BBA004C74EE /* OtherFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */; };
 		5ACD712329936D35004C74EE /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD712229936D35004C74EE /* FollowerResponse.swift */; };
@@ -305,6 +307,8 @@
 		5AA4149D299553C700EB45F8 /* GetStoryIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStoryIdResponse.swift; sourceTree = "<group>"; };
 		5AA4149F2995552B00EB45F8 /* GettingStoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStoryResponse.swift; sourceTree = "<group>"; };
 		5AA414A12995626C00EB45F8 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
+		5AA414A429957FE400EB45F8 /* CommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentResponse.swift; sourceTree = "<group>"; };
+		5AA414A62995830800EB45F8 /* CommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCollectionViewCell.swift; sourceTree = "<group>"; };
 		5AAF113D299270C400260D46 /* FolloweeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeResponse.swift; sourceTree = "<group>"; };
 		5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFeedViewController.swift; sourceTree = "<group>"; };
 		5ACD712229936D35004C74EE /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
@@ -977,7 +981,9 @@
 		5A84D9DF298BD26A006E8D66 /* Comment */ = {
 			isa = PBXGroup;
 			children = (
+				5AA414A329957F8300EB45F8 /* Entity */,
 				5A84D9E0298BD281006E8D66 /* CommentViewController.swift */,
+				5AA414A62995830800EB45F8 /* CommentCollectionViewCell.swift */,
 			);
 			path = Comment;
 			sourceTree = "<group>";
@@ -1104,6 +1110,14 @@
 				5A87F3FE298A99D40016F69A /* PrivateBirthdayViewController.swift */,
 			);
 			path = Birthday;
+			sourceTree = "<group>";
+		};
+		5AA414A329957F8300EB45F8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				5AA414A429957FE400EB45F8 /* CommentResponse.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		5ACD711F29935B94004C74EE /* OtherFeed */ = {
@@ -1358,6 +1372,7 @@
 				5A0962992989F9D3001A472E /* BFDescriptionViewController.swift in Sources */,
 				5A0CD9B8298F9AC700A1E894 /* FollowListViewController.swift in Sources */,
 				5A3D7A492987907E0020C74F /* PasswordViewController.swift in Sources */,
+				5AA414A529957FE400EB45F8 /* CommentResponse.swift in Sources */,
 				5A7D6FA92985473C002A1996 /* UIColor.swift in Sources */,
 				5A84DA18298D26C8006E8D66 /* MakeTableViewCell.swift in Sources */,
 				5A87F3FB298A99AF0016F69A /* PrivateGenderViewController.swift in Sources */,
@@ -1440,6 +1455,7 @@
 				5A3D7A6629883F310020C74F /* LoginRequest.swift in Sources */,
 				5A21F3F4298EA5EB00B114E3 /* ProfileResponse.swift in Sources */,
 				5A84D9E1298BD281006E8D66 /* CommentViewController.swift in Sources */,
+				5AA414A72995830800EB45F8 /* CommentCollectionViewCell.swift in Sources */,
 				5A4AC7B12993A5790021B4B1 /* PrivateEmailDataManager.swift in Sources */,
 				5A7D6FA529854724002A1996 /* Date.swift in Sources */,
 				5A84DA1E298D3363006E8D66 /* MakeContentsViewController.swift in Sources */,
