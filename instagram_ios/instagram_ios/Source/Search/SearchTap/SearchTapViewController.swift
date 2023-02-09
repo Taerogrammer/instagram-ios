@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+import Alamofire
+
 
 class SearchTapViewController: UIViewController {
     
@@ -21,35 +23,27 @@ class SearchTapViewController: UIViewController {
     @IBOutlet weak var contentLbl: UILabel!
     @IBOutlet weak var commentAllBtn: UIButton!
     @IBOutlet weak var postDateLbl: UILabel!
-
-    lazy var likeText: Int = 0
-    lazy var commentCount: Int = 5
-    lazy var userNameText: String = "rla_xogud"
-    lazy var contentText: String = "문구 200단어까지 굳이 안해도 될듯,,?"
-    lazy var postDateText: String = "2022년 12월 24일"
     
+    @IBOutlet weak var pageControl: UIPageControl!
     
-    @IBOutlet weak var designImage: UIImageView!
-    lazy var imagePassed: String = ""
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var selectedImages: UIImageView!
+    
+    lazy var postId: Int = 0
+    var images :[String] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        designImage.load(url: URL(string: imagePassed)!)
         backNavigationSetting()
         
-        topButton()
-        bottomSetting()
-        
-        
-        self.view.addSubview(self.thumbnailView)
-        self.thumbnailView.snp.makeConstraints { make in
-            make.top.equalTo(buttonTop)
-            make.size.width.height.equalTo(40)
-        }
-        buttonTop.snp.makeConstraints { make in
-            make.left.equalTo(thumbnailView.snp.right)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        DispatchQueue.main.async {
+            self.getPopularPost()
         }
         
     }
@@ -67,75 +61,114 @@ class SearchTapViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = barBackButton
     }
     
-    //MARK: 이미지 동그랗게 + 그라데이션까지?
     
-//    func fetchPhoto(url: URL, completionHanlder: @escaping (UIImage?, Error?) -> Void) {
-//        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-//            if let error = error {
-//                completionHanlder(nil, error)
-//            }
-//            if let data = data, let httpResponse = response as? HTTPURLResponse,
-//               httpResponse.statusCode == 200 {
-//                DispatchQueue.main.async {
-//                    completionHanlder(UIImage(data: data), nil)
-//                    let thumnail = ThumbnailView().then {
-//                        $0.image = UIImage(data: data)
-//                        $0.shouldShowGreenDot = true
-//                    }
-//                }
-//            }
-//            else {
-//                completionHanlder(nil, error)
-//            }
-//        }
-//        task.resume()
-//    }
-
-    //MARK: 비동기 처리 수행 해줘야함
-    private let thumbnailView = ThumbnailView().then {
-        var profileUrl = URL(string: "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E")
-        var data = try? Data(contentsOf: profileUrl!)
-        $0.image = UIImage(data: data!)
-//      $0.shouldShowGreenDot = false
+    //MARK: image page control --> 아직 안해봄
+    @objc func respondToSwipeGesture(_ gesture: UIGestureRecognizer) {
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer {
+            switch swipeGesture.direction {
+            case UISwipeGestureRecognizer.Direction.left:
+                if (pageControl.currentPage<pageControl.numberOfPages-1) {
+//                    pageControl.currentPage = pageControl.currentPage + 1
+                    
+                    pageControl.currentPage = 1
+                }
+                print("Swiped Left")
+                print(pageControl.currentPage)
+            case UISwipeGestureRecognizer.Direction.right:
+                if (pageControl.currentPage>0) {
+                    pageControl.currentPage = pageControl.currentPage - 1
+                }
+                print("Swiped Right")
+            default:
+                break
+            }
+            
+            let feedUrl = URL(string: images[pageControl.currentPage])
+            selectedImages.load(url: feedUrl!)
+        }
+    }
+    
+    @IBAction func imageChange(_ sender: UIPageControl) {
+        let feedUrl = URL(string: images[pageControl.currentPage])
+        selectedImages.load(url: feedUrl!)
     }
     
     
-
-    //MARK: button custom --> 이미지 url로 렌더링하기
-    func topButton() {
-        var userName: String = "rla_xogud"
-//        var profileUrl = URL(string: "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E")
-//        var profileImage: UIImage?
-//        var renderedImage: UIImage?
+    
+    
+    func getPopularPost() {
+        AF.request("\(Constant.Base_URL)/app/posts/popular/\(postId)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: SearchTapResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("GET SUCCESS >> \(Constant.Base_URL)/app/users/posts/popular/\(self.postId)")
+                print(response)
+                
+                DispatchQueue.main.async {
+                    self.buttonTop.setTitle("\(response.result!.userName)", for: .normal)
+                    self.buttonTop.titleLabel?.font = .NotoSans(.bold, size: 14)
+                    self.buttonTop.contentHorizontalAlignment = .left
+                    self.buttonTop.contentVerticalAlignment = .center
+                    if response.result?.likeState == 1 {
+                        self.likeBtn.setImage(UIImage(named: "like_check"), for: .normal)
+                    }
+                    else {
+                        self.likeBtn.setImage(UIImage(named: "like_uncheck"), for: .normal)
+                    }
+                    self.likeLbl.text = "좋아요 " + "\(response.result!.likeCount)" + "개"
+                    self.userNameLbl.text = "\(response.result!.userName)"
+                    self.userNameLbl.font = .NotoSans(.bold, size: 16)
+                    
+                    self.contentLbl.text = "\(response.result?.content ?? "")"
+                    self.commentAllBtn.setTitle("댓글 받으면 넣기", for: .normal)
+                    self.postDateLbl.text = "\(response.result!.dayDetailDto!.day)"
+                    self.profileImage.load(url: URL(string: response.result?.userProfileUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
+                    self.images = response.result!.imgUrls
+                    self.selectedImages.load(url: URL(string: self.images[0])!)
+                    
+                    
+                    if self.images.count == 1 {
+                        print("이미지 1개")
+                        self.pageControl.isHidden = true
+                        
+                        
+                    }
+                    else {
+                        print("이미지 2개 이상")
+                        self.pageControl.numberOfPages = self.images.count
+                        self.pageControl.currentPage = 0
+                        self.pageControl.pageIndicatorTintColor = UIColor.gray
+                        self.pageControl.currentPageIndicatorTintColor = UIColor.systemBlue
+                        self.selectedImages.load(url: URL(string: self.images[0])!)
+                        
+                    }
+                    
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
         
-//        DispatchQueue.global().async {
-//            var data = try? Data(contentsOf: profileUrl!)
-//
-//            DispatchQueue.main.async {
-//                profileImage = UIImage(data: data!)
-//                renderedImage = profileImage?.circularImage(30)
-//                self.buttonTop.setImage(renderedImage?.resizeImage(image: renderedImage!, newWidth: 60).circularImage(38), for: .normal)
-//                self.buttonTop.setTitle("  \(userName)", for: .normal)
-//                self.buttonTop.setTitleColor(UIColor.black, for: .normal)
-//                self.buttonTop.contentHorizontalAlignment = .left
-//            }
-//
-//        }
-        self.buttonTop.setTitle(" \(userName)", for: .normal)
-        self.buttonTop.contentHorizontalAlignment = .leading
-        self.buttonTop.contentVerticalAlignment = .top
     }
+    
+    
+    
+    
+    
+    
+    
+    
+}
 
-    //MARK: buttom setting (좋아요, userName, 문구, 댓글, 날짜)
-    func bottomSetting() {
-        likeLbl.text = "좋아요 \(likeText)개"
-        userNameLbl.text = userNameText
-        contentLbl.text = contentText
-        contentLbl.textAlignment = .left
-        commentAllBtn.setTitle("댓글 \(commentCount)개 모두 보기", for: .normal)
-        commentAllBtn.contentHorizontalAlignment = .left
-        postDateLbl.text = postDateText
+
+extension SearchTapViewController {
+    func didSuccessGetPost(_ result: SearchTapResult) {
+        self.presentAlert(title: "성공", message: "스토리 조회")
+        
+        print("didSuccessGetPost() success")
     }
     
-    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
 }

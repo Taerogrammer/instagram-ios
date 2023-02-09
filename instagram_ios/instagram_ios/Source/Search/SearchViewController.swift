@@ -56,8 +56,6 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = searchCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SearchCollectionViewCell
-        
-        print(searchList[indexPath.row].mediaUrl)
         cell.myImage.load(url: URL(string: searchList[indexPath.row].mediaUrl)!)
         return cell
     }
@@ -69,7 +67,9 @@ extension SearchViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let searchVC = self.storyboard?.instantiateViewController(withIdentifier: "SearchTapViewController") as! SearchTapViewController
-        searchVC.imagePassed = searchList[indexPath.row].mediaUrl
+        searchVC.postId = searchList[indexPath.row].postId
+        
+        
         self.navigationController?.pushViewController(searchVC, animated: true)
     }
     

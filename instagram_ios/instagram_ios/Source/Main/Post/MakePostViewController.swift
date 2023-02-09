@@ -19,12 +19,10 @@ class MakePostViewController : UIViewController {
     @IBOutlet weak var locationBtn: UIButton!
     
     @IBOutlet weak var firstImage : UIImageView!
-    
-    @IBOutlet weak var appearedImage : UIImageView!
-    
+        
 
     let storage = Storage.storage().reference()
-    
+    lazy var dataManager: MakePostDataManager = MakePostDataManager()
     
     
     override func viewDidLoad() {
@@ -33,8 +31,6 @@ class MakePostViewController : UIViewController {
         NavigationBack()
         NavigationPost()
         title = "새 게시물"
-        ButtonSetting()
-        
         print("Make post view did load")
 //        print(selectedImages)
         firstImage.image = selectedImages![0]
@@ -63,40 +59,45 @@ class MakePostViewController : UIViewController {
         guard let imageData = selectedImages![0].pngData() else {
             return
         }
-
-        
-        storage.child("images/file.png").putData(imageData, metadata: nil, completion: { _, error in
+        storage.child("images/Feed.png").putData(imageData, metadata: nil, completion: { _, error in
             guard error == nil else {
                 print("Failed to upload")
                 return
             }
-            self.storage.child("images/file.png").downloadURL(completion: { url, error in
+            self.storage.child("images/Feed.png").downloadURL(completion: { url, error in
                 guard let url = url, error == nil else {
                     return
                 }
                 let urlString = url.absoluteString
                 print("DownLoad URL: \(urlString)")
                 UserDefaults.standard.set(urlString, forKey: "url")
+                
+                let input = MakePostRequest(content: self.contentTextField.text ?? "", imgUrl: urlString)
+                self.dataManager.postRegister(input, delegate: self)
+                
+                
             })
             
         })
         
-        let vc = storyboard?.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
-
 
     
     
-    func ButtonSetting() {
-        personBtn.setTitle("사람 태그하기", for: .normal)
-        personBtn.setTitleColor(.black, for: .normal)
-        personBtn.contentHorizontalAlignment = .left
-        locationBtn.setTitle("위치 추가", for: .normal)
-        locationBtn.setTitleColor(.black, for: .normal)
-        locationBtn.contentHorizontalAlignment = .left
-    }
+    
+
 
 }
 
 
+extension MakePostViewController {
+    func didSuccessPost() {
+        self.presentAlert(title: "포스팅 성공", message: "게시물을 업로드하였습니다")
+    }
+    
+    func failedToRequest(message: String) {
+        self.presentAlert(title: message)
+    }
+}

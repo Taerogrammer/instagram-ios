@@ -12,9 +12,7 @@ import Alamofire
 
 class ViewController: UIViewController {
 
-    var storyPhoto: [String] = ["menu1","menu2","menu3","menu4","tip1","tip2","tip3","fav1","facebook_logo","facebook_logo_black","like_check","like_uncheck"]
-    var userName: [String] = ["user1","user2","user3","user4","user5","user6","tip3","fav1","facebook_logo","facebook_logo_black","like_check","like_uncheck"]
-    
+    var storyInfo: [SearchStoryResult] = []
     var userInfo: [HomeUserResult] = []
     
     var feedImages: [String] = []
@@ -49,6 +47,7 @@ class ViewController: UIViewController {
         print("view will appear")
         DispatchQueue.main.async {
             self.getUserInfo()
+            self.getStoryInfo()
         }
     }
     
@@ -130,7 +129,7 @@ class ViewController: UIViewController {
         AF.request("\(Constant.Base_URL)/app/users/following-posts", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: HomeUserResponse.self) { response in
             switch response.result {
             case .success(let response):
-                print("USER INFO SUCCESS >>> \(response)")
+//                print("USER INFO SUCCESS >>> \(response)")
                 
                 DispatchQueue.main.async {
                     self.userInfo = response.result
@@ -139,6 +138,23 @@ class ViewController: UIViewController {
 
             case .failure(let error):
                 print(error)
+            }
+        }
+    }
+    
+    func getStoryInfo() {
+        AF.request("\(Constant.Olive_URL)/app/users/\(UserDefaults.standard.integer(forKey: "userIdx"))/following-stories", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: SearchStoryResponse.self) { response in
+            switch response.result {
+            case .success(let response):
+                print("USER STORY INFO SUCCESS >>> \(response)")
+                
+                DispatchQueue.main.async {
+                    self.storyInfo = response.result
+                    self.storyCollectionView.reloadData()
+                }
+
+            case .failure(let error):
+                print("ERROR >> \(error)")
             }
         }
     }
@@ -217,7 +233,7 @@ class ViewController: UIViewController {
 extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == storyCollectionView {
-            return storyPhoto.count
+            return storyInfo.count
         }
         else {
             
@@ -233,8 +249,8 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
             else {
                 return UICollectionViewCell()
             }
-            storyCell.storyImage.image = UIImage(named: storyPhoto[indexPath.row])
-            storyCell.storyUserName.text = userName[indexPath.row]
+            storyCell.storyImage.load(url: URL(string: storyInfo[indexPath.row].profileUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
+            storyCell.storyUserName.text = storyInfo[indexPath.row].userName
             return storyCell
         }
         else  {
@@ -285,7 +301,7 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource,
                 print("이건 error일듯")
             }
             let storyVC = self.storyboard?.instantiateViewController(withIdentifier: "StoryViewController") as! StoryViewController
-            storyVC.imagePassed = storyPhoto[indexPath.row]
+            storyVC.imagePassed = storyInfo[indexPath.row].profileUrl
             self.navigationController?.pushViewController(storyVC, animated: true)
             
         }

@@ -127,8 +127,6 @@ class ProfileViewController : UIViewController {
         AF.request("\(Constant.Base_URL)/app/users/profiles/\(UserDefaults.standard.integer(forKey: "userIdx"))", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: ProfileResponse.self) { response in
             switch response.result {
             case .success(let response):
-                print("SUCCESS >>> \(response)")
-//                print(response.result?.follower)  형식
                 self.postCount.text = String(response.result?.postCount ?? 0)
                 self.followerCount.text = String(response.result?.follower ?? 0)
                 self.followingCount.text = String(response.result?.following ?? 0)
