@@ -28,7 +28,6 @@
 		5A10E1852990E45300E4265C /* MakePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E1842990E45300E4265C /* MakePostViewController.swift */; };
 		5A10E1982991F49F00E4265C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A10E1972991F49F00E4265C /* GoogleService-Info.plist */; };
 		5A10E19E2992420600E4265C /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E19D2992420600E4265C /* FirebaseStorageManager.swift */; };
-		5A10E1A02992477000E4265C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E19F2992477000E4265C /* ImageViewController.swift */; };
 		5A10E1A229924A1900E4265C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A10E1A129924A1900E4265C /* UIImageView.swift */; };
 		5A21F3F4298EA5EB00B114E3 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */; };
 		5A3D7A3729874EFB0020C74F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */; };
@@ -98,7 +97,6 @@
 		5A7FD341298DFB1900872DB1 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FD340298DFB1900872DB1 /* StoryViewController.swift */; };
 		5A7FD343298DFB7500872DB1 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FD342298DFB7500872DB1 /* StoryCollectionViewCell.swift */; };
 		5A7FD345298E28DF00872DB1 /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FD344298E28DF00872DB1 /* FeedCollectionViewCell.swift */; };
-		5A7FD347298E28E900872DB1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7FD346298E28E900872DB1 /* FeedViewController.swift */; };
 		5A820B662984FBCB00F3784F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B652984FBCB00F3784F /* AppDelegate.swift */; };
 		5A820B682984FBCB00F3784F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B672984FBCB00F3784F /* SceneDelegate.swift */; };
 		5A820B6A2984FBCB00F3784F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A820B692984FBCB00F3784F /* ViewController.swift */; };
@@ -146,6 +144,7 @@
 		5AA4149C29954CE400EB45F8 /* CommentCountResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4149B29954CE400EB45F8 /* CommentCountResponse.swift */; };
 		5AA4149E299553C700EB45F8 /* GetStoryIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4149D299553C700EB45F8 /* GetStoryIdResponse.swift */; };
 		5AA414A02995552B00EB45F8 /* GettingStoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4149F2995552B00EB45F8 /* GettingStoryResponse.swift */; };
+		5AA414A22995626C00EB45F8 /* GetCommentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA414A12995626C00EB45F8 /* GetCommentResponse.swift */; };
 		5AAF113E299270C400260D46 /* FolloweeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF113D299270C400260D46 /* FolloweeResponse.swift */; };
 		5ACD712129935BBA004C74EE /* OtherFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */; };
 		5ACD712329936D35004C74EE /* FollowerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACD712229936D35004C74EE /* FollowerResponse.swift */; };
@@ -187,7 +186,6 @@
 		5A10E1842990E45300E4265C /* MakePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePostViewController.swift; sourceTree = "<group>"; };
 		5A10E1972991F49F00E4265C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A10E19D2992420600E4265C /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
-		5A10E19F2992477000E4265C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		5A10E1A129924A1900E4265C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		5A21F3F3298EA5EB00B114E3 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		5A3D7A3629874EFB0020C74F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -257,7 +255,6 @@
 		5A7FD340298DFB1900872DB1 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 		5A7FD342298DFB7500872DB1 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		5A7FD344298E28DF00872DB1 /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
-		5A7FD346298E28E900872DB1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		5A820B622984FBCB00F3784F /* instagram_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A820B652984FBCB00F3784F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A820B672984FBCB00F3784F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -307,6 +304,7 @@
 		5AA4149B29954CE400EB45F8 /* CommentCountResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCountResponse.swift; sourceTree = "<group>"; };
 		5AA4149D299553C700EB45F8 /* GetStoryIdResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStoryIdResponse.swift; sourceTree = "<group>"; };
 		5AA4149F2995552B00EB45F8 /* GettingStoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingStoryResponse.swift; sourceTree = "<group>"; };
+		5AA414A12995626C00EB45F8 /* GetCommentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentResponse.swift; sourceTree = "<group>"; };
 		5AAF113D299270C400260D46 /* FolloweeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolloweeResponse.swift; sourceTree = "<group>"; };
 		5ACD712029935BBA004C74EE /* OtherFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFeedViewController.swift; sourceTree = "<group>"; };
 		5ACD712229936D35004C74EE /* FollowerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerResponse.swift; sourceTree = "<group>"; };
@@ -530,7 +528,6 @@
 				5A7FBB2B29950A8F0011DAC0 /* Entity */,
 				5A10E1842990E45300E4265C /* MakePostViewController.swift */,
 				5A10E19D2992420600E4265C /* FirebaseStorageManager.swift */,
-				5A10E19F2992477000E4265C /* ImageViewController.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -818,6 +815,7 @@
 			isa = PBXGroup;
 			children = (
 				5A7FBB292994DFD30011DAC0 /* SearchTapResponse.swift */,
+				5AA414A12995626C00EB45F8 /* GetCommentResponse.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -857,7 +855,6 @@
 			children = (
 				5A7FBB1C2994B4BB0011DAC0 /* Entity */,
 				5A7FD344298E28DF00872DB1 /* FeedCollectionViewCell.swift */,
-				5A7FD346298E28E900872DB1 /* FeedViewController.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -1371,6 +1368,7 @@
 				5AA4149C29954CE400EB45F8 /* CommentCountResponse.swift in Sources */,
 				5ADD3D60298ABCE600DB02CB /* UITextField.swift in Sources */,
 				5A3D7A4C298792440020C74F /* UserNameViewController.swift in Sources */,
+				5AA414A22995626C00EB45F8 /* GetCommentResponse.swift in Sources */,
 				5ACD712329936D35004C74EE /* FollowerResponse.swift in Sources */,
 				5A7FBB3129950B0F0011DAC0 /* MakePostDataManager.swift in Sources */,
 				5A60028629931AF2005F4F05 /* StoryRequest.swift in Sources */,
@@ -1411,7 +1409,6 @@
 				5A7FBB36299519C60011DAC0 /* SearchStoryResponse.swift in Sources */,
 				5AE866CD29889D5800903022 /* SettingViewController.swift in Sources */,
 				5A84D9DB298B7411006E8D66 /* SearchCollectionViewCell.swift in Sources */,
-				5A7FD347298E28E900872DB1 /* FeedViewController.swift in Sources */,
 				5A7FBB272994C0D40011DAC0 /* ShoppingResponse.swift in Sources */,
 				5AF193BF298A4DE70011F1AD /* EditLinkViewController.swift in Sources */,
 				5AAF113E299270C400260D46 /* FolloweeResponse.swift in Sources */,
@@ -1461,7 +1458,6 @@
 				5A7FBB1E2994B4CE0011DAC0 /* LikeResponse.swift in Sources */,
 				5A4AC7B82993AB9D0021B4B1 /* PrivateSingleton.swift in Sources */,
 				5A0CD9BE298F9D5E00A1E894 /* FolloweeViewController.swift in Sources */,
-				5A10E1A02992477000E4265C /* ImageViewController.swift in Sources */,
 				5A87F3F1298A98340016F69A /* PrivateEmailViewController.swift in Sources */,
 				5A3D7A592987F3AC0020C74F /* FacebookDataManager.swift in Sources */,
 				5A3D7A4629878A280020C74F /* NameViewController.swift in Sources */,

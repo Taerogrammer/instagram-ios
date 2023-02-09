@@ -18,9 +18,6 @@ class CommentViewController : UIViewController {
         
         BackAndDM()
         contentField()
-        
-
-        
     }
     
     

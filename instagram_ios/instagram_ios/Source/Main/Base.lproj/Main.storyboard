@@ -1203,35 +1203,6 @@
             </objects>
             <point key="canvasLocation" x="574.76635514018687" y="-2408.4233261339095"/>
         </scene>
-        <!--Image View Controller-->
-        <scene sceneID="HKz-fX-FHq">
-            <objects>
-                <viewController storyboardIdentifier="ImageViewController" id="vT1-7K-RbV" customClass="ImageViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sFe-nQ-gtQ">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fzC-gl-s1w">
-                                <rect key="frame" x="94" y="127" width="240" height="565"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Q5e-3H-Cq5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="fzC-gl-s1w" firstAttribute="leading" secondItem="Q5e-3H-Cq5" secondAttribute="leading" constant="94" id="0PZ-4m-d85"/>
-                            <constraint firstItem="Q5e-3H-Cq5" firstAttribute="trailing" secondItem="fzC-gl-s1w" secondAttribute="trailing" constant="94" id="Imi-Re-tUZ"/>
-                            <constraint firstItem="fzC-gl-s1w" firstAttribute="top" secondItem="Q5e-3H-Cq5" secondAttribute="top" constant="80" id="fHB-sF-WTo"/>
-                            <constraint firstItem="Q5e-3H-Cq5" firstAttribute="bottom" secondItem="fzC-gl-s1w" secondAttribute="bottom" constant="200" id="pNO-zr-PgL"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="image" destination="fzC-gl-s1w" id="eaq-g6-lvD"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jEZ-8l-UPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1621" y="-2408"/>
-        </scene>
         <!--Make Contents View Controller-->
         <scene sceneID="CsW-TR-LJI">
             <objects>
@@ -2178,22 +2149,6 @@
             </objects>
             <point key="canvasLocation" x="543" y="-823"/>
         </scene>
-        <!--Feed View Controller-->
-        <scene sceneID="hIO-fD-8kG">
-            <objects>
-                <viewController storyboardIdentifier="FeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VB7-5q-pd7" customClass="FeedViewController" customModule="instagram_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OG0-Ne-lOA">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="xz3-xv-lhI"/>
-                        <color key="backgroundColor" systemColor="systemCyanColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="nMe-TD-Dnq"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YhU-Cv-FKo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3725" y="-1608"/>
-        </scene>
         <!--SearchViewController-->
         <scene sceneID="6j7-7E-3ko">
             <objects>
@@ -2371,9 +2326,6 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemCyanColor">
-            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

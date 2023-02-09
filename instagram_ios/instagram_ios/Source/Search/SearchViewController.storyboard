@@ -99,7 +99,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JKa-cT-qEu">
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JKa-cT-qEu">
                                 <rect key="frame" x="0.0" y="151" width="375" height="320"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="iDb-ce-KWq"/>
@@ -350,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0lW-Uz-4FZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="-35.467980295566505"/>
+            <point key="canvasLocation" x="2433" y="-35"/>
         </scene>
         <!--Other Profile View Controller-->
         <scene sceneID="mQy-jE-8Z8">

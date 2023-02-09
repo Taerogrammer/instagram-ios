@@ -79,9 +79,7 @@ class MakePostViewController : UIViewController {
             })
             
         })
-        
-//        let vc = storyboard?.instantiateViewController(withIdentifier: "ImageViewController") as! ImageViewController
-//        self.navigationController?.pushViewController(vc, animated: true)
+
     }
 
     

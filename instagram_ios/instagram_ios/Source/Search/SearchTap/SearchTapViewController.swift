@@ -100,8 +100,19 @@ class SearchTapViewController: UIViewController {
         AF.request("\(Constant.Base_URL)/app/posts/popular/\(postId)", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: SearchTapResponse.self) { response in
             switch response.result {
             case .success(let response):
-                print("GET SUCCESS >> \(Constant.Base_URL)/app/users/posts/popular/\(self.postId)")
+                print("GET SUCCESS >> \(Constant.Base_URL)/app/users/posts/\(self.postId)")
                 print(response)
+                DispatchQueue.main.async {  //댓글 개수 조회
+                    AF.request("\(Constant.Base_URL)/app/posts/\(response.result!.postId)/all-comments", method: .get, parameters: nil, encoding: URLEncoding.default, headers: ["X-ACCESS-TOKEN" : "\(UserDefaults.standard.string(forKey: "userJwt")!)"]).validate().responseDecodable(of: GetCommentResponse.self) { response in
+                        switch response.result {
+                        case .success(let response):
+                            print("댓글 SUCCESS >> \(response)")
+                            self.commentAllBtn.setTitle("댓글 \(response.result)개 전체 보기", for: .normal)
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                }
                 
                 DispatchQueue.main.async {
                     self.buttonTop.setTitle("\(response.result!.userName)", for: .normal)
@@ -119,7 +130,6 @@ class SearchTapViewController: UIViewController {
                     self.userNameLbl.font = .NotoSans(.bold, size: 16)
                     
                     self.contentLbl.text = "\(response.result?.content ?? "")"
-                    self.commentAllBtn.setTitle("댓글 받으면 넣기", for: .normal)
                     self.postDateLbl.text = "\(response.result!.dayDetailDto!.day)"
                     self.profileImage.load(url: URL(string: response.result?.userProfileUrl ?? "https://blog.kakaocdn.net/dn/c3vWTf/btqUuNfnDsf/VQMbJlQW4ywjeI8cUE91OK/img.jpg")!)
                     self.images = response.result!.imgUrls
@@ -150,11 +160,7 @@ class SearchTapViewController: UIViewController {
         }
         
     }
-    
-    
-    
-    
-    
+
     
     
 }
