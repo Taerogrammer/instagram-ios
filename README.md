@@ -38,7 +38,4 @@ https://user-images.githubusercontent.com/104834390/220529610-7c3deed6-8ac6-4ec0
 - 다음에는 여러 디자인 패턴에 대해 공부하고 적용을 해보고 싶습니다.
 
 	- 디자인 패턴에 대해 공부하기
-  
-
-- 라이징 캠프 및 라이징 테스트에 대한 느낀점은 [느낀점 및 후기](https://velog.io/@ted_kim/%EB%9D%BC%EC%9D%B4%EC%A7%95-%EC%BA%A0%ED%94%84-iOS-%ED%9B%84%EA%B8%B0)를 통해 확인하실 수 있습니다. 
- 
+   
